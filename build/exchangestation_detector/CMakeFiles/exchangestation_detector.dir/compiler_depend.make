@@ -752,7 +752,7 @@ CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o: /home/jlurobovi
   /usr/local/include/opencv4/opencv2/flann/defines.h \
   /usr/local/include/opencv4/opencv2/flann/config.h \
   /usr/local/include/opencv4/opencv2/core/affine.hpp \
-  /home/jlurobovision/eng_ws/install/serial/include/serial/packet.hpp \
+  /home/jlurobovision/eng_ws/src/serial/include/serial/packet.hpp \
   /home/jlurobovision/eng_ws/install/msg_interfaces/include/msg_interfaces/msg_interfaces/msg/angle.hpp \
   /home/jlurobovision/eng_ws/install/msg_interfaces/include/msg_interfaces/msg_interfaces/msg/detail/angle__struct.hpp \
   /home/jlurobovision/eng_ws/install/msg_interfaces/include/msg_interfaces/msg_interfaces/msg/detail/angle__builder.hpp \
@@ -1095,7 +1095,7 @@ CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o: /hom
   /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp \
   /usr/local/include/opencv4/opencv2/imgproc.hpp \
   /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
-  /home/jlurobovision/eng_ws/install/serial/include/serial/packet.hpp
+  /home/jlurobovision/eng_ws/src/serial/include/serial/packet.hpp
 
 
 /opt/ros/humble/include/rclcpp_components/rclcpp_components/node_instance_wrapper.hpp:
@@ -1112,7 +1112,7 @@ CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o: /hom
 
 /home/jlurobovision/eng_ws/install/msg_interfaces/include/msg_interfaces/msg_interfaces/msg/angle.hpp:
 
-/home/jlurobovision/eng_ws/install/serial/include/serial/packet.hpp:
+/home/jlurobovision/eng_ws/src/serial/include/serial/packet.hpp:
 
 /usr/local/include/opencv4/opencv2/flann/config.h:
 

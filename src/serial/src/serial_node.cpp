@@ -37,9 +37,8 @@ namespace serialport
         rmw_qos_profile_t rmw_qos(rmw_qos_profile_default);
         rmw_qos.depth = 5;
         
-        //自瞄msg订阅
         angle_info_sub_ = this->create_subscription<AngleMsg>(
-            "/detector_node/angle", 
+            "/angle", 
             qos,
             std::bind(&SerialPortNode::angleMsgCallback, this, _1)
         );
@@ -54,7 +53,7 @@ namespace serialport
         //tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
         
         if (using_port_)
-        {
+        { 
             //serial_msg_pub_ = this->create_publisher<SerialMsg>("/serial_msg", qos);
             //imu_msg_pub_ = this->create_publisher<sensor_msgs::msg::Imu>("imu_msg", qos);
             //receive_timer_ = rclcpp::create_timer(this, this->get_clock(), 5ms, std::bind(&SerialPortNode::receiveData, this));
@@ -341,68 +340,66 @@ namespace serialport
     void SerialPortNode::transformData(Packet angle_data, u_char* Tdata)
     {
       // 0xA5
-      Tdata[0] = 0xA5;
+      Tdata[0] = 0xA7;
       // mode
       Tdata[1] = mode_;
-
+      Tdata[2] = angle_data.found;
       // quaternion1
-      double* quaternion1 = reinterpret_cast<double*>(&angle_data.quaternion1);
+      float* quaternion1 = reinterpret_cast<float*>(&angle_data.quaternion1);
       u_char* quaternion1Bytes = reinterpret_cast<u_char*>(quaternion1);
-      for (int i = 0; i < 8; i++)
+      for (int i = 0; i < 4; i++)
       {
-        Tdata[2 + i] = quaternion1Bytes[i];
+        Tdata[3 + i] = quaternion1Bytes[i];
       }
 
       // quaternion2
-      double* quaternion2 = reinterpret_cast<double*>(&angle_data.quaternion2);
+      float* quaternion2 = reinterpret_cast<float*>(&angle_data.quaternion2);
       u_char* quaternion2Bytes = reinterpret_cast<u_char*>(quaternion2);
-      for (int i = 0; i < 8; i++)
+      for (int i = 0; i < 4; i++)
       {
-        Tdata[10 + i] = quaternion2Bytes[i];
+        Tdata[7 + i] = quaternion2Bytes[i];
       }
 
       // quaternion3
-      double* quaternion3 = reinterpret_cast<double*>(&angle_data.quaternion3);
+      float* quaternion3 = reinterpret_cast<float*>(&angle_data.quaternion3);
       u_char* quaternion3Bytes = reinterpret_cast<u_char*>(quaternion3);
-      for (int i = 0; i < 8; i++)
+      for (int i = 0; i < 4; i++)
       {
-        Tdata[18 + i] = quaternion3Bytes[i];
+        Tdata[11 + i] = quaternion3Bytes[i];
       }
 
       // quaternion4
-      double* quaternion4 = reinterpret_cast<double*>(&angle_data.quaternion4);
+      float* quaternion4 = reinterpret_cast<float*>(&angle_data.quaternion4);
       u_char* quaternion4Bytes = reinterpret_cast<u_char*>(quaternion4);
-      for (int i = 0; i < 8; i++)
+      for (int i = 0; i < 4; i++)
       {
-        Tdata[26 + i] = quaternion4Bytes[i];
+        Tdata[15 + i] = quaternion4Bytes[i];
       }
 
       // x
-      double* x = reinterpret_cast<double*>(&angle_data.x);
+      float* x = reinterpret_cast<float*>(&angle_data.x);
       u_char* xBytes = reinterpret_cast<u_char*>(x);
-      for (int i = 0; i < 8; i++)
+      for (int i = 0; i < 4; i++)
       {
-        Tdata[34 + i] = xBytes[i];
+        Tdata[19 + i] = xBytes[i];
       }
 
       // y
-      double* y = reinterpret_cast<double*>(&angle_data.y);
+      float* y = reinterpret_cast<float*>(&angle_data.y);
       u_char* yBytes = reinterpret_cast<u_char*>(y);
-      for (int i = 0; i < 8; i++)
+      for (int i = 0; i < 4; i++)
       {
-        Tdata[42 + i] = yBytes[i];
+        Tdata[23 + i] = yBytes[i];
       }
 
       // z
-      double* z = reinterpret_cast<double*>(&angle_data.z);
+      float* z = reinterpret_cast<float*>(&angle_data.z);
       u_char* zBytes = reinterpret_cast<u_char*>(z);
-      for (int i = 0; i < 8; i++)
+      for (int i = 0; i < 4; i++)
       {
-        Tdata[50 + i] = zBytes[i];
+        Tdata[27 + i] = zBytes[i];
       }
-
-      // 0x5A
-      Tdata[58] = 0x5A;
+    
     }
     /**
      * @brief 自瞄消息订阅回调函数

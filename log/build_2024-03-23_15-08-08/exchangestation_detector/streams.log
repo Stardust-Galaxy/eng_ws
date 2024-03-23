@@ -1,0 +1,22 @@
+[0.012s] Invoking command in '/home/jlurobovision/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/exchangestation_detector -- -j12 -l12
+[0.053s] [35m[1mConsolidate compiler generated dependencies of target detector_node[0m
+[0.061s] [ 40%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o[0m
+[0.061s] [ 40%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o[0m
+[0.067s] [ 80%] Built target detector_node
+[0.198s] In file included from [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:1[m[K:
+[0.198s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/include/exchangestation_detector/exchangestation_detector.hpp:16:10:[m[K [01;31m[Kfatal error: [m[Kserial/packet.hpp: 没有那个文件或目录
+[0.198s]    16 | #include [01;31m[K"serial/packet.hpp"[m[K
+[0.198s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.198s] compilation terminated.
+[0.204s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:90：CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o] 错误 1
+[0.204s] gmake[2]: *** 正在等待未完成的任务....
+[0.314s] In file included from [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/include/exchangestation_detector/detector_node.hpp:14[m[K,
+[0.314s]                  from [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/detector_node.cpp:15[m[K:
+[0.314s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/include/exchangestation_detector/exchangestation_detector.hpp:16:10:[m[K [01;31m[Kfatal error: [m[Kserial/packet.hpp: 没有那个文件或目录
+[0.314s]    16 | #include [01;31m[K"serial/packet.hpp"[m[K
+[0.314s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.314s] compilation terminated.
+[0.322s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:76：CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o] 错误 1
+[0.322s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/exchangestation_detector.dir/all] 错误 2
+[0.322s] gmake: *** [Makefile:146：all] 错误 2
+[0.325s] Invoked command in '/home/jlurobovision/eng_ws/build/exchangestation_detector' returned '2': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/exchangestation_detector -- -j12 -l12

@@ -1,0 +1,6 @@
+Invoking command in '/home/jlurobovision/eng_ws/build/global_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jlurobovision/eng_ws/src/global_launch -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/global_launch
+Invoked command in '/home/jlurobovision/eng_ws/build/global_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jlurobovision/eng_ws/src/global_launch -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/global_launch
+Invoking command in '/home/jlurobovision/eng_ws/build/global_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/global_launch -- -j12 -l12
+Invoked command in '/home/jlurobovision/eng_ws/build/global_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/global_launch -- -j12 -l12
+Invoking command in '/home/jlurobovision/eng_ws/build/global_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/global_launch
+Invoked command in '/home/jlurobovision/eng_ws/build/global_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/global_launch

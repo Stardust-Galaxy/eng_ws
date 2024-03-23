@@ -82,10 +82,10 @@ void ExchangeStationDetector::getImage(cv::Mat& source) {
 
     int windowWidth = 800;
     int windowHeight = 600;
-    cv::namedWindow("binaryResult", cv::WINDOW_NORMAL);
-    cv::resizeWindow("binaryResult", windowWidth, windowHeight);
-    cv::imshow("binaryResult",binaryResult);
-
+    //cv::namedWindow("binaryResult", cv::WINDOW_NORMAL);
+    //cv::resizeWindow("binaryResult", windowWidth, windowHeight);
+    //cv::imshow("binaryResult",source);
+    //cv::waitKey(1);
     this->binaryImg = binaryResult;
 }
 
@@ -97,7 +97,7 @@ Packet ExchangeStationDetector::solveAngle()
     if(found == false) {
         return Packet();
     }
-    double size = 320;
+    double size = 288;
     std::vector<cv::Point3f> ExStationPos = { cv::Point3f(size / 2, -size / 2,0),
                                               cv::Point3f(size / 2, size / 2,0),
                                               cv::Point3f(-size / 2, size / 2,0),
@@ -107,7 +107,7 @@ Packet ExchangeStationDetector::solveAngle()
                                          this->corners[2].corner, 
                                          this->corners[3].corner };
     cv::Mat tVec, rVec;
-    cv::solvePnP(realPos, ExStationPos, CameraMatrix, DistortionCoeff, rVec, tVec, false,cv::SOLVEPNP_IPPE_SQUARE);
+    cv::solvePnP(realPos, ExStationPos, CameraMatrix, DistortionCoeff, rVec, tVec, false,cv::SOLVEPNP_IPPE);
     cv::Mat rotationVector;
     cv::Rodrigues(rVec, rotationVector);
 
@@ -400,15 +400,17 @@ void ExchangeStationDetector::getCorners() {
         cv::waitKey(500);
         */
     }
-    /*
+    
     for (int i = 0; i < 4; i += 1) {
         cv::circle(source, corners[i].corner, 5, cv::Scalar(255, 0, 0), -1);
     }
-    */
+    
 }
 
 
 
 void ExchangeStationDetector::show() {
     cv::polylines(source, currentFrameCorners, true, cv::Scalar(255, 0, 0), 10);
+    cv::imshow("source",source);
+    cv::waitKey(1);
 }

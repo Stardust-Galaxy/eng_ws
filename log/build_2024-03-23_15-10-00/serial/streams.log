@@ -1,0 +1,146 @@
+[0.022s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake /home/jlurobovision/eng_ws/src/serial -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/serial
+[0.154s] -- The C compiler identification is GNU 11.4.0
+[0.265s] -- The CXX compiler identification is GNU 11.4.0
+[0.278s] -- Detecting C compiler ABI info
+[0.410s] -- Detecting C compiler ABI info - done
+[0.433s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.433s] -- Detecting C compile features
+[0.434s] -- Detecting C compile features - done
+[0.441s] -- Detecting CXX compiler ABI info
+[0.591s] -- Detecting CXX compiler ABI info - done
+[0.616s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.616s] -- Detecting CXX compile features
+[0.617s] -- Detecting CXX compile features - done
+[0.623s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.035s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.365s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[1.498s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.511s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.539s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.584s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.649s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.858s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.863s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.042s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.089s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.172s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.191s] -- Looking for pthread.h
+[2.351s] -- Looking for pthread.h - found
+[2.351s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.487s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.488s] -- Found Threads: TRUE  
+[2.739s] -- Found rclpy: 3.3.12 (/opt/ros/humble/share/rclpy/cmake)
+[2.740s] -- Found rclcpp_components: 16.0.8 (/opt/ros/humble/share/rclcpp_components/cmake)
+[2.842s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.925s] -- Found message_filters: 4.3.3 (/opt/ros/humble/share/message_filters/cmake)
+[2.947s] -- Found OpenCV: /usr/local (found version "4.9.0") 
+[2.948s] -- Found msg_interfaces: 0.0.0 (/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/cmake)
+[2.972s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[3.116s] -- Found tf2_geometry_msgs: 0.25.6 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[3.134s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[3.136s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[3.137s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.570s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.782s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.784s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.785s] -- Configured cppcheck include dirs: /home/jlurobovision/eng_ws/src/serial/include
+[3.785s] -- Configured cppcheck exclude dirs and/or files: 
+[3.787s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.787s] -- Configured cpplint exclude dirs and/or files: 
+[3.789s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.790s] -- Added test 'lint_cmake' to check CMake code style
+[3.791s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.793s] -- Added test 'uncrustify' to check C / C++ code style
+[3.795s] -- Configured uncrustify additional arguments: 
+[3.796s] -- Added test 'xmllint' to check XML markup files
+[3.797s] -- Configuring done
+[3.854s] -- Generating done
+[3.857s] -- Build files have been written to: /home/jlurobovision/eng_ws/build/serial
+[3.905s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake /home/jlurobovision/eng_ws/src/serial -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/serial
+[3.907s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[4.001s] [ 75%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial_node.cpp.o[0m
+[4.002s] [ 75%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial.cpp.o[0m
+[4.002s] [ 75%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial.cpp.o[0m
+[4.002s] [ 75%] [32mBuilding CXX object CMakeFiles/serial.dir/src/crc_check.cpp.o[0m
+[4.002s] [ 75%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/crc_check.cpp.o[0m
+[4.003s] [ 75%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o[0m
+[7.729s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)[m[K’:
+[7.730s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:348:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.730s]   348 |       double* quaternion1 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion1[m[K);
+[7.731s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.731s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:356:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.731s]   356 |       double* quaternion2 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion2[m[K);
+[7.731s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.732s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:364:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.732s]   364 |       double* quaternion3 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion3[m[K);
+[7.732s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.732s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:372:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.732s]   372 |       double* quaternion4 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion4[m[K);
+[7.732s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.732s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:380:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.732s]   380 |       double* x = reinterpret_cast<double*>([01;35m[K&angle_data.x[m[K);
+[7.733s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[7.733s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:388:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.733s]   388 |       double* y = reinterpret_cast<double*>([01;35m[K&angle_data.y[m[K);
+[7.733s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[7.733s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.733s]   396 |       double* z = reinterpret_cast<double*>([01;35m[K&angle_data.z[m[K);
+[7.733s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[7.875s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)[m[K’:
+[7.875s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:348:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.876s]   348 |       double* quaternion1 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion1[m[K);
+[7.876s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.876s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:356:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.876s]   356 |       double* quaternion2 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion2[m[K);
+[7.876s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.877s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:364:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.877s]   364 |       double* quaternion3 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion3[m[K);
+[7.877s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.877s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:372:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.878s]   372 |       double* quaternion4 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion4[m[K);
+[7.878s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.878s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:380:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.878s]   380 |       double* x = reinterpret_cast<double*>([01;35m[K&angle_data.x[m[K);
+[7.878s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[7.878s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:388:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.878s]   388 |       double* y = reinterpret_cast<double*>([01;35m[K&angle_data.y[m[K);
+[7.879s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[7.879s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[7.879s]   396 |       double* z = reinterpret_cast<double*>([01;35m[K&angle_data.z[m[K);
+[7.879s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[16.114s] [ 87%] [32m[1mLinking CXX executable serial_node[0m
+[16.524s] [100%] [32m[1mLinking CXX shared library libserial.so[0m
+[16.954s] [100%] Built target serial_node
+[17.323s] [100%] Built target serial
+[17.341s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[17.369s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/serial
+[17.378s] -- Install configuration: ""
+[17.378s] -- Installing: /home/jlurobovision/eng_ws/install/serial/lib/libserial.so
+[17.389s] -- Set runtime path of "/home/jlurobovision/eng_ws/install/serial/lib/libserial.so" to ""
+[17.389s] -- Installing: /home/jlurobovision/eng_ws/install/serial/lib/serial/serial_node
+[17.394s] -- Set runtime path of "/home/jlurobovision/eng_ws/install/serial/lib/serial/serial_node" to ""
+[17.395s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include
+[17.395s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial
+[17.395s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial/crc_check.hpp
+[17.395s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial/serial_node.hpp
+[17.395s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial/serial.hpp
+[17.395s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial/packet.hpp
+[17.395s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/launch
+[17.395s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/launch/serial.launch.py
+[17.395s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/package_run_dependencies/serial
+[17.396s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/parent_prefix_path/serial
+[17.396s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/ament_prefix_path.sh
+[17.396s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/ament_prefix_path.dsv
+[17.396s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/path.sh
+[17.396s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/path.dsv
+[17.396s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.bash
+[17.396s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.sh
+[17.396s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.zsh
+[17.396s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.dsv
+[17.396s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/package.dsv
+[17.397s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/packages/serial
+[17.397s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/rclcpp_components/serial
+[17.397s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/cmake/serialConfig.cmake
+[17.397s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/cmake/serialConfig-version.cmake
+[17.397s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/package.xml
+[17.400s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/serial

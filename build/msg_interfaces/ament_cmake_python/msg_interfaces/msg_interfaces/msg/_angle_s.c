@@ -50,40 +50,76 @@ bool msg_interfaces__msg__angle__convert_from_py(PyObject * _pymsg, void * _ros_
     assert(strncmp("msg_interfaces.msg._angle.Angle", full_classname_dest, 31) == 0);
   }
   msg_interfaces__msg__Angle * ros_message = _ros_message;
-  {  // roll
-    PyObject * field = PyObject_GetAttrString(_pymsg, "roll");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->roll = PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // pitch
-    PyObject * field = PyObject_GetAttrString(_pymsg, "pitch");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->pitch = PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // yaw
-    PyObject * field = PyObject_GetAttrString(_pymsg, "yaw");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->yaw = PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
   {  // found
     PyObject * field = PyObject_GetAttrString(_pymsg, "found");
     if (!field) {
       return false;
     }
-    assert(PyBool_Check(field));
-    ros_message->found = (Py_True == field);
+    assert(PyLong_Check(field));
+    ros_message->found = (int8_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // quaternion1
+    PyObject * field = PyObject_GetAttrString(_pymsg, "quaternion1");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->quaternion1 = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // quaternion2
+    PyObject * field = PyObject_GetAttrString(_pymsg, "quaternion2");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->quaternion2 = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // quaternion3
+    PyObject * field = PyObject_GetAttrString(_pymsg, "quaternion3");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->quaternion3 = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // quaternion4
+    PyObject * field = PyObject_GetAttrString(_pymsg, "quaternion4");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->quaternion4 = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // x
+    PyObject * field = PyObject_GetAttrString(_pymsg, "x");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->x = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // y
+    PyObject * field = PyObject_GetAttrString(_pymsg, "y");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->y = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // z
+    PyObject * field = PyObject_GetAttrString(_pymsg, "z");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->z = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -108,44 +144,88 @@ PyObject * msg_interfaces__msg__angle__convert_to_py(void * raw_ros_message)
     }
   }
   msg_interfaces__msg__Angle * ros_message = (msg_interfaces__msg__Angle *)raw_ros_message;
-  {  // roll
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->roll);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "roll", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // pitch
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->pitch);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "pitch", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // yaw
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->yaw);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "yaw", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // found
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->found ? 1 : 0);
+    field = PyLong_FromLong(ros_message->found);
     {
       int rc = PyObject_SetAttrString(_pymessage, "found", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // quaternion1
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->quaternion1);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "quaternion1", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // quaternion2
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->quaternion2);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "quaternion2", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // quaternion3
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->quaternion3);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "quaternion3", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // quaternion4
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->quaternion4);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "quaternion4", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // x
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->x);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "x", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // y
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->y);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "y", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // z
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->z);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "z", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

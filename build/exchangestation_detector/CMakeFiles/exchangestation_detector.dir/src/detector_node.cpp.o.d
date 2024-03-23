@@ -685,7 +685,7 @@ CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o: \
  /usr/local/include/opencv4/opencv2/flann/defines.h \
  /usr/local/include/opencv4/opencv2/flann/config.h \
  /usr/local/include/opencv4/opencv2/core/affine.hpp \
- /home/jlurobovision/eng_ws/install/serial/include/serial/packet.hpp \
+ /home/jlurobovision/eng_ws/src/serial/include/serial/packet.hpp \
  /home/jlurobovision/eng_ws/install/msg_interfaces/include/msg_interfaces/msg_interfaces/msg/angle.hpp \
  /home/jlurobovision/eng_ws/install/msg_interfaces/include/msg_interfaces/msg_interfaces/msg/detail/angle__struct.hpp \
  /home/jlurobovision/eng_ws/install/msg_interfaces/include/msg_interfaces/msg_interfaces/msg/detail/angle__builder.hpp \

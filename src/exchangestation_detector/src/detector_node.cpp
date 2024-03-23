@@ -14,7 +14,6 @@
 
 #include "exchangestation_detector/detector_node.hpp"
 #include "exchangestation_detector/exchangestation_detector.hpp"
-#include "serial/packet.hpp"
 using namespace std::chrono_literals;
 using namespace cv;
 exchangestation_detector_node::exchangestation_detector_node(const rclcpp::NodeOptions & options) :Node("exchangestation_detector", options) {
@@ -23,7 +22,12 @@ exchangestation_detector_node::exchangestation_detector_node(const rclcpp::NodeO
     // Create a detector
     detector = initDetector();
     // Create a publisher
-    angle_pub = this->create_publisher<msg_interfaces::msg::Angle>("angle", rclcpp::SensorDataQoS());
+    rclcpp::QoS qos(0);
+    qos.keep_last(5);
+    qos.reliable();
+    qos.durability();
+    qos.deadline();
+    angle_pub = this->create_publisher<msg_interfaces::msg::Angle>("angle", qos);
     // Create a camera info subscriber
     camera_info_sub = this->create_subscription<sensor_msgs::msg::CameraInfo>("camera_info", 10, [this](const sensor_msgs::msg::CameraInfo::SharedPtr msg) {
         camera_info = msg;
@@ -68,6 +72,7 @@ void exchangestation_detector_node::imageCallback(const sensor_msgs::msg::Image:
     detector->selectContours();
     detector->getCorners();
     Packet packet = detector->solveAngle();
+    detector->show();
     msg_interfaces::msg::Angle angle_msg;
     angle_msg.found = packet.found;
     angle_msg.quaternion1 = packet.quaternion1;

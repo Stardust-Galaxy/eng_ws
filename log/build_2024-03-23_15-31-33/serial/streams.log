@@ -1,0 +1,85 @@
+[0.009s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[0.062s] [35m[1mConsolidate compiler generated dependencies of target serial[0m
+[0.062s] [35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[0.085s] [ 25%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o[0m
+[0.085s] [ 25%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial_node.cpp.o[0m
+[3.491s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)[m[K’:
+[3.491s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:348:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.491s]   348 |       double* quaternion1 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion1[m[K);
+[3.491s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.491s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:356:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.491s]   356 |       double* quaternion2 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion2[m[K);
+[3.491s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.491s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:364:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.491s]   364 |       double* quaternion3 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion3[m[K);
+[3.491s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.491s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:372:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.491s]   372 |       double* quaternion4 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion4[m[K);
+[3.492s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.492s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:380:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.492s]   380 |       double* x = reinterpret_cast<double*>([01;35m[K&angle_data.x[m[K);
+[3.492s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[3.492s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:388:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.492s]   388 |       double* y = reinterpret_cast<double*>([01;35m[K&angle_data.y[m[K);
+[3.492s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[3.492s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.492s]   396 |       double* z = reinterpret_cast<double*>([01;35m[K&angle_data.z[m[K);
+[3.492s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[3.511s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)[m[K’:
+[3.512s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:348:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.512s]   348 |       double* quaternion1 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion1[m[K);
+[3.512s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.512s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:356:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.512s]   356 |       double* quaternion2 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion2[m[K);
+[3.512s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.512s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:364:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.512s]   364 |       double* quaternion3 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion3[m[K);
+[3.512s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.512s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:372:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.512s]   372 |       double* quaternion4 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion4[m[K);
+[3.512s]       |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.512s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:380:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.512s]   380 |       double* x = reinterpret_cast<double*>([01;35m[K&angle_data.x[m[K);
+[3.512s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[3.512s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:388:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.513s]   388 |       double* y = reinterpret_cast<double*>([01;35m[K&angle_data.y[m[K);
+[3.513s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[3.513s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[3.513s]   396 |       double* z = reinterpret_cast<double*>([01;35m[K&angle_data.z[m[K);
+[3.513s]       |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[9.818s] [ 37%] [32m[1mLinking CXX executable serial_node[0m
+[9.820s] [ 50%] [32m[1mLinking CXX shared library libserial.so[0m
+[10.852s] [ 75%] Built target serial_node
+[10.874s] [100%] Built target serial
+[10.882s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[10.911s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/serial
+[10.917s] -- Install configuration: ""
+[10.917s] -- Installing: /home/jlurobovision/eng_ws/install/serial/lib/libserial.so
+[10.927s] -- Set runtime path of "/home/jlurobovision/eng_ws/install/serial/lib/libserial.so" to ""
+[10.927s] -- Installing: /home/jlurobovision/eng_ws/install/serial/lib/serial/serial_node
+[10.931s] -- Set runtime path of "/home/jlurobovision/eng_ws/install/serial/lib/serial/serial_node" to ""
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial/crc_check.hpp
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial/serial_node.hpp
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial/serial.hpp
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial/packet.hpp
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/launch
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/launch/serial.launch.py
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/package_run_dependencies/serial
+[10.931s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/parent_prefix_path/serial
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/ament_prefix_path.sh
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/ament_prefix_path.dsv
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/path.sh
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/path.dsv
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.bash
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.sh
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.zsh
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.dsv
+[10.932s] -- Installing: /home/jlurobovision/eng_ws/install/serial/share/serial/package.dsv
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/packages/serial
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/rclcpp_components/serial
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/cmake/serialConfig.cmake
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/cmake/serialConfig-version.cmake
+[10.932s] -- Up-to-date: /home/jlurobovision/eng_ws/install/serial/share/serial/package.xml
+[10.933s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/serial

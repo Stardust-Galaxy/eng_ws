@@ -8,6 +8,7 @@
 /home/jlurobovision/eng_ws/install/galaxy_camera/lib/libgalaxy_camera.so
 /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/config/camera_info.yaml
 /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/config/camera_params.yaml
+/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/launch/__pycache__/galaxy_camera.launch.cpython-310.pyc
 /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/launch/galaxy_camera.launch.py
 /home/jlurobovision/eng_ws/install/galaxy_camera/share/ament_index/resource_index/package_run_dependencies/galaxy_camera
 /home/jlurobovision/eng_ws/install/galaxy_camera/share/ament_index/resource_index/parent_prefix_path/galaxy_camera

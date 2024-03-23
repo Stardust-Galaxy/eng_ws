@@ -1,0 +1,128 @@
+[35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[35m[1mConsolidate compiler generated dependencies of target serial[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial_node.cpp.o[0m
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In constructor ‘[01m[Kserialport::SerialPortNode::SerialPortNode(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:42:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kstd[m[K’
+   42 |             qos
+      |                [01;31m[K^[m[K
+      |                [32m[K)[m[K
+   43 |             [32m[Kstd[m[K::bind(&SerialPortNode::angleMsgCallback, this, _1)
+      |             [32m[K~~~[m[K 
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:40:62:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   40 |         angle_info_sub_ = this->create_subscription<AngleMsg>[01;36m[K([m[K
+      |                                                              [01;36m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:40:62:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kserialport::SerialPortNode::create_subscription<serialport::SerialPortNode::AngleMsg>(const char [7], rclcpp::QoS&)[m[K’
+   40 |         angle_info_sub_ = [01;31m[Kthis->create_subscription<AngleMsg>([m[K
+      |                           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   41 | [01;31m[K            "/angle",[m[K
+      |             [01;31m[K~~~~~~~~~[m[K                                         
+   42 | [01;31m[K            qos[m[K
+      |             [01;31m[K~~~[m[K                                               
+   43 | [01;31m[K            std[m[K::bind(&SerialPortNode::angleMsgCallback, this, _1)
+      |             [01;31m[K~~~[m[K                                               
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:8[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  219 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:40:62:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 2 provided
+   40 |         angle_info_sub_ = [01;36m[Kthis->create_subscription<AngleMsg>([m[K
+      |                           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   41 | [01;36m[K            "/angle",[m[K
+      |             [01;36m[K~~~~~~~~~[m[K                                         
+   42 | [01;36m[K            qos[m[K
+      |             [01;36m[K~~~[m[K                                               
+   43 | [01;36m[K            std[m[K::bind(&SerialPortNode::angleMsgCallback, this, _1)
+      |             [01;36m[K~~~[m[K                                               
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:348:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  348 |       double* quaternion1 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion1[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:356:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  356 |       double* quaternion2 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion2[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:364:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  364 |       double* quaternion3 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion3[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:372:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  372 |       double* quaternion4 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion4[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:380:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  380 |       double* x = reinterpret_cast<double*>([01;35m[K&angle_data.x[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:388:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  388 |       double* y = reinterpret_cast<double*>([01;35m[K&angle_data.y[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  396 |       double* z = reinterpret_cast<double*>([01;35m[K&angle_data.z[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In constructor ‘[01m[Kserialport::SerialPortNode::SerialPortNode(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:42:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kstd[m[K’
+   42 |             qos
+      |                [01;31m[K^[m[K
+      |                [32m[K)[m[K
+   43 |             [32m[Kstd[m[K::bind(&SerialPortNode::angleMsgCallback, this, _1)
+      |             [32m[K~~~[m[K 
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:40:62:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   40 |         angle_info_sub_ = this->create_subscription<AngleMsg>[01;36m[K([m[K
+      |                                                              [01;36m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:40:62:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kserialport::SerialPortNode::create_subscription<serialport::SerialPortNode::AngleMsg>(const char [7], rclcpp::QoS&)[m[K’
+   40 |         angle_info_sub_ = [01;31m[Kthis->create_subscription<AngleMsg>([m[K
+      |                           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   41 | [01;31m[K            "/angle",[m[K
+      |             [01;31m[K~~~~~~~~~[m[K                                         
+   42 | [01;31m[K            qos[m[K
+      |             [01;31m[K~~~[m[K                                               
+   43 | [01;31m[K            std[m[K::bind(&SerialPortNode::angleMsgCallback, this, _1)
+      |             [01;31m[K~~~[m[K                                               
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:8[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  219 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:40:62:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 2 provided
+   40 |         angle_info_sub_ = [01;36m[Kthis->create_subscription<AngleMsg>([m[K
+      |                           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   41 | [01;36m[K            "/angle",[m[K
+      |             [01;36m[K~~~~~~~~~[m[K                                         
+   42 | [01;36m[K            qos[m[K
+      |             [01;36m[K~~~[m[K                                               
+   43 | [01;36m[K            std[m[K::bind(&SerialPortNode::angleMsgCallback, this, _1)
+      |             [01;36m[K~~~[m[K                                               
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:348:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  348 |       double* quaternion1 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion1[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:356:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  356 |       double* quaternion2 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion2[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:364:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  364 |       double* quaternion3 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion3[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:372:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  372 |       double* quaternion4 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion4[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:380:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  380 |       double* x = reinterpret_cast<double*>([01;35m[K&angle_data.x[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:388:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  388 |       double* y = reinterpret_cast<double*>([01;35m[K&angle_data.y[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  396 |       double* z = reinterpret_cast<double*>([01;35m[K&angle_data.z[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:104：CMakeFiles/serial_node.dir/src/serial_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/serial_node.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/serial.dir/build.make:104：CMakeFiles/serial.dir/src/serial_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/serial.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

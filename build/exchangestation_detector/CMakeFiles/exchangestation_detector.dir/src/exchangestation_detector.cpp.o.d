@@ -277,4 +277,4 @@ CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o: \
  /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp \
  /usr/local/include/opencv4/opencv2/imgproc.hpp \
  /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
- /home/jlurobovision/eng_ws/install/serial/include/serial/packet.hpp
+ /home/jlurobovision/eng_ws/src/serial/include/serial/packet.hpp

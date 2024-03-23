@@ -13,8 +13,7 @@
 #include <opencv2/calib3d/calib3d.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-#include "serial/packet.hpp"
-//  Use a struct to make sure the contour & point in the same order, so that pnp can work
+#include "/home/jlurobovision/eng_ws/src/serial/include/serial/packet.hpp"
 
 class ExchangeStationDetector {
 public:
