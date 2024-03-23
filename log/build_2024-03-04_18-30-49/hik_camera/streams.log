@@ -1,0 +1,46 @@
+[0.235s] Invoking command in '/home/stardust/eng_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/stardust/eng_ws/build/hik_camera -- -j8 -l8
+[0.336s] [ 25%] [32mBuilding CXX object CMakeFiles/hik_camera_node.dir/rclcpp_components/node_main_hik_camera_node.cpp.o[0m
+[0.348s] [ 50%] [32mBuilding CXX object CMakeFiles/hik_camera.dir/src/hik_camera_node.cpp.o[0m
+[4.696s] [ 75%] [32m[1mLinking CXX executable hik_camera_node[0m
+[4.904s] [ 75%] Built target hik_camera_node
+[5.212s] [100%] [32m[1mLinking CXX shared library libhik_camera.so[0m
+[5.436s] [100%] Built target hik_camera
+[5.452s] Invoked command in '/home/stardust/eng_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/stardust/eng_ws/build/hik_camera -- -j8 -l8
+[5.494s] Invoking command in '/home/stardust/eng_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/stardust/eng_ws/build/hik_camera
+[5.504s] -- Install configuration: ""
+[5.504s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib
+[5.504s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libMvUsb3vTL.so
+[5.504s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libMediaProcess.so
+[5.505s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libMVRender.so
+[5.505s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libFormatConversion.so
+[5.505s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libMvCameraControl.so
+[5.516s] -- Installing: /home/stardust/eng_ws/install/hik_camera/lib/hik_camera/hik_camera_node
+[5.517s] -- Set runtime path of "/home/stardust/eng_ws/install/hik_camera/lib/hik_camera/hik_camera_node" to ""
+[5.518s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/library_path.sh
+[5.518s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/library_path.dsv
+[5.520s] -- Installing: /home/stardust/eng_ws/install/hik_camera/lib/libhik_camera.so
+[5.522s] -- Set runtime path of "/home/stardust/eng_ws/install/hik_camera/lib/libhik_camera.so" to ""
+[5.522s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/config
+[5.522s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/config/camera_params.yaml
+[5.522s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/config/camera_info.yaml
+[5.523s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/launch
+[5.523s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/launch/hik_camera.launch.py
+[5.523s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/ament_index/resource_index/package_run_dependencies/hik_camera
+[5.523s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/ament_index/resource_index/parent_prefix_path/hik_camera
+[5.524s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.sh
+[5.524s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.dsv
+[5.524s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/path.sh
+[5.525s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/path.dsv
+[5.525s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/local_setup.bash
+[5.525s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/local_setup.sh
+[5.526s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/local_setup.zsh
+[5.526s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/local_setup.dsv
+[5.527s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/package.dsv
+[5.527s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/ament_index/resource_index/packages/hik_camera
+[5.527s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/ament_index/resource_index/rclcpp_components/hik_camera
+[5.528s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.528s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_libraries-extras.cmake
+[5.529s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig.cmake
+[5.529s] -- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig-version.cmake
+[5.530s] -- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/package.xml
+[5.533s] Invoked command in '/home/stardust/eng_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/stardust/eng_ws/build/hik_camera

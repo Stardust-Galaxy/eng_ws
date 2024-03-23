@@ -1,0 +1,7 @@
+-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[31mCMake Error at CMakeLists.txt:12 (ament_auto_add_library):
+  Unknown CMake command "ament_auto_add_library".
+
+[0m
+-- Configuring incomplete, errors occurred!
+See also "/home/stardust/eng_ws/build/exchangestation_detector/CMakeFiles/CMakeOutput.log".

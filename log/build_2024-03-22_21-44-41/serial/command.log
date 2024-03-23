@@ -1,0 +1,2 @@
+Invoking command in '/home/jlurobovision/eng_ws/build/serial': /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '2': /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12

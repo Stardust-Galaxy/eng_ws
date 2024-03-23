@@ -1,0 +1,6 @@
+Invoking command in '/home/stardust/eng_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/stardust/eng_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/hik_camera
+Invoked command in '/home/stardust/eng_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake /home/stardust/eng_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/hik_camera
+Invoking command in '/home/stardust/eng_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/stardust/eng_ws/build/hik_camera -- -j8 -l8
+Invoked command in '/home/stardust/eng_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/stardust/eng_ws/build/hik_camera -- -j8 -l8
+Invoking command in '/home/stardust/eng_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/stardust/eng_ws/build/hik_camera
+Invoked command in '/home/stardust/eng_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/stardust/eng_ws/build/hik_camera

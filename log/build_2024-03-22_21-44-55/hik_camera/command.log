@@ -1,0 +1,2 @@
+Invoking command in '/home/jlurobovision/eng_ws/build/hik_camera': /usr/bin/cmake /home/jlurobovision/eng_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/hik_camera
+Invoked command in '/home/jlurobovision/eng_ws/build/hik_camera' returned '1': /usr/bin/cmake /home/jlurobovision/eng_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/hik_camera

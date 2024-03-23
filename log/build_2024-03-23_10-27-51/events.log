@@ -1,0 +1,571 @@
+[0.000000] (-) TimerEvent: {}
+[0.000151] (-) JobUnselected: {'identifier': 'exchangestation_detector'}
+[0.000213] (-) JobUnselected: {'identifier': 'galaxy_camera'}
+[0.000253] (-) JobUnselected: {'identifier': 'hik_camera'}
+[0.000312] (-) JobUnselected: {'identifier': 'msg_interfaces'}
+[0.000356] (serial) JobQueued: {'identifier': 'serial', 'dependencies': OrderedDict([('msg_interfaces', '/home/jlurobovision/eng_ws/install/msg_interfaces')])}
+[0.000383] (serial) JobStarted: {'identifier': 'serial'}
+[0.012205] (serial) JobProgress: {'identifier': 'serial', 'progress': 'cmake'}
+[0.012843] (serial) JobProgress: {'identifier': 'serial', 'progress': 'build'}
+[0.013553] (serial) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jlurobovision/eng_ws/build/serial', '--', '-j12', '-l12'], 'cwd': '/home/jlurobovision/eng_ws/build/serial', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'jlurobovision'), ('LC_TIME', 'mn_MN'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jlurobovision'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.85.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'mn_MN'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1102'), ('SYSTEMD_EXEC_PID', '1253'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3747'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jlurobovision/eng_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'jlurobovision'), ('JOURNAL_STREAM', '8:28347'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', ':/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jlurobovision'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jlurobovision-10i703:@/tmp/.ICE-unix/1225,unix/jlurobovision-10i703:/tmp/.ICE-unix/1225'), ('INVOCATION_ID', 'ace4833df9bd451e97c55d3000a0b9e1'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'mn_MN'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'mn_MN'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.1PMUK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-0da1c1f86b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'mn_MN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'mn_MN'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'mn_MN'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/jlurobovision/eng_ws/build/serial'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'mn_MN'), ('LC_PAPER', 'mn_MN'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble')]), 'shell': False}
+[0.099336] (-) TimerEvent: {}
+[0.117851] (serial) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target serial_node\x1b[0m\n'}
+[0.119120] (serial) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target serial\x1b[0m\n'}
+[0.186604] (serial) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/serial.dir/src/serial.cpp.o\x1b[0m\n'}
+[0.187603] (serial) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o\x1b[0m\n'}
+[0.187896] (serial) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/serial.dir/src/serial_node.cpp.o\x1b[0m\n'}
+[0.188165] (serial) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial.cpp.o\x1b[0m\n'}
+[0.199467] (-) TimerEvent: {}
+[0.300095] (-) TimerEvent: {}
+[0.400400] (-) TimerEvent: {}
+[0.500745] (-) TimerEvent: {}
+[0.601298] (-) TimerEvent: {}
+[0.702268] (-) TimerEvent: {}
+[0.802677] (-) TimerEvent: {}
+[0.903343] (-) TimerEvent: {}
+[1.004496] (-) TimerEvent: {}
+[1.104920] (-) TimerEvent: {}
+[1.205594] (-) TimerEvent: {}
+[1.306827] (-) TimerEvent: {}
+[1.407885] (-) TimerEvent: {}
+[1.508866] (-) TimerEvent: {}
+[1.609683] (-) TimerEvent: {}
+[1.710784] (-) TimerEvent: {}
+[1.811330] (-) TimerEvent: {}
+[1.911716] (-) TimerEvent: {}
+[2.012457] (-) TimerEvent: {}
+[2.113577] (-) TimerEvent: {}
+[2.213996] (-) TimerEvent: {}
+[2.314862] (-) TimerEvent: {}
+[2.416245] (-) TimerEvent: {}
+[2.518113] (-) TimerEvent: {}
+[2.620003] (-) TimerEvent: {}
+[2.721108] (-) TimerEvent: {}
+[2.822486] (-) TimerEvent: {}
+[2.923927] (-) TimerEvent: {}
+[3.025775] (-) TimerEvent: {}
+[3.127019] (-) TimerEvent: {}
+[3.228042] (-) TimerEvent: {}
+[3.328861] (-) TimerEvent: {}
+[3.429261] (-) TimerEvent: {}
+[3.529681] (-) TimerEvent: {}
+[3.630230] (-) TimerEvent: {}
+[3.730668] (-) TimerEvent: {}
+[3.831084] (-) TimerEvent: {}
+[3.931477] (-) TimerEvent: {}
+[4.031832] (-) TimerEvent: {}
+[4.132272] (-) TimerEvent: {}
+[4.232720] (-) TimerEvent: {}
+[4.333171] (-) TimerEvent: {}
+[4.433550] (-) TimerEvent: {}
+[4.533905] (-) TimerEvent: {}
+[4.634277] (-) TimerEvent: {}
+[4.734683] (-) TimerEvent: {}
+[4.835116] (-) TimerEvent: {}
+[4.935569] (-) TimerEvent: {}
+[5.035965] (-) TimerEvent: {}
+[5.136384] (-) TimerEvent: {}
+[5.236889] (-) TimerEvent: {}
+[5.337330] (-) TimerEvent: {}
+[5.437804] (-) TimerEvent: {}
+[5.538369] (-) TimerEvent: {}
+[5.638971] (-) TimerEvent: {}
+[5.739392] (-) TimerEvent: {}
+[5.839936] (-) TimerEvent: {}
+[5.930883] (serial) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8\x1b[m\x1b[K:\n'}
+[5.931083] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmsg_interfaces::msg::AngleMsg::SharedPTR\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[5.931182] (serial) StderrLine: {'line': b'   39 |         bool sendData(\x1b[01;31m\x1b[KAngleMsg\x1b[m\x1b[K::SharedPTR msg);\n'}
+[5.931252] (serial) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.931323] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:41:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[5.931390] (serial) StderrLine: {'line': b'   41 |         void transformData(Packet angle_msg,\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K* data);\n'}
+[5.931455] (serial) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.940086] (-) TimerEvent: {}
+[6.040649] (-) TimerEvent: {}
+[6.095199] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid serialport::SerialPortNode::receiveData()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.095755] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:151:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.095926] (serial) StderrLine: {'line': b'  151 |                 \x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K flag = serial_port_->serial_data_.rdata[0];\n'}
+[6.096052] (serial) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.096176] (serial) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.096289] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:152:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kmode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.096413] (serial) StderrLine: {'line': b'  152 |                 uchar\x1b[01;31m\x1b[K \x1b[m\x1b[K\x1b[32m\x1b[Kmode\x1b[m\x1b[K = serial_port_->serial_data_.rdata[1];\n'}
+[6.096541] (serial) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\x1b[32m\x1b[K~~~~\x1b[m\x1b[K\n'}
+[6.096737] (serial) StderrLine: {'line': b'      |                      \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[6.113210] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:153:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kmode_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.113548] (serial) StderrLine: {'line': b'  153 |                 mode_ = \x1b[01;31m\x1b[Kmode\x1b[m\x1b[K;\n'}
+[6.113679] (serial) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[6.113795] (serial) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Kmode_\x1b[m\x1b[K\n'}
+[6.123586] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:163:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kflag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kflag_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.123933] (serial) StderrLine: {'line': b'  163 |                 if (\x1b[01;31m\x1b[Kflag\x1b[m\x1b[K == 0xA5)\n'}
+[6.124116] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[6.124411] (serial) StderrLine: {'line': b'      |                     \x1b[32m\x1b[Kflag_\x1b[m\x1b[K\n'}
+[6.141260] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:172:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdata_transform_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.141565] (-) TimerEvent: {}
+[6.141696] (serial) StderrLine: {'line': b'  172 |                     \x1b[01;31m\x1b[Kdata_transform_\x1b[m\x1b[K->getQuatData(&serial_port_->serial_data_.rdata[2], quat);\n'}
+[6.141832] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.157362] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:194:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KSerialMsg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.157830] (serial) StderrLine: {'line': b'  194 |                     \x1b[01;31m\x1b[KSerialMsg\x1b[m\x1b[K serial_msg;\n'}
+[6.157931] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.172623] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:196:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_msg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.173152] (serial) StderrLine: {'line': b'  196 |                     \x1b[01;31m\x1b[Kserial_msg\x1b[m\x1b[K.header.frame_id = "serial";\n'}
+[6.173272] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.191416] (serial) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8\x1b[m\x1b[K:\n'}
+[6.192123] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmsg_interfaces::msg::AngleMsg::SharedPTR\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[6.192239] (serial) StderrLine: {'line': b'   39 |         bool sendData(\x1b[01;31m\x1b[KAngleMsg\x1b[m\x1b[K::SharedPTR msg);\n'}
+[6.192350] (serial) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.192461] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:41:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[6.192596] (serial) StderrLine: {'line': b'   41 |         void transformData(Packet angle_msg,\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K* data);\n'}
+[6.192717] (serial) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.192896] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:248:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_msg_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.192979] (serial) StderrLine: {'line': b'  248 |                     \x1b[01;31m\x1b[Kserial_msg_pub_\x1b[m\x1b[K->publish(std::move(serial_msg));\n'}
+[6.193061] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.194593] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K At global scope:\n'}
+[6.194922] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:262:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kbool serialport::SerialPortNode::sendData(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.195035] (serial) StderrLine: {'line': b'  262 |     bool \x1b[01;31m\x1b[KSerialPortNode\x1b[m\x1b[K::sendData(AngleMsg::SharedPtr angle_info)\n'}
+[6.195128] (serial) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.195220] (serial) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8\x1b[m\x1b[K:\n'}
+[6.195357] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:14:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate is: \xe2\x80\x98\x1b[01m\x1b[Kbool serialport::SerialPortNode::sendData(int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.195437] (serial) StderrLine: {'line': b'   39 |         bool \x1b[01;36m\x1b[KsendData\x1b[m\x1b[K(AngleMsg::SharedPTR msg);\n'}
+[6.195564] (serial) StderrLine: {'line': b'      |              \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.195681] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:29:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass serialport::SerialPortNode\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[6.195760] (serial) StderrLine: {'line': b'   29 |     class \x1b[01;36m\x1b[KSerialPortNode\x1b[m\x1b[K : public rclcpp::Node\n'}
+[6.195836] (serial) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.195917] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:262:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktypedef using Angle = struct msg_interfaces::msg::Angle_<std::allocator<void> > serialport::SerialPortNode::AngleMsg\x1b[m\x1b[K\xe2\x80\x99 is private within this context\n'}
+[6.196003] (serial) StderrLine: {'line': b'  262 |     bool SerialPortNode::sendData(\x1b[01;31m\x1b[KAngleMsg\x1b[m\x1b[K::SharedPtr angle_info)\n'}
+[6.196088] (serial) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.196170] (serial) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8\x1b[m\x1b[K:\n'}
+[6.196260] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:31:44:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared private here\n'}
+[6.196338] (serial) StderrLine: {'line': b'   31 |         typedef msg_interfaces::msg::Angle \x1b[01;36m\x1b[KAngleMsg\x1b[m\x1b[K;\n'}
+[6.196413] (serial) StderrLine: {'line': b'      |                                            \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.196486] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:336:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[6.196580] (serial) StderrLine: {'line': b'  336 |     void SerialPortNode::transformData(Packet angle_data, \x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K* Tdata)\n'}
+[6.196654] (serial) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.196728] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid serialport::SerialPortNode::transformData(Packet, int*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.196807] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:344:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.196889] (serial) StderrLine: {'line': b'  344 |       double* quaternion1 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion1\x1b[m\x1b[K);\n'}
+[6.196964] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.198727] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.198913] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(quaternion1);\n'}
+[6.199025] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.199097] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.199185] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.199255] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion1);\n'}
+[6.199331] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.199399] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.199470] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion1);\n'}
+[6.199540] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.199608] (serial) StderrLine: {'line': b'      |                                                        \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.199676] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.199747] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(quaternion1);\n'}
+[6.199816] (serial) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.199895] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.199965] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<uchar*>(quaternion1)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.200033] (serial) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.200100] (serial) StderrLine: {'line': b'      |                                                                       \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.200168] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:352:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.200240] (serial) StderrLine: {'line': b'  352 |       double* quaternion2 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion2\x1b[m\x1b[K);\n'}
+[6.200314] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.201809] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.201980] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(quaternion2);\n'}
+[6.202078] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.202148] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.202223] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.202294] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion2);\n'}
+[6.202364] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.202432] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.202502] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion2);\n'}
+[6.202570] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.202638] (serial) StderrLine: {'line': b'      |                                                        \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.202705] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.202780] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(quaternion2);\n'}
+[6.202857] (serial) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.202924] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.203001] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<uchar*>(quaternion2)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.203069] (serial) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.203137] (serial) StderrLine: {'line': b'      |                                                                       \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.203225] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:360:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.203300] (serial) StderrLine: {'line': b'  360 |       double* quaternion3 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion3\x1b[m\x1b[K);\n'}
+[6.203368] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.204528] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.204701] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(quaternion3);\n'}
+[6.204824] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.204906] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.204975] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.205044] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion3);\n'}
+[6.205110] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.205175] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.205241] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion3);\n'}
+[6.205314] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.205379] (serial) StderrLine: {'line': b'      |                                                        \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.205467] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.205537] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(quaternion3);\n'}
+[6.205609] (serial) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.205675] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.205744] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<uchar*>(quaternion3)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.205807] (serial) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.205872] (serial) StderrLine: {'line': b'      |                                                                       \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.205941] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:368:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.206018] (serial) StderrLine: {'line': b'  368 |       double* quaternion4 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion4\x1b[m\x1b[K);\n'}
+[6.206093] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.208632] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.208890] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(quaternion4);\n'}
+[6.208960] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.209025] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.209090] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.209171] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion4);\n'}
+[6.209238] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.209303] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.209368] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion4);\n'}
+[6.209465] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.209533] (serial) StderrLine: {'line': b'      |                                                        \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.209598] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.209673] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(quaternion4);\n'}
+[6.209738] (serial) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.209805] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.209873] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<uchar*>(quaternion4)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.209938] (serial) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.210002] (serial) StderrLine: {'line': b'      |                                                                       \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.210069] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:376:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.210151] (serial) StderrLine: {'line': b'  376 |       double* x = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.x\x1b[m\x1b[K);\n'}
+[6.210218] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.212890] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.213080] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(x);\n'}
+[6.213149] (serial) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.213213] (serial) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.213278] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.213347] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(x);\n'}
+[6.213411] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.213498] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.213565] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(x);\n'}
+[6.213629] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.213695] (serial) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.213758] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.213862] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(x);\n'}
+[6.213926] (serial) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.213990] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.214055] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<uchar*>(x)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.214135] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.214197] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.214259] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:384:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.214339] (serial) StderrLine: {'line': b'  384 |       double* y = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.y\x1b[m\x1b[K);\n'}
+[6.214401] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.215770] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.215891] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(y);\n'}
+[6.216016] (serial) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.216080] (serial) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.216142] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.216206] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(y);\n'}
+[6.216268] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.216330] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.216392] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(y);\n'}
+[6.216454] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.216515] (serial) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.216576] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.216644] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(y);\n'}
+[6.216710] (serial) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.216773] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.216836] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<uchar*>(y)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.216898] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.216960] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.217022] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:392:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.217088] (serial) StderrLine: {'line': b'  392 |       double* z = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.z\x1b[m\x1b[K);\n'}
+[6.217151] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.218000] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.218139] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(z);\n'}
+[6.218243] (serial) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.218343] (serial) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.218443] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.218547] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(z);\n'}
+[6.218648] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.218748] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.218850] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(z);\n'}
+[6.218950] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.219049] (serial) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.219148] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.219255] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(z);\n'}
+[6.219366] (serial) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.219465] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.219573] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<uchar*>(z)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.219673] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.219773] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.220581] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid serialport::SerialPortNode::angleMsgCallback(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.220705] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:453:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<msg_interfaces::msg::Angle_<std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.220819] (serial) StderrLine: {'line': b'  453 |         if(!sendData(\x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K))\n'}
+[6.220922] (serial) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[6.221022] (serial) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[6.221121] (serial) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr {aka std::shared_ptr<msg_interfaces::msg::Angle_<std::allocator<void> > >}\x1b[m\x1b[K\n'}
+[6.221229] (serial) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8\x1b[m\x1b[K:\n'}
+[6.221330] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:43:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kbool serialport::SerialPortNode::sendData(int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.221449] (serial) StderrLine: {'line': b'   39 |         bool sendData(\x1b[01;36m\x1b[KAngleMsg::SharedPTR msg\x1b[m\x1b[K);\n'}
+[6.221555] (serial) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[6.241760] (-) TimerEvent: {}
+[6.327441] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid serialport::SerialPortNode::receiveData()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.327999] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:151:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.328131] (serial) StderrLine: {'line': b'  151 |                 \x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K flag = serial_port_->serial_data_.rdata[0];\n'}
+[6.328240] (serial) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.328346] (serial) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.328447] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:152:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kmode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.328575] (serial) StderrLine: {'line': b'  152 |                 uchar\x1b[01;31m\x1b[K \x1b[m\x1b[K\x1b[32m\x1b[Kmode\x1b[m\x1b[K = serial_port_->serial_data_.rdata[1];\n'}
+[6.328679] (serial) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\x1b[32m\x1b[K~~~~\x1b[m\x1b[K\n'}
+[6.328779] (serial) StderrLine: {'line': b'      |                      \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[6.333934] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:153:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kmode_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.334156] (serial) StderrLine: {'line': b'  153 |                 mode_ = \x1b[01;31m\x1b[Kmode\x1b[m\x1b[K;\n'}
+[6.334267] (serial) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[6.334371] (serial) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Kmode_\x1b[m\x1b[K\n'}
+[6.340153] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:163:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kflag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kflag_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.340450] (serial) StderrLine: {'line': b'  163 |                 if (\x1b[01;31m\x1b[Kflag\x1b[m\x1b[K == 0xA5)\n'}
+[6.340564] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[6.340669] (serial) StderrLine: {'line': b'      |                     \x1b[32m\x1b[Kflag_\x1b[m\x1b[K\n'}
+[6.341863] (-) TimerEvent: {}
+[6.355057] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:172:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdata_transform_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.355675] (serial) StderrLine: {'line': b'  172 |                     \x1b[01;31m\x1b[Kdata_transform_\x1b[m\x1b[K->getQuatData(&serial_port_->serial_data_.rdata[2], quat);\n'}
+[6.355833] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.377149] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:194:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KSerialMsg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.377568] (serial) StderrLine: {'line': b'  194 |                     \x1b[01;31m\x1b[KSerialMsg\x1b[m\x1b[K serial_msg;\n'}
+[6.377664] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.393076] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:196:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_msg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.393581] (serial) StderrLine: {'line': b'  196 |                     \x1b[01;31m\x1b[Kserial_msg\x1b[m\x1b[K.header.frame_id = "serial";\n'}
+[6.393735] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.412476] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:248:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kserial_msg_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.412756] (serial) StderrLine: {'line': b'  248 |                     \x1b[01;31m\x1b[Kserial_msg_pub_\x1b[m\x1b[K->publish(std::move(serial_msg));\n'}
+[6.412837] (serial) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.413626] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K At global scope:\n'}
+[6.413761] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:262:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kbool serialport::SerialPortNode::sendData(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.414016] (serial) StderrLine: {'line': b'  262 |     bool \x1b[01;31m\x1b[KSerialPortNode\x1b[m\x1b[K::sendData(AngleMsg::SharedPtr angle_info)\n'}
+[6.414106] (serial) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.414184] (serial) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8\x1b[m\x1b[K:\n'}
+[6.414256] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:14:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate is: \xe2\x80\x98\x1b[01m\x1b[Kbool serialport::SerialPortNode::sendData(int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.414328] (serial) StderrLine: {'line': b'   39 |         bool \x1b[01;36m\x1b[KsendData\x1b[m\x1b[K(AngleMsg::SharedPTR msg);\n'}
+[6.414397] (serial) StderrLine: {'line': b'      |              \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.414465] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:29:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass serialport::SerialPortNode\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[6.414536] (serial) StderrLine: {'line': b'   29 |     class \x1b[01;36m\x1b[KSerialPortNode\x1b[m\x1b[K : public rclcpp::Node\n'}
+[6.414605] (serial) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.414674] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:262:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktypedef using Angle = struct msg_interfaces::msg::Angle_<std::allocator<void> > serialport::SerialPortNode::AngleMsg\x1b[m\x1b[K\xe2\x80\x99 is private within this context\n'}
+[6.414755] (serial) StderrLine: {'line': b'  262 |     bool SerialPortNode::sendData(\x1b[01;31m\x1b[KAngleMsg\x1b[m\x1b[K::SharedPtr angle_info)\n'}
+[6.414828] (serial) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.414897] (serial) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8\x1b[m\x1b[K:\n'}
+[6.414965] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:31:44:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared private here\n'}
+[6.415034] (serial) StderrLine: {'line': b'   31 |         typedef msg_interfaces::msg::Angle \x1b[01;36m\x1b[KAngleMsg\x1b[m\x1b[K;\n'}
+[6.415104] (serial) StderrLine: {'line': b'      |                                            \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.415173] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:336:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[6.415243] (serial) StderrLine: {'line': b'  336 |     void SerialPortNode::transformData(Packet angle_data, \x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K* Tdata)\n'}
+[6.415311] (serial) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.415379] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid serialport::SerialPortNode::transformData(Packet, int*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.415449] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:344:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.415532] (serial) StderrLine: {'line': b'  344 |       double* quaternion1 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion1\x1b[m\x1b[K);\n'}
+[6.415607] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.415991] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.416139] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(quaternion1);\n'}
+[6.416220] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.416293] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.416364] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.416444] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion1);\n'}
+[6.416522] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.416596] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.416676] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion1);\n'}
+[6.416753] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.416833] (serial) StderrLine: {'line': b'      |                                                        \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.416903] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.416975] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(quaternion1);\n'}
+[6.417044] (serial) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.417133] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:345:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.417201] (serial) StderrLine: {'line': b'  345 |       u_char* quaternion1Bytes = reinterpret_cast<uchar*>(quaternion1)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.417268] (serial) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.417334] (serial) StderrLine: {'line': b'      |                                                                       \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.417407] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:352:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.417532] (serial) StderrLine: {'line': b'  352 |       double* quaternion2 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion2\x1b[m\x1b[K);\n'}
+[6.417652] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.417820] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.418033] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(quaternion2);\n'}
+[6.418158] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.418233] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.418300] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.418368] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion2);\n'}
+[6.418434] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.418499] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.418565] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion2);\n'}
+[6.418628] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.418692] (serial) StderrLine: {'line': b'      |                                                        \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.418755] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.418821] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(quaternion2);\n'}
+[6.418885] (serial) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.418953] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:353:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.419018] (serial) StderrLine: {'line': b'  353 |       u_char* quaternion2Bytes = reinterpret_cast<uchar*>(quaternion2)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.419082] (serial) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.419153] (serial) StderrLine: {'line': b'      |                                                                       \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.419221] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:360:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.419301] (serial) StderrLine: {'line': b'  360 |       double* quaternion3 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion3\x1b[m\x1b[K);\n'}
+[6.419460] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.419556] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.419624] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(quaternion3);\n'}
+[6.419689] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.419753] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.419817] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.419883] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion3);\n'}
+[6.419947] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.420010] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.420076] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion3);\n'}
+[6.420158] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.420219] (serial) StderrLine: {'line': b'      |                                                        \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.420281] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.420345] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(quaternion3);\n'}
+[6.420407] (serial) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.420470] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:361:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.420535] (serial) StderrLine: {'line': b'  361 |       u_char* quaternion3Bytes = reinterpret_cast<uchar*>(quaternion3)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.420604] (serial) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.420666] (serial) StderrLine: {'line': b'      |                                                                       \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.420734] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:368:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.420811] (serial) StderrLine: {'line': b'  368 |       double* quaternion4 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion4\x1b[m\x1b[K);\n'}
+[6.420883] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.420995] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.421149] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(quaternion4);\n'}
+[6.421214] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.421280] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.421350] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.421439] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion4);\n'}
+[6.421510] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.421573] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.421649] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(quaternion4);\n'}
+[6.421721] (serial) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.421788] (serial) StderrLine: {'line': b'      |                                                        \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.421854] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.421922] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(quaternion4);\n'}
+[6.421989] (serial) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.422053] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:369:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.422121] (serial) StderrLine: {'line': b'  369 |       u_char* quaternion4Bytes = reinterpret_cast<uchar*>(quaternion4)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.422185] (serial) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.422252] (serial) StderrLine: {'line': b'      |                                                                       \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.422320] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:376:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.422391] (serial) StderrLine: {'line': b'  376 |       double* x = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.x\x1b[m\x1b[K);\n'}
+[6.422458] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.422653] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.422820] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(x);\n'}
+[6.422935] (serial) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.423033] (serial) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.423154] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.423250] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(x);\n'}
+[6.423342] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.423436] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.423531] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(x);\n'}
+[6.423623] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.423703] (serial) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.423764] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.423873] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(x);\n'}
+[6.423945] (serial) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.424010] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:377:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.424080] (serial) StderrLine: {'line': b'  377 |       u_char* xBytes = reinterpret_cast<uchar*>(x)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.424204] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.424275] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.424358] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:384:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.424450] (serial) StderrLine: {'line': b'  384 |       double* y = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.y\x1b[m\x1b[K);\n'}
+[6.424524] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.426235] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.426433] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(y);\n'}
+[6.426499] (serial) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.426561] (serial) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.426623] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.426686] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(y);\n'}
+[6.426754] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.426818] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.426893] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(y);\n'}
+[6.426954] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.427014] (serial) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.427075] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.427137] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(y);\n'}
+[6.427198] (serial) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.427258] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:385:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.427337] (serial) StderrLine: {'line': b'  385 |       u_char* yBytes = reinterpret_cast<uchar*>(y)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.427404] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.427469] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.427536] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:392:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.427615] (serial) StderrLine: {'line': b'  392 |       double* z = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.z\x1b[m\x1b[K);\n'}
+[6.427701] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.429255] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kuchar\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_char\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.429474] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<\x1b[01;31m\x1b[Kuchar\x1b[m\x1b[K*>(z);\n'}
+[6.429564] (serial) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.429633] (serial) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Ku_char\x1b[m\x1b[K\n'}
+[6.429698] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.429765] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(z);\n'}
+[6.429830] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.429894] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.429960] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<uchar\x1b[01;31m\x1b[K*\x1b[m\x1b[K>(z);\n'}
+[6.430023] (serial) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.430091] (serial) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K(\x1b[m\x1b[K\n'}
+[6.430154] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.430229] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<uchar*\x1b[01;31m\x1b[K>\x1b[m\x1b[K(z);\n'}
+[6.430295] (serial) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.430359] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:393:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[6.430424] (serial) StderrLine: {'line': b'  393 |       u_char* zBytes = reinterpret_cast<uchar*>(z)\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[6.430488] (serial) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.430558] (serial) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[6.432154] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid serialport::SerialPortNode::angleMsgCallback(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.432235] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:453:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<msg_interfaces::msg::Angle_<std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.432315] (serial) StderrLine: {'line': b'  453 |         if(!sendData(\x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K))\n'}
+[6.432382] (serial) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[6.432447] (serial) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[6.432512] (serial) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr {aka std::shared_ptr<msg_interfaces::msg::Angle_<std::allocator<void> > >}\x1b[m\x1b[K\n'}
+[6.432578] (serial) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8\x1b[m\x1b[K:\n'}
+[6.432642] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:43:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kbool serialport::SerialPortNode::sendData(int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.432710] (serial) StderrLine: {'line': b'   39 |         bool sendData(\x1b[01;36m\x1b[KAngleMsg::SharedPTR msg\x1b[m\x1b[K);\n'}
+[6.432776] (serial) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[6.441959] (-) TimerEvent: {}
+[6.542291] (-) TimerEvent: {}
+[6.642740] (-) TimerEvent: {}
+[6.743190] (-) TimerEvent: {}
+[6.843723] (-) TimerEvent: {}
+[6.944116] (-) TimerEvent: {}
+[7.044399] (-) TimerEvent: {}
+[7.144716] (-) TimerEvent: {}
+[7.245112] (-) TimerEvent: {}
+[7.345988] (-) TimerEvent: {}
+[7.447677] (-) TimerEvent: {}
+[7.549097] (-) TimerEvent: {}
+[7.649760] (-) TimerEvent: {}
+[7.750488] (-) TimerEvent: {}
+[7.851475] (-) TimerEvent: {}
+[7.953051] (-) TimerEvent: {}
+[8.053805] (-) TimerEvent: {}
+[8.154508] (-) TimerEvent: {}
+[8.255032] (-) TimerEvent: {}
+[8.355862] (-) TimerEvent: {}
+[8.456438] (-) TimerEvent: {}
+[8.557408] (-) TimerEvent: {}
+[8.658057] (-) TimerEvent: {}
+[8.758846] (-) TimerEvent: {}
+[8.859490] (-) TimerEvent: {}
+[8.960111] (-) TimerEvent: {}
+[9.061020] (-) TimerEvent: {}
+[9.161498] (-) TimerEvent: {}
+[9.262186] (-) TimerEvent: {}
+[9.363305] (-) TimerEvent: {}
+[9.463630] (-) TimerEvent: {}
+[9.563937] (-) TimerEvent: {}
+[9.664270] (-) TimerEvent: {}
+[9.764664] (-) TimerEvent: {}
+[9.865056] (-) TimerEvent: {}
+[9.965445] (-) TimerEvent: {}
+[10.065776] (-) TimerEvent: {}
+[10.166127] (-) TimerEvent: {}
+[10.266505] (-) TimerEvent: {}
+[10.366868] (-) TimerEvent: {}
+[10.467272] (-) TimerEvent: {}
+[10.567569] (-) TimerEvent: {}
+[10.667833] (-) TimerEvent: {}
+[10.768136] (-) TimerEvent: {}
+[10.868444] (-) TimerEvent: {}
+[10.968737] (-) TimerEvent: {}
+[11.069032] (-) TimerEvent: {}
+[11.169336] (-) TimerEvent: {}
+[11.269650] (-) TimerEvent: {}
+[11.310818] (serial) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/serial.dir/build.make:104\xef\xbc\x9aCMakeFiles/serial.dir/src/serial_node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[11.311113] (serial) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139\xef\xbc\x9aCMakeFiles/serial.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[11.311243] (serial) StderrLine: {'line': b'gmake[1]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[11.369742] (-) TimerEvent: {}
+[11.470013] (-) TimerEvent: {}
+[11.570306] (-) TimerEvent: {}
+[11.621712] (serial) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:104\xef\xbc\x9aCMakeFiles/serial_node.dir/src/serial_node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[11.622033] (serial) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165\xef\xbc\x9aCMakeFiles/serial_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[11.622211] (serial) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[11.625431] (serial) CommandEnded: {'returncode': 2}
+[11.663577] (serial) JobEnded: {'identifier': 'serial', 'rc': 2}
+[11.670369] (-) TimerEvent: {}
+[11.675330] (-) EventReactorShutdown: {}

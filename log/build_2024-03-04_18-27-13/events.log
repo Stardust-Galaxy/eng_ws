@@ -1,0 +1,175 @@
+[0.000000] (-) TimerEvent: {}
+[0.000637] (-) JobUnselected: {'identifier': 'hik_camera'}
+[0.000685] (-) JobUnselected: {'identifier': 'msg_interfaces'}
+[0.000722] (-) JobUnselected: {'identifier': 'serial'}
+[0.000758] (exchangestation_detector) JobQueued: {'identifier': 'exchangestation_detector', 'dependencies': OrderedDict()}
+[0.000778] (exchangestation_detector) JobStarted: {'identifier': 'exchangestation_detector'}
+[0.076218] (exchangestation_detector) JobProgress: {'identifier': 'exchangestation_detector', 'progress': 'cmake'}
+[0.077674] (exchangestation_detector) JobProgress: {'identifier': 'exchangestation_detector', 'progress': 'build'}
+[0.078471] (exchangestation_detector) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/stardust/eng_ws/build/exchangestation_detector', '--', '-j8', '-l8'], 'cwd': '/home/stardust/eng_ws/build/exchangestation_detector', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:'), ('USER', 'stardust'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('GIO_MODULE_DIR', '/home/stardust/snap/code/common/.cache/gio-modules'), ('XDG_SESSION_TYPE', 'wayland'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('GIT_ASKPASS', '/snap/code/153/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/stardust/eng_ws/install/msg_interfaces/lib:/home/stardust/eng_ws/install/msg_interface/lib:/home/stardust/eng_ws/install/hik_camera/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/stardust'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('OLDPWD', '/home/stardust'), ('TERM_PROGRAM_VERSION', '1.87.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/153/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('GTK_IM_MODULE_FILE', '/home/stardust/snap/code/common/.cache/immodules/immodules.cache'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/153/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/153/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '1414'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/stardust/eng_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'stardust'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'stardust'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/stardust-virtual-machine:@/tmp/.ICE-unix/1171,unix/stardust-virtual-machine:/tmp/.ICE-unix/1171'), ('GTK_EXE_PREFIX', '/snap/code/153/usr'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c73b7ba5_ea99_4d27_ba7d_53aefc494b20'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LOCPATH', '/snap/code/153/usr/lib/locale'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VW94J2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-baeb5fd1a8.sock'), ('GNOME_TERMINAL_SERVICE', ':1.122'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/stardust/snap/code/153/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/stardust/eng_ws/install/serial:/home/stardust/eng_ws/install/msg_interfaces:/home/stardust/eng_ws/install/msg_interface:/home/stardust/eng_ws/install/hik_camera:/opt/ros/iron'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'Unity'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/stardust/eng_ws/build/exchangestation_detector'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/home/stardust/snap/code/153/.local/share:/home/stardust/snap/code/153:/snap/code/153/usr/share:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stardust/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/stardust/eng_ws/install/msg_interface/local/lib/python3.10/dist-packages:/opt/ros/iron/lib/python3.10/site-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stardust/eng_ws/install/serial:/home/stardust/eng_ws/install/msg_interfaces:/home/stardust/eng_ws/install/msg_interface:/home/stardust/eng_ws/install/hik_camera:/opt/ros/iron'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib')]), 'shell': False}
+[0.099538] (-) TimerEvent: {}
+[0.148896] (exchangestation_detector) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target exchangestation_detector\x1b[0m\n'}
+[0.199111] (exchangestation_detector) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o\x1b[0m\n'}
+[0.199906] (-) TimerEvent: {}
+[0.300215] (-) TimerEvent: {}
+[0.400695] (-) TimerEvent: {}
+[0.501132] (-) TimerEvent: {}
+[0.601716] (-) TimerEvent: {}
+[0.702198] (-) TimerEvent: {}
+[0.803085] (-) TimerEvent: {}
+[0.904420] (-) TimerEvent: {}
+[1.005108] (-) TimerEvent: {}
+[1.105871] (-) TimerEvent: {}
+[1.206619] (-) TimerEvent: {}
+[1.307210] (-) TimerEvent: {}
+[1.408400] (-) TimerEvent: {}
+[1.509090] (-) TimerEvent: {}
+[1.609871] (-) TimerEvent: {}
+[1.710778] (-) TimerEvent: {}
+[1.811928] (-) TimerEvent: {}
+[1.912632] (-) TimerEvent: {}
+[2.013144] (-) TimerEvent: {}
+[2.114386] (-) TimerEvent: {}
+[2.215079] (-) TimerEvent: {}
+[2.315690] (-) TimerEvent: {}
+[2.416122] (-) TimerEvent: {}
+[2.516842] (-) TimerEvent: {}
+[2.617648] (-) TimerEvent: {}
+[2.718225] (-) TimerEvent: {}
+[2.819115] (-) TimerEvent: {}
+[2.919564] (-) TimerEvent: {}
+[3.020272] (-) TimerEvent: {}
+[3.120850] (-) TimerEvent: {}
+[3.223078] (-) TimerEvent: {}
+[3.323634] (-) TimerEvent: {}
+[3.424394] (-) TimerEvent: {}
+[3.524936] (-) TimerEvent: {}
+[3.625563] (-) TimerEvent: {}
+[3.726171] (-) TimerEvent: {}
+[3.824092] (exchangestation_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid exchangestation_detector_node::imageCallback(const SharedPtr&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.824391] (exchangestation_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:70:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kpacket\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.824516] (exchangestation_detector) StderrLine: {'line': b'   70 |     Packet \x1b[01;35m\x1b[Kpacket\x1b[m\x1b[K = detector->solveAngle();\n'}
+[3.824608] (exchangestation_detector) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.828751] (-) TimerEvent: {}
+[3.929183] (-) TimerEvent: {}
+[4.029995] (-) TimerEvent: {}
+[4.130516] (-) TimerEvent: {}
+[4.231278] (-) TimerEvent: {}
+[4.332052] (-) TimerEvent: {}
+[4.432426] (-) TimerEvent: {}
+[4.533494] (-) TimerEvent: {}
+[4.634241] (-) TimerEvent: {}
+[4.734860] (-) TimerEvent: {}
+[4.835334] (-) TimerEvent: {}
+[4.935754] (-) TimerEvent: {}
+[5.036302] (-) TimerEvent: {}
+[5.136832] (-) TimerEvent: {}
+[5.237361] (-) TimerEvent: {}
+[5.338018] (-) TimerEvent: {}
+[5.439167] (-) TimerEvent: {}
+[5.539886] (-) TimerEvent: {}
+[5.640718] (-) TimerEvent: {}
+[5.741329] (-) TimerEvent: {}
+[5.842005] (-) TimerEvent: {}
+[5.942802] (-) TimerEvent: {}
+[6.043577] (-) TimerEvent: {}
+[6.143998] (-) TimerEvent: {}
+[6.244739] (-) TimerEvent: {}
+[6.345329] (-) TimerEvent: {}
+[6.446047] (-) TimerEvent: {}
+[6.547005] (-) TimerEvent: {}
+[6.647838] (-) TimerEvent: {}
+[6.749073] (-) TimerEvent: {}
+[6.850202] (-) TimerEvent: {}
+[6.950830] (-) TimerEvent: {}
+[7.051710] (-) TimerEvent: {}
+[7.152453] (-) TimerEvent: {}
+[7.253215] (-) TimerEvent: {}
+[7.353749] (-) TimerEvent: {}
+[7.454278] (-) TimerEvent: {}
+[7.554999] (-) TimerEvent: {}
+[7.655826] (-) TimerEvent: {}
+[7.756527] (-) TimerEvent: {}
+[7.857059] (-) TimerEvent: {}
+[7.957489] (-) TimerEvent: {}
+[8.058055] (-) TimerEvent: {}
+[8.159031] (-) TimerEvent: {}
+[8.260115] (-) TimerEvent: {}
+[8.360952] (-) TimerEvent: {}
+[8.461446] (-) TimerEvent: {}
+[8.562265] (-) TimerEvent: {}
+[8.662865] (-) TimerEvent: {}
+[8.763269] (-) TimerEvent: {}
+[8.863819] (-) TimerEvent: {}
+[8.964374] (-) TimerEvent: {}
+[9.064877] (-) TimerEvent: {}
+[9.165319] (-) TimerEvent: {}
+[9.265812] (-) TimerEvent: {}
+[9.366192] (-) TimerEvent: {}
+[9.466711] (-) TimerEvent: {}
+[9.567176] (-) TimerEvent: {}
+[9.667932] (-) TimerEvent: {}
+[9.769227] (-) TimerEvent: {}
+[9.870191] (-) TimerEvent: {}
+[9.971074] (-) TimerEvent: {}
+[10.071614] (-) TimerEvent: {}
+[10.172573] (-) TimerEvent: {}
+[10.273020] (-) TimerEvent: {}
+[10.373717] (-) TimerEvent: {}
+[10.474850] (-) TimerEvent: {}
+[10.575511] (-) TimerEvent: {}
+[10.675964] (-) TimerEvent: {}
+[10.776470] (-) TimerEvent: {}
+[10.877624] (-) TimerEvent: {}
+[10.978216] (-) TimerEvent: {}
+[11.078892] (-) TimerEvent: {}
+[11.179558] (-) TimerEvent: {}
+[11.280006] (-) TimerEvent: {}
+[11.380674] (-) TimerEvent: {}
+[11.481718] (-) TimerEvent: {}
+[11.582697] (-) TimerEvent: {}
+[11.683514] (-) TimerEvent: {}
+[11.784374] (-) TimerEvent: {}
+[11.838599] (exchangestation_detector) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libexchangestation_detector.so\x1b[0m\n'}
+[11.884887] (-) TimerEvent: {}
+[11.985319] (-) TimerEvent: {}
+[12.085871] (-) TimerEvent: {}
+[12.186859] (-) TimerEvent: {}
+[12.288270] (-) TimerEvent: {}
+[12.389334] (-) TimerEvent: {}
+[12.490251] (-) TimerEvent: {}
+[12.590953] (-) TimerEvent: {}
+[12.691430] (-) TimerEvent: {}
+[12.784202] (exchangestation_detector) StdoutLine: {'line': b'[100%] Built target exchangestation_detector\n'}
+[12.791970] (-) TimerEvent: {}
+[12.798734] (exchangestation_detector) CommandEnded: {'returncode': 0}
+[12.853949] (exchangestation_detector) JobProgress: {'identifier': 'exchangestation_detector', 'progress': 'install'}
+[12.866441] (exchangestation_detector) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/stardust/eng_ws/build/exchangestation_detector'], 'cwd': '/home/stardust/eng_ws/build/exchangestation_detector', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:'), ('USER', 'stardust'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('GIO_MODULE_DIR', '/home/stardust/snap/code/common/.cache/gio-modules'), ('XDG_SESSION_TYPE', 'wayland'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('GIT_ASKPASS', '/snap/code/153/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/stardust/eng_ws/install/msg_interfaces/lib:/home/stardust/eng_ws/install/msg_interface/lib:/home/stardust/eng_ws/install/hik_camera/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/stardust'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('OLDPWD', '/home/stardust'), ('TERM_PROGRAM_VERSION', '1.87.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/153/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('GTK_IM_MODULE_FILE', '/home/stardust/snap/code/common/.cache/immodules/immodules.cache'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/153/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/153/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '1414'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/stardust/eng_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'stardust'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'stardust'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/stardust-virtual-machine:@/tmp/.ICE-unix/1171,unix/stardust-virtual-machine:/tmp/.ICE-unix/1171'), ('GTK_EXE_PREFIX', '/snap/code/153/usr'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c73b7ba5_ea99_4d27_ba7d_53aefc494b20'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LOCPATH', '/snap/code/153/usr/lib/locale'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VW94J2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-baeb5fd1a8.sock'), ('GNOME_TERMINAL_SERVICE', ':1.122'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/stardust/snap/code/153/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/stardust/eng_ws/install/serial:/home/stardust/eng_ws/install/msg_interfaces:/home/stardust/eng_ws/install/msg_interface:/home/stardust/eng_ws/install/hik_camera:/opt/ros/iron'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'Unity'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/stardust/eng_ws/build/exchangestation_detector'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/home/stardust/snap/code/153/.local/share:/home/stardust/snap/code/153:/snap/code/153/usr/share:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/stardust/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/stardust/eng_ws/install/msg_interface/local/lib/python3.10/dist-packages:/opt/ros/iron/lib/python3.10/site-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/stardust/eng_ws/install/serial:/home/stardust/eng_ws/install/msg_interfaces:/home/stardust/eng_ws/install/msg_interface:/home/stardust/eng_ws/install/hik_camera:/opt/ros/iron'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib')]), 'shell': False}
+[12.876665] (exchangestation_detector) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.877278] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/include\n'}
+[12.877391] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/include/exchangestation_detector\n'}
+[12.877466] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/include/exchangestation_detector/exchangestation_detector.hpp\n'}
+[12.877937] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/include/exchangestation_detector/detector_node.hpp\n'}
+[12.878798] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/ament_index/resource_index/package_run_dependencies/exchangestation_detector\n'}
+[12.879323] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/ament_index/resource_index/parent_prefix_path/exchangestation_detector\n'}
+[12.880677] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/ament_prefix_path.sh\n'}
+[12.881137] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/ament_prefix_path.dsv\n'}
+[12.881527] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/path.sh\n'}
+[12.881891] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/path.dsv\n'}
+[12.882251] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/local_setup.bash\n'}
+[12.882627] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/local_setup.sh\n'}
+[12.883020] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/local_setup.zsh\n'}
+[12.883370] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/local_setup.dsv\n'}
+[12.883735] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.dsv\n'}
+[12.884334] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/ament_index/resource_index/packages/exchangestation_detector\n'}
+[12.885148] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/ament_index/resource_index/rclcpp_components/exchangestation_detector\n'}
+[12.885585] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[12.885964] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[12.886459] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/cmake/exchangestation_detectorConfig.cmake\n'}
+[12.886795] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/cmake/exchangestation_detectorConfig-version.cmake\n'}
+[12.887161] (exchangestation_detector) StdoutLine: {'line': b'-- Installing: /home/stardust/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.xml\n'}
+[12.890369] (exchangestation_detector) CommandEnded: {'returncode': 0}
+[12.892372] (-) TimerEvent: {}
+[12.992688] (-) TimerEvent: {}
+[13.061902] (exchangestation_detector) JobEnded: {'identifier': 'exchangestation_detector', 'rc': 0}
+[13.063350] (-) EventReactorShutdown: {}

@@ -1,0 +1,23 @@
+[0.015s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': /usr/bin/cmake /home/jlurobovision/eng_ws/src/serial -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/serial
+[0.043s] -- Found ament_cmake: 1.3.0 (/usr/share/ament_cmake/cmake)
+[0.320s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.520s] -- Found ament_cmake_auto: 1.3.0 (/usr/share/ament_cmake_auto/cmake)
+[0.692s] [31mCMake Error at CMakeLists.txt:19 (find_package):
+[0.692s]   By not providing "Findament_lint_auto.cmake" in CMAKE_MODULE_PATH this
+[0.692s]   project has asked CMake to find a package configuration file provided by
+[0.692s]   "ament_lint_auto", but CMake did not find one.
+[0.693s] 
+[0.693s]   Could not find a package configuration file provided by "ament_lint_auto"
+[0.693s]   with any of the following names:
+[0.693s] 
+[0.693s]     ament_lint_autoConfig.cmake
+[0.694s]     ament_lint_auto-config.cmake
+[0.694s] 
+[0.694s]   Add the installation prefix of "ament_lint_auto" to CMAKE_PREFIX_PATH or
+[0.694s]   set "ament_lint_auto_DIR" to a directory containing one of the above files.
+[0.694s]   If "ament_lint_auto" provides a separate development package or SDK, be
+[0.694s]   sure it has been installed.
+[0.695s] 
+[0.695s] [0m
+[0.695s] -- Configuring incomplete, errors occurred!
+[0.695s] See also "/home/jlurobovision/eng_ws/build/serial/CMakeFiles/CMakeOutput.log".

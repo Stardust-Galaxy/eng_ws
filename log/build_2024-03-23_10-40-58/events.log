@@ -1,0 +1,229 @@
+[0.000000] (-) TimerEvent: {}
+[0.001318] (-) JobUnselected: {'identifier': 'exchangestation_detector'}
+[0.001382] (-) JobUnselected: {'identifier': 'galaxy_camera'}
+[0.001551] (-) JobUnselected: {'identifier': 'hik_camera'}
+[0.001990] (-) JobUnselected: {'identifier': 'msg_interfaces'}
+[0.002046] (serial) JobQueued: {'identifier': 'serial', 'dependencies': OrderedDict([('msg_interfaces', '/home/jlurobovision/eng_ws/install/msg_interfaces')])}
+[0.002196] (serial) JobStarted: {'identifier': 'serial'}
+[0.016355] (serial) JobProgress: {'identifier': 'serial', 'progress': 'cmake'}
+[0.017163] (serial) JobProgress: {'identifier': 'serial', 'progress': 'build'}
+[0.018346] (serial) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jlurobovision/eng_ws/build/serial', '--', '-j12', '-l12'], 'cwd': '/home/jlurobovision/eng_ws/build/serial', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'jlurobovision'), ('LC_TIME', 'mn_MN'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jlurobovision'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.85.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'mn_MN'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1102'), ('SYSTEMD_EXEC_PID', '1253'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3747'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jlurobovision/eng_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'jlurobovision'), ('JOURNAL_STREAM', '8:28347'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', ':/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jlurobovision'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jlurobovision-10i703:@/tmp/.ICE-unix/1225,unix/jlurobovision-10i703:/tmp/.ICE-unix/1225'), ('INVOCATION_ID', 'ace4833df9bd451e97c55d3000a0b9e1'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'mn_MN'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'mn_MN'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.1PMUK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-0da1c1f86b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'mn_MN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'mn_MN'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'mn_MN'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/jlurobovision/eng_ws/build/serial'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'mn_MN'), ('LC_PAPER', 'mn_MN'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble')]), 'shell': False}
+[0.093790] (serial) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target serial\x1b[0m\n'}
+[0.094172] (serial) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target serial_node\x1b[0m\n'}
+[0.099586] (-) TimerEvent: {}
+[0.137076] (serial) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o\x1b[0m\n'}
+[0.137985] (serial) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/serial.dir/src/serial_node.cpp.o\x1b[0m\n'}
+[0.199932] (-) TimerEvent: {}
+[0.301293] (-) TimerEvent: {}
+[0.402828] (-) TimerEvent: {}
+[0.503503] (-) TimerEvent: {}
+[0.604915] (-) TimerEvent: {}
+[0.706158] (-) TimerEvent: {}
+[0.807840] (-) TimerEvent: {}
+[0.909528] (-) TimerEvent: {}
+[1.010563] (-) TimerEvent: {}
+[1.111134] (-) TimerEvent: {}
+[1.211714] (-) TimerEvent: {}
+[1.313168] (-) TimerEvent: {}
+[1.416002] (-) TimerEvent: {}
+[1.517521] (-) TimerEvent: {}
+[1.618893] (-) TimerEvent: {}
+[1.719331] (-) TimerEvent: {}
+[1.819694] (-) TimerEvent: {}
+[1.920140] (-) TimerEvent: {}
+[2.020495] (-) TimerEvent: {}
+[2.120912] (-) TimerEvent: {}
+[2.221298] (-) TimerEvent: {}
+[2.321625] (-) TimerEvent: {}
+[2.421912] (-) TimerEvent: {}
+[2.522277] (-) TimerEvent: {}
+[2.622586] (-) TimerEvent: {}
+[2.722867] (-) TimerEvent: {}
+[2.823265] (-) TimerEvent: {}
+[2.923641] (-) TimerEvent: {}
+[3.024135] (-) TimerEvent: {}
+[3.125466] (-) TimerEvent: {}
+[3.226011] (-) TimerEvent: {}
+[3.326623] (-) TimerEvent: {}
+[3.427600] (-) TimerEvent: {}
+[3.528138] (-) TimerEvent: {}
+[3.628700] (-) TimerEvent: {}
+[3.729812] (-) TimerEvent: {}
+[3.831014] (-) TimerEvent: {}
+[3.931984] (-) TimerEvent: {}
+[4.032910] (-) TimerEvent: {}
+[4.133452] (-) TimerEvent: {}
+[4.234133] (-) TimerEvent: {}
+[4.334500] (-) TimerEvent: {}
+[4.434857] (-) TimerEvent: {}
+[4.535225] (-) TimerEvent: {}
+[4.635552] (-) TimerEvent: {}
+[4.735849] (-) TimerEvent: {}
+[4.836168] (-) TimerEvent: {}
+[4.936483] (-) TimerEvent: {}
+[4.996384] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.996838] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:349:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.996923] (serial) StderrLine: {'line': b'  349 |       double* quaternion1 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion1\x1b[m\x1b[K);\n'}
+[4.996994] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.997061] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:357:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.997131] (serial) StderrLine: {'line': b'  357 |       double* quaternion2 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion2\x1b[m\x1b[K);\n'}
+[4.997211] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.997282] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:365:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.997349] (serial) StderrLine: {'line': b'  365 |       double* quaternion3 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion3\x1b[m\x1b[K);\n'}
+[4.997413] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.997477] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:373:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.997543] (serial) StderrLine: {'line': b'  373 |       double* quaternion4 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion4\x1b[m\x1b[K);\n'}
+[4.997607] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.997671] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:381:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.997760] (serial) StderrLine: {'line': b'  381 |       double* x = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.x\x1b[m\x1b[K);\n'}
+[4.997834] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.997903] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:389:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.997977] (serial) StderrLine: {'line': b'  389 |       double* y = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.y\x1b[m\x1b[K);\n'}
+[4.998048] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.998117] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:397:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.998197] (serial) StderrLine: {'line': b'  397 |       double* z = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.z\x1b[m\x1b[K);\n'}
+[4.998267] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.035736] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.036082] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:349:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.036163] (serial) StderrLine: {'line': b'  349 |       double* quaternion1 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion1\x1b[m\x1b[K);\n'}
+[5.036228] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.036287] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:357:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.036355] (serial) StderrLine: {'line': b'  357 |       double* quaternion2 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion2\x1b[m\x1b[K);\n'}
+[5.036413] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.036474] (-) TimerEvent: {}
+[5.036567] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:365:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.036647] (serial) StderrLine: {'line': b'  365 |       double* quaternion3 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion3\x1b[m\x1b[K);\n'}
+[5.036722] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.036783] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:373:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.036845] (serial) StderrLine: {'line': b'  373 |       double* quaternion4 = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.quaternion4\x1b[m\x1b[K);\n'}
+[5.036902] (serial) StderrLine: {'line': b'      |                                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.036959] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:381:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.037027] (serial) StderrLine: {'line': b'  381 |       double* x = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.x\x1b[m\x1b[K);\n'}
+[5.037087] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.037155] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:389:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.037237] (serial) StderrLine: {'line': b'  389 |       double* y = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.y\x1b[m\x1b[K);\n'}
+[5.037297] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.037355] (serial) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:397:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktaking address of packed member of \xe2\x80\x98\x1b[01m\x1b[KPacket\x1b[m\x1b[K\xe2\x80\x99 may result in an unaligned pointer value [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member\x07-Waddress-of-packed-member\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.037415] (serial) StderrLine: {'line': b'  397 |       double* z = reinterpret_cast<double*>(\x1b[01;35m\x1b[K&angle_data.z\x1b[m\x1b[K);\n'}
+[5.037478] (serial) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.136622] (-) TimerEvent: {}
+[5.236928] (-) TimerEvent: {}
+[5.337232] (-) TimerEvent: {}
+[5.437496] (-) TimerEvent: {}
+[5.537755] (-) TimerEvent: {}
+[5.638061] (-) TimerEvent: {}
+[5.738365] (-) TimerEvent: {}
+[5.838655] (-) TimerEvent: {}
+[5.939007] (-) TimerEvent: {}
+[6.039350] (-) TimerEvent: {}
+[6.139668] (-) TimerEvent: {}
+[6.240053] (-) TimerEvent: {}
+[6.340404] (-) TimerEvent: {}
+[6.440863] (-) TimerEvent: {}
+[6.541738] (-) TimerEvent: {}
+[6.642608] (-) TimerEvent: {}
+[6.742958] (-) TimerEvent: {}
+[6.843379] (-) TimerEvent: {}
+[6.943982] (-) TimerEvent: {}
+[7.044466] (-) TimerEvent: {}
+[7.144960] (-) TimerEvent: {}
+[7.245482] (-) TimerEvent: {}
+[7.346118] (-) TimerEvent: {}
+[7.446527] (-) TimerEvent: {}
+[7.546880] (-) TimerEvent: {}
+[7.647151] (-) TimerEvent: {}
+[7.747429] (-) TimerEvent: {}
+[7.847716] (-) TimerEvent: {}
+[7.947982] (-) TimerEvent: {}
+[8.048245] (-) TimerEvent: {}
+[8.148536] (-) TimerEvent: {}
+[8.248836] (-) TimerEvent: {}
+[8.349174] (-) TimerEvent: {}
+[8.449550] (-) TimerEvent: {}
+[8.549832] (-) TimerEvent: {}
+[8.650185] (-) TimerEvent: {}
+[8.750599] (-) TimerEvent: {}
+[8.850936] (-) TimerEvent: {}
+[8.951324] (-) TimerEvent: {}
+[9.051717] (-) TimerEvent: {}
+[9.176655] (-) TimerEvent: {}
+[9.277377] (-) TimerEvent: {}
+[9.377946] (-) TimerEvent: {}
+[9.478338] (-) TimerEvent: {}
+[9.578621] (-) TimerEvent: {}
+[9.678894] (-) TimerEvent: {}
+[9.779161] (-) TimerEvent: {}
+[9.879414] (-) TimerEvent: {}
+[9.979652] (-) TimerEvent: {}
+[10.079902] (-) TimerEvent: {}
+[10.180227] (-) TimerEvent: {}
+[10.280502] (-) TimerEvent: {}
+[10.380775] (-) TimerEvent: {}
+[10.481045] (-) TimerEvent: {}
+[10.581293] (-) TimerEvent: {}
+[10.681534] (-) TimerEvent: {}
+[10.781798] (-) TimerEvent: {}
+[10.882071] (-) TimerEvent: {}
+[10.982345] (-) TimerEvent: {}
+[11.082597] (-) TimerEvent: {}
+[11.182894] (-) TimerEvent: {}
+[11.283176] (-) TimerEvent: {}
+[11.383441] (-) TimerEvent: {}
+[11.483709] (-) TimerEvent: {}
+[11.583974] (-) TimerEvent: {}
+[11.684240] (-) TimerEvent: {}
+[11.784488] (-) TimerEvent: {}
+[11.884740] (-) TimerEvent: {}
+[11.985018] (-) TimerEvent: {}
+[12.085321] (-) TimerEvent: {}
+[12.185783] (-) TimerEvent: {}
+[12.286261] (-) TimerEvent: {}
+[12.386887] (-) TimerEvent: {}
+[12.487301] (-) TimerEvent: {}
+[12.587665] (-) TimerEvent: {}
+[12.688001] (-) TimerEvent: {}
+[12.788434] (-) TimerEvent: {}
+[12.888836] (-) TimerEvent: {}
+[12.989330] (-) TimerEvent: {}
+[13.089923] (-) TimerEvent: {}
+[13.191057] (-) TimerEvent: {}
+[13.292048] (-) TimerEvent: {}
+[13.393072] (-) TimerEvent: {}
+[13.448396] (serial) StdoutLine: {'line': b'[ 37%] \x1b[32m\x1b[1mLinking CXX shared library libserial.so\x1b[0m\n'}
+[13.467713] (serial) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable serial_node\x1b[0m\n'}
+[13.493619] (-) TimerEvent: {}
+[13.594344] (-) TimerEvent: {}
+[13.694864] (-) TimerEvent: {}
+[13.795561] (-) TimerEvent: {}
+[13.896921] (-) TimerEvent: {}
+[13.997899] (-) TimerEvent: {}
+[14.099112] (-) TimerEvent: {}
+[14.199597] (-) TimerEvent: {}
+[14.300279] (-) TimerEvent: {}
+[14.401716] (-) TimerEvent: {}
+[14.503020] (-) TimerEvent: {}
+[14.604342] (-) TimerEvent: {}
+[14.705888] (-) TimerEvent: {}
+[14.807190] (-) TimerEvent: {}
+[14.908356] (-) TimerEvent: {}
+[15.010061] (-) TimerEvent: {}
+[15.112638] (-) TimerEvent: {}
+[15.214491] (-) TimerEvent: {}
+[15.316215] (-) TimerEvent: {}
+[15.416826] (-) TimerEvent: {}
+[15.517220] (-) TimerEvent: {}
+[15.617532] (-) TimerEvent: {}
+[15.717851] (-) TimerEvent: {}
+[15.818287] (-) TimerEvent: {}
+[15.822849] (serial) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/serial_node.dir/src/serial.cpp.o: in function `serialport::SerialPort::openPort()':\n"}
+[15.823178] (serial) StderrLine: {'line': b"serial.cpp:(.text+0xf49): undefined reference to `serialport::SerialPort::listPorts()'\n"}
+[15.908589] (serial) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[15.914753] (serial) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:312\xef\xbc\x9aserial_node] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[15.915358] (serial) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165\xef\xbc\x9aCMakeFiles/serial_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[15.915752] (serial) StderrLine: {'line': b'gmake[1]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[15.918519] (-) TimerEvent: {}
+[15.947420] (serial) StdoutLine: {'line': b'[ 75%] Built target serial\n'}
+[15.948393] (serial) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[15.950192] (serial) CommandEnded: {'returncode': 2}
+[16.000653] (serial) JobEnded: {'identifier': 'serial', 'rc': 2}
+[16.002354] (-) EventReactorShutdown: {}

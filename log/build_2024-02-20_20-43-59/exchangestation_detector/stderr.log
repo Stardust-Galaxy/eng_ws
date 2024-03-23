@@ -1,0 +1,4 @@
+[31mCMake Error at CMakeLists.txt:12 (ament_auto_add_library):
+  Unknown CMake command "ament_auto_add_library".
+
+[0m

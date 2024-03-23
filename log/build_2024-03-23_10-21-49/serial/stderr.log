@@ -1,0 +1,80 @@
+In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:22:10:[m[K [01;31m[Kfatal error: [m[Kmsg_interfaces/msg/angle.hpp: 没有那个文件或目录
+   22 | #include [01;31m[K"msg_interfaces/msg/angle.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:104：CMakeFiles/serial_node.dir/src/serial_node.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:22:10:[m[K [01;31m[Kfatal error: [m[Kmsg_interfaces/msg/angle.hpp: 没有那个文件或目录
+   22 | #include [01;31m[K"msg_interfaces/msg/angle.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/serial.dir/build.make:104：CMakeFiles/serial.dir/src/serial_node.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In member function ‘[01m[Kstd::vector<serialport::Device> serialport::SerialPort::listPorts()[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:186:38:[m[K [01;31m[Kerror: [m[K‘[01m[KsymbolicToReal[m[K’ was not declared in this scope
+  186 |                     auto real_path = [01;31m[KsymbolicToReal[m[K(tty_dir_path);
+      |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:190:57:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  190 |                         info_path = getParent(getParent([01;31m[KgetParent[m[K(real_path)));
+      |                                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:190:47:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  190 |                         info_path = getParent([01;31m[KgetParent[m[K(getParent(real_path)));
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:190:37:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  190 |                         info_path = [01;31m[KgetParent[m[K(getParent(getParent(real_path)));
+      |                                     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:192:67:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  192 |                         info_path = getParent(getParent(getParent([01;31m[KgetParent[m[K(real_path))));
+      |                                                                   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:192:57:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  192 |                         info_path = getParent(getParent([01;31m[KgetParent[m[K(getParent(real_path))));
+      |                                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:192:47:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  192 |                         info_path = getParent([01;31m[KgetParent[m[K(getParent(getParent(real_path))));
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:192:37:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  192 |                         info_path = [01;31m[KgetParent[m[K(getParent(getParent(getParent(real_path))));
+      |                                     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In member function ‘[01m[Kserialport::Device serialport::SerialPort::getDeviceInfo(std::string)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:212:22:[m[K [01;31m[Kerror: [m[K‘[01m[KreadLines[m[K’ was not declared in this scope; did you mean ‘[01m[Kreadlink[m[K’?
+  212 |         auto texts = [01;31m[KreadLines[m[K(uevent_path);
+      |                      [01;31m[K^~~~~~~~~[m[K
+      |                      [32m[Kreadlink[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In member function ‘[01m[Kstd::vector<serialport::Device> serialport::SerialPort::listPorts()[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:186:38:[m[K [01;31m[Kerror: [m[K‘[01m[KsymbolicToReal[m[K’ was not declared in this scope
+  186 |                     auto real_path = [01;31m[KsymbolicToReal[m[K(tty_dir_path);
+      |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:190:57:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  190 |                         info_path = getParent(getParent([01;31m[KgetParent[m[K(real_path)));
+      |                                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:190:47:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  190 |                         info_path = getParent([01;31m[KgetParent[m[K(getParent(real_path)));
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:190:37:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  190 |                         info_path = [01;31m[KgetParent[m[K(getParent(getParent(real_path)));
+      |                                     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:192:67:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  192 |                         info_path = getParent(getParent(getParent([01;31m[KgetParent[m[K(real_path))));
+      |                                                                   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:192:57:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  192 |                         info_path = getParent(getParent([01;31m[KgetParent[m[K(getParent(real_path))));
+      |                                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:192:47:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  192 |                         info_path = getParent([01;31m[KgetParent[m[K(getParent(getParent(real_path))));
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:192:37:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+  192 |                         info_path = [01;31m[KgetParent[m[K(getParent(getParent(getParent(real_path))));
+      |                                     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In member function ‘[01m[Kserialport::Device serialport::SerialPort::getDeviceInfo(std::string)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:212:22:[m[K [01;31m[Kerror: [m[K‘[01m[KreadLines[m[K’ was not declared in this scope; did you mean ‘[01m[Kreadlink[m[K’?
+  212 |         auto texts = [01;31m[KreadLines[m[K(uevent_path);
+      |                      [01;31m[K^~~~~~~~~[m[K
+      |                      [32m[Kreadlink[m[K
+gmake[2]: *** [CMakeFiles/serial.dir/build.make:90：CMakeFiles/serial.dir/src/serial.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/serial.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:90：CMakeFiles/serial_node.dir/src/serial.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/serial_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -1,0 +1,28 @@
+[0.069s] Invoking command in '/home/stardust/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8
+[0.097s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.235s] -- Found ament_cmake_auto: 1.3.7 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.299s] [33mCMake Warning (dev) at /opt/ros/humble/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:64 (if):
+[0.299s]   Policy CMP0057 is not set: Support new IN_LIST if() operator.  Run "cmake
+[0.299s]   --help-policy CMP0057" for policy details.  Use the cmake_policy command to
+[0.299s]   set the policy and suppress this warning.
+[0.299s] 
+[0.299s]   IN_LIST will be interpreted as an operator when the policy is set to NEW.
+[0.299s]   Since the policy is not set the OLD behavior will be used.
+[0.299s] Call Stack (most recent call first):
+[0.299s]   CMakeLists.txt:25 (ament_auto_find_build_dependencies)
+[0.299s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.299s] [0m
+[0.299s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:64 (if):
+[0.299s]   if given arguments:
+[0.299s] 
+[0.300s]     "_dep" "IN_LIST" "_ARG_REQUIRED"
+[0.300s] 
+[0.300s]   Unknown arguments specified
+[0.300s] Call Stack (most recent call first):
+[0.300s]   CMakeLists.txt:25 (ament_auto_find_build_dependencies)
+[0.300s] 
+[0.300s] [0m
+[0.300s] -- Configuring incomplete, errors occurred!
+[0.300s] See also "/home/stardust/eng_ws/build/exchangestation_detector/CMakeFiles/CMakeOutput.log".
+[0.302s] gmake: *** [Makefile:294：cmake_check_build_system] 错误 1
+[0.305s] Invoked command in '/home/stardust/eng_ws/build/exchangestation_detector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8

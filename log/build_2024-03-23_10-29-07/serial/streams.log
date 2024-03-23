@@ -1,0 +1,128 @@
+[0.014s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[0.071s] [35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[0.071s] [35m[1mConsolidate compiler generated dependencies of target serial[0m
+[0.094s] [ 25%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial_node.cpp.o[0m
+[0.095s] [ 25%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o[0m
+[4.508s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.508s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_interfaces::msg::AngleMsg::SharedPTR[m[K’ has not been declared
+[4.508s]    39 |         bool sendData([01;31m[KAngleMsg[m[K::SharedPTR msg);
+[4.508s]       |                       [01;31m[K^~~~~~~~[m[K
+[4.508s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:41:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kuchar[m[K’ has not been declared
+[4.508s]    41 |         void transformData(Packet angle_msg,[01;31m[Kuchar[m[K* data);
+[4.508s]       |                                             [01;31m[K^~~~~[m[K
+[4.527s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.528s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_interfaces::msg::AngleMsg::SharedPTR[m[K’ has not been declared
+[4.528s]    39 |         bool sendData([01;31m[KAngleMsg[m[K::SharedPTR msg);
+[4.528s]       |                       [01;31m[K^~~~~~~~[m[K
+[4.528s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:41:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kuchar[m[K’ has not been declared
+[4.528s]    41 |         void transformData(Packet angle_msg,[01;31m[Kuchar[m[K* data);
+[4.528s]       |                                             [01;31m[K^~~~~[m[K
+[4.631s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::receiveData()[m[K’:
+[4.632s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:172:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kdata_transform_[m[K’ was not declared in this scope
+[4.632s]   172 |                     [01;31m[Kdata_transform_[m[K->getQuatData(&serial_port_->serial_data_.rdata[2], quat);
+[4.632s]       |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.651s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:194:21:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialMsg[m[K’ was not declared in this scope
+[4.652s]   194 |                     [01;31m[KSerialMsg[m[K serial_msg;
+[4.652s]       |                     [01;31m[K^~~~~~~~~[m[K
+[4.668s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:196:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_msg[m[K’ was not declared in this scope
+[4.668s]   196 |                     [01;31m[Kserial_msg[m[K.header.frame_id = "serial";
+[4.668s]       |                     [01;31m[K^~~~~~~~~~[m[K
+[4.669s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::receiveData()[m[K’:
+[4.669s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:172:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kdata_transform_[m[K’ was not declared in this scope
+[4.669s]   172 |                     [01;31m[Kdata_transform_[m[K->getQuatData(&serial_port_->serial_data_.rdata[2], quat);
+[4.669s]       |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.681s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:248:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_msg_pub_[m[K’ was not declared in this scope
+[4.682s]   248 |                     [01;31m[Kserial_msg_pub_[m[K->publish(std::move(serial_msg));
+[4.682s]       |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.682s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:194:21:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialMsg[m[K’ was not declared in this scope
+[4.682s]   194 |                     [01;31m[KSerialMsg[m[K serial_msg;
+[4.682s]       |                     [01;31m[K^~~~~~~~~[m[K
+[4.683s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[4.683s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:262:10:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool serialport::SerialPortNode::sendData(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)[m[K’
+[4.683s]   262 |     bool [01;31m[KSerialPortNode[m[K::sendData(AngleMsg::SharedPtr angle_info)
+[4.683s]       |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.683s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.683s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:14:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kbool serialport::SerialPortNode::sendData(int)[m[K’
+[4.683s]    39 |         bool [01;36m[KsendData[m[K(AngleMsg::SharedPTR msg);
+[4.683s]       |              [01;36m[K^~~~~~~~[m[K
+[4.683s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:29:11:[m[K [01;36m[Knote: [m[K‘[01m[Kclass serialport::SerialPortNode[m[K’ defined here
+[4.683s]    29 |     class [01;36m[KSerialPortNode[m[K : public rclcpp::Node
+[4.683s]       |           [01;36m[K^~~~~~~~~~~~~~[m[K
+[4.683s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:262:35:[m[K [01;31m[Kerror: [m[K‘[01m[Ktypedef using Angle = struct msg_interfaces::msg::Angle_<std::allocator<void> > serialport::SerialPortNode::AngleMsg[m[K’ is private within this context
+[4.683s]   262 |     bool SerialPortNode::sendData([01;31m[KAngleMsg[m[K::SharedPtr angle_info)
+[4.683s]       |                                   [01;31m[K^~~~~~~~[m[K
+[4.683s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.683s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:31:44:[m[K [01;36m[Knote: [m[Kdeclared private here
+[4.684s]    31 |         typedef msg_interfaces::msg::Angle [01;36m[KAngleMsg[m[K;
+[4.684s]       |                                            [01;36m[K^~~~~~~~[m[K
+[4.684s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:336:10:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)[m[K’
+[4.684s]   336 |     void [01;31m[KSerialPortNode[m[K::transformData(Packet angle_data, u_char* Tdata)
+[4.684s]       |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.684s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.684s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:41:14:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, int*)[m[K’
+[4.684s]    41 |         void [01;36m[KtransformData[m[K(Packet angle_msg,uchar* data);
+[4.684s]       |              [01;36m[K^~~~~~~~~~~~~[m[K
+[4.684s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:29:11:[m[K [01;36m[Knote: [m[K‘[01m[Kclass serialport::SerialPortNode[m[K’ defined here
+[4.684s]    29 |     class [01;36m[KSerialPortNode[m[K : public rclcpp::Node
+[4.684s]       |           [01;36m[K^~~~~~~~~~~~~~[m[K
+[4.685s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::angleMsgCallback(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.685s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:453:22:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<msg_interfaces::msg::Angle_<std::allocator<void> > >[m[K’} to ‘[01m[Kint[m[K’
+[4.685s]   453 |         if(!sendData([01;31m[Kmsg[m[K))
+[4.685s]       |                      [01;31m[K^~~[m[K
+[4.685s]       |                      [01;31m[K|[m[K
+[4.685s]       |                      [01;31m[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr {aka std::shared_ptr<msg_interfaces::msg::Angle_<std::allocator<void> > >}[m[K
+[4.685s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.685s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:43:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kbool serialport::SerialPortNode::sendData(int)[m[K’
+[4.685s]    39 |         bool sendData([01;36m[KAngleMsg::SharedPTR msg[m[K);
+[4.686s]       |                       [01;36m[K~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[4.689s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:196:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_msg[m[K’ was not declared in this scope
+[4.690s]   196 |                     [01;31m[Kserial_msg[m[K.header.frame_id = "serial";
+[4.690s]       |                     [01;31m[K^~~~~~~~~~[m[K
+[4.700s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:248:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kserial_msg_pub_[m[K’ was not declared in this scope
+[4.700s]   248 |                     [01;31m[Kserial_msg_pub_[m[K->publish(std::move(serial_msg));
+[4.700s]       |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.701s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[4.701s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:262:10:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool serialport::SerialPortNode::sendData(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)[m[K’
+[4.701s]   262 |     bool [01;31m[KSerialPortNode[m[K::sendData(AngleMsg::SharedPtr angle_info)
+[4.701s]       |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.701s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.702s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:14:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kbool serialport::SerialPortNode::sendData(int)[m[K’
+[4.702s]    39 |         bool [01;36m[KsendData[m[K(AngleMsg::SharedPTR msg);
+[4.702s]       |              [01;36m[K^~~~~~~~[m[K
+[4.702s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:29:11:[m[K [01;36m[Knote: [m[K‘[01m[Kclass serialport::SerialPortNode[m[K’ defined here
+[4.702s]    29 |     class [01;36m[KSerialPortNode[m[K : public rclcpp::Node
+[4.702s]       |           [01;36m[K^~~~~~~~~~~~~~[m[K
+[4.702s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:262:35:[m[K [01;31m[Kerror: [m[K‘[01m[Ktypedef using Angle = struct msg_interfaces::msg::Angle_<std::allocator<void> > serialport::SerialPortNode::AngleMsg[m[K’ is private within this context
+[4.702s]   262 |     bool SerialPortNode::sendData([01;31m[KAngleMsg[m[K::SharedPtr angle_info)
+[4.702s]       |                                   [01;31m[K^~~~~~~~[m[K
+[4.702s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.702s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:31:44:[m[K [01;36m[Knote: [m[Kdeclared private here
+[4.702s]    31 |         typedef msg_interfaces::msg::Angle [01;36m[KAngleMsg[m[K;
+[4.702s]       |                                            [01;36m[K^~~~~~~~[m[K
+[4.702s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:336:10:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, u_char*)[m[K’
+[4.702s]   336 |     void [01;31m[KSerialPortNode[m[K::transformData(Packet angle_data, u_char* Tdata)
+[4.702s]       |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.702s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.703s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:41:14:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid serialport::SerialPortNode::transformData(Packet, int*)[m[K’
+[4.703s]    41 |         void [01;36m[KtransformData[m[K(Packet angle_msg,uchar* data);
+[4.703s]       |              [01;36m[K^~~~~~~~~~~~~[m[K
+[4.703s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:29:11:[m[K [01;36m[Knote: [m[K‘[01m[Kclass serialport::SerialPortNode[m[K’ defined here
+[4.703s]    29 |     class [01;36m[KSerialPortNode[m[K : public rclcpp::Node
+[4.703s]       |           [01;36m[K^~~~~~~~~~~~~~[m[K
+[4.704s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kvoid serialport::SerialPortNode::angleMsgCallback(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.704s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:453:22:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<msg_interfaces::msg::Angle_<std::allocator<void> > >[m[K’} to ‘[01m[Kint[m[K’
+[4.704s]   453 |         if(!sendData([01;31m[Kmsg[m[K))
+[4.704s]       |                      [01;31m[K^~~[m[K
+[4.704s]       |                      [01;31m[K|[m[K
+[4.704s]       |                      [01;31m[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr {aka std::shared_ptr<msg_interfaces::msg::Angle_<std::allocator<void> > >}[m[K
+[4.704s] In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[4.704s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:39:43:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kbool serialport::SerialPortNode::sendData(int)[m[K’
+[4.704s]    39 |         bool sendData([01;36m[KAngleMsg::SharedPTR msg[m[K);
+[4.704s]       |                       [01;36m[K~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[8.326s] gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:104：CMakeFiles/serial_node.dir/src/serial_node.cpp.o] 错误 1
+[8.326s] gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/serial_node.dir/all] 错误 2
+[8.326s] gmake[1]: *** 正在等待未完成的任务....
+[8.433s] gmake[2]: *** [CMakeFiles/serial.dir/build.make:104：CMakeFiles/serial.dir/src/serial_node.cpp.o] 错误 1
+[8.433s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/serial.dir/all] 错误 2
+[8.433s] gmake: *** [Makefile:146：all] 错误 2
+[8.435s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '2': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12

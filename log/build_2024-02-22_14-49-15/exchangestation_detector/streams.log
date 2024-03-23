@@ -1,0 +1,64 @@
+[0.072s] Invoking command in '/home/stardust/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/stardust/eng_ws/src/exchangestation_detector -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/exchangestation_detector
+[0.277s] -- The C compiler identification is GNU 11.4.0
+[0.377s] -- The CXX compiler identification is GNU 11.4.0
+[0.389s] -- Detecting C compiler ABI info
+[0.478s] -- Detecting C compiler ABI info - done
+[0.485s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.485s] -- Detecting C compile features
+[0.486s] -- Detecting C compile features - done
+[0.490s] -- Detecting CXX compiler ABI info
+[0.586s] -- Detecting CXX compiler ABI info - done
+[0.592s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.592s] -- Detecting CXX compile features
+[0.593s] -- Detecting CXX compile features - done
+[0.604s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.784s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.895s] -- Found OpenCV: /usr/local (found version "4.9.0") 
+[0.897s] -- Found ament_cmake_auto: 1.3.7 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.901s] -- Found image_transport: 3.1.8 (/opt/ros/humble/share/image_transport/cmake)
+[0.966s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.973s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.983s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.000s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.022s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.099s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.102s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.230s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.265s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.315s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.327s] -- Looking for pthread.h
+[1.412s] -- Looking for pthread.h - found
+[1.412s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.497s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.498s] -- Found Threads: TRUE  
+[1.963s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.988s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.990s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.990s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/stardust/eng_ws/src/exchangestation_detector/include>
+[1.990s] -- Configured cppcheck exclude dirs and/or files: 
+[1.991s] -- Added test 'lint_cmake' to check CMake code style
+[1.993s] -- Added test 'uncrustify' to check C / C++ code style
+[1.993s] -- Configured uncrustify additional arguments: 
+[1.994s] -- Added test 'xmllint' to check XML markup files
+[1.997s] -- Configuring done
+[2.007s] -- Generating done
+[2.009s] -- Build files have been written to: /home/stardust/eng_ws/build/exchangestation_detector
+[2.021s] Invoked command in '/home/stardust/eng_ws/build/exchangestation_detector' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/stardust/eng_ws/src/exchangestation_detector -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/exchangestation_detector
+[2.023s] Invoking command in '/home/stardust/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8
+[2.088s] [ 66%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o[0m
+[2.088s] [ 66%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o[0m
+[2.097s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kimage_transport/image_transport.hpp: 没有那个文件或目录
+[2.097s]     2 | #include [01;31m[K<image_transport/image_transport.hpp>[m[K
+[2.097s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.097s] compilation terminated.
+[2.098s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:90：CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o] 错误 1
+[2.098s] gmake[2]: *** 正在等待未完成的任务....
+[2.187s] In file included from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:1[m[K:
+[2.187s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/include/exchangestation_detector/exchangestation_detector.hpp:16:10:[m[K [01;31m[Kfatal error: [m[Kserial/packet.hpp: 没有那个文件或目录
+[2.187s]    16 | #include [01;31m[K"serial/packet.hpp"[m[K
+[2.187s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.187s] compilation terminated.
+[2.190s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:76：CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o] 错误 1
+[2.190s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/exchangestation_detector.dir/all] 错误 2
+[2.190s] gmake: *** [Makefile:146：all] 错误 2
+[2.193s] Invoked command in '/home/stardust/eng_ws/build/exchangestation_detector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8

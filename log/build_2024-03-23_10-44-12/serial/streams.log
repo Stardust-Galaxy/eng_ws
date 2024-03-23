@@ -1,0 +1,72 @@
+[0.013s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[0.072s] [35m[1mConsolidate compiler generated dependencies of target serial[0m
+[0.073s] [35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[0.093s] [ 12%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial.cpp.o[0m
+[0.098s] [ 25%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial.cpp.o[0m
+[3.756s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In member function ‘[01m[Kstd::vector<serialport::Device> serialport::SerialPort::listPorts()[m[K’:
+[3.756s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:187:38:[m[K [01;31m[Kerror: [m[K‘[01m[KsymbolicToReal[m[K’ was not declared in this scope
+[3.756s]   187 |                     auto real_path = [01;31m[KsymbolicToReal[m[K(tty_dir_path);
+[3.756s]       |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.765s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:191:57:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.765s]   191 |                         info_path = getParent(getParent([01;31m[KgetParent[m[K(real_path)));
+[3.765s]       |                                                         [01;31m[K^~~~~~~~~[m[K
+[3.772s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:191:47:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.772s]   191 |                         info_path = getParent([01;31m[KgetParent[m[K(getParent(real_path)));
+[3.773s]       |                                               [01;31m[K^~~~~~~~~[m[K
+[3.780s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:191:37:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.780s]   191 |                         info_path = [01;31m[KgetParent[m[K(getParent(getParent(real_path)));
+[3.780s]       |                                     [01;31m[K^~~~~~~~~[m[K
+[3.787s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:193:67:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.787s]   193 |                         info_path = getParent(getParent(getParent([01;31m[KgetParent[m[K(real_path))));
+[3.787s]       |                                                                   [01;31m[K^~~~~~~~~[m[K
+[3.794s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:193:57:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.794s]   193 |                         info_path = getParent(getParent([01;31m[KgetParent[m[K(getParent(real_path))));
+[3.794s]       |                                                         [01;31m[K^~~~~~~~~[m[K
+[3.795s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In member function ‘[01m[Kstd::vector<serialport::Device> serialport::SerialPort::listPorts()[m[K’:
+[3.795s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:187:38:[m[K [01;31m[Kerror: [m[K‘[01m[KsymbolicToReal[m[K’ was not declared in this scope
+[3.795s]   187 |                     auto real_path = [01;31m[KsymbolicToReal[m[K(tty_dir_path);
+[3.795s]       |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.801s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:193:47:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.801s]   193 |                         info_path = getParent([01;31m[KgetParent[m[K(getParent(getParent(real_path))));
+[3.801s]       |                                               [01;31m[K^~~~~~~~~[m[K
+[3.802s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:191:57:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.802s]   191 |                         info_path = getParent(getParent([01;31m[KgetParent[m[K(real_path)));
+[3.802s]       |                                                         [01;31m[K^~~~~~~~~[m[K
+[3.807s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:193:37:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.807s]   193 |                         info_path = [01;31m[KgetParent[m[K(getParent(getParent(getParent(real_path))));
+[3.807s]       |                                     [01;31m[K^~~~~~~~~[m[K
+[3.808s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:191:47:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.808s]   191 |                         info_path = getParent([01;31m[KgetParent[m[K(getParent(real_path)));
+[3.808s]       |                                               [01;31m[K^~~~~~~~~[m[K
+[3.815s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In member function ‘[01m[Kserialport::Device serialport::SerialPort::getDeviceInfo(std::string)[m[K’:
+[3.815s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:215:22:[m[K [01;31m[Kerror: [m[K‘[01m[KreadLines[m[K’ was not declared in this scope; did you mean ‘[01m[Kreadlink[m[K’?
+[3.816s]   215 |         auto texts = [01;31m[KreadLines[m[K(uevent_path);
+[3.816s]       |                      [01;31m[K^~~~~~~~~[m[K
+[3.816s]       |                      [32m[Kreadlink[m[K
+[3.816s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:191:37:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.816s]   191 |                         info_path = [01;31m[KgetParent[m[K(getParent(getParent(real_path)));
+[3.816s]       |                                     [01;31m[K^~~~~~~~~[m[K
+[3.822s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:193:67:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.822s]   193 |                         info_path = getParent(getParent(getParent([01;31m[KgetParent[m[K(real_path))));
+[3.822s]       |                                                                   [01;31m[K^~~~~~~~~[m[K
+[3.831s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:193:57:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.831s]   193 |                         info_path = getParent(getParent([01;31m[KgetParent[m[K(getParent(real_path))));
+[3.831s]       |                                                         [01;31m[K^~~~~~~~~[m[K
+[3.840s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:193:47:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.840s]   193 |                         info_path = getParent([01;31m[KgetParent[m[K(getParent(getParent(real_path))));
+[3.841s]       |                                               [01;31m[K^~~~~~~~~[m[K
+[3.856s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:193:37:[m[K [01;31m[Kerror: [m[K‘[01m[KgetParent[m[K’ was not declared in this scope
+[3.856s]   193 |                         info_path = [01;31m[KgetParent[m[K(getParent(getParent(getParent(real_path))));
+[3.856s]       |                                     [01;31m[K^~~~~~~~~[m[K
+[3.866s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In member function ‘[01m[Kserialport::Device serialport::SerialPort::getDeviceInfo(std::string)[m[K’:
+[3.866s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:215:22:[m[K [01;31m[Kerror: [m[K‘[01m[KreadLines[m[K’ was not declared in this scope; did you mean ‘[01m[Kreadlink[m[K’?
+[3.866s]   215 |         auto texts = [01;31m[KreadLines[m[K(uevent_path);
+[3.866s]       |                      [01;31m[K^~~~~~~~~[m[K
+[3.866s]       |                      [32m[Kreadlink[m[K
+[4.390s] gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:90：CMakeFiles/serial_node.dir/src/serial.cpp.o] 错误 1
+[4.390s] gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/serial_node.dir/all] 错误 2
+[4.390s] gmake[1]: *** 正在等待未完成的任务....
+[4.452s] gmake[2]: *** [CMakeFiles/serial.dir/build.make:90：CMakeFiles/serial.dir/src/serial.cpp.o] 错误 1
+[4.452s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/serial.dir/all] 错误 2
+[4.453s] gmake: *** [Makefile:146：all] 错误 2
+[4.456s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '2': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12

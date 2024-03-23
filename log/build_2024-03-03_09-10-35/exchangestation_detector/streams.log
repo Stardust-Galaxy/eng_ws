@@ -1,0 +1,153 @@
+[0.057s] Invoking command in '/home/stardust/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8
+[0.206s] [35m[1mConsolidate compiler generated dependencies of target exchangestation_detector[0m
+[0.238s] [ 33%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o[0m
+[1.986s] In file included from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:14[m[K:
+[1.986s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/include/exchangestation_detector/detector_node.hpp:15:59:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+[1.987s]    15 | class exchangestation_detector_node : public rclcpp::Node [01;31m[K{[m[K
+[1.987s]       |                                                           [01;31m[K^[m[K
+[1.987s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/include/exchangestation_detector/detector_node.hpp:17:49:[m[K [01;31m[Kerror: [m[K‘[01m[KNodeOptions[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type
+[1.987s]    17 |     exchangestation_detector_node(const rclcpp::[01;31m[KNodeOptions[m[K & options);
+[1.987s]       |                                                 [01;31m[K^~~~~~~~~~~[m[K
+[2.081s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:19:76:[m[K [01;31m[Kerror: [m[K‘[01m[KNodeOptions[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a type
+[2.081s]    19 | exchangestation_detector_node::exchangestation_detector_node(const rclcpp::[01;31m[KNodeOptions[m[K & options) :Node("exchangestation_detector", options) {
+[2.081s]       |                                                                            [01;31m[K^~~~~~~~~~~[m[K
+[2.081s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:[m[K In constructor ‘[01m[Kexchangestation_detector_node::exchangestation_detector_node(const int&)[m[K’:
+[2.081s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:19:100:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kexchangestation_detector_node[m[K’ does not have any field named ‘[01m[KNode[m[K’
+[2.081s]    19 | exchangestation_detector_node::exchangestation_detector_node(const rclcpp::NodeOptions & options) :[01;31m[KNode[m[K("exchangestation_detector", options) {
+[2.081s]       |                                                                                                    [01;31m[K^~~~[m[K
+[2.082s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process_base.hpp:27[m[K,
+[2.082s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/ros_message_intra_process_buffer.hpp:25[m[K,
+[2.082s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/intra_process_manager.hpp:31[m[K,
+[2.082s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:35[m[K,
+[2.082s]                  from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/include/exchangestation_detector/detector_node.hpp:4[m[K,
+[2.082s]                  from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:14[m[K:
+[2.083s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:21:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[2.083s]    21 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Starting Exchange Station Recognition Node");
+[2.083s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[2.083s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:21:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[2.083s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:21:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.083s]    21 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Starting Exchange Station Recognition Node");
+[2.083s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.083s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:21:5:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.084s]    21 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Starting Exchange Station Recognition Node");
+[2.084s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.084s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:21:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.084s]    21 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Starting Exchange Station Recognition Node");
+[2.084s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.084s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:21:5:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.084s]    21 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Starting Exchange Station Recognition Node");
+[2.084s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.084s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:21:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.084s]    21 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Starting Exchange Station Recognition Node");
+[2.084s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.084s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.084s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process_base.hpp:27[m[K,
+[2.084s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/ros_message_intra_process_buffer.hpp:25[m[K,
+[2.084s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/intra_process_manager.hpp:31[m[K,
+[2.084s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:35[m[K,
+[2.084s]                  from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/include/exchangestation_detector/detector_node.hpp:4[m[K,
+[2.084s]                  from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:14[m[K:
+[2.084s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:21:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[2.085s]    21 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Starting Exchange Station Recognition Node");
+[2.085s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[2.085s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:21:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[2.085s]    21 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Starting Exchange Station Recognition Node");
+[2.085s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[2.085s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:25:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kcreate_publisher[m[K’
+[2.085s]    25 |     angle_pub = this->[01;31m[Kcreate_publisher[m[K<msg_interfaces::msg::Angle>("angle", rclcpp::SensorDataQoS());
+[2.085s]       |                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.085s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:25:66:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[2.085s]    25 |     angle_pub = this->create_publisher<msg_interfaces::msg::Angle[01;31m[K>[m[K("angle", rclcpp::SensorDataQoS());
+[2.085s]       |                                                                  [01;31m[K^[m[K
+[2.085s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:25:68:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[2.085s]    25 |     angle_pub = this->create_publisher<msg_interfaces::msg::Angle>([01;35m[K"angle"[m[K, rclcpp::SensorDataQoS());
+[2.085s]       |                                                                    [01;35m[K^~~~~~~[m[K
+[2.085s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:27:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kcreate_subscription[m[K’
+[2.085s]    27 |     camera_info_sub = this->[01;31m[Kcreate_subscription[m[K<sensor_msgs::msg::CameraInfo>("camera_info", 10, [this](const sensor_msgs::msg::CameraInfo::SharedPtr msg) {
+[2.085s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.085s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:27:77:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[2.085s]    27 |     camera_info_sub = this->create_subscription<sensor_msgs::msg::CameraInfo[01;31m[K>[m[K("camera_info", 10, [this](const sensor_msgs::msg::CameraInfo::SharedPtr msg) {
+[2.085s]       |                                                                             [01;31m[K^[m[K
+[2.086s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:27:79:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[2.086s]    27 |     camera_info_sub = this->create_subscription<sensor_msgs::msg::CameraInfo>([01;35m[K"camera_info"[m[K, 10, [this](const sensor_msgs::msg::CameraInfo::SharedPtr msg) {
+[2.086s]       |                                                                               [01;35m[K^~~~~~~~~~~~~[m[K
+[2.086s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:30:5:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[2.086s]    30 |     [01;35m[K}[m[K);
+[2.086s]       |     [01;35m[K^[m[K
+[2.086s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:32:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kcreate_subscription[m[K’
+[2.086s]    32 |     image_sub = this->[01;31m[Kcreate_subscription[m[K<sensor_msgs::msg::Image>("/image_raw", rclcpp::SensorDataQoS(),
+[2.086s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.086s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:32:66:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[2.086s]    32 |     image_sub = this->create_subscription<sensor_msgs::msg::Image[01;31m[K>[m[K("/image_raw", rclcpp::SensorDataQoS(),
+[2.086s]       |                                                                  [01;31m[K^[m[K
+[2.086s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:32:68:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[2.086s]    32 |     image_sub = this->create_subscription<sensor_msgs::msg::Image>([01;35m[K"/image_raw"[m[K, rclcpp::SensorDataQoS(),
+[2.086s]       |                                                                    [01;35m[K^~~~~~~~~~~~[m[K
+[2.256s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process_base.hpp:27[m[K,
+[2.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/ros_message_intra_process_buffer.hpp:25[m[K,
+[2.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/intra_process_manager.hpp:31[m[K,
+[2.256s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:35[m[K,
+[2.256s]                  from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/include/exchangestation_detector/detector_node.hpp:4[m[K,
+[2.256s]                  from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:14[m[K:
+[2.256s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:[m[K In destructor ‘[01m[Kexchangestation_detector_node::~exchangestation_detector_node()[m[K’:
+[2.256s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:37:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[2.256s]    37 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Shutting down Exchange Station Recognition Node");
+[2.257s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[2.257s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:37:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[2.257s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:37:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.257s]    37 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Shutting down Exchange Station Recognition Node");
+[2.257s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.257s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.257s]    37 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Shutting down Exchange Station Recognition Node");
+[2.257s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.257s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:37:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.257s]    37 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Shutting down Exchange Station Recognition Node");
+[2.257s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.257s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.257s]    37 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Shutting down Exchange Station Recognition Node");
+[2.257s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.257s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:37:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.257s]    37 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Shutting down Exchange Station Recognition Node");
+[2.258s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[2.258s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.258s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/subscription_intra_process_base.hpp:27[m[K,
+[2.258s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/ros_message_intra_process_buffer.hpp:25[m[K,
+[2.258s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/experimental/intra_process_manager.hpp:31[m[K,
+[2.258s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:35[m[K,
+[2.258s]                  from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/include/exchangestation_detector/detector_node.hpp:4[m[K,
+[2.258s]                  from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:14[m[K:
+[2.258s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:37:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[2.258s]    37 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Shutting down Exchange Station Recognition Node");
+[2.258s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[2.258s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:37:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[2.258s]    37 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Shutting down Exchange Station Recognition Node");
+[2.258s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[2.258s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:[m[K In member function ‘[01m[Kstd::unique_ptr<ExchangeStationDetector> exchangestation_detector_node::initDetector()[m[K’:
+[2.258s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:41:26:[m[K [01;31m[Kerror: [m[K‘[01m[KParameterDescriptor[m[K’ is not a member of ‘[01m[Krcl_interfaces::msg[m[K’
+[2.258s]    41 |     rcl_interfaces::msg::[01;31m[KParameterDescriptor[m[K descriptor;
+[2.258s]       |                          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.264s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:42:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdescriptor[m[K’ was not declared in this scope
+[2.264s]    42 |     [01;31m[Kdescriptor[m[K.integer_range.resize(1);
+[2.265s]       |     [01;31m[K^~~~~~~~~~[m[K
+[2.265s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:46:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kdeclare_parameter[m[K’
+[2.265s]    46 |     this->[01;31m[Kdeclare_parameter[m[K("red_threshold", 150, descriptor);
+[2.265s]       |           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.265s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:47:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kdeclare_parameter[m[K’
+[2.265s]    47 |     this->[01;31m[Kdeclare_parameter[m[K("blue_threshold", 80, descriptor);
+[2.265s]       |           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.265s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:52:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kdeclare_parameter[m[K’
+[2.265s]    52 |     this->[01;31m[Kdeclare_parameter[m[K("detect_color", 0, descriptor);
+[2.265s]       |           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[2.265s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:53:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_parameter[m[K’
+[2.265s]    53 |     auto detectColor = this->[01;31m[Kget_parameter[m[K("detect_color").as_int();
+[2.265s]       |                              [01;31m[K^~~~~~~~~~~~~[m[K
+[2.265s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:54:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_parameter[m[K’
+[2.266s]    54 |     int redThreshold = this->[01;31m[Kget_parameter[m[K("red_threshold").as_int();
+[2.266s]       |                              [01;31m[K^~~~~~~~~~~~~[m[K
+[2.266s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:55:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass exchangestation_detector_node[m[K’ has no member named ‘[01m[Kget_parameter[m[K’
+[2.266s]    55 |     int blueThreshold = this->[01;31m[Kget_parameter[m[K("blue_threshold").as_int();
+[2.266s]       |                               [01;31m[K^~~~~~~~~~~~~[m[K
+[2.640s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:90：CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o] 错误 1
+[2.641s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/exchangestation_detector.dir/all] 错误 2
+[2.641s] gmake: *** [Makefile:146：all] 错误 2
+[2.644s] Invoked command in '/home/stardust/eng_ws/build/exchangestation_detector' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8

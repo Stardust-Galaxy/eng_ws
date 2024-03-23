@@ -1,0 +1,6 @@
+[0.018s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[0.029s] [0mCMake Error: The current CMakeCache.txt directory /home/jlurobovision/eng_ws/build/serial/CMakeCache.txt is different than the directory /home/stardust/eng_ws/build/serial where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.045s] [0mCMake Error: The source directory "/home/stardust/eng_ws/src/serial" does not exist.
+[0.045s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.047s] gmake: *** [Makefile:226：cmake_check_build_system] 错误 1
+[0.057s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '2': /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12

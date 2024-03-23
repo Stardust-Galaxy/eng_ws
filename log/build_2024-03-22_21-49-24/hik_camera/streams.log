@@ -1,0 +1,11 @@
+[0.019s] Invoking command in '/home/jlurobovision/eng_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/hik_camera -- -j12 -l12
+[0.100s] [ 25%] [32mBuilding CXX object CMakeFiles/hik_camera.dir/src/hik_camera_node.cpp.o[0m
+[0.108s] [ 75%] Built target hik_camera_node
+[0.124s] [01m[K/home/jlurobovision/eng_ws/src/hik_camera/src/hik_camera_node.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kcamera_info_manager/camera_info_manager.hpp: 没有那个文件或目录
+[0.124s]     3 | #include [01;31m[K<camera_info_manager/camera_info_manager.hpp>[m[K
+[0.125s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.125s] compilation terminated.
+[0.126s] gmake[2]: *** [CMakeFiles/hik_camera.dir/build.make:76：CMakeFiles/hik_camera.dir/src/hik_camera_node.cpp.o] 错误 1
+[0.126s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/hik_camera.dir/all] 错误 2
+[0.126s] gmake: *** [Makefile:146：all] 错误 2
+[0.128s] Invoked command in '/home/jlurobovision/eng_ws/build/hik_camera' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/hik_camera -- -j12 -l12

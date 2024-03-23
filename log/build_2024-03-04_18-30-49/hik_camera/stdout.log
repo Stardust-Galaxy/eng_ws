@@ -1,0 +1,42 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/hik_camera_node.dir/rclcpp_components/node_main_hik_camera_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/hik_camera.dir/src/hik_camera_node.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable hik_camera_node[0m
+[ 75%] Built target hik_camera_node
+[100%] [32m[1mLinking CXX shared library libhik_camera.so[0m
+[100%] Built target hik_camera
+-- Install configuration: ""
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libMvUsb3vTL.so
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libMediaProcess.so
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libMVRender.so
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libFormatConversion.so
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/lib/libMvCameraControl.so
+-- Installing: /home/stardust/eng_ws/install/hik_camera/lib/hik_camera/hik_camera_node
+-- Set runtime path of "/home/stardust/eng_ws/install/hik_camera/lib/hik_camera/hik_camera_node" to ""
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/library_path.sh
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/library_path.dsv
+-- Installing: /home/stardust/eng_ws/install/hik_camera/lib/libhik_camera.so
+-- Set runtime path of "/home/stardust/eng_ws/install/hik_camera/lib/libhik_camera.so" to ""
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/config
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/config/camera_params.yaml
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/config/camera_info.yaml
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/launch
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/launch/hik_camera.launch.py
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/ament_index/resource_index/package_run_dependencies/hik_camera
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/ament_index/resource_index/parent_prefix_path/hik_camera
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.sh
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/path.sh
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/environment/path.dsv
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/local_setup.bash
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/local_setup.sh
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/local_setup.zsh
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/local_setup.dsv
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/package.dsv
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/ament_index/resource_index/packages/hik_camera
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/ament_index/resource_index/rclcpp_components/hik_camera
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig.cmake
+-- Installing: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig-version.cmake
+-- Up-to-date: /home/stardust/eng_ws/install/hik_camera/share/hik_camera/package.xml

@@ -1,0 +1,48 @@
+[0.056s] Invoking command in '/home/stardust/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/stardust/eng_ws/src/exchangestation_detector -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/exchangestation_detector
+[0.214s] -- The C compiler identification is GNU 11.4.0
+[0.298s] -- The CXX compiler identification is GNU 11.4.0
+[0.313s] -- Detecting C compiler ABI info
+[0.415s] -- Detecting C compiler ABI info - done
+[0.424s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.425s] -- Detecting C compile features
+[0.426s] -- Detecting C compile features - done
+[0.431s] -- Detecting CXX compiler ABI info
+[0.526s] -- Detecting CXX compiler ABI info - done
+[0.533s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.533s] -- Detecting CXX compile features
+[0.535s] -- Detecting CXX compile features - done
+[0.541s] -- Found ament_cmake: 2.0.4 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.724s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.848s] -- Found OpenCV: /usr/local (found version "4.9.0") 
+[0.849s] -- Found ament_cmake_auto: 2.0.4 (/opt/ros/iron/share/ament_cmake_auto/cmake)
+[0.855s] -- Found image_transport: 4.2.3 (/opt/ros/iron/share/image_transport/cmake)
+[0.927s] -- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)
+[0.944s] -- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)
+[0.967s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.991s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.181s] -- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)
+[1.185s] -- Found rmw_fastrtps_cpp: 7.1.3 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)
+[1.335s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.368s] -- Found FastRTPS: /opt/ros/iron/include  
+[1.416s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.884s] -- Found cv_bridge: 3.4.0 (/opt/ros/iron/share/cv_bridge/cmake)
+[1.911s] [31mCMake Error at CMakeLists.txt:19 (find_package):
+[1.911s]   By not providing "Findserial.cmake" in CMAKE_MODULE_PATH this project has
+[1.911s]   asked CMake to find a package configuration file provided by "serial", but
+[1.911s]   CMake did not find one.
+[1.911s] 
+[1.911s]   Could not find a package configuration file provided by "serial" with any
+[1.911s]   of the following names:
+[1.912s] 
+[1.912s]     serialConfig.cmake
+[1.912s]     serial-config.cmake
+[1.912s] 
+[1.912s]   Add the installation prefix of "serial" to CMAKE_PREFIX_PATH or set
+[1.912s]   "serial_DIR" to a directory containing one of the above files.  If "serial"
+[1.912s]   provides a separate development package or SDK, be sure it has been
+[1.912s]   installed.
+[1.912s] 
+[1.912s] [0m
+[1.912s] -- Configuring incomplete, errors occurred!
+[1.912s] See also "/home/stardust/eng_ws/build/exchangestation_detector/CMakeFiles/CMakeOutput.log".
+[1.921s] Invoked command in '/home/stardust/eng_ws/build/exchangestation_detector' returned '1': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/stardust/eng_ws/src/exchangestation_detector -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/exchangestation_detector

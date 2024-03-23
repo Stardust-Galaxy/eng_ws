@@ -1,0 +1,22 @@
+[33mCMake Warning (dev) at /opt/ros/humble/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:64 (if):
+  Policy CMP0057 is not set: Support new IN_LIST if() operator.  Run "cmake
+  --help-policy CMP0057" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  IN_LIST will be interpreted as an operator when the policy is set to NEW.
+  Since the policy is not set the OLD behavior will be used.
+Call Stack (most recent call first):
+  CMakeLists.txt:25 (ament_auto_find_build_dependencies)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:64 (if):
+  if given arguments:
+
+    "_dep" "IN_LIST" "_ARG_REQUIRED"
+
+  Unknown arguments specified
+Call Stack (most recent call first):
+  CMakeLists.txt:25 (ament_auto_find_build_dependencies)
+
+[0m
+gmake: *** [Makefile:294：cmake_check_build_system] 错误 1

@@ -1,0 +1,19 @@
+In file included from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:14[m[K:
+[01m[K/home/stardust/eng_ws/src/exchangestation_detector/include/exchangestation_detector/detector_node.hpp:13:10:[m[K [01;31m[Kfatal error: [m[Kmsg_interface/msg/angle.hpp: 没有那个文件或目录
+   13 | #include [01;31m[K"msg_interface/msg/angle.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:90：CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+[01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:[m[K In member function ‘[01m[Kvoid ExchangeStationDetector::selectContours()[m[K’:
+[01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:168:25:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kcenter[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  168 |             cv::Point2f [01;35m[Kcenter[m[K = boundary.center;
+      |                         [01;35m[K^~~~~~[m[K
+[01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:133:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KminDis[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  133 |     double [01;35m[KminDis[m[K = 0, maxDis = 400; // Compare between contours
+      |            [01;35m[K^~~~~~[m[K
+[01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:133:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KmaxDis[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  133 |     double minDis = 0, [01;35m[KmaxDis[m[K = 400; // Compare between contours
+      |                        [01;35m[K^~~~~~[m[K
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/exchangestation_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target serial[0m
+[35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial.cpp.o[0m
+[ 37%] [32m[1mLinking CXX executable serial_node[0m
+[ 50%] [32m[1mLinking CXX shared library libserial.so[0m
+[ 75%] Built target serial_node
+[100%] Built target serial
+-- Install configuration: ""
+-- Installing: /home/jlurobovision/eng_ws/install/serial/lib/libserial.so
+-- Set runtime path of "/home/jlurobovision/eng_ws/install/serial/lib/libserial.so" to ""
+-- Installing: /home/jlurobovision/eng_ws/install/serial/lib/serial/serial_node
+-- Set runtime path of "/home/jlurobovision/eng_ws/install/serial/lib/serial/serial_node" to ""
+-- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include
+-- Up-to-date: /home/jlurobovision/eng_ws/install/serial/include/serial
+-- Installing: /home/jlurobovision/eng_ws/install/serial/include/serial/crc_check.hpp
+-- Installing: /home/jlurobovision/eng_ws/install/serial/include/serial/serial_node.hpp
+-- Installing: /home/jlurobovision/eng_ws/install/serial/include/serial/serial.hpp
+-- Installing: /home/jlurobovision/eng_ws/install/serial/include/serial/packet.hpp

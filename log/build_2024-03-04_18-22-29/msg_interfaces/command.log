@@ -1,0 +1,1 @@
+Invoking command in '/home/stardust/eng_ws/build/msg_interfaces': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/stardust/eng_ws/src/msg_interfaces -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/msg_interfaces

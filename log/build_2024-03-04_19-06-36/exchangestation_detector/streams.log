@@ -1,0 +1,40 @@
+[0.298s] Invoking command in '/home/stardust/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8
+[0.377s] -- Found ament_cmake: 2.0.4 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.625s] -- Found ament_cmake_auto: 2.0.4 (/opt/ros/iron/share/ament_cmake_auto/cmake)
+[0.627s] -- Found image_transport: 4.2.3 (/opt/ros/iron/share/image_transport/cmake)
+[0.691s] -- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)
+[0.705s] -- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)
+[0.729s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.758s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.954s] -- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)
+[0.957s] -- Found rmw_fastrtps_cpp: 7.1.3 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)
+[1.142s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.604s] -- Found cv_bridge: 3.4.0 (/opt/ros/iron/share/cv_bridge/cmake)
+[1.618s] -- Found serial: 0.0.0 (/home/stardust/eng_ws/install/serial/share/serial/cmake)
+[1.619s] -- Found msg_interfaces: 0.0.0 (/home/stardust/eng_ws/install/msg_interfaces/share/msg_interfaces/cmake)
+[1.827s] -- Found ament_lint_auto: 0.14.3 (/opt/ros/iron/share/ament_lint_auto/cmake)
+[1.845s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.847s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.847s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/stardust/eng_ws/src/exchangestation_detector/include>
+[1.847s] -- Configured cppcheck exclude dirs and/or files: 
+[1.848s] -- Added test 'lint_cmake' to check CMake code style
+[1.851s] -- Added test 'uncrustify' to check C / C++ code style
+[1.851s] -- Configured uncrustify additional arguments: 
+[1.851s] -- Added test 'xmllint' to check XML markup files
+[1.854s] -- Configuring done
+[1.859s] [31mCMake Error at CMakeLists.txt:26 (add_library):
+[1.859s]   Cannot find source file:
+[1.859s] 
+[1.859s]     DIRECTORY
+[1.859s] 
+[1.859s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.859s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.859s] 
+[1.860s] [0m
+[1.863s] [31mCMake Error at CMakeLists.txt:26 (add_library):
+[1.864s]   No SOURCES given to target: exchangestation_detector
+[1.864s] 
+[1.864s] [0m
+[1.864s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[1.872s] gmake: *** [Makefile:335: cmake_check_build_system] Error 1
+[1.874s] Invoked command in '/home/stardust/eng_ws/build/exchangestation_detector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8

@@ -1,0 +1,9 @@
+[31mCMake Error at CMakeLists.txt:24:
+  Parse error.  Expected "(", got newline with text "
+
+  ".
+
+[0m
+-- Configuring incomplete, errors occurred!
+See also "/home/stardust/eng_ws/build/exchangestation_detector/CMakeFiles/CMakeOutput.log".
+gmake: *** [Makefile:294: cmake_check_build_system] Error 1

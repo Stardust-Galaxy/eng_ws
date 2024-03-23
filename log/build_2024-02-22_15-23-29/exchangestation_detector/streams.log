@@ -1,0 +1,19 @@
+[0.100s] Invoking command in '/home/stardust/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=/home/stardust/eng_ws/install/msg_interface:/home/stardust/eng_ws/install/serial:/home/stardust/eng_ws/install/hik_camera:/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8
+[0.242s] [ 33%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o[0m
+[0.243s] [ 66%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o[0m
+[0.431s] In file included from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:7[m[K:
+[0.431s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kbuiltin_interfaces/msg/duration.hpp: 没有那个文件或目录
+[0.431s]    20 | #include [01;31m[K"builtin_interfaces/msg/duration.hpp"[m[K
+[0.431s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.431s] compilation terminated.
+[0.433s] In file included from [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:1[m[K:
+[0.433s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/include/exchangestation_detector/exchangestation_detector.hpp:16:10:[m[K [01;31m[Kfatal error: [m[Kserial/packet.hpp: 没有那个文件或目录
+[0.433s]    16 | #include [01;31m[K"serial/packet.hpp"[m[K
+[0.433s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.434s] compilation terminated.
+[0.434s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:90：CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o] 错误 1
+[0.434s] gmake[2]: *** 正在等待未完成的任务....
+[0.437s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:76：CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o] 错误 1
+[0.437s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/exchangestation_detector.dir/all] 错误 2
+[0.437s] gmake: *** [Makefile:146：all] 错误 2
+[0.442s] Invoked command in '/home/stardust/eng_ws/build/exchangestation_detector' returned '2': CMAKE_PREFIX_PATH=/home/stardust/eng_ws/install/msg_interface:/home/stardust/eng_ws/install/serial:/home/stardust/eng_ws/install/hik_camera:/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8

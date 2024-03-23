@@ -1,0 +1,8 @@
+[31mCMake Error at /opt/ros/iron/share/rclcpp_components/cmake/rclcpp_components_register_nodes.cmake:54 (message):
+  rclcpp_components_register_nodes() the plugin names must be unique
+  (multiple 'exchangestation_detector_node')
+Call Stack (most recent call first):
+  CMakeLists.txt:61 (rclcpp_components_register_nodes)
+
+[0m
+gmake: *** [Makefile:294: cmake_check_build_system] Error 1

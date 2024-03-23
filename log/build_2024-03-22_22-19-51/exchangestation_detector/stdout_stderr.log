@@ -1,0 +1,30 @@
+[ 20%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o[0m
+[ 60%] Built target detector_node
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/detector_node.cpp:[m[K In member function ‘[01m[Kvoid exchangestation_detector_node::imageCallback(const SharedPtr&)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/detector_node.cpp:70:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kpacket[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   70 |     Packet [01;35m[Kpacket[m[K = detector->solveAngle();
+      |            [01;35m[K^~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:56[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp_components/rclcpp_components/register_node_macro.hpp:18[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/detector_node.cpp:72[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/detector_node.cpp:[m[K At global scope:
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/detector_node.cpp:74:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kexchangestation_detector[m[K’ was not declared in this scope; did you mean ‘[01m[KExchangeStationDetector[m[K’?
+   74 |   [01;31m[Kexchangestation_detector[m[K
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/detector_node.cpp:73:1:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   73 | [01;31m[KRCLCPP_COMPONENTS_REGISTER_NODE[m[K(
+      | [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp:57[m[K,
+                 from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:55[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp_components/rclcpp_components/register_node_macro.hpp:18[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/detector_node.cpp:72[m[K:
+/opt/ros/humble/include/class_loader/class_loader/meta_object.hpp: In instantiation of ‘[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = int; B = rclcpp_components::NodeFactory][m[K’:
+[01m[K/opt/ros/humble/include/class_loader/class_loader/meta_object.hpp:216:7:[m[K   required from here
+[01m[K/opt/ros/humble/include/class_loader/class_loader/meta_object.hpp:218:12:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kint*[m[K’ to ‘[01m[Krclcpp_components::NodeFactory*[m[K’ in return
+  218 |     return [01;31m[Knew C[m[K;
+      |            [01;31m[K^~~~~[m[K
+      |            [01;31m[K|[m[K
+      |            [01;31m[Kint*[m[K
+gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:76：CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/exchangestation_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

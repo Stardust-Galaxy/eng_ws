@@ -1,0 +1,39 @@
+[0.095s] Invoking command in '/home/stardust/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8
+[0.222s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.395s] -- Found rclcpp_components: 16.0.8 (/opt/ros/humble/share/rclcpp_components/cmake)
+[0.448s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.452s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.461s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.475s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.491s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.620s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.623s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.760s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.913s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.987s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.990s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.990s] -- Configured cppcheck include dirs: 
+[0.990s] -- Configured cppcheck exclude dirs and/or files: 
+[0.991s] -- Added test 'lint_cmake' to check CMake code style
+[0.993s] -- Added test 'uncrustify' to check C / C++ code style
+[0.993s] -- Configured uncrustify additional arguments: 
+[0.994s] -- Added test 'xmllint' to check XML markup files
+[0.996s] -- Configuring done
+[1.011s] -- Generating done
+[1.013s] -- Build files have been written to: /home/stardust/eng_ws/build/exchangestation_detector
+[1.065s] [ 66%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o[0m
+[1.065s] [ 66%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o[0m
+[1.092s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kexchangestation_detector/exchangestation_detector.hpp: 没有那个文件或目录
+[1.092s]     1 | #include [01;31m[K"exchangestation_detector/exchangestation_detector.hpp"[m[K
+[1.092s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.092s] [01m[K/home/stardust/eng_ws/src/exchangestation_detector/src/detector_node.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kcv_bridge/cv_bridge.h: 没有那个文件或目录
+[1.092s]     2 | #include [01;31m[K<cv_bridge/cv_bridge.h>[m[K
+[1.092s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.092s] compilation terminated.
+[1.093s] compilation terminated.
+[1.094s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:76：CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o] 错误 1
+[1.094s] gmake[2]: *** 正在等待未完成的任务....
+[1.094s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:90：CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o] 错误 1
+[1.094s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/exchangestation_detector.dir/all] 错误 2
+[1.094s] gmake: *** [Makefile:146：all] 错误 2
+[1.098s] Invoked command in '/home/stardust/eng_ws/build/exchangestation_detector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8

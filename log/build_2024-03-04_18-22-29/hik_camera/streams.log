@@ -1,0 +1,36 @@
+[0.184s] Invoking command in '/home/stardust/eng_ws/build/hik_camera': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/stardust/eng_ws/src/hik_camera -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/hik_camera
+[0.267s] -- The C compiler identification is GNU 11.4.0
+[0.349s] -- The CXX compiler identification is GNU 11.4.0
+[0.362s] -- Detecting C compiler ABI info
+[0.467s] -- Detecting C compiler ABI info - done
+[0.475s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.476s] -- Detecting C compile features
+[0.476s] -- Detecting C compile features - done
+[0.481s] -- Detecting CXX compiler ABI info
+[0.591s] -- Detecting CXX compiler ABI info - done
+[0.601s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.601s] -- Detecting CXX compile features
+[0.602s] -- Detecting CXX compile features - done
+[0.604s] -- Found ament_cmake_auto: 2.0.4 (/opt/ros/iron/share/ament_cmake_auto/cmake)
+[0.808s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.030s] -- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)
+[1.041s] -- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)
+[1.062s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.088s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.263s] -- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)
+[1.266s] -- Found rmw_fastrtps_cpp: 7.1.3 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)
+[1.419s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.452s] -- Found FastRTPS: /opt/ros/iron/include  
+[1.516s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.300s] -- Found ament_lint_auto: 0.14.3 (/opt/ros/iron/share/ament_lint_auto/cmake)
+[2.341s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.341s] -- Configured cppcheck include dirs: /home/stardust/eng_ws/src/hik_camera/hikSDK/include
+[2.341s] -- Configured cppcheck exclude dirs and/or files: 
+[2.343s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.343s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.345s] -- Added test 'lint_cmake' to check CMake code style
+[2.346s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.348s] -- Added test 'xmllint' to check XML markup files
+[2.351s] -- Configuring done
+[2.376s] -- Generating done
+[2.379s] -- Build files have been written to: /home/stardust/eng_ws/build/hik_camera

@@ -1,0 +1,26 @@
+[0.012s] Invoking command in '/home/jlurobovision/eng_ws/build/exchangestation_detector': AMENT_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/exchangestation_detector -- -j12 -l12
+[0.066s] [35m[1mConsolidate compiler generated dependencies of target exchangestation_detector[0m
+[0.066s] [35m[1mConsolidate compiler generated dependencies of target detector_node[0m
+[0.085s] [ 20%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o[0m
+[0.088s] [ 40%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o[0m
+[0.092s] [ 80%] Built target detector_node
+[0.299s] In file included from [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/detector_node.cpp:15[m[K:
+[0.299s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/include/exchangestation_detector/detector_node.hpp:2:10:[m[K [01;31m[Kfatal error: [m[Kcv_bridge/cv_bridge.hpp: 没有那个文件或目录
+[0.299s]     2 | #include [01;31m[K<cv_bridge/cv_bridge.hpp>[m[K
+[0.299s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.299s] compilation terminated.
+[0.301s] gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:76：CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o] 错误 1
+[0.301s] gmake[2]: *** 正在等待未完成的任务....
+[1.203s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:[m[K In member function ‘[01m[Kvoid ExchangeStationDetector::selectContours()[m[K’:
+[1.203s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:202:25:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kcenter[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[1.203s]   202 |             cv::Point2f [01;35m[Kcenter[m[K = boundary.center;
+[1.203s]       |                         [01;35m[K^~~~~~[m[K
+[1.209s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:167:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KminDis[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.209s]   167 |     double [01;35m[KminDis[m[K = 0, maxDis = 400; // Compare between contours
+[1.209s]       |            [01;35m[K^~~~~~[m[K
+[1.209s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:167:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KmaxDis[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.209s]   167 |     double minDis = 0, [01;35m[KmaxDis[m[K = 400; // Compare between contours
+[1.210s]       |                        [01;35m[K^~~~~~[m[K
+[2.101s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/exchangestation_detector.dir/all] 错误 2
+[2.102s] gmake: *** [Makefile:146：all] 错误 2
+[2.104s] Invoked command in '/home/jlurobovision/eng_ws/build/exchangestation_detector' returned '2': AMENT_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/exchangestation_detector -- -j12 -l12

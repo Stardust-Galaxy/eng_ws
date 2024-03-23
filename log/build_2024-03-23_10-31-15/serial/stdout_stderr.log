@@ -1,0 +1,508 @@
+[35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[35m[1mConsolidate compiler generated dependencies of target serial[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial_node.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial_node.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:8[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kbool serialport::SerialPortNode::sendData(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:272:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[Kmode_[m[K’?
+  272 |             [01;31m[Kmode[m[K
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:281:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[K;[m[K’ token
+  281 |                 angle_info->found[01;31m[K;[m[K
+      |                                  [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:280:13:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  280 |             [01;36m[K{[m[K
+      |             [01;36m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:281:29:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((std::__shared_ptr_access<msg_interfaces::msg::Angle_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& angle_info))->std::__shared_ptr_access<msg_interfaces::msg::Angle_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->msg_interfaces::msg::Angle_<std::allocator<void> >::found[m[K’ from ‘[01m[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::_found_type[m[K’ {aka ‘[01m[Ksigned char[m[K’} to ‘[01m[Kbool[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  281 |                 [01;35m[Kangle_info->found[m[K;
+      |                 [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:281:29:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((std::__shared_ptr_access<msg_interfaces::msg::Angle_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& angle_info))->std::__shared_ptr_access<msg_interfaces::msg::Angle_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->msg_interfaces::msg::Angle_<std::allocator<void> >::found[m[K’ from ‘[01m[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::_found_type[m[K’ {aka ‘[01m[Ksigned char[m[K’} to ‘[01m[Kbool[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:290:25:[m[K [01;31m[Kerror: [m[K‘[01m[KAppend_CRC16_Check_Sum[m[K’ is not a member of ‘[01m[Kserialport[m[K’
+  290 |             serialport::[01;31m[KAppend_CRC16_Check_Sum[m[K(reinterpret_cast<uint8_t*>(&angle_data), sizeof(angle_data));
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:290:76:[m[K [01;31m[Kerror: [m[K‘[01m[Kangle_data[m[K’ was not declared in this scope
+  290 |             serialport::Append_CRC16_Check_Sum(reinterpret_cast<uint8_t*>(&[01;31m[Kangle_data[m[K), sizeof(angle_data));
+      |                                                                            [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:8[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:296:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_info[m[K’ was not declared in this scope
+  296 |                 ([01;31m[Ktarget_info[m[K->is_switched || target_info->is_spinning_switched),
+      |                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:297:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[Kmode_[m[K’?
+  297 |                 [01;31m[Kmode[m[K
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:316:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_info[m[K’ was not declared in this scope
+  316 |             rclcpp::Time start = [01;31m[Ktarget_info[m[K->header.stamp;
+      |                                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:333:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kelse[m[K’
+  333 |         [01;31m[Kelse[m[K
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:339:10:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  339 |     void [01;31m[KSerialPortNode[m[K::transformData(Packet angle_data, u_char* Tdata)
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In function ‘[01m[Kvoid transformData(Packet, u_char*)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:344:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode_[m[K’ was not declared in this scope; did you mean ‘[01m[Kmode_t[m[K’?
+  344 |       Tdata[1] = [01;31m[Kmode_[m[K;
+      |                  [01;31m[K^~~~~[m[K
+      |                  [32m[Kmode_t[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:347:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  347 |       double* quaternion1 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion1[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:355:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  355 |       double* quaternion2 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion2[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:363:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  363 |       double* quaternion3 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion3[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:371:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  371 |       double* quaternion4 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion4[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:379:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  379 |       double* x = reinterpret_cast<double*>([01;35m[K&angle_data.x[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:387:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  387 |       double* y = reinterpret_cast<double*>([01;35m[K&angle_data.y[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:395:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  395 |       double* z = reinterpret_cast<double*>([01;35m[K&angle_data.z[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:41:[m[K [01;31m[Kerror: [m[K‘[01m[Ku_har[m[K’ does not name a type; did you mean ‘[01m[Ku_char[m[K’?
+  396 |       u_char* zBytes = reinterpret_cast<[01;31m[Ku_har[m[K*>(z);
+      |                                         [01;31m[K^~~~~[m[K
+      |                                         [32m[Ku_char[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K>[m[K’ before ‘[01m[K*[m[K’ token
+  396 |       u_char* zBytes = reinterpret_cast<u_har[01;31m[K*[m[K>(z);
+      |                                              [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[K*[m[K’ token
+  396 |       u_char* zBytes = reinterpret_cast<u_har[01;31m[K*[m[K>(z);
+      |                                              [01;31m[K^[m[K
+      |                                              [32m[K([m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:47:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  396 |       u_char* zBytes = reinterpret_cast<u_har*[01;31m[K>[m[K(z);
+      |                                               [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:51:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  396 |       u_char* zBytes = reinterpret_cast<u_har*>(z)[01;31m[K;[m[K
+      |                                                   [01;31m[K^[m[K
+      |                                                   [32m[K)[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:454:10:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  454 |     void [01;31m[KSerialPortNode[m[K::angleMsgCallback(AngleMsg::SharedPtr msg)
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:454:10:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KangleMsgCallback[m[K’ declared void
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:454:43:[m[K [01;31m[Kerror: [m[K‘[01m[KAngleMsg[m[K’ has not been declared
+  454 |     void SerialPortNode::angleMsgCallback([01;31m[KAngleMsg[m[K::SharedPtr msg)
+      |                                           [01;31m[K^~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:469:10:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  469 |     bool [01;31m[KSerialPortNode[m[K::setParam(rclcpp::Parameter param)
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In function ‘[01m[Kbool setParam(rclcpp::Parameter)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:471:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kparams_map_[m[K’ was not declared in this scope
+  471 |         auto param_idx = [01;31m[Kparams_map_[m[K[param.get_name()];
+      |                          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:475:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  475 |             [01;31m[Kthis[m[K->using_port_ = param.as_bool();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:478:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  478 |             [01;31m[Kthis[m[K->baud_ = param.as_int();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:481:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  481 |             [01;31m[Kthis[m[K->found_target_ = param.as_bool();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:484:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  484 |             [01;31m[Kthis[m[K->print_serial_info_ = param.as_bool();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:487:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  487 |             [01;31m[Kthis[m[K->print_referee_info_= param.as_bool();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:501:46:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  501 |     rcl_interfaces::msg::SetParametersResult [01;31m[KSerialPortNode[m[K::paramsCallback(const std::vector<rclcpp::Parameter>& params)
+      |                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:518:21:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPort[m[K’ was not declared in this scope; did you mean ‘[01m[Kserialport::SerialPort[m[K’?
+  518 |     std::unique_ptr<[01;31m[KSerialPort[m[K> SerialPortNode::initSerialPort()
+      |                     [01;31m[K^~~~~~~~~~[m[K
+      |                     [32m[Kserialport::SerialPort[m[K
+In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:20[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial.hpp:61:11:[m[K [01;36m[Knote: [m[K‘[01m[Kserialport::SerialPort[m[K’ declared here
+   61 |     class [01;36m[KSerialPort[m[K
+      |           [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:518:31:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  518 |     std::unique_ptr<SerialPort[01;31m[K>[m[K SerialPortNode::initSerialPort()
+      |                               [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:518:31:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:518:33:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  518 |     std::unique_ptr<SerialPort> [01;31m[KSerialPortNode[m[K::initSerialPort()
+      |                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In function ‘[01m[Kint initSerialPort()[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:520:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kparams_map_[m[K’ was not declared in this scope
+  520 |         [01;31m[Kparams_map_[m[K =
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:529:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  529 |         [01;31m[Kthis[m[K->declare_parameter<std::string>("port_id", "483/5740/200");
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:529:44:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  529 |         this->declare_parameter<std::string[01;31m[K>[m[K("port_id", "483/5740/200");
+      |                                            [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:530:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  530 |         [01;31m[Kthis[m[K->get_parameter("port_id", this->id_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:530:40:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  530 |         this->get_parameter("port_id", [01;31m[Kthis[m[K->id_);
+      |                                        [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:532:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  532 |         [01;31m[Kthis[m[K->declare_parameter<int>("baud", 115200);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:532:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+  532 |         this->declare_parameter<[01;31m[Kint[m[K>("baud", 115200);
+      |                                 [01;31m[K^~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:533:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  533 |         [01;31m[Kthis[m[K->get_parameter("baud", this->baud_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:533:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  533 |         this->get_parameter("baud", [01;31m[Kthis[m[K->baud_);
+      |                                     [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:535:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  535 |         [01;31m[Kthis[m[K->declare_parameter<bool>("using_port", true);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:535:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kbool[m[K’
+  535 |         this->declare_parameter<[01;31m[Kbool[m[K>("using_port", true);
+      |                                 [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:536:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  536 |         [01;31m[Kthis[m[K->get_parameter("using_port", this->using_port_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:536:43:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  536 |         this->get_parameter("using_port", [01;31m[Kthis[m[K->using_port_);
+      |                                           [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:538:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  538 |         [01;31m[Kthis[m[K->declare_parameter<bool>("found_target", false);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:538:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kbool[m[K’
+  538 |         this->declare_parameter<[01;31m[Kbool[m[K>("found_target", false);
+      |                                 [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:539:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  539 |         [01;31m[Kthis[m[K->get_parameter("found_target", this->found_target_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:539:45:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  539 |         this->get_parameter("found_target", [01;31m[Kthis[m[K->found_target_);
+      |                                             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:541:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  541 |         [01;31m[Kthis[m[K->declare_parameter("print_serial_info", false);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:542:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  542 |         [01;31m[Kthis[m[K->get_parameter("print_serial_info", this->print_serial_info_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:542:50:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  542 |         this->get_parameter("print_serial_info", [01;31m[Kthis[m[K->print_serial_info_);
+      |                                                  [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:544:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  544 |         [01;31m[Kthis[m[K->declare_parameter("print_referee_info", false);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:545:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  545 |         [01;31m[Kthis[m[K->get_parameter("print_referee_info", this->print_referee_info_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:545:51:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  545 |         this->get_parameter("print_referee_info", [01;31m[Kthis[m[K->print_referee_info_);
+      |                                                   [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:547:33:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPort[m[K’ was not declared in this scope; did you mean ‘[01m[Kserialport::SerialPort[m[K’?
+  547 |         return std::make_unique<[01;31m[KSerialPort[m[K>(id_, baud_, using_port_);
+      |                                 [01;31m[K^~~~~~~~~~[m[K
+      |                                 [32m[Kserialport::SerialPort[m[K
+In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:20[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial.hpp:61:11:[m[K [01;36m[Knote: [m[K‘[01m[Kserialport::SerialPort[m[K’ declared here
+   61 |     class [01;36m[KSerialPort[m[K
+      |           [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:547:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kid_[m[K’ was not declared in this scope; did you mean ‘[01m[Kid_t[m[K’?
+  547 |         return std::make_unique<SerialPort>([01;31m[Kid_[m[K, baud_, using_port_);
+      |                                             [01;31m[K^~~[m[K
+      |                                             [32m[Kid_t[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:547:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kbaud_[m[K’ was not declared in this scope
+  547 |         return std::make_unique<SerialPort>(id_, [01;31m[Kbaud_[m[K, using_port_);
+      |                                                  [01;31m[K^~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:547:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing_port_[m[K’ was not declared in this scope
+  547 |         return std::make_unique<SerialPort>(id_, baud_, [01;31m[Kusing_port_[m[K);
+      |                                                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:561:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  561 | [01;31m[K}[m[K //namespace serialport
+      | [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:8[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In member function ‘[01m[Kbool serialport::SerialPortNode::sendData(msg_interfaces::msg::Angle_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:272:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[Kmode_[m[K’?
+  272 |             [01;31m[Kmode[m[K
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:281:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[K;[m[K’ token
+  281 |                 angle_info->found[01;31m[K;[m[K
+      |                                  [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:280:13:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  280 |             [01;36m[K{[m[K
+      |             [01;36m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:281:29:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((std::__shared_ptr_access<msg_interfaces::msg::Angle_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& angle_info))->std::__shared_ptr_access<msg_interfaces::msg::Angle_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->msg_interfaces::msg::Angle_<std::allocator<void> >::found[m[K’ from ‘[01m[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::_found_type[m[K’ {aka ‘[01m[Ksigned char[m[K’} to ‘[01m[Kbool[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  281 |                 [01;35m[Kangle_info->found[m[K;
+      |                 [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:281:29:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((std::__shared_ptr_access<msg_interfaces::msg::Angle_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& angle_info))->std::__shared_ptr_access<msg_interfaces::msg::Angle_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->msg_interfaces::msg::Angle_<std::allocator<void> >::found[m[K’ from ‘[01m[Kmsg_interfaces::msg::Angle_<std::allocator<void> >::_found_type[m[K’ {aka ‘[01m[Ksigned char[m[K’} to ‘[01m[Kbool[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:290:25:[m[K [01;31m[Kerror: [m[K‘[01m[KAppend_CRC16_Check_Sum[m[K’ is not a member of ‘[01m[Kserialport[m[K’
+  290 |             serialport::[01;31m[KAppend_CRC16_Check_Sum[m[K(reinterpret_cast<uint8_t*>(&angle_data), sizeof(angle_data));
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:290:76:[m[K [01;31m[Kerror: [m[K‘[01m[Kangle_data[m[K’ was not declared in this scope
+  290 |             serialport::Append_CRC16_Check_Sum(reinterpret_cast<uint8_t*>(&[01;31m[Kangle_data[m[K), sizeof(angle_data));
+      |                                                                            [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:8[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:296:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_info[m[K’ was not declared in this scope
+  296 |                 ([01;31m[Ktarget_info[m[K->is_switched || target_info->is_spinning_switched),
+      |                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:297:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode[m[K’ was not declared in this scope; did you mean ‘[01m[Kmode_[m[K’?
+  297 |                 [01;31m[Kmode[m[K
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:316:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_info[m[K’ was not declared in this scope
+  316 |             rclcpp::Time start = [01;31m[Ktarget_info[m[K->header.stamp;
+      |                                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:333:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kelse[m[K’
+  333 |         [01;31m[Kelse[m[K
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:339:10:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  339 |     void [01;31m[KSerialPortNode[m[K::transformData(Packet angle_data, u_char* Tdata)
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In function ‘[01m[Kvoid transformData(Packet, u_char*)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:344:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kmode_[m[K’ was not declared in this scope; did you mean ‘[01m[Kmode_t[m[K’?
+  344 |       Tdata[1] = [01;31m[Kmode_[m[K;
+      |                  [01;31m[K^~~~~[m[K
+      |                  [32m[Kmode_t[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:347:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  347 |       double* quaternion1 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion1[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:355:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  355 |       double* quaternion2 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion2[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:363:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  363 |       double* quaternion3 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion3[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:371:55:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  371 |       double* quaternion4 = reinterpret_cast<double*>([01;35m[K&angle_data.quaternion4[m[K);
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:379:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  379 |       double* x = reinterpret_cast<double*>([01;35m[K&angle_data.x[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:387:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  387 |       double* y = reinterpret_cast<double*>([01;35m[K&angle_data.y[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:395:45:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  395 |       double* z = reinterpret_cast<double*>([01;35m[K&angle_data.z[m[K);
+      |                                             [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:41:[m[K [01;31m[Kerror: [m[K‘[01m[Ku_har[m[K’ does not name a type; did you mean ‘[01m[Ku_char[m[K’?
+  396 |       u_char* zBytes = reinterpret_cast<[01;31m[Ku_har[m[K*>(z);
+      |                                         [01;31m[K^~~~~[m[K
+      |                                         [32m[Ku_char[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K>[m[K’ before ‘[01m[K*[m[K’ token
+  396 |       u_char* zBytes = reinterpret_cast<u_har[01;31m[K*[m[K>(z);
+      |                                              [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[K*[m[K’ token
+  396 |       u_char* zBytes = reinterpret_cast<u_har[01;31m[K*[m[K>(z);
+      |                                              [01;31m[K^[m[K
+      |                                              [32m[K([m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:47:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  396 |       u_char* zBytes = reinterpret_cast<u_har*[01;31m[K>[m[K(z);
+      |                                               [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:396:51:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  396 |       u_char* zBytes = reinterpret_cast<u_har*>(z)[01;31m[K;[m[K
+      |                                                   [01;31m[K^[m[K
+      |                                                   [32m[K)[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:454:10:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  454 |     void [01;31m[KSerialPortNode[m[K::angleMsgCallback(AngleMsg::SharedPtr msg)
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:454:10:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KangleMsgCallback[m[K’ declared void
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:454:43:[m[K [01;31m[Kerror: [m[K‘[01m[KAngleMsg[m[K’ has not been declared
+  454 |     void SerialPortNode::angleMsgCallback([01;31m[KAngleMsg[m[K::SharedPtr msg)
+      |                                           [01;31m[K^~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:469:10:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  469 |     bool [01;31m[KSerialPortNode[m[K::setParam(rclcpp::Parameter param)
+      |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In function ‘[01m[Kbool setParam(rclcpp::Parameter)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:471:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kparams_map_[m[K’ was not declared in this scope
+  471 |         auto param_idx = [01;31m[Kparams_map_[m[K[param.get_name()];
+      |                          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:475:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  475 |             [01;31m[Kthis[m[K->using_port_ = param.as_bool();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:478:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  478 |             [01;31m[Kthis[m[K->baud_ = param.as_int();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:481:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  481 |             [01;31m[Kthis[m[K->found_target_ = param.as_bool();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:484:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  484 |             [01;31m[Kthis[m[K->print_serial_info_ = param.as_bool();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:487:13:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  487 |             [01;31m[Kthis[m[K->print_referee_info_= param.as_bool();
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:501:46:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  501 |     rcl_interfaces::msg::SetParametersResult [01;31m[KSerialPortNode[m[K::paramsCallback(const std::vector<rclcpp::Parameter>& params)
+      |                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:518:21:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPort[m[K’ was not declared in this scope; did you mean ‘[01m[Kserialport::SerialPort[m[K’?
+  518 |     std::unique_ptr<[01;31m[KSerialPort[m[K> SerialPortNode::initSerialPort()
+      |                     [01;31m[K^~~~~~~~~~[m[K
+      |                     [32m[Kserialport::SerialPort[m[K
+In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:20[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial.hpp:61:11:[m[K [01;36m[Knote: [m[K‘[01m[Kserialport::SerialPort[m[K’ declared here
+   61 |     class [01;36m[KSerialPort[m[K
+      |           [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:518:31:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  518 |     std::unique_ptr<SerialPort[01;31m[K>[m[K SerialPortNode::initSerialPort()
+      |                               [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:518:31:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:518:33:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPortNode[m[K’ has not been declared
+  518 |     std::unique_ptr<SerialPort> [01;31m[KSerialPortNode[m[K::initSerialPort()
+      |                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K In function ‘[01m[Kint initSerialPort()[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:520:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kparams_map_[m[K’ was not declared in this scope
+  520 |         [01;31m[Kparams_map_[m[K =
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:529:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  529 |         [01;31m[Kthis[m[K->declare_parameter<std::string>("port_id", "483/5740/200");
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:529:44:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  529 |         this->declare_parameter<std::string[01;31m[K>[m[K("port_id", "483/5740/200");
+      |                                            [01;31m[K^[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:530:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  530 |         [01;31m[Kthis[m[K->get_parameter("port_id", this->id_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:530:40:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  530 |         this->get_parameter("port_id", [01;31m[Kthis[m[K->id_);
+      |                                        [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:532:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  532 |         [01;31m[Kthis[m[K->declare_parameter<int>("baud", 115200);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:532:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+  532 |         this->declare_parameter<[01;31m[Kint[m[K>("baud", 115200);
+      |                                 [01;31m[K^~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:533:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  533 |         [01;31m[Kthis[m[K->get_parameter("baud", this->baud_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:533:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  533 |         this->get_parameter("baud", [01;31m[Kthis[m[K->baud_);
+      |                                     [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:535:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  535 |         [01;31m[Kthis[m[K->declare_parameter<bool>("using_port", true);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:535:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kbool[m[K’
+  535 |         this->declare_parameter<[01;31m[Kbool[m[K>("using_port", true);
+      |                                 [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:536:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  536 |         [01;31m[Kthis[m[K->get_parameter("using_port", this->using_port_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:536:43:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  536 |         this->get_parameter("using_port", [01;31m[Kthis[m[K->using_port_);
+      |                                           [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:538:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  538 |         [01;31m[Kthis[m[K->declare_parameter<bool>("found_target", false);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:538:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kbool[m[K’
+  538 |         this->declare_parameter<[01;31m[Kbool[m[K>("found_target", false);
+      |                                 [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:539:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  539 |         [01;31m[Kthis[m[K->get_parameter("found_target", this->found_target_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:539:45:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  539 |         this->get_parameter("found_target", [01;31m[Kthis[m[K->found_target_);
+      |                                             [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:541:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  541 |         [01;31m[Kthis[m[K->declare_parameter("print_serial_info", false);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:542:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  542 |         [01;31m[Kthis[m[K->get_parameter("print_serial_info", this->print_serial_info_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:542:50:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  542 |         this->get_parameter("print_serial_info", [01;31m[Kthis[m[K->print_serial_info_);
+      |                                                  [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:544:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  544 |         [01;31m[Kthis[m[K->declare_parameter("print_referee_info", false);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:545:9:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  545 |         [01;31m[Kthis[m[K->get_parameter("print_referee_info", this->print_referee_info_);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:545:51:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  545 |         this->get_parameter("print_referee_info", [01;31m[Kthis[m[K->print_referee_info_);
+      |                                                   [01;31m[K^~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:547:33:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialPort[m[K’ was not declared in this scope; did you mean ‘[01m[Kserialport::SerialPort[m[K’?
+  547 |         return std::make_unique<[01;31m[KSerialPort[m[K>(id_, baud_, using_port_);
+      |                                 [01;31m[K^~~~~~~~~~[m[K
+      |                                 [32m[Kserialport::SerialPort[m[K
+In file included from [01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial_node.hpp:20[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:8[m[K:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/../include/serial/serial.hpp:61:11:[m[K [01;36m[Knote: [m[K‘[01m[Kserialport::SerialPort[m[K’ declared here
+   61 |     class [01;36m[KSerialPort[m[K
+      |           [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:547:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kid_[m[K’ was not declared in this scope; did you mean ‘[01m[Kid_t[m[K’?
+  547 |         return std::make_unique<SerialPort>([01;31m[Kid_[m[K, baud_, using_port_);
+      |                                             [01;31m[K^~~[m[K
+      |                                             [32m[Kid_t[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:547:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kbaud_[m[K’ was not declared in this scope
+  547 |         return std::make_unique<SerialPort>(id_, [01;31m[Kbaud_[m[K, using_port_);
+      |                                                  [01;31m[K^~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:547:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing_port_[m[K’ was not declared in this scope
+  547 |         return std::make_unique<SerialPort>(id_, baud_, [01;31m[Kusing_port_[m[K);
+      |                                                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:[m[K At global scope:
+[01m[K/home/jlurobovision/eng_ws/src/serial/src/serial_node.cpp:561:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  561 | [01;31m[K}[m[K //namespace serialport
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:104：CMakeFiles/serial_node.dir/src/serial_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/serial_node.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/serial.dir/build.make:104：CMakeFiles/serial.dir/src/serial_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/serial.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

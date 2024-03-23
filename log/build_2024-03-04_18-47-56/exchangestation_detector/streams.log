@@ -1,0 +1,11 @@
+[0.081s] Invoking command in '/home/stardust/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8
+[0.112s] [31mCMake Error at CMakeLists.txt:24:
+[0.113s]   Parse error.  Expected "(", got newline with text "
+[0.113s] 
+[0.113s]   ".
+[0.113s] 
+[0.113s] [0m
+[0.113s] -- Configuring incomplete, errors occurred!
+[0.113s] See also "/home/stardust/eng_ws/build/exchangestation_detector/CMakeFiles/CMakeOutput.log".
+[0.115s] gmake: *** [Makefile:294: cmake_check_build_system] Error 1
+[0.119s] Invoked command in '/home/stardust/eng_ws/build/exchangestation_detector' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/stardust/eng_ws/build/exchangestation_detector -- -j8 -l8

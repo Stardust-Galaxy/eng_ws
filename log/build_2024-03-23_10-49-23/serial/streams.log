@@ -1,0 +1,20 @@
+[0.013s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[0.073s] [35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[0.073s] [35m[1mConsolidate compiler generated dependencies of target serial[0m
+[0.101s] [ 25%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/serial.cpp.o[0m
+[0.101s] [ 25%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial.cpp.o[0m
+[4.740s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In function ‘[01m[Kstd::vector<std::__cxx11::basic_string<char> > readLines(std::string)[m[K’:
+[4.741s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:86:19:[m[K [01;31m[Kerror: [m[Kaggregate ‘[01m[Kstd::ifstream file[m[K’ has incomplete type and cannot be defined
+[4.741s]    86 |     std::ifstream [01;31m[Kfile[m[K;
+[4.741s]       |                   [01;31m[K^~~~[m[K
+[4.835s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:[m[K In function ‘[01m[Kstd::vector<std::__cxx11::basic_string<char> > readLines(std::string)[m[K’:
+[4.835s] [01m[K/home/jlurobovision/eng_ws/src/serial/src/serial.cpp:86:19:[m[K [01;31m[Kerror: [m[Kaggregate ‘[01m[Kstd::ifstream file[m[K’ has incomplete type and cannot be defined
+[4.836s]    86 |     std::ifstream [01;31m[Kfile[m[K;
+[4.836s]       |                   [01;31m[K^~~~[m[K
+[5.407s] gmake[2]: *** [CMakeFiles/serial.dir/build.make:90：CMakeFiles/serial.dir/src/serial.cpp.o] 错误 1
+[5.407s] gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/serial.dir/all] 错误 2
+[5.407s] gmake[1]: *** 正在等待未完成的任务....
+[5.472s] gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:90：CMakeFiles/serial_node.dir/src/serial.cpp.o] 错误 1
+[5.472s] gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/serial_node.dir/all] 错误 2
+[5.472s] gmake: *** [Makefile:146：all] 错误 2
+[5.476s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '2': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12

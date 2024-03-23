@@ -1,0 +1,33 @@
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_generator_c[0m
+[  3%] Built target msg_interfaces__cpp
+[ 12%] Built target msg_interfaces__rosidl_generator_c
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_typesupport_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_typesupport_introspection_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[ 12%] Built target ament_cmake_python_copy_msg_interfaces
+[ 22%] Built target msg_interfaces__rosidl_typesupport_cpp
+[ 32%] Built target msg_interfaces__rosidl_typesupport_introspection_cpp
+[ 41%] Built target msg_interfaces__rosidl_typesupport_fastrtps_cpp
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_typesupport_fastrtps_c[0m
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_typesupport_c[0m
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_typesupport_introspection_c[0m
+[ 51%] Built target msg_interfaces__rosidl_typesupport_fastrtps_c
+[ 61%] Built target msg_interfaces__rosidl_typesupport_introspection_c
+[ 70%] Built target msg_interfaces__rosidl_typesupport_c
+[ 70%] Built target msg_interfaces
+[ 74%] Built target msg_interfaces__py
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_generator_py[0m
+[ 80%] Built target msg_interfaces__rosidl_generator_py
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_typesupport_c__pyext[0m
+[35m[1mConsolidate compiler generated dependencies of target msg_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[100%] Built target msg_interfaces__rosidl_typesupport_introspection_c__pyext
+[100%] Built target msg_interfaces__rosidl_typesupport_c__pyext
+[100%] Built target msg_interfaces__rosidl_typesupport_fastrtps_c__pyext
+running egg_info
+writing msg_interfaces.egg-info/PKG-INFO
+writing dependency_links to msg_interfaces.egg-info/dependency_links.txt
+writing top-level names to msg_interfaces.egg-info/top_level.txt
+reading manifest file 'msg_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'msg_interfaces.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_msg_interfaces_egg
