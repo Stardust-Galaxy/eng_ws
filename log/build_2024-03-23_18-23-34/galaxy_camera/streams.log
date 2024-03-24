@@ -1,0 +1,41 @@
+[0.024s] Invoking command in '/home/jlurobovision/eng_ws/build/galaxy_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/galaxy_camera -- -j12 -l12
+[0.125s] [100%] Built target galaxy_camera_node
+[0.125s] [100%] Built target galaxy_camera
+[0.187s] Invoked command in '/home/jlurobovision/eng_ws/build/galaxy_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/galaxy_camera -- -j12 -l12
+[0.240s] Invoking command in '/home/jlurobovision/eng_ws/build/galaxy_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/galaxy_camera
+[0.253s] -- Install configuration: ""
+[0.254s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/lib
+[0.254s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/lib/GxU3VTL.cti
+[0.254s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/lib/GxGVTL.cti
+[0.254s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/lib/libgxiapi.so
+[0.255s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/lib/bc4b08373788f18282ff1e747a98dd6c21a8b629.cache
+[0.255s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/lib/galaxy_camera/galaxy_camera_node
+[0.255s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/environment/library_path.sh
+[0.255s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/environment/library_path.dsv
+[0.256s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/lib/libgalaxy_camera.so
+[0.256s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/config
+[0.256s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/config/camera_info.yaml
+[0.257s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/config/camera_params.yaml
+[0.257s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/launch
+[0.257s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/launch/__pycache__
+[0.257s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/launch/__pycache__/galaxy_camera.launch.cpython-310.pyc
+[0.257s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/launch/galaxy_camera.launch.py
+[0.258s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/ament_index/resource_index/package_run_dependencies/galaxy_camera
+[0.258s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/ament_index/resource_index/parent_prefix_path/galaxy_camera
+[0.259s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/environment/ament_prefix_path.sh
+[0.259s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/environment/ament_prefix_path.dsv
+[0.259s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/environment/path.sh
+[0.259s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/environment/path.dsv
+[0.259s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/local_setup.bash
+[0.259s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/local_setup.sh
+[0.260s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/local_setup.zsh
+[0.261s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/local_setup.dsv
+[0.262s] -- Installing: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.dsv
+[0.263s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/ament_index/resource_index/packages/galaxy_camera
+[0.263s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/ament_index/resource_index/rclcpp_components/galaxy_camera
+[0.264s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.264s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/cmake/ament_cmake_export_libraries-extras.cmake
+[0.264s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/cmake/galaxy_cameraConfig.cmake
+[0.269s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/cmake/galaxy_cameraConfig-version.cmake
+[0.269s] -- Up-to-date: /home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.xml
+[0.275s] Invoked command in '/home/jlurobovision/eng_ws/build/galaxy_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/galaxy_camera

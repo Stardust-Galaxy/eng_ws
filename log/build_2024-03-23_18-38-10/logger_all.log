@@ -1,0 +1,507 @@
+[0.094s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.094s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f0b86950f40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f0b86a51ba0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f0b86a51ba0>>)
+[0.385s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.385s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.385s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.385s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.385s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.386s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.386s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jlurobovision/eng_ws'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.402s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/exchangestation_detector) by extensions ['ignore', 'ignore_ament_install']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/exchangestation_detector) by extension 'ignore'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/exchangestation_detector) by extension 'ignore_ament_install'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/exchangestation_detector) by extensions ['colcon_pkg']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/exchangestation_detector) by extension 'colcon_pkg'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/exchangestation_detector) by extensions ['colcon_meta']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/exchangestation_detector) by extension 'colcon_meta'
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/exchangestation_detector) by extensions ['ros']
+[0.405s] Level 1:colcon.colcon_core.package_identification:_identify(src/exchangestation_detector) by extension 'ros'
+[0.411s] DEBUG:colcon.colcon_core.package_identification:Package 'src/exchangestation_detector' with type 'ros.ament_cmake' and name 'exchangestation_detector'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(src/galaxy_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/galaxy_camera) by extension 'ignore'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/galaxy_camera) by extension 'ignore_ament_install'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/galaxy_camera) by extensions ['colcon_pkg']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/galaxy_camera) by extension 'colcon_pkg'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/galaxy_camera) by extensions ['colcon_meta']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/galaxy_camera) by extension 'colcon_meta'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/galaxy_camera) by extensions ['ros']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/galaxy_camera) by extension 'ros'
+[0.415s] DEBUG:colcon.colcon_core.package_identification:Package 'src/galaxy_camera' with type 'ros.ament_cmake' and name 'galaxy_camera'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/global_launch) by extensions ['ignore', 'ignore_ament_install']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/global_launch) by extension 'ignore'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/global_launch) by extension 'ignore_ament_install'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/global_launch) by extensions ['colcon_pkg']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/global_launch) by extension 'colcon_pkg'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/global_launch) by extensions ['colcon_meta']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/global_launch) by extension 'colcon_meta'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/global_launch) by extensions ['ros']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/global_launch) by extension 'ros'
+[0.417s] DEBUG:colcon.colcon_core.package_identification:Package 'src/global_launch' with type 'ros.ament_cmake' and name 'global_launch'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'ignore'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'ignore_ament_install'
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['colcon_pkg']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'colcon_pkg'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['colcon_meta']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'colcon_meta'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extensions ['ros']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(src/hik_camera) by extension 'ros'
+[0.419s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hik_camera' with type 'ros.ament_cmake' and name 'hik_camera'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(src/msg_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(src/msg_interfaces) by extension 'ignore'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(src/msg_interfaces) by extension 'ignore_ament_install'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/msg_interfaces) by extensions ['colcon_pkg']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/msg_interfaces) by extension 'colcon_pkg'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/msg_interfaces) by extensions ['colcon_meta']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/msg_interfaces) by extension 'colcon_meta'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/msg_interfaces) by extensions ['ros']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/msg_interfaces) by extension 'ros'
+[0.421s] DEBUG:colcon.colcon_core.package_identification:Package 'src/msg_interfaces' with type 'ros.ament_cmake' and name 'msg_interfaces'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial) by extensions ['ignore', 'ignore_ament_install']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial) by extension 'ignore'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial) by extension 'ignore_ament_install'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial) by extensions ['colcon_pkg']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial) by extension 'colcon_pkg'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial) by extensions ['colcon_meta']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial) by extension 'colcon_meta'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial) by extensions ['ros']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial) by extension 'ros'
+[0.423s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial' with type 'ros.ament_cmake' and name 'serial'
+[0.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.423s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.494s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.494s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.498s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/jlurobovision/eng_ws/install
+[0.499s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 273 installed packages in /opt/ros/humble
+[0.502s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'galaxy_camera' build argument 'cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'galaxy_camera' build argument 'cmake_target' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'galaxy_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'galaxy_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'galaxy_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'galaxy_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'galaxy_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'galaxy_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'galaxy_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.543s] DEBUG:colcon.colcon_core.verb:Building package 'galaxy_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jlurobovision/eng_ws/build/galaxy_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jlurobovision/eng_ws/install/galaxy_camera', 'merge_install': False, 'path': '/home/jlurobovision/eng_ws/src/galaxy_camera', 'symlink_install': False, 'test_result_base': None}
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'global_launch' build argument 'cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'global_launch' build argument 'cmake_target' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'global_launch' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'global_launch' build argument 'cmake_clean_cache' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'global_launch' build argument 'cmake_clean_first' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'global_launch' build argument 'cmake_force_configure' from command line to 'False'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'global_launch' build argument 'ament_cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'global_launch' build argument 'catkin_cmake_args' from command line to 'None'
+[0.543s] Level 5:colcon.colcon_core.verb:set package 'global_launch' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.543s] DEBUG:colcon.colcon_core.verb:Building package 'global_launch' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jlurobovision/eng_ws/build/global_launch', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jlurobovision/eng_ws/install/global_launch', 'merge_install': False, 'path': '/home/jlurobovision/eng_ws/src/global_launch', 'symlink_install': False, 'test_result_base': None}
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.544s] DEBUG:colcon.colcon_core.verb:Building package 'hik_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jlurobovision/eng_ws/build/hik_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jlurobovision/eng_ws/install/hik_camera', 'merge_install': False, 'path': '/home/jlurobovision/eng_ws/src/hik_camera', 'symlink_install': False, 'test_result_base': None}
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'msg_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'msg_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'msg_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'msg_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'msg_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'msg_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'msg_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'msg_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'msg_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.545s] DEBUG:colcon.colcon_core.verb:Building package 'msg_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jlurobovision/eng_ws/build/msg_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jlurobovision/eng_ws/install/msg_interfaces', 'merge_install': False, 'path': '/home/jlurobovision/eng_ws/src/msg_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_target' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_clean_cache' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_clean_first' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_force_configure' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'ament_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'catkin_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.545s] DEBUG:colcon.colcon_core.verb:Building package 'serial' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jlurobovision/eng_ws/build/serial', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jlurobovision/eng_ws/install/serial', 'merge_install': False, 'path': '/home/jlurobovision/eng_ws/src/serial', 'symlink_install': False, 'test_result_base': None}
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'exchangestation_detector' build argument 'cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'exchangestation_detector' build argument 'cmake_target' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'exchangestation_detector' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'exchangestation_detector' build argument 'cmake_clean_cache' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'exchangestation_detector' build argument 'cmake_clean_first' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'exchangestation_detector' build argument 'cmake_force_configure' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'exchangestation_detector' build argument 'ament_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'exchangestation_detector' build argument 'catkin_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'exchangestation_detector' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.546s] DEBUG:colcon.colcon_core.verb:Building package 'exchangestation_detector' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jlurobovision/eng_ws/build/exchangestation_detector', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jlurobovision/eng_ws/install/exchangestation_detector', 'merge_install': False, 'path': '/home/jlurobovision/eng_ws/src/exchangestation_detector', 'symlink_install': False, 'test_result_base': None}
+[0.546s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.548s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.549s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jlurobovision/eng_ws/src/msg_interfaces' with build type 'ament_cmake'
+[0.549s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jlurobovision/eng_ws/src/msg_interfaces'
+[0.552s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.553s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.553s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.557s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jlurobovision/eng_ws/src/galaxy_camera' with build type 'ament_cmake'
+[0.557s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jlurobovision/eng_ws/src/galaxy_camera'
+[0.557s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.557s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.561s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jlurobovision/eng_ws/src/global_launch' with build type 'ament_cmake'
+[0.561s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jlurobovision/eng_ws/src/global_launch'
+[0.562s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.562s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.568s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jlurobovision/eng_ws/src/hik_camera' with build type 'ament_cmake'
+[0.569s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jlurobovision/eng_ws/src/hik_camera'
+[0.569s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.569s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.584s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/msg_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/msg_interfaces -- -j12 -l12
+[0.589s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/galaxy_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/galaxy_camera -- -j12 -l12
+[0.597s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/global_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/global_launch -- -j12 -l12
+[0.611s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/hik_camera -- -j12 -l12
+[0.661s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/global_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/global_launch -- -j12 -l12
+[0.773s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/galaxy_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/galaxy_camera -- -j12 -l12
+[0.819s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/global_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/global_launch
+[0.842s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/galaxy_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/galaxy_camera
+[0.844s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/hik_camera -- -j12 -l12
+[0.847s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(global_launch)
+[0.849s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/global_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/global_launch
+[0.855s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch' for CMake module files
+[0.856s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch' for CMake config files
+[0.856s] Level 1:colcon.colcon_core.shell:create_environment_hook('global_launch', 'cmake_prefix_path')
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/hook/cmake_prefix_path.ps1'
+[0.860s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/hook/cmake_prefix_path.dsv'
+[0.861s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/hook/cmake_prefix_path.sh'
+[0.867s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch/bin'
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch/lib/pkgconfig/global_launch.pc'
+[0.868s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch/lib/python3.10/site-packages'
+[0.869s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch/bin'
+[0.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.ps1'
+[0.873s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.dsv'
+[0.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.sh'
+[0.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.bash'
+[0.878s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.zsh'
+[0.880s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/global_launch/share/colcon-core/packages/global_launch)
+[0.886s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(galaxy_camera)
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera' for CMake module files
+[0.892s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/galaxy_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/galaxy_camera
+[0.892s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera' for CMake config files
+[0.893s] Level 1:colcon.colcon_core.shell:create_environment_hook('galaxy_camera', 'cmake_prefix_path')
+[0.893s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/cmake_prefix_path.ps1'
+[0.894s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/cmake_prefix_path.dsv'
+[0.894s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/cmake_prefix_path.sh'
+[0.895s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/lib'
+[0.896s] Level 1:colcon.colcon_core.shell:create_environment_hook('galaxy_camera', 'ld_library_path_lib')
+[0.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/ld_library_path_lib.ps1'
+[0.899s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/ld_library_path_lib.dsv'
+[0.900s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/ld_library_path_lib.sh'
+[0.901s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/bin'
+[0.902s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/lib/pkgconfig/galaxy_camera.pc'
+[0.902s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/lib/python3.10/site-packages'
+[0.903s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/bin'
+[0.903s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.ps1'
+[0.904s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.dsv'
+[0.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.sh'
+[0.906s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.bash'
+[0.906s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.zsh'
+[0.907s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/galaxy_camera/share/colcon-core/packages/galaxy_camera)
+[0.914s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/hik_camera
+[0.917s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(global_launch)
+[0.918s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch' for CMake module files
+[0.919s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch' for CMake config files
+[0.919s] Level 1:colcon.colcon_core.shell:create_environment_hook('global_launch', 'cmake_prefix_path')
+[0.919s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/hook/cmake_prefix_path.ps1'
+[0.920s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/hook/cmake_prefix_path.dsv'
+[0.920s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/hook/cmake_prefix_path.sh'
+[0.921s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch/bin'
+[0.922s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch/lib/pkgconfig/global_launch.pc'
+[0.922s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch/lib/python3.10/site-packages'
+[0.922s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/global_launch/bin'
+[0.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.ps1'
+[0.925s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.dsv'
+[0.927s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.sh'
+[0.928s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.bash'
+[0.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/global_launch/share/global_launch/package.zsh'
+[0.937s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/global_launch/share/colcon-core/packages/global_launch)
+[0.939s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[0.940s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera' for CMake module files
+[0.941s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera' for CMake config files
+[0.942s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[0.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[0.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[0.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[0.946s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/lib'
+[0.947s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[0.947s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[0.952s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/hik_camera
+[0.953s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[0.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[0.954s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/bin'
+[0.954s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[0.955s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/lib/python3.10/site-packages'
+[0.955s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/bin'
+[0.956s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.ps1'
+[0.957s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.dsv'
+[0.958s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.sh'
+[0.959s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.bash'
+[0.960s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.zsh'
+[0.960s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/hik_camera/share/colcon-core/packages/hik_camera)
+[0.969s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(galaxy_camera)
+[0.971s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera' for CMake module files
+[0.972s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera' for CMake config files
+[0.973s] Level 1:colcon.colcon_core.shell:create_environment_hook('galaxy_camera', 'cmake_prefix_path')
+[0.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/cmake_prefix_path.ps1'
+[0.977s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/cmake_prefix_path.dsv'
+[0.978s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/cmake_prefix_path.sh'
+[0.980s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/lib'
+[0.981s] Level 1:colcon.colcon_core.shell:create_environment_hook('galaxy_camera', 'ld_library_path_lib')
+[0.983s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/ld_library_path_lib.ps1'
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/ld_library_path_lib.dsv'
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/hook/ld_library_path_lib.sh'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/bin'
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/lib/pkgconfig/galaxy_camera.pc'
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/lib/python3.10/site-packages'
+[0.990s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/galaxy_camera/bin'
+[0.990s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.ps1'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.dsv'
+[0.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.sh'
+[0.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.bash'
+[0.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/galaxy_camera/share/galaxy_camera/package.zsh'
+[0.994s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/galaxy_camera/share/colcon-core/packages/galaxy_camera)
+[1.023s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[1.024s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera' for CMake module files
+[1.024s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera' for CMake config files
+[1.025s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[1.025s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[1.026s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[1.026s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[1.027s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/lib'
+[1.027s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[1.028s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[1.029s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[1.030s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[1.034s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/bin'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/lib/python3.10/site-packages'
+[1.036s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/hik_camera/bin'
+[1.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.ps1'
+[1.039s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.dsv'
+[1.040s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.sh'
+[1.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.bash'
+[1.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/hik_camera/share/hik_camera/package.zsh'
+[1.042s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/hik_camera/share/colcon-core/packages/hik_camera)
+[1.642s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/msg_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/msg_interfaces -- -j12 -l12
+[1.718s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/msg_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/msg_interfaces
+[1.805s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(msg_interfaces)
+[1.805s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces' for CMake module files
+[1.806s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/msg_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/msg_interfaces
+[1.806s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces' for CMake config files
+[1.807s] Level 1:colcon.colcon_core.shell:create_environment_hook('msg_interfaces', 'cmake_prefix_path')
+[1.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/cmake_prefix_path.ps1'
+[1.808s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/cmake_prefix_path.dsv'
+[1.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/cmake_prefix_path.sh'
+[1.809s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/lib'
+[1.809s] Level 1:colcon.colcon_core.shell:create_environment_hook('msg_interfaces', 'ld_library_path_lib')
+[1.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/ld_library_path_lib.ps1'
+[1.810s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/ld_library_path_lib.dsv'
+[1.810s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/ld_library_path_lib.sh'
+[1.810s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/bin'
+[1.810s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/lib/pkgconfig/msg_interfaces.pc'
+[1.811s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages'
+[1.811s] Level 1:colcon.colcon_core.shell:create_environment_hook('msg_interfaces', 'pythonpath')
+[1.811s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/pythonpath.ps1'
+[1.811s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/pythonpath.dsv'
+[1.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/pythonpath.sh'
+[1.812s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/bin'
+[1.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.ps1'
+[1.813s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.dsv'
+[1.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.sh'
+[1.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.bash'
+[1.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.zsh'
+[1.815s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/msg_interfaces/share/colcon-core/packages/msg_interfaces)
+[1.859s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(msg_interfaces)
+[1.860s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces' for CMake module files
+[1.862s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces' for CMake config files
+[1.863s] Level 1:colcon.colcon_core.shell:create_environment_hook('msg_interfaces', 'cmake_prefix_path')
+[1.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/cmake_prefix_path.ps1'
+[1.865s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/cmake_prefix_path.dsv'
+[1.866s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/cmake_prefix_path.sh'
+[1.867s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/lib'
+[1.867s] Level 1:colcon.colcon_core.shell:create_environment_hook('msg_interfaces', 'ld_library_path_lib')
+[1.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/ld_library_path_lib.ps1'
+[1.868s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/ld_library_path_lib.dsv'
+[1.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/ld_library_path_lib.sh'
+[1.869s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/bin'
+[1.869s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/lib/pkgconfig/msg_interfaces.pc'
+[1.870s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages'
+[1.870s] Level 1:colcon.colcon_core.shell:create_environment_hook('msg_interfaces', 'pythonpath')
+[1.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/pythonpath.ps1'
+[1.871s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/pythonpath.dsv'
+[1.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/hook/pythonpath.sh'
+[1.872s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/msg_interfaces/bin'
+[1.873s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.ps1'
+[1.873s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.dsv'
+[1.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.sh'
+[1.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.bash'
+[1.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/package.zsh'
+[1.875s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/msg_interfaces/share/colcon-core/packages/msg_interfaces)
+[1.875s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jlurobovision/eng_ws/src/serial' with build type 'ament_cmake'
+[1.876s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jlurobovision/eng_ws/src/serial'
+[1.876s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.876s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.894s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[2.012s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[2.037s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/serial
+[2.049s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial)
+[2.051s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial' for CMake module files
+[2.051s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/serial
+[2.052s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial' for CMake config files
+[2.052s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial', 'cmake_prefix_path')
+[2.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/cmake_prefix_path.ps1'
+[2.053s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/cmake_prefix_path.dsv'
+[2.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/cmake_prefix_path.sh'
+[2.054s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/lib'
+[2.054s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial', 'ld_library_path_lib')
+[2.054s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/ld_library_path_lib.ps1'
+[2.055s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/ld_library_path_lib.dsv'
+[2.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/ld_library_path_lib.sh'
+[2.056s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/bin'
+[2.056s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/lib/pkgconfig/serial.pc'
+[2.056s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/lib/python3.10/site-packages'
+[2.057s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/bin'
+[2.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/serial/share/serial/package.ps1'
+[2.058s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/serial/share/serial/package.dsv'
+[2.059s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/serial/share/serial/package.sh'
+[2.061s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/serial/share/serial/package.bash'
+[2.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/serial/share/serial/package.zsh'
+[2.062s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/serial/share/colcon-core/packages/serial)
+[2.096s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial)
+[2.096s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial' for CMake module files
+[2.097s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial' for CMake config files
+[2.097s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial', 'cmake_prefix_path')
+[2.098s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/cmake_prefix_path.ps1'
+[2.099s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/cmake_prefix_path.dsv'
+[2.099s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/cmake_prefix_path.sh'
+[2.100s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/lib'
+[2.100s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial', 'ld_library_path_lib')
+[2.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/ld_library_path_lib.ps1'
+[2.101s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/ld_library_path_lib.dsv'
+[2.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/serial/share/serial/hook/ld_library_path_lib.sh'
+[2.101s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/bin'
+[2.101s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/lib/pkgconfig/serial.pc'
+[2.102s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/lib/python3.10/site-packages'
+[2.102s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/serial/bin'
+[2.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/serial/share/serial/package.ps1'
+[2.103s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/serial/share/serial/package.dsv'
+[2.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/serial/share/serial/package.sh'
+[2.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/serial/share/serial/package.bash'
+[2.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/serial/share/serial/package.zsh'
+[2.104s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/serial/share/colcon-core/packages/serial)
+[2.105s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jlurobovision/eng_ws/src/exchangestation_detector' with build type 'ament_cmake'
+[2.105s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jlurobovision/eng_ws/src/exchangestation_detector'
+[2.106s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.106s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.118s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/exchangestation_detector -- -j12 -l12
+[6.189s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/exchangestation_detector' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/exchangestation_detector -- -j12 -l12
+[6.258s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jlurobovision/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/exchangestation_detector
+[6.311s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(exchangestation_detector)
+[6.311s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector' for CMake module files
+[6.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jlurobovision/eng_ws/build/exchangestation_detector' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/exchangestation_detector
+[6.314s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector' for CMake config files
+[6.315s] Level 1:colcon.colcon_core.shell:create_environment_hook('exchangestation_detector', 'cmake_prefix_path')
+[6.317s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/cmake_prefix_path.ps1'
+[6.318s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/cmake_prefix_path.dsv'
+[6.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/cmake_prefix_path.sh'
+[6.320s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/lib'
+[6.320s] Level 1:colcon.colcon_core.shell:create_environment_hook('exchangestation_detector', 'ld_library_path_lib')
+[6.321s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/ld_library_path_lib.ps1'
+[6.321s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/ld_library_path_lib.dsv'
+[6.322s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/ld_library_path_lib.sh'
+[6.323s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/bin'
+[6.323s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/lib/pkgconfig/exchangestation_detector.pc'
+[6.323s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/lib/python3.10/site-packages'
+[6.324s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/bin'
+[6.324s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.ps1'
+[6.325s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.dsv'
+[6.325s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.sh'
+[6.326s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.bash'
+[6.326s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.zsh'
+[6.327s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/exchangestation_detector/share/colcon-core/packages/exchangestation_detector)
+[6.393s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(exchangestation_detector)
+[6.394s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector' for CMake module files
+[6.395s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector' for CMake config files
+[6.395s] Level 1:colcon.colcon_core.shell:create_environment_hook('exchangestation_detector', 'cmake_prefix_path')
+[6.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/cmake_prefix_path.ps1'
+[6.397s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/cmake_prefix_path.dsv'
+[6.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/cmake_prefix_path.sh'
+[6.400s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/lib'
+[6.401s] Level 1:colcon.colcon_core.shell:create_environment_hook('exchangestation_detector', 'ld_library_path_lib')
+[6.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/ld_library_path_lib.ps1'
+[6.403s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/ld_library_path_lib.dsv'
+[6.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/hook/ld_library_path_lib.sh'
+[6.404s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/bin'
+[6.404s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/lib/pkgconfig/exchangestation_detector.pc'
+[6.405s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/lib/python3.10/site-packages'
+[6.405s] Level 1:colcon.colcon_core.environment:checking '/home/jlurobovision/eng_ws/install/exchangestation_detector/bin'
+[6.406s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.ps1'
+[6.407s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.dsv'
+[6.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.sh'
+[6.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.bash'
+[6.409s] INFO:colcon.colcon_core.shell:Creating package script '/home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.zsh'
+[6.409s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jlurobovision/eng_ws/install/exchangestation_detector/share/colcon-core/packages/exchangestation_detector)
+[6.410s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.410s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.411s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.411s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.425s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.425s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.426s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.451s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.452s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jlurobovision/eng_ws/install/local_setup.ps1'
+[6.454s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jlurobovision/eng_ws/install/_local_setup_util_ps1.py'
+[6.456s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jlurobovision/eng_ws/install/setup.ps1'
+[6.460s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jlurobovision/eng_ws/install/local_setup.sh'
+[6.460s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jlurobovision/eng_ws/install/_local_setup_util_sh.py'
+[6.461s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jlurobovision/eng_ws/install/setup.sh'
+[6.466s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jlurobovision/eng_ws/install/local_setup.bash'
+[6.468s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jlurobovision/eng_ws/install/setup.bash'
+[6.473s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jlurobovision/eng_ws/install/local_setup.zsh'
+[6.474s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jlurobovision/eng_ws/install/setup.zsh'

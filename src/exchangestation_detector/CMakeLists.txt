@@ -19,6 +19,7 @@ find_package(image_transport REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(serial REQUIRED)
 find_package(msg_interfaces REQUIRED)
+find_package(yaml-cpp REQUIRED)
 ament_auto_find_build_dependencies()
 
 

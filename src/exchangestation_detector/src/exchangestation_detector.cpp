@@ -1,4 +1,6 @@
 #include "exchangestation_detector/exchangestation_detector.hpp"
+//use yaml-cpp to read yaml files
+#include <yaml-cpp/yaml.h>
 using namespace cv;
 // helper method
 cv::Point2f ExchangeStationDetector::computeCentroid(const std::vector<candidateContour>& candidates) {
@@ -31,11 +33,37 @@ ExchangeStationDetector::ExchangeStationDetector() {
 }
 
 ExchangeStationDetector::ExchangeStationDetector(int blueThreshold,int redThreshold,int detectColor) {
-    cv::FileStorage fs("config/camera.yaml", cv::FileStorage::READ);
-    fs["DistortionCoeff"] >> DistortionCoeff;
-    fs["CameraMatrix"] >> CameraMatrix;
-    fs.release();
+    try {
+        YAML::Node config = YAML::LoadFile("/home/jlurobovision/eng_ws/src/exchangestation_detector/config/camera.yaml");
 
+        std::vector<double> DistortionCoeff;
+        if (config["distortion_coeff"]) {
+            DistortionCoeff = config["distortion_coeff"].as<std::vector<double>>();
+            std::cout << "Distortion Coefficients: ";
+            for (double coeff : DistortionCoeff) {
+                std::cout << coeff << " ";
+            }
+            std::cout << std::endl;
+        } else {
+            std::cout << "distortion_coeff not found in the YAML file." << std::endl;
+        }
+
+        std::vector<double> CameraMatrix;
+        if (config["camera_matrix"]["data"]) {
+            CameraMatrix = config["camera_matrix"]["data"].as<std::vector<double>>();
+            std::cout << "Camera Matrix: ";
+            for (double val : CameraMatrix) {
+                std::cout << val << " ";
+            }
+            std::cout << std::endl;
+        } else {
+            std::cout << "camera_matrix data not found in the YAML file." << std::endl;
+        }
+    } catch (const std::exception& e) {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
+
+    
     this->redThreshold = redThreshold;
     this->blueThreshold = blueThreshold;
     this->detectColor = detectColor;
@@ -107,7 +135,7 @@ Packet ExchangeStationDetector::solveAngle()
                                          this->corners[2].corner, 
                                          this->corners[3].corner };
     cv::Mat tVec, rVec;
-    cv::solvePnP(realPos, ExStationPos, CameraMatrix, DistortionCoeff, rVec, tVec, false,cv::SOLVEPNP_IPPE);
+    cv::solvePnP(ExStationPos, realPos, CameraMatrix, DistortionCoeff, rVec, tVec, false,cv::SOLVEPNP_IPPE_SQUARE);
     cv::Mat rotationVector;
     cv::Rodrigues(rVec, rotationVector);
 
@@ -118,8 +146,6 @@ Packet ExchangeStationDetector::solveAngle()
     //solve quarternion and coordinates from rVec and tVec, alread have rVec and tVec
     cv::Mat rotationMatrix;
     cv::Rodrigues(rVec, rotationMatrix);
-    cv::Mat rotationQuaternion;
-    cv::Rodrigues(rotationMatrix, rotationQuaternion);
     double Q[4];
     getQuaternion(rotationMatrix, Q);
     packet.quaternion1 = Q[0];

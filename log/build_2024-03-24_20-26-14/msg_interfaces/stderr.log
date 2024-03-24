@@ -1,0 +1,5 @@
+failed to create symbolic link '/home/jlurobovision/eng_ws/build/msg_interfaces/ament_cmake_python/msg_interfaces/msg_interfaces' because existing path cannot be removed: Is a directory
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_msg_interfaces.dir/build.make:70：CMakeFiles/ament_cmake_python_symlink_msg_interfaces] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:421：CMakeFiles/ament_cmake_python_symlink_msg_interfaces.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+gmake: *** [Makefile:146：all] 错误 2
