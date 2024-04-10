@@ -1,1 +1,1 @@
-rclcpp;rclcpp_components;geometry_msgs;std_msgs;rclpy;rclcpp_lifecycle;message_filters;sensor_msgs;OpenCV;Eigen3;msg_interfaces;tf2_ros;tf2_geometry_msgs;ament_lint_auto;ament_lint_common
+/home/jlurobovision/eng_ws/build/serial/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/serial

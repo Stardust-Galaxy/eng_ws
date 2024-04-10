@@ -1,4 +1,1 @@
-PLUGIN;lib/libserial.so
-serialport::SerialPortNode;lib/libserial.so
-EXECUTABLE;lib/libserial.so
-serial_node;lib/libserial.so
+/home/jlurobovision/eng_ws/build/serial/ament_cmake_index/share/ament_index/resource_index/rclcpp_components/serial

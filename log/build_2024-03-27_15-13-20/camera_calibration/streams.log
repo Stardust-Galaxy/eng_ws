@@ -1,0 +1,182 @@
+[0.042s] Invoking command in '/home/jlurobovision/eng_ws/build/camera_calibration': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jlurobovision/eng_ws/src/camera_calibration -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/camera_calibration
+[0.161s] -- The C compiler identification is GNU 11.4.0
+[0.259s] -- The CXX compiler identification is GNU 11.4.0
+[0.268s] -- Detecting C compiler ABI info
+[0.370s] -- Detecting C compiler ABI info - done
+[0.380s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.381s] -- Detecting C compile features
+[0.381s] -- Detecting C compile features - done
+[0.387s] -- Detecting CXX compiler ABI info
+[0.506s] -- Detecting CXX compiler ABI info - done
+[0.516s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.516s] -- Detecting CXX compile features
+[0.516s] -- Detecting CXX compile features - done
+[0.523s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.688s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.774s] -- Found ament_cmake_auto: 1.3.8 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.778s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.833s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.841s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.854s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.880s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.910s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.021s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.024s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.124s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.156s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.198s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.208s] -- Looking for pthread.h
+[1.283s] -- Looking for pthread.h - found
+[1.283s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.358s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.359s] -- Found Threads: TRUE  
+[1.543s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.683s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[1.708s] [33mCMake Warning at CMakeLists.txt:17 (find_package):
+[1.708s]   By not providing "FindOpenCV_REQUIRED.cmake" in CMAKE_MODULE_PATH this
+[1.708s]   project has asked CMake to find a package configuration file provided by
+[1.708s]   "OpenCV_REQUIRED", but CMake did not find one.
+[1.709s] 
+[1.709s]   Could not find a package configuration file provided by "OpenCV_REQUIRED"
+[1.709s]   with any of the following names:
+[1.709s] 
+[1.709s]     OpenCV_REQUIREDConfig.cmake
+[1.709s]     opencv_required-config.cmake
+[1.709s] 
+[1.709s]   Add the installation prefix of "OpenCV_REQUIRED" to CMAKE_PREFIX_PATH or
+[1.709s]   set "OpenCV_REQUIRED_DIR" to a directory containing one of the above files.
+[1.709s]   If "OpenCV_REQUIRED" provides a separate development package or SDK, be
+[1.709s]   sure it has been installed.
+[1.710s] 
+[1.710s] [0m
+[1.856s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.873s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.873s] -- Configured cppcheck include dirs: 
+[1.873s] -- Configured cppcheck exclude dirs and/or files: 
+[1.874s] -- Added test 'lint_cmake' to check CMake code style
+[1.875s] -- Added test 'uncrustify' to check C / C++ code style
+[1.875s] -- Configured uncrustify additional arguments: 
+[1.875s] -- Added test 'xmllint' to check XML markup files
+[1.876s] -- Configuring done
+[1.888s] -- Generating done
+[1.890s] -- Build files have been written to: /home/jlurobovision/eng_ws/build/camera_calibration
+[1.898s] Invoked command in '/home/jlurobovision/eng_ws/build/camera_calibration' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jlurobovision/eng_ws/src/camera_calibration -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/camera_calibration
+[1.899s] Invoking command in '/home/jlurobovision/eng_ws/build/camera_calibration': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/camera_calibration -- -j12 -l12
+[1.959s] [ 50%] [32mBuilding CXX object CMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o[0m
+[5.815s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[5.816s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:27:17:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[5.816s]    27 |     auto node = [01;31m[Kmake_shared<Node>[m[K("camera_calibration");
+[5.816s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[5.816s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:27:34:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >(const char [19])[m[K’
+[5.816s]    27 |     auto node = [01;31m[Kmake_shared<Node>("camera_calibration")[m[K;
+[5.816s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.819s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[5.819s]                  from [01m[K/usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp:11[m[K,
+[5.819s]                  from [01m[K/usr/local/include/opencv4/opencv2/core/cvstd.hpp:81[m[K,
+[5.819s]                  from [01m[K/usr/local/include/opencv4/opencv2/core/base.hpp:58[m[K,
+[5.820s]                  from [01m[K/usr/local/include/opencv4/opencv2/core.hpp:53[m[K,
+[5.820s]                  from [01m[K/usr/local/include/opencv4/opencv2/opencv.hpp:52[m[K,
+[5.820s]                  from [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1[m[K:
+[5.820s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+[5.820s]   875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+[5.820s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[5.820s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.820s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:27:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.820s]    27 |     auto node = [01;31m[Kmake_shared<Node>("camera_calibration")[m[K;
+[5.820s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.820s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:28:47:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[5.820s]    28 |     auto sub = node->create_subscription<Image[01;31m[K>[m[K("/image_raw", 10, [](const Image::SharedPtr msg) {
+[5.820s]       |                                               [01;31m[K^[m[K
+[5.820s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:28:49:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[5.820s]    28 |     auto sub = node->create_subscription<Image>([01;35m[K"/image_raw"[m[K, 10, [](const Image::SharedPtr msg) {
+[5.821s]       |                                                 [01;35m[K^~~~~~~~~~~~[m[K
+[5.823s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:[m[K In lambda function:
+[5.823s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:29:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv_bridge[m[K’ has not been declared
+[5.823s]    29 |         [01;31m[Kcv_bridge[m[K::CvImagePtr cv_ptr;
+[5.823s]       |         [01;31m[K^~~~~~~~~[m[K
+[5.831s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:31:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv_ptr[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_ptr[m[K’?
+[5.831s]    31 |             [01;31m[Kcv_ptr[m[K = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+[5.831s]       |             [01;31m[K^~~~~~[m[K
+[5.832s]       |             [32m[Ksi_ptr[m[K
+[5.832s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:31:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv_bridge[m[K’ has not been declared
+[5.832s]    31 |             cv_ptr = [01;31m[Kcv_bridge[m[K::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+[5.832s]       |                      [01;31m[K^~~~~~~~~[m[K
+[5.832s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:31:60:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_msgs::image_encodings[m[K’ has not been declared
+[5.832s]    31 |             cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::[01;31m[Kimage_encodings[m[K::BGR8);
+[5.832s]       |                                                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+[5.835s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv_bridge[m[K’ does not name a type
+[5.835s]    35 |         } catch ([01;31m[Kcv_bridge[m[K::Exception& e) {
+[5.835s]       |                  [01;31m[K^~~~~~~~~[m[K
+[5.835s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:38:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+[5.835s]    35 |         } catch (cv_bridge::Exception[01;31m[K&[m[K e) {
+[5.835s]       |                                      [01;31m[K^[m[K
+[5.835s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+[5.835s]    35 |         } catch [34m[K([m[Kcv_bridge::Exception[01;31m[K&[m[K e) {
+[5.836s]       |                 [34m[K~[m[K                    [01;31m[K^[m[K
+[5.836s]       |                                      [32m[K)[m[K
+[5.836s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K&[m[K’ token
+[5.842s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:40:[m[K [01;31m[Kerror: [m[K‘[01m[Ke[m[K’ was not declared in this scope
+[5.842s]    35 |         } catch (cv_bridge::Exception& [01;31m[Ke[m[K) {
+[5.842s]       |                                        [01;31m[K^[m[K
+[5.850s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:39:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv_ptr[m[K’ was not declared in this scope; did you mean ‘[01m[Ksi_ptr[m[K’?
+[5.850s]    39 |         g_image = [01;31m[Kcv_ptr[m[K->image;
+[5.850s]       |                   [01;31m[K^~~~~~[m[K
+[5.850s]       |                   [32m[Ksi_ptr[m[K
+[5.850s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[5.850s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:40:5:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[5.850s]    40 |     [01;35m[K}[m[K);
+[5.850s]       |     [01;35m[K^[m[K
+[5.851s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:44:47:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kdouble*[m[K’ to ‘[01m[Kint*[m[K’
+[5.851s]    44 |     createTrackbar("k1", "Undistorted Image", [01;31m[K&distortionMatrix.at<double>(0, 0)[m[K, 100, updateDistortionMatrix, &distortionMatrix);
+[5.851s]       |                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.851s]       |                                               [01;31m[K|[m[K
+[5.851s]       |                                               [01;31m[Kdouble*[m[K
+[5.851s] In file included from [01m[K/usr/local/include/opencv4/opencv2/opencv.hpp:68[m[K,
+[5.851s]                  from [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1[m[K:
+[5.851s] [01m[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)[m[K’
+[5.852s]   524 |                               [01;36m[Kint* value[m[K, int count,
+[5.852s]       |                               [01;36m[K~~~~~^~~~~[m[K
+[5.852s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:45:47:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kdouble*[m[K’ to ‘[01m[Kint*[m[K’
+[5.852s]    45 |     createTrackbar("k2", "Undistorted Image", [01;31m[K&distortionMatrix.at<double>(0, 1)[m[K, 100, updateDistortionMatrix, &distortionMatrix);
+[5.852s]       |                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.852s]       |                                               [01;31m[K|[m[K
+[5.852s]       |                                               [01;31m[Kdouble*[m[K
+[5.852s] In file included from [01m[K/usr/local/include/opencv4/opencv2/opencv.hpp:68[m[K,
+[5.852s]                  from [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1[m[K:
+[5.852s] [01m[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)[m[K’
+[5.852s]   524 |                               [01;36m[Kint* value[m[K, int count,
+[5.852s]       |                               [01;36m[K~~~~~^~~~~[m[K
+[5.852s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:46:47:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kdouble*[m[K’ to ‘[01m[Kint*[m[K’
+[5.852s]    46 |     createTrackbar("p1", "Undistorted Image", [01;31m[K&distortionMatrix.at<double>(0, 2)[m[K, 100, updateDistortionMatrix, &distortionMatrix);
+[5.852s]       |                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.853s]       |                                               [01;31m[K|[m[K
+[5.853s]       |                                               [01;31m[Kdouble*[m[K
+[5.853s] In file included from [01m[K/usr/local/include/opencv4/opencv2/opencv.hpp:68[m[K,
+[5.853s]                  from [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1[m[K:
+[5.853s] [01m[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)[m[K’
+[5.853s]   524 |                               [01;36m[Kint* value[m[K, int count,
+[5.853s]       |                               [01;36m[K~~~~~^~~~~[m[K
+[5.853s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:47:47:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kdouble*[m[K’ to ‘[01m[Kint*[m[K’
+[5.853s]    47 |     createTrackbar("p2", "Undistorted Image", [01;31m[K&distortionMatrix.at<double>(0, 3)[m[K, 100, updateDistortionMatrix, &distortionMatrix);
+[5.853s]       |                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.853s]       |                                               [01;31m[K|[m[K
+[5.854s]       |                                               [01;31m[Kdouble*[m[K
+[5.854s] In file included from [01m[K/usr/local/include/opencv4/opencv2/opencv.hpp:68[m[K,
+[5.854s]                  from [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1[m[K:
+[5.854s] [01m[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)[m[K’
+[5.854s]   524 |                               [01;36m[Kint* value[m[K, int count,
+[5.854s]       |                               [01;36m[K~~~~~^~~~~[m[K
+[5.854s] [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:48:47:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kdouble*[m[K’ to ‘[01m[Kint*[m[K’
+[5.854s]    48 |     createTrackbar("k3", "Undistorted Image", [01;31m[K&distortionMatrix.at<double>(0, 4)[m[K, 100, updateDistortionMatrix, &distortionMatrix);
+[5.854s]       |                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.854s]       |                                               [01;31m[K|[m[K
+[5.854s]       |                                               [01;31m[Kdouble*[m[K
+[5.854s] In file included from [01m[K/usr/local/include/opencv4/opencv2/opencv.hpp:68[m[K,
+[5.854s]                  from [01m[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1[m[K:
+[5.854s] [01m[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)[m[K’
+[5.855s]   524 |                               [01;36m[Kint* value[m[K, int count,
+[5.855s]       |                               [01;36m[K~~~~~^~~~~[m[K
+[7.369s] gmake[2]: *** [CMakeFiles/camera_calibration.dir/build.make:76：CMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o] 错误 1
+[7.370s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/camera_calibration.dir/all] 错误 2
+[7.370s] gmake: *** [Makefile:146：all] 错误 2
+[7.372s] Invoked command in '/home/jlurobovision/eng_ws/build/camera_calibration' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/camera_calibration -- -j12 -l12

@@ -25,7 +25,7 @@ AMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=ON
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
-AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -407,7 +407,7 @@ exchangestation_detector_BINARY_DIR:STATIC=/home/jlurobovision/eng_ws/build/exch
 exchangestation_detector_IS_TOP_LEVEL:STATIC=ON
 
 //Dependencies for the target
-exchangestation_detector_LIB_DEPENDS:STATIC=general;cv_bridge::cv_bridge;general;image_transport::image_transport;general;rclcpp::rclcpp;general;sensor_msgs::sensor_msgs__rosidl_generator_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_cpp;general;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_cpp;general;sensor_msgs::sensor_msgs__rosidl_typesupport_cpp;general;sensor_msgs::sensor_msgs__rosidl_generator_py;general;rclcpp_components::component_manager;general;message_filters::message_filters;general;msg_interfaces::msg_interfaces__rosidl_generator_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_fastrtps_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_introspection_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_fastrtps_cpp;general;msg_interfaces::msg_interfaces__rosidl_typesupport_introspection_cpp;general;msg_interfaces::msg_interfaces__rosidl_typesupport_cpp;general;msg_interfaces::msg_interfaces__rosidl_generator_py;general;rclcpp::rclcpp;general;cv_bridge::cv_bridge;general;msg_interfaces::msg_interfaces__rosidl_generator_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_fastrtps_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_introspection_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_fastrtps_cpp;general;msg_interfaces::msg_interfaces__rosidl_typesupport_introspection_cpp;general;msg_interfaces::msg_interfaces__rosidl_typesupport_cpp;general;msg_interfaces::msg_interfaces__rosidl_generator_py;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_gapi;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;general;opencv_alphamat;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dnn_objdetect;general;opencv_dnn_superres;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_hfs;general;opencv_img_hash;general;opencv_intensity_transform;general;opencv_line_descriptor;general;opencv_mcc;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_quality;general;opencv_rapid;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_shape;general;opencv_signal;general;opencv_stereo;general;opencv_structured_light;general;opencv_superres;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_videostab;general;opencv_wechat_qrcode;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
+exchangestation_detector_LIB_DEPENDS:STATIC=general;cv_bridge::cv_bridge;general;image_transport::image_transport;general;rclcpp::rclcpp;general;sensor_msgs::sensor_msgs__rosidl_generator_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_fastrtps_cpp;general;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_c;general;sensor_msgs::sensor_msgs__rosidl_typesupport_introspection_cpp;general;sensor_msgs::sensor_msgs__rosidl_typesupport_cpp;general;sensor_msgs::sensor_msgs__rosidl_generator_py;general;rclcpp_components::component_manager;general;message_filters::message_filters;general;yaml-cpp;general;msg_interfaces::msg_interfaces__rosidl_generator_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_fastrtps_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_introspection_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_fastrtps_cpp;general;msg_interfaces::msg_interfaces__rosidl_typesupport_introspection_cpp;general;msg_interfaces::msg_interfaces__rosidl_typesupport_cpp;general;msg_interfaces::msg_interfaces__rosidl_generator_py;general;rclcpp::rclcpp;general;cv_bridge::cv_bridge;general;msg_interfaces::msg_interfaces__rosidl_generator_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_fastrtps_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_introspection_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_c;general;msg_interfaces::msg_interfaces__rosidl_typesupport_fastrtps_cpp;general;msg_interfaces::msg_interfaces__rosidl_typesupport_introspection_cpp;general;msg_interfaces::msg_interfaces__rosidl_typesupport_cpp;general;msg_interfaces::msg_interfaces__rosidl_generator_py;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_gapi;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_stitching;general;opencv_video;general;opencv_videoio;
 
 //Value Computed by CMake
 exchangestation_detector_SOURCE_DIR:STATIC=/home/jlurobovision/eng_ws/src/exchangestation_detector
@@ -571,8 +571,14 @@ tracetools_DIR:PATH=/opt/ros/humble/share/tracetools/cmake
 //Path to a program.
 xmllint_BIN:FILEPATH=/usr/bin/xmllint
 
+//The directory containing a CMake configuration file for yaml-cpp.
+yaml-cpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp
+
 //The directory containing a CMake configuration file for yaml.
 yaml_DIR:PATH=/opt/ros/humble/cmake
+
+//The directory containing a CMake configuration file for yaml_cpp_vendor.
+yaml_cpp_vendor_DIR:PATH=/opt/ros/humble/share/yaml_cpp_vendor/cmake
 
 
 ########################
@@ -729,7 +735,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding FastRTPS
 FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/humble/include][/opt/ros/humble/lib/libfastrtps.so;/opt/ros/humble/lib/libfastcdr.so][v()]
 //Details about finding OpenCV
-FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v4.9.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v4.8.0()]
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcrypto.so][/usr/include][c ][v3.0.2()]
 //Details about finding Python3
@@ -789,6 +795,8 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=0f3e53742e142b1d9e50e4ca5b901dd8
+//Index for unique symlink install targets
+__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=3
 __pkg_config_arguments__OPENSSL:INTERNAL=QUIET;openssl
 __pkg_config_checked__OPENSSL:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib__OPENSSL_crypto

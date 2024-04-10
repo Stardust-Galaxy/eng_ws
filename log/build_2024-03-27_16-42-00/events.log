@@ -1,0 +1,283 @@
+[0.000000] (-) TimerEvent: {}
+[0.000247] (-) JobUnselected: {'identifier': 'exchangestation_detector'}
+[0.000321] (-) JobUnselected: {'identifier': 'galaxy_camera'}
+[0.000373] (-) JobUnselected: {'identifier': 'global_launch'}
+[0.000396] (-) JobUnselected: {'identifier': 'hik_camera'}
+[0.000413] (-) JobUnselected: {'identifier': 'msg_interfaces'}
+[0.000431] (-) JobUnselected: {'identifier': 'serial'}
+[0.000535] (camera_calibration) JobQueued: {'identifier': 'camera_calibration', 'dependencies': OrderedDict()}
+[0.000666] (camera_calibration) JobStarted: {'identifier': 'camera_calibration'}
+[0.010122] (camera_calibration) JobProgress: {'identifier': 'camera_calibration', 'progress': 'cmake'}
+[0.010938] (camera_calibration) JobProgress: {'identifier': 'camera_calibration', 'progress': 'build'}
+[0.011685] (camera_calibration) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jlurobovision/eng_ws/build/camera_calibration', '--', '-j12', '-l12'], 'cwd': '/home/jlurobovision/eng_ws/build/camera_calibration', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'jlurobovision'), ('LC_TIME', 'mn_MN'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jlurobovision'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/jlurobovision/eng_ws/src'), ('TERM_PROGRAM_VERSION', '1.85.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'mn_MN'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1055'), ('SYSTEMD_EXEC_PID', '1188'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '50603'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jlurobovision/eng_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'jlurobovision'), ('JOURNAL_STREAM', '8:27320'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', ':/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jlurobovision'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/jlurobovision/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jlurobovision-10i703:@/tmp/.ICE-unix/1171,unix/jlurobovision-10i703:/tmp/.ICE-unix/1171'), ('INVOCATION_ID', 'e7177b13d2674f77b379d1fed8151919'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'mn_MN'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'mn_MN'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QN1GL2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-0da1c1f86b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'mn_MN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'mn_MN'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'mn_MN'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/jlurobovision/eng_ws/build/camera_calibration'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'mn_MN'), ('LC_PAPER', 'mn_MN'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble')]), 'shell': False}
+[0.099329] (-) TimerEvent: {}
+[0.149051] (camera_calibration) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target camera_calibration\x1b[0m\n'}
+[0.199858] (-) TimerEvent: {}
+[0.210981] (camera_calibration) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o\x1b[0m\n'}
+[0.300343] (-) TimerEvent: {}
+[0.402329] (-) TimerEvent: {}
+[0.503889] (-) TimerEvent: {}
+[0.604850] (-) TimerEvent: {}
+[0.705631] (-) TimerEvent: {}
+[0.806031] (-) TimerEvent: {}
+[0.906848] (-) TimerEvent: {}
+[1.007709] (-) TimerEvent: {}
+[1.108933] (-) TimerEvent: {}
+[1.209983] (-) TimerEvent: {}
+[1.310802] (-) TimerEvent: {}
+[1.411730] (-) TimerEvent: {}
+[1.512179] (-) TimerEvent: {}
+[1.612718] (-) TimerEvent: {}
+[1.714320] (-) TimerEvent: {}
+[1.815892] (-) TimerEvent: {}
+[1.916255] (-) TimerEvent: {}
+[2.016942] (-) TimerEvent: {}
+[2.118003] (-) TimerEvent: {}
+[2.218633] (-) TimerEvent: {}
+[2.319496] (-) TimerEvent: {}
+[2.420346] (-) TimerEvent: {}
+[2.520692] (-) TimerEvent: {}
+[2.621079] (-) TimerEvent: {}
+[2.721876] (-) TimerEvent: {}
+[2.823222] (-) TimerEvent: {}
+[2.923624] (-) TimerEvent: {}
+[3.024055] (-) TimerEvent: {}
+[3.125040] (-) TimerEvent: {}
+[3.225999] (-) TimerEvent: {}
+[3.326345] (-) TimerEvent: {}
+[3.426819] (-) TimerEvent: {}
+[3.527251] (-) TimerEvent: {}
+[3.627789] (-) TimerEvent: {}
+[3.728315] (-) TimerEvent: {}
+[3.828924] (-) TimerEvent: {}
+[3.930034] (-) TimerEvent: {}
+[4.030462] (-) TimerEvent: {}
+[4.130962] (-) TimerEvent: {}
+[4.231254] (-) TimerEvent: {}
+[4.331633] (-) TimerEvent: {}
+[4.432009] (-) TimerEvent: {}
+[4.532584] (-) TimerEvent: {}
+[4.633567] (-) TimerEvent: {}
+[4.733921] (-) TimerEvent: {}
+[4.834269] (-) TimerEvent: {}
+[4.934661] (-) TimerEvent: {}
+[5.035057] (-) TimerEvent: {}
+[5.135366] (-) TimerEvent: {}
+[5.235681] (-) TimerEvent: {}
+[5.336028] (-) TimerEvent: {}
+[5.436333] (-) TimerEvent: {}
+[5.536701] (-) TimerEvent: {}
+[5.637040] (-) TimerEvent: {}
+[5.737351] (-) TimerEvent: {}
+[5.837679] (-) TimerEvent: {}
+[5.937975] (-) TimerEvent: {}
+[6.038566] (-) TimerEvent: {}
+[6.139812] (-) TimerEvent: {}
+[6.241603] (-) TimerEvent: {}
+[6.342876] (-) TimerEvent: {}
+[6.444775] (-) TimerEvent: {}
+[6.545950] (-) TimerEvent: {}
+[6.647250] (-) TimerEvent: {}
+[6.749181] (-) TimerEvent: {}
+[6.850474] (-) TimerEvent: {}
+[6.951262] (-) TimerEvent: {}
+[7.051540] (-) TimerEvent: {}
+[7.151824] (-) TimerEvent: {}
+[7.252094] (-) TimerEvent: {}
+[7.352360] (-) TimerEvent: {}
+[7.452621] (-) TimerEvent: {}
+[7.552924] (-) TimerEvent: {}
+[7.653226] (-) TimerEvent: {}
+[7.753565] (-) TimerEvent: {}
+[7.853923] (-) TimerEvent: {}
+[7.954264] (-) TimerEvent: {}
+[8.054579] (-) TimerEvent: {}
+[8.154897] (-) TimerEvent: {}
+[8.255243] (-) TimerEvent: {}
+[8.355633] (-) TimerEvent: {}
+[8.455963] (-) TimerEvent: {}
+[8.556312] (-) TimerEvent: {}
+[8.656608] (-) TimerEvent: {}
+[8.757024] (-) TimerEvent: {}
+[8.857455] (-) TimerEvent: {}
+[8.958397] (-) TimerEvent: {}
+[9.059034] (-) TimerEvent: {}
+[9.159966] (-) TimerEvent: {}
+[9.260548] (-) TimerEvent: {}
+[9.360905] (-) TimerEvent: {}
+[9.461248] (-) TimerEvent: {}
+[9.561755] (-) TimerEvent: {}
+[9.662253] (-) TimerEvent: {}
+[9.762727] (-) TimerEvent: {}
+[9.863191] (-) TimerEvent: {}
+[9.963742] (-) TimerEvent: {}
+[10.064082] (-) TimerEvent: {}
+[10.164404] (-) TimerEvent: {}
+[10.264725] (-) TimerEvent: {}
+[10.365004] (-) TimerEvent: {}
+[10.465308] (-) TimerEvent: {}
+[10.565624] (-) TimerEvent: {}
+[10.665954] (-) TimerEvent: {}
+[10.766277] (-) TimerEvent: {}
+[10.866649] (-) TimerEvent: {}
+[10.966990] (-) TimerEvent: {}
+[11.067298] (-) TimerEvent: {}
+[11.167627] (-) TimerEvent: {}
+[11.267901] (-) TimerEvent: {}
+[11.368211] (-) TimerEvent: {}
+[11.468494] (-) TimerEvent: {}
+[11.568809] (-) TimerEvent: {}
+[11.669136] (-) TimerEvent: {}
+[11.769441] (-) TimerEvent: {}
+[11.869779] (-) TimerEvent: {}
+[11.970091] (-) TimerEvent: {}
+[12.070355] (-) TimerEvent: {}
+[12.170663] (-) TimerEvent: {}
+[12.270960] (-) TimerEvent: {}
+[12.371254] (-) TimerEvent: {}
+[12.471562] (-) TimerEvent: {}
+[12.571878] (-) TimerEvent: {}
+[12.672226] (-) TimerEvent: {}
+[12.772587] (-) TimerEvent: {}
+[12.872966] (-) TimerEvent: {}
+[12.973255] (-) TimerEvent: {}
+[13.073613] (-) TimerEvent: {}
+[13.173916] (-) TimerEvent: {}
+[13.274241] (-) TimerEvent: {}
+[13.374722] (-) TimerEvent: {}
+[13.475178] (-) TimerEvent: {}
+[13.576120] (-) TimerEvent: {}
+[13.676648] (-) TimerEvent: {}
+[13.776970] (-) TimerEvent: {}
+[13.877350] (-) TimerEvent: {}
+[13.977719] (-) TimerEvent: {}
+[14.078090] (-) TimerEvent: {}
+[14.178476] (-) TimerEvent: {}
+[14.278909] (-) TimerEvent: {}
+[14.379295] (-) TimerEvent: {}
+[14.479714] (-) TimerEvent: {}
+[14.580240] (-) TimerEvent: {}
+[14.680649] (-) TimerEvent: {}
+[14.780999] (-) TimerEvent: {}
+[14.881312] (-) TimerEvent: {}
+[14.981667] (-) TimerEvent: {}
+[15.082008] (-) TimerEvent: {}
+[15.182306] (-) TimerEvent: {}
+[15.282582] (-) TimerEvent: {}
+[15.382851] (-) TimerEvent: {}
+[15.483153] (-) TimerEvent: {}
+[15.583421] (-) TimerEvent: {}
+[15.683688] (-) TimerEvent: {}
+[15.783964] (-) TimerEvent: {}
+[15.884210] (-) TimerEvent: {}
+[15.984488] (-) TimerEvent: {}
+[16.084857] (-) TimerEvent: {}
+[16.185116] (-) TimerEvent: {}
+[16.285410] (-) TimerEvent: {}
+[16.385722] (-) TimerEvent: {}
+[16.485975] (-) TimerEvent: {}
+[16.586222] (-) TimerEvent: {}
+[16.686522] (-) TimerEvent: {}
+[16.786836] (-) TimerEvent: {}
+[16.887085] (-) TimerEvent: {}
+[16.987379] (-) TimerEvent: {}
+[17.087741] (-) TimerEvent: {}
+[17.188064] (-) TimerEvent: {}
+[17.288322] (-) TimerEvent: {}
+[17.388580] (-) TimerEvent: {}
+[17.488842] (-) TimerEvent: {}
+[17.589098] (-) TimerEvent: {}
+[17.689350] (-) TimerEvent: {}
+[17.789654] (-) TimerEvent: {}
+[17.889959] (-) TimerEvent: {}
+[17.990252] (-) TimerEvent: {}
+[18.090578] (-) TimerEvent: {}
+[18.190944] (-) TimerEvent: {}
+[18.291594] (-) TimerEvent: {}
+[18.393096] (-) TimerEvent: {}
+[18.494159] (-) TimerEvent: {}
+[18.594502] (-) TimerEvent: {}
+[18.694987] (-) TimerEvent: {}
+[18.795528] (-) TimerEvent: {}
+[18.896252] (-) TimerEvent: {}
+[18.996580] (-) TimerEvent: {}
+[19.096847] (-) TimerEvent: {}
+[19.197133] (-) TimerEvent: {}
+[19.297443] (-) TimerEvent: {}
+[19.397742] (-) TimerEvent: {}
+[19.498001] (-) TimerEvent: {}
+[19.598253] (-) TimerEvent: {}
+[19.698516] (-) TimerEvent: {}
+[19.798788] (-) TimerEvent: {}
+[19.899094] (-) TimerEvent: {}
+[19.999371] (-) TimerEvent: {}
+[20.099698] (-) TimerEvent: {}
+[20.200071] (-) TimerEvent: {}
+[20.300581] (-) TimerEvent: {}
+[20.400865] (-) TimerEvent: {}
+[20.501269] (-) TimerEvent: {}
+[20.601688] (-) TimerEvent: {}
+[20.701983] (-) TimerEvent: {}
+[20.802360] (-) TimerEvent: {}
+[20.902751] (-) TimerEvent: {}
+[20.971934] (camera_calibration) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable camera_calibration\x1b[0m\n'}
+[21.002886] (-) TimerEvent: {}
+[21.103217] (-) TimerEvent: {}
+[21.203822] (-) TimerEvent: {}
+[21.305062] (-) TimerEvent: {}
+[21.405981] (-) TimerEvent: {}
+[21.506793] (-) TimerEvent: {}
+[21.608077] (-) TimerEvent: {}
+[21.709871] (-) TimerEvent: {}
+[21.811553] (-) TimerEvent: {}
+[21.913386] (-) TimerEvent: {}
+[22.013872] (-) TimerEvent: {}
+[22.115001] (-) TimerEvent: {}
+[22.215636] (-) TimerEvent: {}
+[22.316905] (-) TimerEvent: {}
+[22.414884] (camera_calibration) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.409\n'}
+[22.416833] (-) TimerEvent: {}
+[22.420796] (camera_calibration) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.409\n'}
+[22.517233] (-) TimerEvent: {}
+[22.618969] (-) TimerEvent: {}
+[22.720966] (-) TimerEvent: {}
+[22.822566] (-) TimerEvent: {}
+[22.924072] (-) TimerEvent: {}
+[23.025419] (-) TimerEvent: {}
+[23.126541] (-) TimerEvent: {}
+[23.227330] (-) TimerEvent: {}
+[23.327703] (-) TimerEvent: {}
+[23.428128] (-) TimerEvent: {}
+[23.528492] (-) TimerEvent: {}
+[23.628914] (-) TimerEvent: {}
+[23.729441] (-) TimerEvent: {}
+[23.829976] (-) TimerEvent: {}
+[23.930592] (-) TimerEvent: {}
+[24.030935] (-) TimerEvent: {}
+[24.131230] (-) TimerEvent: {}
+[24.136766] (camera_calibration) StdoutLine: {'line': b'[100%] Built target camera_calibration\n'}
+[24.169541] (camera_calibration) CommandEnded: {'returncode': 0}
+[24.197588] (camera_calibration) JobProgress: {'identifier': 'camera_calibration', 'progress': 'install'}
+[24.204731] (camera_calibration) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jlurobovision/eng_ws/build/camera_calibration'], 'cwd': '/home/jlurobovision/eng_ws/build/camera_calibration', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'jlurobovision'), ('LC_TIME', 'mn_MN'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jlurobovision'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/jlurobovision/eng_ws/src'), ('TERM_PROGRAM_VERSION', '1.85.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'mn_MN'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1055'), ('SYSTEMD_EXEC_PID', '1188'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '50603'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jlurobovision/eng_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'jlurobovision'), ('JOURNAL_STREAM', '8:27320'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', ':/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jlurobovision'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/jlurobovision/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jlurobovision-10i703:@/tmp/.ICE-unix/1171,unix/jlurobovision-10i703:/tmp/.ICE-unix/1171'), ('INVOCATION_ID', 'e7177b13d2674f77b379d1fed8151919'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'mn_MN'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'mn_MN'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QN1GL2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-0da1c1f86b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'mn_MN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'mn_MN'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'mn_MN'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/jlurobovision/eng_ws/build/camera_calibration'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'mn_MN'), ('LC_PAPER', 'mn_MN'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble')]), 'shell': False}
+[24.213222] (camera_calibration) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[24.213422] (camera_calibration) StdoutLine: {'line': b'-- Installing: /home/jlurobovision/eng_ws/install/camera_calibration/lib/camera_calibration/camera_calibration\n'}
+[24.217728] (camera_calibration) StdoutLine: {'line': b'-- Set runtime path of "/home/jlurobovision/eng_ws/install/camera_calibration/lib/camera_calibration/camera_calibration" to ""\n'}
+[24.217881] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/ament_index/resource_index/package_run_dependencies/camera_calibration\n'}
+[24.217998] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/ament_index/resource_index/parent_prefix_path/camera_calibration\n'}
+[24.218097] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/environment/ament_prefix_path.sh\n'}
+[24.218172] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/environment/ament_prefix_path.dsv\n'}
+[24.218264] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/environment/path.sh\n'}
+[24.218337] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/environment/path.dsv\n'}
+[24.218398] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/local_setup.bash\n'}
+[24.218458] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/local_setup.sh\n'}
+[24.218518] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/local_setup.zsh\n'}
+[24.218580] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/local_setup.dsv\n'}
+[24.218656] (camera_calibration) StdoutLine: {'line': b'-- Installing: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/package.dsv\n'}
+[24.218723] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/ament_index/resource_index/packages/camera_calibration\n'}
+[24.218783] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/cmake/camera_calibrationConfig.cmake\n'}
+[24.218863] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/cmake/camera_calibrationConfig-version.cmake\n'}
+[24.218923] (camera_calibration) StdoutLine: {'line': b'-- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/package.xml\n'}
+[24.219835] (camera_calibration) CommandEnded: {'returncode': 0}
+[24.231472] (-) TimerEvent: {}
+[24.262485] (camera_calibration) JobEnded: {'identifier': 'camera_calibration', 'rc': 0}
+[24.263443] (-) EventReactorShutdown: {}

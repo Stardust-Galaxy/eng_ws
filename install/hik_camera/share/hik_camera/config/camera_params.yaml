@@ -1,6 +1,1 @@
-/hik_camera:
-  ros__parameters:
-    camera_name: narrow_stereo
-
-    exposure_time: 6000
-    gain: 32.0
+/home/jlurobovision/eng_ws/src/hik_camera/config/camera_params.yaml

@@ -1,0 +1,28 @@
+[0.036s] Invoking command in '/home/jlurobovision/eng_ws/build/camera_calibration': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/camera_calibration -- -j12 -l12
+[0.193s] [35m[1mConsolidate compiler generated dependencies of target camera_calibration[0m
+[0.240s] [ 50%] [32mBuilding CXX object CMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o[0m
+[37.439s] [100%] [32m[1mLinking CXX executable camera_calibration[0m
+[39.299s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408
+[39.301s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408
+[41.630s] [100%] Built target camera_calibration
+[41.659s] Invoked command in '/home/jlurobovision/eng_ws/build/camera_calibration' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/camera_calibration -- -j12 -l12
+[41.736s] Invoking command in '/home/jlurobovision/eng_ws/build/camera_calibration': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/camera_calibration
+[41.756s] -- Install configuration: ""
+[41.757s] -- Installing: /home/jlurobovision/eng_ws/install/camera_calibration/lib/camera_calibration/camera_calibration
+[41.769s] -- Set runtime path of "/home/jlurobovision/eng_ws/install/camera_calibration/lib/camera_calibration/camera_calibration" to ""
+[41.769s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/ament_index/resource_index/package_run_dependencies/camera_calibration
+[41.769s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/ament_index/resource_index/parent_prefix_path/camera_calibration
+[41.769s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/environment/ament_prefix_path.sh
+[41.769s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/environment/ament_prefix_path.dsv
+[41.770s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/environment/path.sh
+[41.770s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/environment/path.dsv
+[41.770s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/local_setup.bash
+[41.770s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/local_setup.sh
+[41.770s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/local_setup.zsh
+[41.770s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/local_setup.dsv
+[41.770s] -- Installing: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/package.dsv
+[41.770s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/ament_index/resource_index/packages/camera_calibration
+[41.771s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/cmake/camera_calibrationConfig.cmake
+[41.771s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/cmake/camera_calibrationConfig-version.cmake
+[41.771s] -- Up-to-date: /home/jlurobovision/eng_ws/install/camera_calibration/share/camera_calibration/package.xml
+[41.777s] Invoked command in '/home/jlurobovision/eng_ws/build/camera_calibration' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/camera_calibration

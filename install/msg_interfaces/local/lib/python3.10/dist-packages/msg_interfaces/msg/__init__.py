@@ -1,1 +1,1 @@
-from msg_interfaces.msg._angle import Angle  # noqa: F401
+/home/jlurobovision/eng_ws/build/msg_interfaces/rosidl_generator_py/msg_interfaces/msg/__init__.py

@@ -1,1 +1,1 @@
-cv_bridge;image_transport;opencv;image_transport_plugins;rclcpp;sensor_msgs;rclcpp_components;message_filters;msg_interfaces;serial;ament_lint_auto;ament_lint_common
+cv_bridge;image_transport;opencv;image_transport_plugins;rclcpp;sensor_msgs;rclcpp_components;message_filters;yaml_cpp_vendor;msg_interfaces;serial;ament_lint_auto;ament_lint_common

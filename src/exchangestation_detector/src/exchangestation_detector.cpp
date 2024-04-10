@@ -33,37 +33,45 @@ ExchangeStationDetector::ExchangeStationDetector() {
 }
 
 ExchangeStationDetector::ExchangeStationDetector(int blueThreshold,int redThreshold,int detectColor) {
+  /*
     try {
         YAML::Node config = YAML::LoadFile("/home/jlurobovision/eng_ws/src/exchangestation_detector/config/camera.yaml");
 
-        std::vector<double> DistortionCoeff;
         if (config["distortion_coeff"]) {
-            DistortionCoeff = config["distortion_coeff"].as<std::vector<double>>();
-            std::cout << "Distortion Coefficients: ";
-            for (double coeff : DistortionCoeff) {
-                std::cout << coeff << " ";
+            const YAML::Node& distortionCoeffNode = config["distortion_coeff"];
+            std::vector<double> distortionCoeffData;
+            for (const auto& val : distortionCoeffNode) {
+                distortionCoeffData.push_back(val.as<double>());
             }
-            std::cout << std::endl;
+            for(auto& val : distortionCoeffData)
+                std::cout << val << std::endl;
+            DistortionCoeff = cv::Mat(distortionCoeffData);
         } else {
             std::cout << "distortion_coeff not found in the YAML file." << std::endl;
         }
 
-        std::vector<double> CameraMatrix;
         if (config["camera_matrix"]["data"]) {
-            CameraMatrix = config["camera_matrix"]["data"].as<std::vector<double>>();
-            std::cout << "Camera Matrix: ";
-            for (double val : CameraMatrix) {
-                std::cout << val << " ";
+            const YAML::Node& cameraMatrixNode = config["camera_matrix"]["data"];
+            std::vector<double> cameraMatrixData;
+            for (const auto& val : cameraMatrixNode) {
+                cameraMatrixData.push_back(val.as<double>());
             }
-            std::cout << std::endl;
+            CameraMatrix = cv::Mat(cameraMatrixData).reshape(1, 3); // Assuming camera matrix is 3x3
         } else {
             std::cout << "camera_matrix data not found in the YAML file." << std::endl;
         }
     } catch (const std::exception& e) {
         std::cout << "Error: " << e.what() << std::endl;
     }
-
-    
+        //print CameraMatrix for debug
+    std::cout << "CameraMatrix:" << CameraMatrix << std::endl;
+    //print DistortionCoeff for debug
+    std::cout << "DistortionCoeff:" << DistortionCoeff << std::endl;
+    */
+    CameraMatrix = (cv::Mat_<double>(3, 3) << 1850.906255, 0.0000, 496.601643,
+         0.0000, 1846.847240, 212.542900,
+         0.0000, 0.0000, 1.0000);
+    DistortionCoeff = (cv::Mat_<double>(1, 5) << -0.20730, -0.1343, 0.00000, 0.01260, 0.05390);
     this->redThreshold = redThreshold;
     this->blueThreshold = blueThreshold;
     this->detectColor = detectColor;
@@ -122,6 +130,10 @@ void ExchangeStationDetector::getImage(cv::Mat& source) {
 
 Packet ExchangeStationDetector::solveAngle()
 {
+    //print CameraMatrix for debug
+    std::cout << "CameraMatrix:" << CameraMatrix << std::endl;
+    //print DistortionCoeff for debug
+    std::cout << "DistortionCoeff:" << DistortionCoeff << std::endl;
     if(found == false) {
         return Packet();
     }
@@ -138,24 +150,24 @@ Packet ExchangeStationDetector::solveAngle()
     cv::solvePnP(ExStationPos, realPos, CameraMatrix, DistortionCoeff, rVec, tVec, false,cv::SOLVEPNP_IPPE_SQUARE);
     cv::Mat rotationVector;
     cv::Rodrigues(rVec, rotationVector);
-
-    cv::Vec3d eulerAngles = cv::RQDecomp3x3(rotationVector, cv::noArray(), cv::noArray());
+    cv::Mat mtxR, mtxQ;
+    cv::Vec3d eulerAngles = cv::RQDecomp3x3(rotationVector, mtxR, mtxQ, cv::noArray(), cv::noArray());
     std::cout << "EulerAngle(pitch,yaw,roll)" << eulerAngles << std::endl;
     Packet packet;
     packet.found = true;
     //solve quarternion and coordinates from rVec and tVec, alread have rVec and tVec
-    cv::Mat rotationMatrix;
-    cv::Rodrigues(rVec, rotationMatrix);
-    double Q[4];
-    getQuaternion(rotationMatrix, Q);
-    packet.quaternion1 = Q[0];
-    packet.quaternion2 = Q[1];
-    packet.quaternion3 = Q[2];
-    packet.quaternion4 = Q[3];
-    packet.x = tVec.at<double>(0, 0);
-    packet.y = tVec.at<double>(1, 0);
-    packet.z = tVec.at<double>(2, 0);    
-    return packet;
+    //cv::Mat rotationMatrix;
+    //cv::Rodrigues(rVec, rotationMatrix);
+    //double Q[4];
+    //getQuaternion(rotationMatrix, Q);
+    //packet.quaternion1 = Q[0];
+    //packet.quaternion2 = Q[1];
+    //packet.quaternion3 = Q[2];
+    //packet.quaternion4 = Q[3];
+    //packet.x = tVec.at<double>(0, 0);
+    //packet.y = tVec.at<double>(1, 0);
+    //packet.z = tVec.at<double>(2, 0);    
+    //return packet;
 }
 
 void getQuaternion(cv::Mat rotationMatrix, double Q[]) {

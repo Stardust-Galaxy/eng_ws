@@ -1,0 +1,42 @@
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:[m[K In constructor ‘[01m[KExchangeStationDetector::ExchangeStationDetector(int, int, int)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:74:21:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(cv::Mat) (cv::MatCommaInitializer_<double>, double, double, double, double)[m[K’
+   74 |     [01;31m[KDistortionCoeff (cv::Mat_<double>(1, 5) << -0.068474, 0.250751, -0.010355, 0.008416, 0.000000)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/local/include/opencv4/opencv2/core/mat.hpp:3795[m[K,
+                 from [01m[K/usr/local/include/opencv4/opencv2/core.hpp:58[m[K,
+                 from [01m[K/usr/local/include/opencv4/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/include/exchangestation_detector/exchangestation_detector.hpp:11[m[K,
+                 from [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:1[m[K:
+[01m[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:631:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kcv::Mat cv::Mat::operator()(cv::Range, cv::Range) const[m[K’
+  631 | Mat [01;36m[KMat[m[K::operator()( Range _rowRange, Range _colRange ) const
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:631:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 5 provided
+[01m[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:637:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kcv::Mat cv::Mat::operator()(const Rect&) const[m[K’
+  637 | Mat [01;36m[KMat[m[K::operator()( const Rect& roi ) const
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:637:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 5 provided
+[01m[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:643:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kcv::Mat cv::Mat::operator()(const cv::Range*) const[m[K’
+  643 | Mat [01;36m[KMat[m[K::operator()(const Range* ranges) const
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:643:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 5 provided
+[01m[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:649:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kcv::Mat cv::Mat::operator()(const std::vector<cv::Range>&) const[m[K’
+  649 | Mat [01;36m[KMat[m[K::operator()(const std::vector<Range>& ranges) const
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:649:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 5 provided
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:[m[K In member function ‘[01m[Kvoid ExchangeStationDetector::getImage(cv::Mat&)[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:119:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwindowWidth[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  119 |     int [01;35m[KwindowWidth[m[K = 800;
+      |         [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:120:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwindowHeight[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  120 |     int [01;35m[KwindowHeight[m[K = 600;
+      |         [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:[m[K In member function ‘[01m[Kvoid ExchangeStationDetector::selectContours()[m[K’:
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:202:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KminDis[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  202 |     double [01;35m[KminDis[m[K = 0, maxDis = 400; // Compare between contours
+      |            [01;35m[K^~~~~~[m[K
+[01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:202:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KmaxDis[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  202 |     double minDis = 0, [01;35m[KmaxDis[m[K = 400; // Compare between contours
+      |                        [01;35m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/exchangestation_detector.dir/build.make:90：CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/exchangestation_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

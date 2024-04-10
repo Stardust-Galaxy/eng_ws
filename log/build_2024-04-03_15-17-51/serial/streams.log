@@ -1,0 +1,73 @@
+[0.014s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[0.050s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.294s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.315s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.369s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.373s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.380s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.394s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.419s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.597s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.601s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.869s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.154s] -- Found rclpy: 3.3.12 (/opt/ros/humble/share/rclpy/cmake)
+[1.155s] -- Found rclcpp_components: 16.0.8 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.303s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.427s] -- Found message_filters: 4.3.3 (/opt/ros/humble/share/message_filters/cmake)
+[1.446s] -- Found OpenCV: /usr/local (found version "4.8.0") 
+[1.447s] -- Found msg_interfaces: 0.0.0 (/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/cmake)
+[1.494s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.681s] -- Found tf2_geometry_msgs: 0.25.6 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.695s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.699s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.097s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.212s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.213s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.214s] -- Configured cppcheck include dirs: /home/jlurobovision/eng_ws/src/serial/include
+[2.214s] -- Configured cppcheck exclude dirs and/or files: 
+[2.216s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.216s] -- Configured cpplint exclude dirs and/or files: 
+[2.216s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.217s] -- Added test 'lint_cmake' to check CMake code style
+[2.218s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.219s] -- Added test 'uncrustify' to check C / C++ code style
+[2.219s] -- Configured uncrustify additional arguments: 
+[2.219s] -- Added test 'xmllint' to check XML markup files
+[2.221s] -- Configuring done
+[2.258s] -- Generating done
+[2.261s] -- Build files have been written to: /home/jlurobovision/eng_ws/build/serial
+[2.314s] [35m[1mConsolidate compiler generated dependencies of target serial[0m
+[2.314s] [35m[1mConsolidate compiler generated dependencies of target serial_node[0m
+[2.346s] [ 12%] [32m[1mLinking CXX shared library libserial.so[0m
+[2.348s] [ 25%] [32m[1mLinking CXX executable serial_node[0m
+[5.034s] [ 62%] Built target serial
+[5.133s] [100%] Built target serial_node
+[5.152s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/serial -- -j12 -l12
+[5.187s] Invoking command in '/home/jlurobovision/eng_ws/build/serial': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/serial
+[5.197s] -- Install configuration: ""
+[5.198s] -- Execute custom install script
+[5.198s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/lib/serial/serial_node
+[5.199s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/include/serial/crc_check.hpp
+[5.199s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/include/serial/packet.hpp
+[5.199s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/include/serial/serial.hpp
+[5.199s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/include/serial/serial_node.hpp
+[5.200s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/launch/serial.launch.py
+[5.200s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/package_run_dependencies/serial
+[5.200s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/parent_prefix_path/serial
+[5.200s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/ament_prefix_path.sh
+[5.200s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/ament_prefix_path.dsv
+[5.200s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/path.sh
+[5.201s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/environment/path.dsv
+[5.201s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.bash
+[5.201s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.sh
+[5.201s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.zsh
+[5.201s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/local_setup.dsv
+[5.201s] -- Symlinking: /home/jlurobovision/eng_ws/install/serial/share/serial/package.dsv
+[5.215s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/packages/serial
+[5.216s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/ament_index/resource_index/rclcpp_components/serial
+[5.216s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/cmake/serialConfig.cmake
+[5.216s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/cmake/serialConfig-version.cmake
+[5.216s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/serial/share/serial/package.xml
+[5.216s] -- Installing: /home/jlurobovision/eng_ws/install/serial/lib/libserial.so
+[5.227s] -- Set runtime path of "/home/jlurobovision/eng_ws/install/serial/lib/libserial.so" to ""
+[5.231s] Invoked command in '/home/jlurobovision/eng_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/serial

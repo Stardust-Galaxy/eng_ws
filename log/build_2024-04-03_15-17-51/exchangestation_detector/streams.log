@@ -1,0 +1,86 @@
+[0.018s] Invoking command in '/home/jlurobovision/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/exchangestation_detector -- -j12 -l12
+[0.061s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.238s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.258s] -- Found OpenCV: /usr/local (found version "4.8.0") 
+[0.259s] -- Found ament_cmake_auto: 1.3.8 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.260s] -- Found image_transport: 3.1.8 (/opt/ros/humble/share/image_transport/cmake)
+[0.319s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.322s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.330s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.343s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.361s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.426s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.427s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.574s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.947s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.953s] -- Found serial: 0.0.0 (/home/jlurobovision/eng_ws/install/serial/share/serial/cmake)
+[0.953s] -- Found msg_interfaces: 0.0.0 (/home/jlurobovision/eng_ws/install/msg_interfaces/share/msg_interfaces/cmake)
+[1.155s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.168s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.169s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.169s] -- Configured cppcheck include dirs: /home/jlurobovision/eng_ws/src/exchangestation_detector/include;$<BUILD_INTERFACE:/home/jlurobovision/eng_ws/src/exchangestation_detector/include>
+[1.169s] -- Configured cppcheck exclude dirs and/or files: 
+[1.169s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.170s] -- Added test 'lint_cmake' to check CMake code style
+[1.170s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.171s] -- Added test 'uncrustify' to check C / C++ code style
+[1.171s] -- Configured uncrustify additional arguments: 
+[1.171s] -- Added test 'xmllint' to check XML markup files
+[1.175s] -- Configuring done
+[1.195s] -- Generating done
+[1.197s] -- Build files have been written to: /home/jlurobovision/eng_ws/build/exchangestation_detector
+[1.248s] [35m[1mConsolidate compiler generated dependencies of target detector_node[0m
+[1.248s] [35m[1mConsolidate compiler generated dependencies of target exchangestation_detector[0m
+[1.274s] [ 40%] Built target detector_node
+[1.277s] [ 60%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/exchangestation_detector.cpp.o[0m
+[1.279s] [ 80%] [32mBuilding CXX object CMakeFiles/exchangestation_detector.dir/src/detector_node.cpp.o[0m
+[3.183s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:[m[K In member function ‘[01m[Kvoid ExchangeStationDetector::getImage(cv::Mat&)[m[K’:
+[3.184s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:119:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwindowWidth[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.184s]   119 |     int [01;35m[KwindowWidth[m[K = 800;
+[3.184s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[3.184s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:120:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwindowHeight[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.184s]   120 |     int [01;35m[KwindowHeight[m[K = 600;
+[3.184s]       |         [01;35m[K^~~~~~~~~~~~[m[K
+[3.200s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:[m[K In member function ‘[01m[Kvoid ExchangeStationDetector::selectContours()[m[K’:
+[3.200s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:240:25:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kcenter[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[3.200s]   240 |             cv::Point2f [01;35m[Kcenter[m[K = boundary.center;
+[3.200s]       |                         [01;35m[K^~~~~~[m[K
+[3.205s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:205:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KminDis[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.205s]   205 |     double [01;35m[KminDis[m[K = 0, maxDis = 400; // Compare between contours
+[3.205s]       |            [01;35m[K^~~~~~[m[K
+[3.205s] [01m[K/home/jlurobovision/eng_ws/src/exchangestation_detector/src/exchangestation_detector.cpp:205:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KmaxDis[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.205s]   205 |     double minDis = 0, [01;35m[KmaxDis[m[K = 400; // Compare between contours
+[3.205s]       |                        [01;35m[K^~~~~~[m[K
+[20.002s] [100%] [32m[1mLinking CXX shared library libexchangestation_detector.so[0m
+[21.491s] [100%] Built target exchangestation_detector
+[21.503s] Invoked command in '/home/jlurobovision/eng_ws/build/exchangestation_detector' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/exchangestation_detector -- -j12 -l12
+[21.531s] Invoking command in '/home/jlurobovision/eng_ws/build/exchangestation_detector': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/exchangestation_detector
+[21.538s] -- Install configuration: ""
+[21.539s] -- Execute custom install script
+[21.539s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/lib/exchangestation_detector/detector_node
+[21.539s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/launch/detector_node.launch.py
+[21.540s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/include/exchangestation_detector/detector_node.hpp
+[21.541s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/include/exchangestation_detector/exchangestation_detector.hpp
+[21.541s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/library_path.sh
+[21.541s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/library_path.dsv
+[21.541s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/lib/libexchangestation_detector.so
+[21.541s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/ament_index/resource_index/package_run_dependencies/exchangestation_detector
+[21.541s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/ament_index/resource_index/parent_prefix_path/exchangestation_detector
+[21.541s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/ament_prefix_path.sh
+[21.542s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/ament_prefix_path.dsv
+[21.542s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/path.sh
+[21.542s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/environment/path.dsv
+[21.542s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/local_setup.bash
+[21.542s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/local_setup.sh
+[21.542s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/local_setup.zsh
+[21.542s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/local_setup.dsv
+[21.542s] -- Symlinking: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.dsv
+[21.553s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/ament_index/resource_index/packages/exchangestation_detector
+[21.553s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/ament_index/resource_index/rclcpp_components/exchangestation_detector
+[21.553s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/cmake/ament_cmake_export_dependencies-extras.cmake
+[21.553s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/cmake/ament_cmake_export_include_directories-extras.cmake
+[21.553s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/cmake/ament_cmake_export_libraries-extras.cmake
+[21.553s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/cmake/exchangestation_detectorConfig.cmake
+[21.553s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/cmake/exchangestation_detectorConfig-version.cmake
+[21.553s] -- Up-to-date symlink: /home/jlurobovision/eng_ws/install/exchangestation_detector/share/exchangestation_detector/package.xml
+[21.556s] Invoked command in '/home/jlurobovision/eng_ws/build/exchangestation_detector' returned '0': CMAKE_PREFIX_PATH=/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble LD_LIBRARY_PATH=/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/jlurobovision/eng_ws/build/exchangestation_detector

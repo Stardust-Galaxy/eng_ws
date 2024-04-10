@@ -1,0 +1,268 @@
+[0.000000] (-) TimerEvent: {}
+[0.000185] (-) JobUnselected: {'identifier': 'exchangestation_detector'}
+[0.000232] (-) JobUnselected: {'identifier': 'galaxy_camera'}
+[0.000253] (-) JobUnselected: {'identifier': 'global_launch'}
+[0.000270] (-) JobUnselected: {'identifier': 'hik_camera'}
+[0.000285] (-) JobUnselected: {'identifier': 'msg_interfaces'}
+[0.000300] (-) JobUnselected: {'identifier': 'serial'}
+[0.000318] (camera_calibration) JobQueued: {'identifier': 'camera_calibration', 'dependencies': OrderedDict()}
+[0.000338] (camera_calibration) JobStarted: {'identifier': 'camera_calibration'}
+[0.037476] (camera_calibration) JobProgress: {'identifier': 'camera_calibration', 'progress': 'cmake'}
+[0.038153] (camera_calibration) Command: {'cmd': ['/usr/bin/cmake', '/home/jlurobovision/eng_ws/src/camera_calibration', '-DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/camera_calibration'], 'cwd': '/home/jlurobovision/eng_ws/build/camera_calibration', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'jlurobovision'), ('LC_TIME', 'mn_MN'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jlurobovision'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/jlurobovision/eng_ws/src'), ('TERM_PROGRAM_VERSION', '1.85.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'mn_MN'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1055'), ('SYSTEMD_EXEC_PID', '1188'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '50603'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'jlurobovision'), ('JOURNAL_STREAM', '8:27320'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', ':/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jlurobovision'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/jlurobovision/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jlurobovision-10i703:@/tmp/.ICE-unix/1171,unix/jlurobovision-10i703:/tmp/.ICE-unix/1171'), ('INVOCATION_ID', 'e7177b13d2674f77b379d1fed8151919'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'mn_MN'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'mn_MN'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QN1GL2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-0da1c1f86b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'mn_MN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'mn_MN'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'mn_MN'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/jlurobovision/eng_ws/build/camera_calibration'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'mn_MN'), ('LC_PAPER', 'mn_MN'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099373] (-) TimerEvent: {}
+[0.161247] (camera_calibration) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199514] (-) TimerEvent: {}
+[0.258774] (camera_calibration) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.268299] (camera_calibration) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299657] (-) TimerEvent: {}
+[0.370154] (camera_calibration) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.380515] (camera_calibration) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.380932] (camera_calibration) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.381691] (camera_calibration) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.387063] (camera_calibration) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.399977] (-) TimerEvent: {}
+[0.500582] (-) TimerEvent: {}
+[0.505841] (camera_calibration) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.515529] (camera_calibration) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.515905] (camera_calibration) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.516209] (camera_calibration) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.522743] (camera_calibration) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600854] (-) TimerEvent: {}
+[0.688164] (camera_calibration) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.700932] (-) TimerEvent: {}
+[0.774315] (camera_calibration) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.8 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[0.777900] (camera_calibration) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.801101] (-) TimerEvent: {}
+[0.833127] (camera_calibration) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.841015] (camera_calibration) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.853983] (camera_calibration) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.879908] (camera_calibration) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.901295] (-) TimerEvent: {}
+[0.910144] (camera_calibration) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.001453] (-) TimerEvent: {}
+[1.020913] (camera_calibration) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.024191] (camera_calibration) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.101859] (-) TimerEvent: {}
+[1.123879] (camera_calibration) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.156175] (camera_calibration) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.198164] (camera_calibration) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.202036] (-) TimerEvent: {}
+[1.208573] (camera_calibration) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.283373] (camera_calibration) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.283605] (camera_calibration) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.302255] (-) TimerEvent: {}
+[1.358043] (camera_calibration) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.359080] (camera_calibration) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.402457] (-) TimerEvent: {}
+[1.503368] (-) TimerEvent: {}
+[1.543272] (camera_calibration) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.603507] (-) TimerEvent: {}
+[1.683135] (camera_calibration) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[1.703599] (-) TimerEvent: {}
+[1.708289] (camera_calibration) StderrLine: {'line': b'\x1b[33mCMake Warning at CMakeLists.txt:17 (find_package):\n'}
+[1.708500] (camera_calibration) StderrLine: {'line': b'  By not providing "FindOpenCV_REQUIRED.cmake" in CMAKE_MODULE_PATH this\n'}
+[1.708607] (camera_calibration) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[1.708701] (camera_calibration) StderrLine: {'line': b'  "OpenCV_REQUIRED", but CMake did not find one.\n'}
+[1.708793] (camera_calibration) StderrLine: {'line': b'\n'}
+[1.708884] (camera_calibration) StderrLine: {'line': b'  Could not find a package configuration file provided by "OpenCV_REQUIRED"\n'}
+[1.708975] (camera_calibration) StderrLine: {'line': b'  with any of the following names:\n'}
+[1.709066] (camera_calibration) StderrLine: {'line': b'\n'}
+[1.709157] (camera_calibration) StderrLine: {'line': b'    OpenCV_REQUIREDConfig.cmake\n'}
+[1.709242] (camera_calibration) StderrLine: {'line': b'    opencv_required-config.cmake\n'}
+[1.709354] (camera_calibration) StderrLine: {'line': b'\n'}
+[1.709461] (camera_calibration) StderrLine: {'line': b'  Add the installation prefix of "OpenCV_REQUIRED" to CMAKE_PREFIX_PATH or\n'}
+[1.709555] (camera_calibration) StderrLine: {'line': b'  set "OpenCV_REQUIRED_DIR" to a directory containing one of the above files.\n'}
+[1.709652] (camera_calibration) StderrLine: {'line': b'  If "OpenCV_REQUIRED" provides a separate development package or SDK, be\n'}
+[1.709764] (camera_calibration) StderrLine: {'line': b'  sure it has been installed.\n'}
+[1.709860] (camera_calibration) StderrLine: {'line': b'\n'}
+[1.709957] (camera_calibration) StderrLine: {'line': b'\x1b[0m\n'}
+[1.803752] (-) TimerEvent: {}
+[1.856118] (camera_calibration) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.873213] (camera_calibration) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.873376] (camera_calibration) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.873460] (camera_calibration) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.874066] (camera_calibration) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.874894] (camera_calibration) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.874981] (camera_calibration) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.875384] (camera_calibration) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.876488] (camera_calibration) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.888684] (camera_calibration) StdoutLine: {'line': b'-- Generating done\n'}
+[1.890083] (camera_calibration) StdoutLine: {'line': b'-- Build files have been written to: /home/jlurobovision/eng_ws/build/camera_calibration\n'}
+[1.898056] (camera_calibration) CommandEnded: {'returncode': 0}
+[1.899252] (camera_calibration) JobProgress: {'identifier': 'camera_calibration', 'progress': 'build'}
+[1.899287] (camera_calibration) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jlurobovision/eng_ws/build/camera_calibration', '--', '-j12', '-l12'], 'cwd': '/home/jlurobovision/eng_ws/build/camera_calibration', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'jlurobovision'), ('LC_TIME', 'mn_MN'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jlurobovision'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/jlurobovision/eng_ws/src'), ('TERM_PROGRAM_VERSION', '1.85.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'mn_MN'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1055'), ('SYSTEMD_EXEC_PID', '1188'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '50603'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'jlurobovision'), ('JOURNAL_STREAM', '8:27320'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', ':/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jlurobovision'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/jlurobovision/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jlurobovision-10i703:@/tmp/.ICE-unix/1171,unix/jlurobovision-10i703:/tmp/.ICE-unix/1171'), ('INVOCATION_ID', 'e7177b13d2674f77b379d1fed8151919'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'mn_MN'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'mn_MN'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QN1GL2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-0da1c1f86b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'mn_MN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'mn_MN'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'mn_MN'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/jlurobovision/eng_ws/build/camera_calibration'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'mn_MN'), ('LC_PAPER', 'mn_MN'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.903852] (-) TimerEvent: {}
+[1.958840] (camera_calibration) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o\x1b[0m\n'}
+[2.003982] (-) TimerEvent: {}
+[2.104352] (-) TimerEvent: {}
+[2.204815] (-) TimerEvent: {}
+[2.305214] (-) TimerEvent: {}
+[2.405623] (-) TimerEvent: {}
+[2.505885] (-) TimerEvent: {}
+[2.606156] (-) TimerEvent: {}
+[2.706416] (-) TimerEvent: {}
+[2.806671] (-) TimerEvent: {}
+[2.906951] (-) TimerEvent: {}
+[3.007241] (-) TimerEvent: {}
+[3.107532] (-) TimerEvent: {}
+[3.207841] (-) TimerEvent: {}
+[3.308121] (-) TimerEvent: {}
+[3.408406] (-) TimerEvent: {}
+[3.508677] (-) TimerEvent: {}
+[3.608992] (-) TimerEvent: {}
+[3.709279] (-) TimerEvent: {}
+[3.809663] (-) TimerEvent: {}
+[3.909926] (-) TimerEvent: {}
+[4.010174] (-) TimerEvent: {}
+[4.110470] (-) TimerEvent: {}
+[4.210769] (-) TimerEvent: {}
+[4.311055] (-) TimerEvent: {}
+[4.411350] (-) TimerEvent: {}
+[4.511685] (-) TimerEvent: {}
+[4.611991] (-) TimerEvent: {}
+[4.712317] (-) TimerEvent: {}
+[4.812601] (-) TimerEvent: {}
+[4.912865] (-) TimerEvent: {}
+[5.013182] (-) TimerEvent: {}
+[5.113492] (-) TimerEvent: {}
+[5.213749] (-) TimerEvent: {}
+[5.314016] (-) TimerEvent: {}
+[5.414320] (-) TimerEvent: {}
+[5.514640] (-) TimerEvent: {}
+[5.614934] (-) TimerEvent: {}
+[5.715327] (-) TimerEvent: {}
+[5.815567] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.815719] (-) TimerEvent: {}
+[5.815806] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:27:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kparse error in template argument list\n'}
+[5.816125] (camera_calibration) StderrLine: {'line': b'   27 |     auto node = \x1b[01;31m\x1b[Kmake_shared<Node>\x1b[m\x1b[K("camera_calibration");\n'}
+[5.816188] (camera_calibration) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.816249] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:27:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_shared<<expression error> >(const char [19])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.816340] (camera_calibration) StderrLine: {'line': b'   27 |     auto node = \x1b[01;31m\x1b[Kmake_shared<Node>("camera_calibration")\x1b[m\x1b[K;\n'}
+[5.816430] (camera_calibration) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.819271] (camera_calibration) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:77\x1b[m\x1b[K,\n'}
+[5.819456] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp:11\x1b[m\x1b[K,\n'}
+[5.819558] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/cvstd.hpp:81\x1b[m\x1b[K,\n'}
+[5.819704] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/base.hpp:58\x1b[m\x1b[K,\n'}
+[5.819801] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core.hpp:53\x1b[m\x1b[K,\n'}
+[5.819889] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/opencv.hpp:52\x1b[m\x1b[K,\n'}
+[5.819976] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1\x1b[m\x1b[K:\n'}
+[5.820063] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.820155] (camera_calibration) StderrLine: {'line': b'  875 |     \x1b[01;36m\x1b[Kmake_shared\x1b[m\x1b[K(_Args&&... __args)\n'}
+[5.820239] (camera_calibration) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.820296] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.820353] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:27:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[5.820413] (camera_calibration) StderrLine: {'line': b'   27 |     auto node = \x1b[01;31m\x1b[Kmake_shared<Node>("camera_calibration")\x1b[m\x1b[K;\n'}
+[5.820469] (camera_calibration) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.820524] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:28:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[5.820581] (camera_calibration) StderrLine: {'line': b'   28 |     auto sub = node->create_subscription<Image\x1b[01;31m\x1b[K>\x1b[m\x1b[K("/image_raw", 10, [](const Image::SharedPtr msg) {\n'}
+[5.820637] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.820699] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:28:49:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.820763] (camera_calibration) StderrLine: {'line': b'   28 |     auto sub = node->create_subscription<Image>(\x1b[01;35m\x1b[K"/image_raw"\x1b[m\x1b[K, 10, [](const Image::SharedPtr msg) {\n'}
+[5.820819] (camera_calibration) StderrLine: {'line': b'      |                                                 \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.822904] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[5.823094] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:29:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcv_bridge\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[5.823212] (camera_calibration) StderrLine: {'line': b'   29 |         \x1b[01;31m\x1b[Kcv_bridge\x1b[m\x1b[K::CvImagePtr cv_ptr;\n'}
+[5.823309] (camera_calibration) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[5.831369] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:31:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcv_ptr\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksi_ptr\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.831651] (camera_calibration) StderrLine: {'line': b'   31 |             \x1b[01;31m\x1b[Kcv_ptr\x1b[m\x1b[K = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);\n'}
+[5.831791] (camera_calibration) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.831859] (camera_calibration) StderrLine: {'line': b'      |             \x1b[32m\x1b[Ksi_ptr\x1b[m\x1b[K\n'}
+[5.831920] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:31:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcv_bridge\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[5.831982] (camera_calibration) StderrLine: {'line': b'   31 |             cv_ptr = \x1b[01;31m\x1b[Kcv_bridge\x1b[m\x1b[K::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);\n'}
+[5.832042] (camera_calibration) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[5.832101] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:31:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::image_encodings\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[5.832161] (camera_calibration) StderrLine: {'line': b'   31 |             cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::\x1b[01;31m\x1b[Kimage_encodings\x1b[m\x1b[K::BGR8);\n'}
+[5.832219] (camera_calibration) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.835174] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcv_bridge\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[5.835348] (camera_calibration) StderrLine: {'line': b'   35 |         } catch (\x1b[01;31m\x1b[Kcv_bridge\x1b[m\x1b[K::Exception& e) {\n'}
+[5.835438] (camera_calibration) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[5.835507] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[K&\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[5.835571] (camera_calibration) StderrLine: {'line': b'   35 |         } catch (cv_bridge::Exception\x1b[01;31m\x1b[K&\x1b[m\x1b[K e) {\n'}
+[5.835630] (camera_calibration) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.835690] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K&\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[5.835750] (camera_calibration) StderrLine: {'line': b'   35 |         } catch \x1b[34m\x1b[K(\x1b[m\x1b[Kcv_bridge::Exception\x1b[01;31m\x1b[K&\x1b[m\x1b[K e) {\n'}
+[5.835809] (camera_calibration) StderrLine: {'line': b'      |                 \x1b[34m\x1b[K~\x1b[m\x1b[K                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.835868] (camera_calibration) StderrLine: {'line': b'      |                                      \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[5.835925] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K&\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[5.842063] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:35:40:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ke\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.842422] (camera_calibration) StderrLine: {'line': b'   35 |         } catch (cv_bridge::Exception& \x1b[01;31m\x1b[Ke\x1b[m\x1b[K) {\n'}
+[5.842503] (camera_calibration) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.850017] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:39:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcv_ptr\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksi_ptr\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.850258] (camera_calibration) StderrLine: {'line': b'   39 |         g_image = \x1b[01;31m\x1b[Kcv_ptr\x1b[m\x1b[K->image;\n'}
+[5.850336] (camera_calibration) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[5.850503] (camera_calibration) StderrLine: {'line': b'      |                   \x1b[32m\x1b[Ksi_ptr\x1b[m\x1b[K\n'}
+[5.850595] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.850666] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:40:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.850733] (camera_calibration) StderrLine: {'line': b'   40 |     \x1b[01;35m\x1b[K}\x1b[m\x1b[K);\n'}
+[5.850796] (camera_calibration) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.850992] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:44:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kdouble*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.851221] (camera_calibration) StderrLine: {'line': b'   44 |     createTrackbar("k1", "Undistorted Image", \x1b[01;31m\x1b[K&distortionMatrix.at<double>(0, 0)\x1b[m\x1b[K, 100, updateDistortionMatrix, &distortionMatrix);\n'}
+[5.851340] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.851410] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[5.851549] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[Kdouble*\x1b[m\x1b[K\n'}
+[5.851653] (camera_calibration) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/opencv.hpp:68\x1b[m\x1b[K,\n'}
+[5.851717] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1\x1b[m\x1b[K:\n'}
+[5.851779] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 3 of \xe2\x80\x98\x1b[01m\x1b[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.851846] (camera_calibration) StderrLine: {'line': b'  524 |                               \x1b[01;36m\x1b[Kint* value\x1b[m\x1b[K, int count,\n'}
+[5.851908] (camera_calibration) StderrLine: {'line': b'      |                               \x1b[01;36m\x1b[K~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.851974] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:45:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kdouble*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.852037] (camera_calibration) StderrLine: {'line': b'   45 |     createTrackbar("k2", "Undistorted Image", \x1b[01;31m\x1b[K&distortionMatrix.at<double>(0, 1)\x1b[m\x1b[K, 100, updateDistortionMatrix, &distortionMatrix);\n'}
+[5.852098] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.852160] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[5.852218] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[Kdouble*\x1b[m\x1b[K\n'}
+[5.852282] (camera_calibration) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/opencv.hpp:68\x1b[m\x1b[K,\n'}
+[5.852341] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1\x1b[m\x1b[K:\n'}
+[5.852408] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 3 of \xe2\x80\x98\x1b[01m\x1b[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.852488] (camera_calibration) StderrLine: {'line': b'  524 |                               \x1b[01;36m\x1b[Kint* value\x1b[m\x1b[K, int count,\n'}
+[5.852549] (camera_calibration) StderrLine: {'line': b'      |                               \x1b[01;36m\x1b[K~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.852610] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:46:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kdouble*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.852677] (camera_calibration) StderrLine: {'line': b'   46 |     createTrackbar("p1", "Undistorted Image", \x1b[01;31m\x1b[K&distortionMatrix.at<double>(0, 2)\x1b[m\x1b[K, 100, updateDistortionMatrix, &distortionMatrix);\n'}
+[5.852751] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.852814] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[5.852873] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[Kdouble*\x1b[m\x1b[K\n'}
+[5.852930] (camera_calibration) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/opencv.hpp:68\x1b[m\x1b[K,\n'}
+[5.853121] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1\x1b[m\x1b[K:\n'}
+[5.853207] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 3 of \xe2\x80\x98\x1b[01m\x1b[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.853278] (camera_calibration) StderrLine: {'line': b'  524 |                               \x1b[01;36m\x1b[Kint* value\x1b[m\x1b[K, int count,\n'}
+[5.853356] (camera_calibration) StderrLine: {'line': b'      |                               \x1b[01;36m\x1b[K~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.853505] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:47:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kdouble*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.853575] (camera_calibration) StderrLine: {'line': b'   47 |     createTrackbar("p2", "Undistorted Image", \x1b[01;31m\x1b[K&distortionMatrix.at<double>(0, 3)\x1b[m\x1b[K, 100, updateDistortionMatrix, &distortionMatrix);\n'}
+[5.853663] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.853745] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[5.853819] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[Kdouble*\x1b[m\x1b[K\n'}
+[5.853890] (camera_calibration) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/opencv.hpp:68\x1b[m\x1b[K,\n'}
+[5.853969] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1\x1b[m\x1b[K:\n'}
+[5.854032] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 3 of \xe2\x80\x98\x1b[01m\x1b[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.854103] (camera_calibration) StderrLine: {'line': b'  524 |                               \x1b[01;36m\x1b[Kint* value\x1b[m\x1b[K, int count,\n'}
+[5.854163] (camera_calibration) StderrLine: {'line': b'      |                               \x1b[01;36m\x1b[K~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.854222] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:48:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kdouble*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.854283] (camera_calibration) StderrLine: {'line': b'   48 |     createTrackbar("k3", "Undistorted Image", \x1b[01;31m\x1b[K&distortionMatrix.at<double>(0, 4)\x1b[m\x1b[K, 100, updateDistortionMatrix, &distortionMatrix);\n'}
+[5.854346] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.854405] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[5.854468] (camera_calibration) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[Kdouble*\x1b[m\x1b[K\n'}
+[5.854530] (camera_calibration) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/opencv.hpp:68\x1b[m\x1b[K,\n'}
+[5.854614] (camera_calibration) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:1\x1b[m\x1b[K:\n'}
+[5.854716] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/highgui.hpp:524:36:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 3 of \xe2\x80\x98\x1b[01m\x1b[Kint cv::createTrackbar(const String&, const String&, int*, int, cv::TrackbarCallback, void*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.854835] (camera_calibration) StderrLine: {'line': b'  524 |                               \x1b[01;36m\x1b[Kint* value\x1b[m\x1b[K, int count,\n'}
+[5.854973] (camera_calibration) StderrLine: {'line': b'      |                               \x1b[01;36m\x1b[K~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.915904] (-) TimerEvent: {}
+[6.016230] (-) TimerEvent: {}
+[6.116557] (-) TimerEvent: {}
+[6.216858] (-) TimerEvent: {}
+[6.317237] (-) TimerEvent: {}
+[6.417658] (-) TimerEvent: {}
+[6.518032] (-) TimerEvent: {}
+[6.618979] (-) TimerEvent: {}
+[6.719303] (-) TimerEvent: {}
+[6.819837] (-) TimerEvent: {}
+[6.920308] (-) TimerEvent: {}
+[7.020625] (-) TimerEvent: {}
+[7.121085] (-) TimerEvent: {}
+[7.221607] (-) TimerEvent: {}
+[7.321943] (-) TimerEvent: {}
+[7.369477] (camera_calibration) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/camera_calibration.dir/build.make:76\xef\xbc\x9aCMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[7.369838] (camera_calibration) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137\xef\xbc\x9aCMakeFiles/camera_calibration.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[7.369999] (camera_calibration) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[7.371746] (camera_calibration) CommandEnded: {'returncode': 2}
+[7.404812] (camera_calibration) JobEnded: {'identifier': 'camera_calibration', 'rc': 2}
+[7.415383] (-) EventReactorShutdown: {}

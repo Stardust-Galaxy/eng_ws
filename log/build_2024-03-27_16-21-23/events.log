@@ -1,0 +1,127 @@
+[0.000000] (-) TimerEvent: {}
+[0.000585] (-) JobUnselected: {'identifier': 'exchangestation_detector'}
+[0.000619] (-) JobUnselected: {'identifier': 'galaxy_camera'}
+[0.000639] (-) JobUnselected: {'identifier': 'global_launch'}
+[0.000656] (-) JobUnselected: {'identifier': 'hik_camera'}
+[0.000672] (-) JobUnselected: {'identifier': 'msg_interfaces'}
+[0.000687] (-) JobUnselected: {'identifier': 'serial'}
+[0.000704] (camera_calibration) JobQueued: {'identifier': 'camera_calibration', 'dependencies': OrderedDict()}
+[0.000820] (camera_calibration) JobStarted: {'identifier': 'camera_calibration'}
+[0.007130] (camera_calibration) JobProgress: {'identifier': 'camera_calibration', 'progress': 'cmake'}
+[0.007412] (camera_calibration) JobProgress: {'identifier': 'camera_calibration', 'progress': 'build'}
+[0.008314] (camera_calibration) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jlurobovision/eng_ws/build/camera_calibration', '--', '-j12', '-l12'], 'cwd': '/home/jlurobovision/eng_ws/build/camera_calibration', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'jlurobovision'), ('LC_TIME', 'mn_MN'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/jlurobovision/eng_ws/install/exchangestation_detector/lib:/home/jlurobovision/eng_ws/install/serial/lib:/home/jlurobovision/eng_ws/install/msg_interfaces/lib:/home/jlurobovision/eng_ws/install/hik_camera/lib:/home/jlurobovision/eng_ws/install/galaxy_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jlurobovision'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/jlurobovision/eng_ws/src'), ('TERM_PROGRAM_VERSION', '1.85.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'mn_MN'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1055'), ('SYSTEMD_EXEC_PID', '1188'), ('IM_CONFIG_CHECK_ENV', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '50603'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/jlurobovision/eng_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'jlurobovision'), ('JOURNAL_STREAM', '8:27320'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', ':/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jlurobovision'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/jlurobovision/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jlurobovision-10i703:@/tmp/.ICE-unix/1171,unix/jlurobovision-10i703:/tmp/.ICE-unix/1171'), ('INVOCATION_ID', 'e7177b13d2674f77b379d1fed8151919'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'mn_MN'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'mn_MN'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QN1GL2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-0da1c1f86b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'mn_MN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'mn_MN'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'mn_MN'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/jlurobovision/eng_ws/build/camera_calibration'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/jlurobovision/eng_ws/install/msg_interfaces/local/lib/python3.10/dist-packages:/home/jlurobovision/eng_ws/install/msg_interfaces/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'mn_MN'), ('LC_PAPER', 'mn_MN'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/jlurobovision/eng_ws/install/exchangestation_detector:/home/jlurobovision/eng_ws/install/serial:/home/jlurobovision/eng_ws/install/msg_interfaces:/home/jlurobovision/eng_ws/install/hik_camera:/home/jlurobovision/eng_ws/install/global_launch:/home/jlurobovision/eng_ws/install/galaxy_camera:/home/jlurobovision/eng_ws/install/camera_calibration:/opt/ros/humble')]), 'shell': False}
+[0.079656] (camera_calibration) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target camera_calibration\x1b[0m\n'}
+[0.100095] (-) TimerEvent: {}
+[0.104953] (camera_calibration) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o\x1b[0m\n'}
+[0.200399] (-) TimerEvent: {}
+[0.301283] (-) TimerEvent: {}
+[0.401722] (-) TimerEvent: {}
+[0.502476] (-) TimerEvent: {}
+[0.603365] (-) TimerEvent: {}
+[0.703851] (-) TimerEvent: {}
+[0.804706] (-) TimerEvent: {}
+[0.905024] (-) TimerEvent: {}
+[1.005414] (-) TimerEvent: {}
+[1.105813] (-) TimerEvent: {}
+[1.206158] (-) TimerEvent: {}
+[1.306740] (-) TimerEvent: {}
+[1.407348] (-) TimerEvent: {}
+[1.507722] (-) TimerEvent: {}
+[1.608377] (-) TimerEvent: {}
+[1.709478] (-) TimerEvent: {}
+[1.811293] (-) TimerEvent: {}
+[1.912602] (-) TimerEvent: {}
+[2.013816] (-) TimerEvent: {}
+[2.114151] (-) TimerEvent: {}
+[2.214446] (-) TimerEvent: {}
+[2.314733] (-) TimerEvent: {}
+[2.415026] (-) TimerEvent: {}
+[2.515318] (-) TimerEvent: {}
+[2.615623] (-) TimerEvent: {}
+[2.715928] (-) TimerEvent: {}
+[2.816186] (-) TimerEvent: {}
+[2.916474] (-) TimerEvent: {}
+[3.016764] (-) TimerEvent: {}
+[3.117070] (-) TimerEvent: {}
+[3.217377] (-) TimerEvent: {}
+[3.317684] (-) TimerEvent: {}
+[3.417994] (-) TimerEvent: {}
+[3.518284] (-) TimerEvent: {}
+[3.618571] (-) TimerEvent: {}
+[3.718863] (-) TimerEvent: {}
+[3.819167] (-) TimerEvent: {}
+[3.919463] (-) TimerEvent: {}
+[4.019733] (-) TimerEvent: {}
+[4.120023] (-) TimerEvent: {}
+[4.220318] (-) TimerEvent: {}
+[4.320615] (-) TimerEvent: {}
+[4.420947] (-) TimerEvent: {}
+[4.521424] (-) TimerEvent: {}
+[4.621673] (-) TimerEvent: {}
+[4.657073] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.657560] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:41:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of \xe2\x80\x98\x1b[01m\x1b[Kthis\x1b[m\x1b[K\xe2\x80\x99 in non-member function\n'}
+[4.657661] (camera_calibration) StderrLine: {'line': b'   41 |     auto camera_info_sub = \x1b[01;31m\x1b[Kthis\x1b[m\x1b[K->create_subscription<sensor_msgs::msg::CameraInfo>("camera_info", 10, [](const sensor_msgs::msg::CameraInfo::SharedPtr msg) {\n'}
+[4.657743] (camera_calibration) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[4.658596] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:41:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCameraInfo\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.658847] (camera_calibration) StderrLine: {'line': b'   41 |     auto camera_info_sub = this->create_subscription<sensor_msgs::msg::\x1b[01;31m\x1b[KCameraInfo\x1b[m\x1b[K>("camera_info", 10, [](const sensor_msgs::msg::CameraInfo::SharedPtr msg) {\n'}
+[4.658952] (camera_calibration) StderrLine: {'line': b'      |                                                                        \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.659046] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:41:84:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.659127] (camera_calibration) StderrLine: {'line': b'   41 |     auto camera_info_sub = this->create_subscription<sensor_msgs::msg::CameraInfo>(\x1b[01;35m\x1b[K"camera_info"\x1b[m\x1b[K, 10, [](const sensor_msgs::msg::CameraInfo::SharedPtr msg) {\n'}
+[4.659202] (camera_calibration) StderrLine: {'line': b'      |                                                                                    \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.659297] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:41:130:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCameraInfo\x1b[m\x1b[K\xe2\x80\x99 in namespace \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[4.659414] (camera_calibration) StderrLine: {'line': b'   41 |     auto camera_info_sub = this->create_subscription<sensor_msgs::msg::CameraInfo>("camera_info", 10, [](const sensor_msgs::msg::\x1b[01;31m\x1b[KCameraInfo\x1b[m\x1b[K::SharedPtr msg) {\n'}
+[4.659522] (camera_calibration) StderrLine: {'line': b'      |                                                                                                                                  \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.659770] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[4.659858] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:43:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[4.659943] (camera_calibration) StderrLine: {'line': b'   43 |     })\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[4.660024] (camera_calibration) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.660111] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.660187] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:43:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.660278] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:43:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[4.660352] (camera_calibration) StderrLine: {'line': b'   43 |     })\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[4.660424] (camera_calibration) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.660496] (camera_calibration) StderrLine: {'line': b'      |       \x1b[32m\x1b[K)\x1b[m\x1b[K\n'}
+[4.660567] (camera_calibration) StderrLine: {'line': b'\x1b[01m\x1b[K/home/jlurobovision/eng_ws/src/camera_calibration/src/camera_calibration.cpp:41:83:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.660648] (camera_calibration) StderrLine: {'line': b'   41 |     auto camera_info_sub = this->create_subscription<sensor_msgs::msg::CameraInfo>\x1b[01;36m\x1b[K(\x1b[m\x1b[K"camera_info", 10, [](const sensor_msgs::msg::CameraInfo::SharedPtr msg) {\n'}
+[4.660720] (camera_calibration) StderrLine: {'line': b'      |                                                                                   \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.721795] (-) TimerEvent: {}
+[4.822048] (-) TimerEvent: {}
+[4.922352] (-) TimerEvent: {}
+[5.022655] (-) TimerEvent: {}
+[5.122974] (-) TimerEvent: {}
+[5.223309] (-) TimerEvent: {}
+[5.323664] (-) TimerEvent: {}
+[5.423953] (-) TimerEvent: {}
+[5.524251] (-) TimerEvent: {}
+[5.624607] (-) TimerEvent: {}
+[5.724973] (-) TimerEvent: {}
+[5.825313] (-) TimerEvent: {}
+[5.926468] (-) TimerEvent: {}
+[6.027490] (-) TimerEvent: {}
+[6.127893] (-) TimerEvent: {}
+[6.228190] (-) TimerEvent: {}
+[6.328519] (-) TimerEvent: {}
+[6.428916] (-) TimerEvent: {}
+[6.529306] (-) TimerEvent: {}
+[6.629672] (-) TimerEvent: {}
+[6.730031] (-) TimerEvent: {}
+[6.830313] (-) TimerEvent: {}
+[6.930696] (-) TimerEvent: {}
+[7.030992] (-) TimerEvent: {}
+[7.131372] (-) TimerEvent: {}
+[7.231847] (-) TimerEvent: {}
+[7.332099] (-) TimerEvent: {}
+[7.432401] (-) TimerEvent: {}
+[7.532680] (-) TimerEvent: {}
+[7.632967] (-) TimerEvent: {}
+[7.733247] (-) TimerEvent: {}
+[7.833541] (-) TimerEvent: {}
+[7.933829] (-) TimerEvent: {}
+[8.034120] (-) TimerEvent: {}
+[8.134418] (-) TimerEvent: {}
+[8.140387] (camera_calibration) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/camera_calibration.dir/build.make:76\xef\xbc\x9aCMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[8.140597] (camera_calibration) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137\xef\xbc\x9aCMakeFiles/camera_calibration.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[8.140841] (camera_calibration) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[8.143646] (camera_calibration) CommandEnded: {'returncode': 2}
+[8.183146] (camera_calibration) JobEnded: {'identifier': 'camera_calibration', 'rc': 2}
+[8.194224] (-) EventReactorShutdown: {}

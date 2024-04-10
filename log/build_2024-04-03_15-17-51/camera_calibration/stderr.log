@@ -1,0 +1,19 @@
+[33mCMake Warning at CMakeLists.txt:17 (find_package):
+  By not providing "FindOpenCV_REQUIRED.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "OpenCV_REQUIRED", but CMake did not find one.
+
+  Could not find a package configuration file provided by "OpenCV_REQUIRED"
+  with any of the following names:
+
+    OpenCV_REQUIREDConfig.cmake
+    opencv_required-config.cmake
+
+  Add the installation prefix of "OpenCV_REQUIRED" to CMAKE_PREFIX_PATH or
+  set "OpenCV_REQUIRED_DIR" to a directory containing one of the above files.
+  If "OpenCV_REQUIRED" provides a separate development package or SDK, be
+  sure it has been installed.
+
+[0m
+/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.408
+/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.408
