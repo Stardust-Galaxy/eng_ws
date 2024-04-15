@@ -163,9 +163,9 @@ Packet ExchangeStationDetector::solveAngle()
     packet.z = tVec.at<double>(2, 0);
     return packet;
     //print eularangle on the screen through imshow
-    cv::putText(source, "pitch:" + std::to_string(eulerAngles[0]), cv::Point(50, 50), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 0, 0), 2);
-    cv::putText(source, "yaw:" + std::to_string(eulerAngles[1]), cv::Point(50, 100), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 0, 0), 2);
-    cv::putText(source, "roll:" + std::to_string(eulerAngles[2]), cv::Point(50, 150), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 0, 0), 2);
+    cv::putText(source, "pitch:" + std::to_string(eulerAngles[0]), cv::Point(20, 20), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 0, 0), 3);
+    cv::putText(source, "yaw:" + std::to_string(eulerAngles[1]), cv::Point(20, 60), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 0, 0), 3);
+    cv::putText(source, "roll:" + std::to_string(eulerAngles[2]), cv::Point(20, 160), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 0, 0), 3);
     //solve quarternion and coordinates from rVec and tVec, alread have rVec and tVec
     //cv::Mat rotationMatrix;
     //cv::Rodrigues(rVec, rotationMatrix);
