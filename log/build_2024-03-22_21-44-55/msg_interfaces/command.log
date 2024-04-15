@@ -1,2 +1,0 @@
-Invoking command in '/home/jlurobovision/eng_ws/build/msg_interfaces': /usr/bin/cmake /home/jlurobovision/eng_ws/src/msg_interfaces -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/msg_interfaces
-Invoked command in '/home/jlurobovision/eng_ws/build/msg_interfaces' returned '1': /usr/bin/cmake /home/jlurobovision/eng_ws/src/msg_interfaces -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/msg_interfaces

@@ -1,1 +1,0 @@
-/home/jlurobovision/eng_ws/src/exchangestation_detector/launch/detector_node.launch.py

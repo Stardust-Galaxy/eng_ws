@@ -1,7 +1,0 @@
-[0.011s] Invoking command in '/home/jlurobovision/eng_ws/build/camera_calibration': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/camera_calibration -- -j12 -l12
-[0.124s] [35m[1mConsolidate compiler generated dependencies of target camera_calibration[0m
-[0.168s] [ 50%] [32mBuilding CXX object CMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o[0m
-[2.065s] gmake[2]: *** [CMakeFiles/camera_calibration.dir/build.make:76: CMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o] 中断
-[2.065s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/camera_calibration.dir/all] 中断
-[2.065s] gmake: *** [Makefile:146: all] 中断
-[2.073s] Invoked command in '/home/jlurobovision/eng_ws/build/camera_calibration' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/camera_calibration -- -j12 -l12

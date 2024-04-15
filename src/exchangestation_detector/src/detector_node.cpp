@@ -75,10 +75,9 @@ void exchangestation_detector_node::imageCallback(const sensor_msgs::msg::Image:
     detector->show();
     msg_interfaces::msg::Angle angle_msg;
     angle_msg.found = packet.found;
-    angle_msg.quaternion1 = packet.quaternion1;
-    angle_msg.quaternion2 = packet.quaternion2;
-    angle_msg.quaternion3 = packet.quaternion3;
-    angle_msg.quaternion4 = packet.quaternion4;
+    angle_msg.roll = packet.roll;
+    angle_msg.pitch = packet.pitch;
+    angle_msg.yaw = packet.yaw;
     angle_msg.x = packet.x;
     angle_msg.y = packet.y;
     angle_msg.z = packet.z;

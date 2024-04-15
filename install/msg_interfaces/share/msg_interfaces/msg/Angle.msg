@@ -1,1 +1,0 @@
-/home/jlurobovision/eng_ws/src/msg_interfaces/msg/Angle.msg

@@ -1,2 +1,0 @@
-Invoking command in '/home/jlurobovision/eng_ws/build/hik_camera': /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/hik_camera -- -j12 -l12
-Invoked command in '/home/jlurobovision/eng_ws/build/hik_camera' returned '2': /usr/bin/cmake --build /home/jlurobovision/eng_ws/build/hik_camera -- -j12 -l12

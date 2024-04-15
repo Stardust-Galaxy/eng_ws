@@ -7,7 +7,7 @@ def generate_launch_description():
     ld = LaunchDescription()
     camera_launch = launch.actions.IncludeLaunchDescription(
         launch.launch_description_sources.PythonLaunchDescriptionSource(
-            '/home/jlurobovision/eng_ws/src/galaxy_camera/launch/galaxy_camera.launch.py'
+            '/home/jlurobovision/eng_ws/src/hik_camera/launch/hik_camera.launch.py'
         )
     )
     detector_node = Node(

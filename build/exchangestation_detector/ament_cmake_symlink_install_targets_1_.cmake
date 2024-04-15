@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/jlurobovision/eng_ws/build/exchangestation_detector/libexchangestation_detector.so" "TARGETS" "exchangestation_detector" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

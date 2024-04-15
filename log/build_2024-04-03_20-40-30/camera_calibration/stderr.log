@@ -1,3 +1,0 @@
-gmake[2]: *** [CMakeFiles/camera_calibration.dir/build.make:76: CMakeFiles/camera_calibration.dir/src/camera_calibration.cpp.o] 中断
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/camera_calibration.dir/all] 中断
-gmake: *** [Makefile:146: all] 中断

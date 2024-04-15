@@ -1,1 +1,0 @@
-/home/jlurobovision/eng_ws/build/global_launch/ament_cmake_core/global_launchConfig.cmake

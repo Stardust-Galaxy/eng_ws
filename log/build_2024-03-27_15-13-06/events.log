@@ -1,9 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000098] (-) JobUnselected: {'identifier': 'camera_calibration'}
-[0.000124] (-) JobUnselected: {'identifier': 'exchangestation_detector'}
-[0.000141] (-) JobUnselected: {'identifier': 'galaxy_camera'}
-[0.000157] (-) JobUnselected: {'identifier': 'global_launch'}
-[0.000171] (-) JobUnselected: {'identifier': 'hik_camera'}
-[0.000185] (-) JobUnselected: {'identifier': 'msg_interfaces'}
-[0.000199] (-) JobUnselected: {'identifier': 'serial'}
-[0.000213] (-) EventReactorShutdown: {}

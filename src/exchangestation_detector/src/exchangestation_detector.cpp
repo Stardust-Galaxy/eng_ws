@@ -131,9 +131,9 @@ void ExchangeStationDetector::getImage(cv::Mat& source) {
 Packet ExchangeStationDetector::solveAngle()
 {
     //print CameraMatrix for debug
-    std::cout << "CameraMatrix:" << CameraMatrix << std::endl;
+    //std::cout << "CameraMatrix:" << CameraMatrix << std::endl;
     //print DistortionCoeff for debug
-    std::cout << "DistortionCoeff:" << DistortionCoeff << std::endl;
+    //std::cout << "DistortionCoeff:" << DistortionCoeff << std::endl;
     if(found == false) {
         return Packet();
     }
@@ -155,6 +155,17 @@ Packet ExchangeStationDetector::solveAngle()
     std::cout << "EulerAngle(pitch,yaw,roll)" << eulerAngles << std::endl;
     Packet packet;
     packet.found = true;
+    packet.pitch = eulerAngles[0];
+    packet.yaw = eulerAngles[1];
+    packet.roll = eulerAngles[2];
+    packet.x = tVec.at<double>(0, 0);
+    packet.y = tVec.at<double>(1, 0);
+    packet.z = tVec.at<double>(2, 0);
+    return packet;
+    //print eularangle on the screen through imshow
+    cv::putText(source, "pitch:" + std::to_string(eulerAngles[0]), cv::Point(50, 50), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 0, 0), 2);
+    cv::putText(source, "yaw:" + std::to_string(eulerAngles[1]), cv::Point(50, 100), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 0, 0), 2);
+    cv::putText(source, "roll:" + std::to_string(eulerAngles[2]), cv::Point(50, 150), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 0, 0), 2);
     //solve quarternion and coordinates from rVec and tVec, alread have rVec and tVec
     //cv::Mat rotationMatrix;
     //cv::Rodrigues(rVec, rotationMatrix);
@@ -200,8 +211,8 @@ void getQuaternion(cv::Mat rotationMatrix, double Q[]) {
 void ExchangeStationDetector::selectContours() {
     found = false; //Reset state
     currentFrameSmallSquares.clear();
-	double minArea = 300, maxArea = 1000; // For a single contour
-	double maxRatio = 4.5; // For a single contour : width / height
+	  double minArea = 300, maxArea = 1000; // For a single contour
+	  double maxRatio = 4.5; // For a single contour : width / height
     double minDis = 0, maxDis = 400; // Compare between contours
     double minAreaRatio = 0.1, maxAreaRatio = 10; // Compare between contours
 	std::vector<std::vector<cv::Point>> contours;
@@ -217,9 +228,9 @@ void ExchangeStationDetector::selectContours() {
     */
 	for (const auto& contour : contours) {
 		double area = cv::contourArea(contour);
-        std::cout << std::endl;
+        //std::cout << std::endl;
 
-        std::cout << "area:" << area << std::endl;
+        //std::cout << "area:" << area << std::endl;
 
         
         std::vector<std::vector<cv::Point>> contour_ = { contour };
@@ -262,8 +273,8 @@ void ExchangeStationDetector::selectContours() {
 		double widthHeightRatio = static_cast<double>(boundary.size.width) / boundary.size.height;
         double heightWidthRatio = static_cast<double>(boundary.size.height) / boundary.size.width;
         
-        std::cout << "widthHeightRatio" << widthHeightRatio << std::endl;
-        std::cout << "heightWidthRatio" << heightWidthRatio << std::endl;
+        //std::cout << "widthHeightRatio" << widthHeightRatio << std::endl;
+        //std::cout << "heightWidthRatio" << heightWidthRatio << std::endl;
 
 		if (widthHeightRatio > maxRatio || heightWidthRatio > maxRatio)
 			continue; 

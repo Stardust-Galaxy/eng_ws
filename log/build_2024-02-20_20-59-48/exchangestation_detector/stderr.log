@@ -1,4 +1,0 @@
-[31mCMake Error at CMakeLists.txt:27 (rclcpp_components_register_nodes):
-  Unknown CMake command "rclcpp_components_register_nodes".
-
-[0m

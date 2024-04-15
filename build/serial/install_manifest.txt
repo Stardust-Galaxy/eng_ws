@@ -1,1 +1,0 @@
-/home/jlurobovision/eng_ws/install/serial/lib/libserial.so

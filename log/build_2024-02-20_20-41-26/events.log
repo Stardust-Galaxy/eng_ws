@@ -1,6 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000175] (-) JobUnselected: {'identifier': 'ExchangeStationRecog'}
-[0.000452] (-) JobUnselected: {'identifier': 'hik_camera'}
-[0.000512] (-) JobUnselected: {'identifier': 'msg_interface'}
-[0.000537] (-) JobUnselected: {'identifier': 'serial'}
-[0.000556] (-) EventReactorShutdown: {}

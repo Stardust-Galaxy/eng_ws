@@ -1,1 +1,0 @@
-Invoking command in '/home/jlurobovision/eng_ws/build/serial': /usr/bin/cmake /home/jlurobovision/eng_ws/src/serial -DCMAKE_INSTALL_PREFIX=/home/jlurobovision/eng_ws/install/serial

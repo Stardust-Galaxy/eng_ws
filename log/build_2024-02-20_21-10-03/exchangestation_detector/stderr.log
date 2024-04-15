@@ -1,5 +1,0 @@
-[31mCMake Error at CMakeLists.txt:25 (ament_auto_find_build_dependencies):
-  Unknown CMake command "ament_auto_find_build_dependencies".
-
-[0m
-gmake: *** [Makefile:294：cmake_check_build_system] 错误 1

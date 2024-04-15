@@ -1,4 +1,0 @@
-PLUGIN;lib/libserial.so
-serialport::SerialPortNode;lib/libserial.so
-EXECUTABLE;lib/libserial.so
-serial_node;lib/libserial.so

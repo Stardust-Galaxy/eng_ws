@@ -277,10 +277,9 @@ namespace serialport
             Packet angle_data;
            
             angle_data.found = angle_info->found;
-            angle_data.quaternion1 = angle_info->quaternion1;
-            angle_data.quaternion2 = angle_info->quaternion2;
-            angle_data.quaternion3 = angle_info->quaternion3;
-            angle_data.quaternion4 = angle_info->quaternion4;
+            angle_data.roll= angle_info->roll;
+            angle_data.pitch = angle_info->pitch;
+            angle_data.yaw= angle_info->yaw;
             angle_data.x = angle_info->x;
             angle_data.y = angle_info->y;
             angle_data.z = angle_info->z;
@@ -344,36 +343,28 @@ namespace serialport
       // mode
       Tdata[1] = mode_;
       Tdata[2] = angle_data.found;
-      // quaternion1
-      float* quaternion1 = reinterpret_cast<float*>(&angle_data.quaternion1);
-      u_char* quaternion1Bytes = reinterpret_cast<u_char*>(quaternion1);
+      // roll
+      float* roll = reinterpret_cast<float*>(&angle_data.roll);
+      u_char* rollBytes = reinterpret_cast<u_char*>(roll);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[3 + i] = quaternion1Bytes[i];
+        Tdata[3 + i] = rollBytes[i];
       }
 
-      // quaternion2
-      float* quaternion2 = reinterpret_cast<float*>(&angle_data.quaternion2);
-      u_char* quaternion2Bytes = reinterpret_cast<u_char*>(quaternion2);
+      // pitch
+      float* pitch = reinterpret_cast<float*>(&angle_data.pitch);
+      u_char* pitchBytes = reinterpret_cast<u_char*>(pitch);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[7 + i] = quaternion2Bytes[i];
+        Tdata[7 + i] = pitchBytes[i];
       }
 
-      // quaternion3
-      float* quaternion3 = reinterpret_cast<float*>(&angle_data.quaternion3);
-      u_char* quaternion3Bytes = reinterpret_cast<u_char*>(quaternion3);
+      // yaw
+      float* yaw = reinterpret_cast<float*>(&angle_data.yaw);
+      u_char* yawBytes = reinterpret_cast<u_char*>(yaw);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[11 + i] = quaternion3Bytes[i];
-      }
-
-      // quaternion4
-      float* quaternion4 = reinterpret_cast<float*>(&angle_data.quaternion4);
-      u_char* quaternion4Bytes = reinterpret_cast<u_char*>(quaternion4);
-      for (int i = 0; i < 4; i++)
-      {
-        Tdata[15 + i] = quaternion4Bytes[i];
+        Tdata[11 + i] = yawBytes[i];
       }
 
       // x
@@ -381,7 +372,7 @@ namespace serialport
       u_char* xBytes = reinterpret_cast<u_char*>(x);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[19 + i] = xBytes[i];
+        Tdata[15 + i] = xBytes[i];
       }
 
       // y
@@ -389,7 +380,7 @@ namespace serialport
       u_char* yBytes = reinterpret_cast<u_char*>(y);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[23 + i] = yBytes[i];
+        Tdata[19 + i] = yBytes[i];
       }
 
       // z
@@ -397,7 +388,7 @@ namespace serialport
       u_char* zBytes = reinterpret_cast<u_char*>(z);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[27 + i] = zBytes[i];
+        Tdata[23 + i] = zBytes[i];
       }
     
     }

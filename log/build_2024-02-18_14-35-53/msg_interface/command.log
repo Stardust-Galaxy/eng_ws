@@ -1,6 +1,0 @@
-Invoking command in '/home/stardust/eng_ws/build/msg_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stardust/eng_ws/src/msg_interface -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/msg_interface
-Invoked command in '/home/stardust/eng_ws/build/msg_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/stardust/eng_ws/src/msg_interface -DCMAKE_INSTALL_PREFIX=/home/stardust/eng_ws/install/msg_interface
-Invoking command in '/home/stardust/eng_ws/build/msg_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/msg_interface -- -j8 -l8
-Invoked command in '/home/stardust/eng_ws/build/msg_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/stardust/eng_ws/build/msg_interface -- -j8 -l8
-Invoking command in '/home/stardust/eng_ws/build/msg_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stardust/eng_ws/build/msg_interface
-Invoked command in '/home/stardust/eng_ws/build/msg_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/stardust/eng_ws/build/msg_interface
