@@ -1,6 +1,7 @@
 #include "exchangestation_detector/exchangestation_detector.hpp"
 //use yaml-cpp to read yaml files
 #include <yaml-cpp/yaml.h>
+#include <experimental/filesystem>
 using namespace cv;
 // helper method
 cv::Point2f ExchangeStationDetector::computeCentroid(const std::vector<candidateContour>& candidates) {
@@ -33,45 +34,36 @@ ExchangeStationDetector::ExchangeStationDetector() {
 }
 
 ExchangeStationDetector::ExchangeStationDetector(int blueThreshold,int redThreshold,int detectColor) {
-  /*
+    CameraMatrix = cv::Mat::eye(3, 3, CV_64F);
+    DistortionCoeff = cv::Mat::zeros(1, 5, CV_64F);
     try {
-        YAML::Node config = YAML::LoadFile("/home/jlurobovision/eng_ws/src/exchangestation_detector/config/camera.yaml");
+        std::string current_path = std::filesystem::current_path();
 
-        if (config["distortion_coeff"]) {
-            const YAML::Node& distortionCoeffNode = config["distortion_coeff"];
-            std::vector<double> distortionCoeffData;
-            for (const auto& val : distortionCoeffNode) {
-                distortionCoeffData.push_back(val.as<double>());
-            }
-            for(auto& val : distortionCoeffData)
-                std::cout << val << std::endl;
-            DistortionCoeff = cv::Mat(distortionCoeffData);
-        } else {
-            std::cout << "distortion_coeff not found in the YAML file." << std::endl;
+        std::string yaml_file_path = current_path + "/src/exchangestation_detector/config/camera.yaml";
+
+        YAML::Node config = YAML::LoadFile(yaml_file_path);
+
+        const YAML::Node& camera_matrix_node = config["camera_matrix"]["data"];
+        int index = 0;
+        for (const auto& value : camera_matrix_node) {
+            CameraMatrix.at<double>(index / 3, index % 3) = value.as<double>();
+            index++;
         }
 
-        if (config["camera_matrix"]["data"]) {
-            const YAML::Node& cameraMatrixNode = config["camera_matrix"]["data"];
-            std::vector<double> cameraMatrixData;
-            for (const auto& val : cameraMatrixNode) {
-                cameraMatrixData.push_back(val.as<double>());
-            }
-            CameraMatrix = cv::Mat(cameraMatrixData).reshape(1, 3); // Assuming camera matrix is 3x3
-        } else {
-            std::cout << "camera_matrix data not found in the YAML file." << std::endl;
+        const YAML::Node& distortion_coeff_node = config["distortion_coeff"];
+        index = 0;
+        for (const auto& value : distortion_coeff_node) {
+            DistortionCoeff.at<double>(0, index) = value.as<double>();
+            index++;
         }
+    } catch (const YAML::ParserException& e) {
+        std::cerr << "YAML parsing error: " << e.what() << std::endl;
+    } catch (const std::filesystem::filesystem_error& e) {
+        std::cerr << "Filesystem error: " << e.what() << std::endl;
     } catch (const std::exception& e) {
-        std::cout << "Error: " << e.what() << std::endl;
+        std::cerr << "Error: " << e.what() << std::endl;
     }
-        //print CameraMatrix for debug
-    std::cout << "CameraMatrix:" << CameraMatrix << std::endl;
-    //print DistortionCoeff for debug
-    std::cout << "DistortionCoeff:" << DistortionCoeff << std::endl;
-    */
-    CameraMatrix = (cv::Mat_<double>(3, 3) << 1850.906255, 0.0000, 496.601643,
-         0.0000, 1846.847240, 212.542900,
-         0.0000, 0.0000, 1.0000);
-    DistortionCoeff = (cv::Mat_<double>(1, 5) << -0.20730, -0.1343, 0.00000, 0.01260, 0.05390);
+    
     this->redThreshold = redThreshold;
     this->blueThreshold = blueThreshold;
     this->detectColor = detectColor;
@@ -80,23 +72,6 @@ ExchangeStationDetector::ExchangeStationDetector(int blueThreshold,int redThresh
     lastFrameCorners.emplace_back(cv::Point(-100, -100));
     lastFrameCorners.emplace_back(cv::Point(-100, 100));
     currentFrameCorners = lastFrameCorners;
-}
-ExchangeStationDetector::ExchangeStationDetector(cv::Mat& source) {
-    this->source = source;
-    cv::FileStorage fs("config/camera.yaml", cv::FileStorage::READ);
-    fs["DistortionCoeff"] >> DistortionCoeff;
-    fs["CameraMatrix"] >> CameraMatrix;
-    fs.release();
-
-    cv::Mat binaryImg;
-    std::vector<cv::Mat> channels;
-    cv::split(source, channels);
-    cv::Mat redChannel = channels[2];
-    cv::Mat blueChannel = channels[0];
-    cv::Mat mergedChannels = redChannel + blueChannel;
-    cv::Mat binaryResult;
-    cv::threshold(mergedChannels, binaryResult, 50, 255, cv::THRESH_BINARY);
-    this->binaryImg = binaryResult;
 }
 
 void ExchangeStationDetector::getImage(cv::Mat& source) {
@@ -118,10 +93,6 @@ void ExchangeStationDetector::getImage(cv::Mat& source) {
 
     int windowWidth = 800;
     int windowHeight = 600;
-    //cv::namedWindow("binaryResult", cv::WINDOW_NORMAL);
-    //cv::resizeWindow("binaryResult", windowWidth, windowHeight);
-    //cv::imshow("binaryResult",source);
-    //cv::waitKey(1);
     this->binaryImg = binaryResult;
 }
 
@@ -131,10 +102,13 @@ void ExchangeStationDetector::getImage(cv::Mat& source) {
 Packet ExchangeStationDetector::solveAngle()
 {
     //print CameraMatrix for debug
-    //std::cout << "CameraMatrix:" << CameraMatrix << std::endl;
+    std::cout << "CameraMatrix:" << CameraMatrix << std::endl;
     //print DistortionCoeff for debug
-    //std::cout << "DistortionCoeff:" << DistortionCoeff << std::endl;
+    std::cout << "DistortionCoeff:" << DistortionCoeff << std::endl;
     if(found == false) {
+        cv::putText(source, "pitch: UNKNOWN", cv::Point(20, 40), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
+        cv::putText(source, "yaw: UNKNOWN", cv::Point(20, 100), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
+        cv::putText(source, "roll: UNKNOWN", cv::Point(20, 160), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
         return Packet();
     }
     double size = 288;
@@ -161,11 +135,12 @@ Packet ExchangeStationDetector::solveAngle()
     packet.x = tVec.at<double>(0, 0);
     packet.y = tVec.at<double>(1, 0);
     packet.z = tVec.at<double>(2, 0);
-    return packet;
     //print eularangle on the screen through imshow
-    cv::putText(source, "pitch:" + std::to_string(eulerAngles[0]), cv::Point(20, 20), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 0, 0), 3);
-    cv::putText(source, "yaw:" + std::to_string(eulerAngles[1]), cv::Point(20, 60), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 0, 0), 3);
-    cv::putText(source, "roll:" + std::to_string(eulerAngles[2]), cv::Point(20, 160), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 0, 0), 3);
+    cv::putText(source, "pitch:" + std::to_string(eulerAngles[0]), cv::Point(20, 20), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "yaw:" + std::to_string(eulerAngles[1]), cv::Point(20, 60), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "roll:" + std::to_string(eulerAngles[2]), cv::Point(20, 160), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
+    return packet;
+    /*quarternion version(discarded)*/
     //solve quarternion and coordinates from rVec and tVec, alread have rVec and tVec
     //cv::Mat rotationMatrix;
     //cv::Rodrigues(rVec, rotationMatrix);
@@ -229,10 +204,7 @@ void ExchangeStationDetector::selectContours() {
 	for (const auto& contour : contours) {
 		double area = cv::contourArea(contour);
         //std::cout << std::endl;
-
         //std::cout << "area:" << area << std::endl;
-
-        
         std::vector<std::vector<cv::Point>> contour_ = { contour };
         cv::drawContours(source, contour_, 0, cv::Scalar(0, 255, 0), 2);
 
@@ -312,12 +284,7 @@ void ExchangeStationDetector::selectContours() {
         cv::waitKey(500);
     }
     */
-    
-
-
     int contourNum = candidateContours.size();
-    
-
     //Find corner set
     UnionFind UF(contourNum);
     for (int i = 0; i < contourNum; i += 1) {
@@ -364,17 +331,14 @@ void ExchangeStationDetector::getCorners() {
     for (auto& corner : this->corners) {
         std::vector<cv::Point> approxTriangle;
         cv::minEnclosingTriangle(corner.contour, approxTriangle);
-        
         //cv::polylines(source, approxTriangle, true, cv::Scalar(255, 0, 0), 10);
-        
         /*
         std::vector<std::vector<cv::Point>> contours = { approxTriangle };
         cv::Mat Source = source.clone();
         cv::drawContours(Source, contours, 0, cv::Scalar(255, 0, 0), 2);
         cv::imshow("approxResult", Source);
         cv::waitKey(500);
-        */
-        
+        */ 
         double maxAngle = 0;
         cv::Point maxAnglePoint;
         for (int i = 0; i < 3; i += 1) {
@@ -394,10 +358,7 @@ void ExchangeStationDetector::getCorners() {
                 maxAnglePoint = b;
             }
         }
-        corner.corner = maxAnglePoint;
-        
-        
-        
+        corner.corner = maxAnglePoint;    
         if (maxAngle * (180 / M_PI) > 130)
             corner.corner = maxAnglePoint;
         else {
@@ -453,10 +414,7 @@ void ExchangeStationDetector::getCorners() {
     for (int i = 0; i < 4; i += 1) {
         cv::circle(source, corners[i].corner, 5, cv::Scalar(255, 0, 0), -1);
     }
-    
 }
-
-
 
 void ExchangeStationDetector::show() {
     cv::polylines(source, currentFrameCorners, true, cv::Scalar(255, 0, 0), 10);

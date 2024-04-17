@@ -12,8 +12,9 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/calib3d/calib3d.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <filesystem>
 
-#include "/home/jlurobovision/eng_ws/src/serial/include/serial/packet.hpp"
+#include "../../serial/include/serial/packet.hpp"
 
 class ExchangeStationDetector {
 public:
