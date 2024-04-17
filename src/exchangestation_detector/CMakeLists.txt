@@ -3,7 +3,7 @@ project(exchangestation_detector)
 
 cmake_policy(SET CMP0057 NEW)
 
-set(CMAKE_CXX_STANDARD 14) # 设置 C++ 标准为 C++11
+set(CMAKE_CXX_STANDARD 14) 
 
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
