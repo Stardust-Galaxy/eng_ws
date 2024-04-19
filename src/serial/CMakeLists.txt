@@ -24,6 +24,7 @@ find_package(std_msgs REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(msg_interfaces REQUIRED)
+find_package(my_msg_interface REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(Eigen3 REQUIRED)
@@ -56,6 +57,7 @@ set(dependencies
   Eigen3
   tf2_geometry_msgs
   tf2_ros 
+  my_msg_interface
 )
 
 ament_target_dependencies(${PROJECT_NAME}

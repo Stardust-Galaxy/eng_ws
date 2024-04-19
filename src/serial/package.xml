@@ -20,6 +20,7 @@
   <depend>OpenCV</depend>
   <depend>Eigen3</depend>
   <depend>msg_interfaces</depend>
+  <depend>my_msg_interface</depend>
   <depend>tf2_ros</depend>
   <depend>tf2_geometry_msgs</depend>
 

@@ -36,27 +36,41 @@ namespace serialport
    
         rmw_qos_profile_t rmw_qos(rmw_qos_profile_default);
         rmw_qos.depth = 5;
-        
+        //
         angle_info_sub_ = this->create_subscription<AngleMsg>(
             "/angle", 
             qos,
             std::bind(&SerialPortNode::angleMsgCallback, this, _1)
         );
         
-        //能量机关msg订阅
-        //buff_info_sub_ = this->create_subscription<GimbalMsg>(
-        //    "/buff_processor/gimbal_msg",
-        //    qos,
-        //    std::bind(&SerialPortNode::buffMsgCallback, this, _1)
-        //);
+        node_ = this->shared_from_this();
+        client = this->create_client<my_msg_interface::srv::RefereeMsg>("RequestSerialize");
+        RCLCPP_INFO(this->get_logger(), "RefereeSystem_Client has been started.");
+        bool is_connected = false;
+        while (!client->wait_for_service(std::chrono::seconds(1))) {
+                if (!rclcpp::ok()) {
+                    RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"RefereeSystem_Client Exit！");
+                    break;
+                }
+                RCLCPP_INFO(this->get_logger(),"RefereeSystem_Client connecting...");
+        }
+        if(is_connected)
+        {
+            RCLCPP_INFO(this->get_logger(), "RefereeSystem_Client has been connected.");
+        }
+        else
+        {
+            RCLCPP_INFO(this->get_logger(), "RefereeSystem_Client has not been connected.");
+        }
+        // 设置定时器用于发送请求
+        request_timer_ = this->create_wall_timer(
+            std::chrono::seconds(1),  // 1秒发送一次请求
+            std::bind(&SerialPortNode::requestDataFromService, this)
+        );
 
-        //tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
         
         if (using_port_)
         { 
-            //serial_msg_pub_ = this->create_publisher<SerialMsg>("/serial_msg", qos);
-            //imu_msg_pub_ = this->create_publisher<sensor_msgs::msg::Imu>("imu_msg", qos);
-            //receive_timer_ = rclcpp::create_timer(this, this->get_clock(), 5ms, std::bind(&SerialPortNode::receiveData, this));
             watch_timer_ = rclcpp::create_timer(
                 this, 
                 this->get_clock(), 
@@ -86,6 +100,53 @@ namespace serialport
                 RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 500, "Port open failed!!!");
             }
         }
+    }
+
+    void SerialPortNode::requestDataFromService() {
+        for (const auto& packetType : allPacketTypes) {
+            uint16_t cmd_id = static_cast<uint16_t>(packetType);
+            auto request = std::make_shared<my_msg_interface::srv::RefereeMsg::Request>();
+            request->cmd_id = cmd_id;
+            auto response = client->async_send_request(request);
+            RCLCPP_INFO(this->get_logger(),"Sending Request:0x%x",cmd_id);
+            if (rclcpp::spin_until_future_complete(node_,response) == rclcpp::FutureReturnCode::SUCCESS) {
+                RCLCPP_INFO(this->get_logger(),"Request Success!");
+                auto result = response.get();
+                if(result->data_stream.size() != 0) {
+                    RCLCPP_INFO(this->get_logger(),"cmd_id:0x%x,data_length:%ld",result->cmd_id,result->data_stream.size());
+                    if (handleServiceResponse(cmd_id, result)) {
+                        RCLCPP_INFO(this->get_logger(),"Response Success!");
+                    } 
+                } else {
+                    RCLCPP_INFO(this->get_logger(),"请求异常");
+                }
+                // 控制请求间隔
+                sleep(0.8);
+            }
+        }
+    }
+
+    bool SerialPortNode::handleServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeMsg::Response::SharedPtr response) {
+        uint16_t response_cmd_id = response->cmd_id;
+        if (response_cmd_id != cmd_id) {
+            RCLCPP_ERROR(this->get_logger(), "Response cmd_id does not match request cmd_id!");
+            return false;
+        }
+        uint16_t data_size = response->data_stream.size();
+        if(response->data_length != 0) {
+            serial_port_->Tdata[0] = static_cast<uint8_t>(cmd_id >> 8); // 高8位
+            serial_port_->Tdata[1] = static_cast<uint8_t>(cmd_id);      // 低8位
+
+            for (size_t i = 0; i < response->data_length; ++i) {
+                serial_port_->Tdata[i + 2] = response->data_stream[i];
+            }
+
+            mutex_.lock();
+            serial_port_->sendData();
+            mutex_.unlock();
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -285,25 +346,7 @@ namespace serialport
             angle_data.z = angle_info->z;
             serialport::CrcCheck crc_check_ = CrcCheck();
             crc_check_.Append_CRC16_Check_Sum(reinterpret_cast<uint8_t*>(&angle_data), sizeof(angle_data));
-            /*
-            RCLCPP_WARN_THROTTLE(
-                this->get_logger(),
-                *this->get_clock(), 
-                50,
-                "is_target_switched: %d %d",
-                (target_info->is_switched || target_info->is_spinning_switched),
-                mode
-            );
-            */
-            //                 RCLCPP_WARN_THROTTLE(
-            //     this->get_logger(),
-            //     *this->get_clock(), 
-            //     5,
-            //     "                 imu_pitch:%f     imu_yaw：%f",
-            //     (float)target_info->imu_pitch/3.1415926535*180,
-            //     (float)target_info->imu_yaw/3.1415926535*180,
-            //     mode
-            // );
+
             
           
 
@@ -336,6 +379,7 @@ namespace serialport
             return false;
         }
     }
+    
     void SerialPortNode::transformData(Packet angle_data, u_char* Tdata)
     {
       // 0xA5
@@ -392,55 +436,7 @@ namespace serialport
       }
     
     }
-    /**
-     * @brief 自瞄消息订阅回调函数
-     * 
-     * @param gimbal_msg 云台转动消息
-     */
-    /*
-    void SerialPortNode::armorMsgCallback(GimbalMsg::SharedPtr gimbal_msg) 
-    {
-        int mode = mode_;
-        if (mode == AUTOAIM_TRACKING || mode == AUTOAIM_NORMAL ||
-            mode == AUTOAIM_SLING || mode == OUTPOST_ROTATION_MODE ||
-            mode == SENTRY_NORMAL
-        )
-        {
-            if (!sendData(gimbal_msg))
-            {   // Debug without com.
-                RCLCPP_WARN_THROTTLE(
-                    this->get_logger(), 
-                    *this->get_clock(), 
-                    500, 
-                    "Sub autoaim msg..."
-                );
-            }
-        }
-    }
-    */
-    /**
-     * @brief 能量机关消息订阅回调函数
-     * 
-     * @param gimbal_msg 云台转动消息
-     */
-    /*
-    void SerialPortNode::buffMsgCallback(GimbalMsg::SharedPtr gimbal_msg) 
-    {
-        int mode = mode_;
-        if (mode == SMALL_BUFF || mode == BIG_BUFF)
-        {
-            if (!sendData(gimbal_msg))
-            {
-                RCLCPP_WARN_THROTTLE(
-                    this->get_logger(), 
-                    *this->get_clock(), 
-                    500, 
-                    "Sub buff msg..."
-                );
-            }
-        }
-    }
-    */
+
     void SerialPortNode::angleMsgCallback(AngleMsg::SharedPtr msg)
     {
         if(!sendData(msg))
