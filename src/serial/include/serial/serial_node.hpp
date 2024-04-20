@@ -20,7 +20,7 @@
 #include "serial.hpp"
 #include "packet.hpp"
 #include "msg_interfaces/msg/angle.hpp"
-#include "my_msg_interface/srv/referee_msg.hpp"
+#include "my_msg_interface/srv/referee_graphic_msg.hpp"
 #include "crc_check.hpp"
 #include "DataType.h"
 
@@ -66,7 +66,7 @@ namespace serialport
         
     public:
         rclcpp::Subscription<AngleMsg>::SharedPtr angle_info_sub_;
-        rclcpp::Client<my_msg_interface::srv::RefereeMsg>::SharedPtr client;
+        rclcpp::Client<my_msg_interface::srv::RefereeGraphicMsg>::SharedPtr client;
         rclcpp::TimerBase::SharedPtr request_timer_;
         rclcpp::Node::SharedPtr node_;
     private:
@@ -82,37 +82,10 @@ namespace serialport
         bool setParam(rclcpp::Parameter param);
         rcl_interfaces::msg::SetParametersResult paramsCallback(const std::vector<rclcpp::Parameter>& params);
         void requestDataFromService();
-        bool handleServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeMsg::Response::SharedPtr response);
+        bool handleServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeGraphicMsg::Response::SharedPtr response);
         std::array<RM_referee::PacketType, 29> allPacketTypes = {
-        RM_referee::PacketType::GameStatus,
-        RM_referee::PacketType::GameResultEvent,
-        RM_referee::PacketType::GameRobotHP,
-        RM_referee::PacketType::PlaygroundEvent,
-        RM_referee::PacketType::ExtSupplyProjectileAction,
-        RM_referee::PacketType::RefereeWarningEvent,
-        RM_referee::PacketType::DartInfo,
-        RM_referee::PacketType::RobotState,
-        RM_referee::PacketType::PowerHeatData,
-        RM_referee::PacketType::RobotPosition,
-        RM_referee::PacketType::RobotBuff,
-        RM_referee::PacketType::AirSupportData,
-        RM_referee::PacketType::DamageEvent,
-        RM_referee::PacketType::ShootEvent,
-        RM_referee::PacketType::ProjectileAllowance,
-        RM_referee::PacketType::RobotRfidState,
-        RM_referee::PacketType::DartClientCmd,
-        RM_referee::PacketType::GroundRobotPosition,
-        RM_referee::PacketType::RadarMarkData,
-        RM_referee::PacketType::SentryInfo,
-        RM_referee::PacketType::RadarInfo,
-        RM_referee::PacketType::InterRobotCommsMessage,
         RM_referee::PacketType::CustomRobotData,
-        RM_referee::PacketType::MinimapInteractionCommsMessage,
-        RM_referee::PacketType::KeyboardMouseMessage,
-        RM_referee::PacketType::ClientMinimapRecv,
-        RM_referee::PacketType::CustomClientData,
-        RM_referee::PacketType::MapData,
-        RM_referee::PacketType::CustomInfo
+        RM_referee::PacketType::KeyboardMouseMessage
     };
     }; 
 } //namespace serialport

@@ -44,7 +44,7 @@ namespace serialport
         );
         
         node_ = this->shared_from_this();
-        client = this->create_client<my_msg_interface::srv::RefereeMsg>("RequestSerialize");
+        client = this->create_client<my_msg_interface::srv::RefereeGraphicMsg>("RequestSerialize");
         RCLCPP_INFO(this->get_logger(), "RefereeSystem_Client has been started.");
         bool is_connected = false;
         while (!client->wait_for_service(std::chrono::seconds(1))) {
@@ -64,7 +64,7 @@ namespace serialport
         }
         // 设置定时器用于发送请求
         request_timer_ = this->create_wall_timer(
-            std::chrono::seconds(1),  // 1秒发送一次请求
+            std::chrono::milliseconds(10),  
             std::bind(&SerialPortNode::requestDataFromService, this)
         );
 
@@ -79,7 +79,7 @@ namespace serialport
             );
         }
         
-        //receive_thread_ = std::make_unique<std::thread>(&SerialPortNode::receiveData, this);
+        receive_thread_ = std::make_unique<std::thread>(&SerialPortNode::receiveData, this);
     }
 
     SerialPortNode::~SerialPortNode()
@@ -105,7 +105,7 @@ namespace serialport
     void SerialPortNode::requestDataFromService() {
         for (const auto& packetType : allPacketTypes) {
             uint16_t cmd_id = static_cast<uint16_t>(packetType);
-            auto request = std::make_shared<my_msg_interface::srv::RefereeMsg::Request>();
+            auto request = std::make_shared<my_msg_interface::srv::RefereeGraphicMsg::Request>();
             request->cmd_id = cmd_id;
             auto response = client->async_send_request(request);
             RCLCPP_INFO(this->get_logger(),"Sending Request:0x%x",cmd_id);
@@ -118,15 +118,15 @@ namespace serialport
                         RCLCPP_INFO(this->get_logger(),"Response Success!");
                     } 
                 } else {
-                    RCLCPP_INFO(this->get_logger(),"请求异常");
+                    RCLCPP_INFO(this->get_logger(),"Request Error");
                 }
                 // 控制请求间隔
-                sleep(0.8);
+                //sleep(0.8);
             }
         }
     }
 
-    bool SerialPortNode::handleServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeMsg::Response::SharedPtr response) {
+    bool SerialPortNode::handleServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeGraphicMsg::Response::SharedPtr response) {
         uint16_t response_cmd_id = response->cmd_id;
         if (response_cmd_id != cmd_id) {
             RCLCPP_ERROR(this->get_logger(), "Response cmd_id does not match request cmd_id!");
@@ -155,12 +155,12 @@ namespace serialport
      * 
      */
 
-    /*
+    
     void SerialPortNode::receiveData()
     {
         vector<float> vehicle_pos_info;
         while (1)
-        {
+        {   /*
             if (!using_port_)
             {   
                 geometry_msgs::msg::TransformStamped t;
@@ -185,135 +185,138 @@ namespace serialport
                 tf_broadcaster_->sendTransform(t);
                 
             }
-            else
+            */
+            // 若串口离线则跳过数据发送
+            if (!serial_port_->serial_data_.is_initialized)
             {
-                // 若串口离线则跳过数据发送
-                if (!serial_port_->serial_data_.is_initialized)
+                RCLCPP_INFO_THROTTLE(this->get_logger(), this->serial_port_->steady_clock_, 1000, "Serial port offline!!!");
+                usleep(1000);
+                continue;
+            }
+
+            // 数据读取不成功进行循环
+            bool is_receive_data = false; 
+            while (!is_receive_data)
+            {
+                mutex_.lock();
+                is_receive_data = serial_port_->receiveData();
+                mutex_.unlock();
+                if(!is_receive_data)
                 {
-                    RCLCPP_INFO_THROTTLE(this->get_logger(), this->serial_port_->steady_clock_, 1000, "Serial port offline!!!");
+                    RCLCPP_INFO_THROTTLE(this->get_logger(), this->serial_port_->steady_clock_, 1000, "CHECKSUM FAILED OR NO DATA RECVIED!!!");
                     usleep(1000);
                     continue;
                 }
-
-                // 数据读取不成功进行循环
-                bool is_receive_data = false; 
-                while (!is_receive_data)
-                {
-                    mutex_.lock();
-                    is_receive_data = serial_port_->receiveData();
-                    mutex_.unlock();
-                    if(!is_receive_data)
-                    {
-                        RCLCPP_INFO_THROTTLE(this->get_logger(), this->serial_port_->steady_clock_, 1000, "CHECKSUM FAILED OR NO DATA RECVIED!!!");
-                        usleep(1000);
-                        continue;
-                    }
-                }
-                
-                u_char flag = serial_port_->serial_data_.rdata[0];
-                u_char mode = serial_port_->serial_data_.rdata[1];
-                mode_ = mode;
-
-                RCLCPP_INFO_THROTTLE(
-                    this->get_logger(), 
-                    *this->get_clock(), 
-                    100,
-                    "mode:%d", 
-                    mode
-                );
-                
-                if (flag == 0xA5)
-                {
-                    std::vector<float> quat;
-                    std::vector<float> gyro;
-                    std::vector<float> acc;
-                    float bullet_speed = 0.0;
-                    float shoot_delay = 0.0;
-                    
-                    // Process IMU Datas.
-                    data_transform_->getQuatData(&serial_port_->serial_data_.rdata[2], quat);
-                    data_transform_->getGyroData(&serial_port_->serial_data_.rdata[18], gyro);
-                    data_transform_->getAccData(&serial_port_->serial_data_.rdata[30], acc);
-                    data_transform_->getBulletSpeed(&serial_port_->serial_data_.rdata[42], bullet_speed);
-                    data_transform_->getShootDelay(&serial_port_->serial_data_.rdata[46], shoot_delay);
-                    
-                    // Gimbal angle.
-                    // float yaw_angle = 0.0, pitch_angle = 0.0;
-                    // data_transform_->getYawAngle(flag, &serial_port_->serial_data_.rdata[55], yaw_angle);
-                    // data_transform_->getPitchAngle(flag, &serial_port_->serial_data_.rdata[59], pitch_angle);
-                    // RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "yaw_angle:%.2f", yaw_angle);
-                    // RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "pitch_angle:%.2f", pitch_angle);
-                    if (print_serial_info_)
-                    {
-                        RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "quat:[%.3f %.3f %.3f %.3f]", quat[0], quat[1], quat[2], quat[3]);
-                        RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "gyro:[%.3f %.3f %.3f]", gyro[0], gyro[1], gyro[2]);
-                        RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "acc:[%.3f %.3f %.3f]", acc[0], acc[1], acc[2]);
-                        RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "bullet_speed::%.3f", bullet_speed);
-                        RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "shoot_delay:%.3f", shoot_delay);
-                    }
-
-                    rclcpp::Time now = this->get_clock()->now();
-                    SerialMsg serial_msg;
-                    // sensor_msgs::msg::Imu imu_msg;
-                    serial_msg.header.frame_id = "serial";
-                    serial_msg.header.stamp = now;
-                    serial_msg.imu.header.frame_id = "imu_link";
-                    serial_msg.imu.header.stamp = now;
-                    // imu_msg.header.frame_id = "imu_link";
-                    // imu_msg.header.stamp = now;
-                    serial_msg.mode = mode;
-                    serial_msg.bullet_speed = bullet_speed;
-                    serial_msg.shoot_delay = shoot_delay;
-                    // 下位机乘1000发，会准一点
-                    serial_msg.imu.orientation.w = quat[0]/1000;
-                    serial_msg.imu.orientation.x = quat[1]/1000;
-                    serial_msg.imu.orientation.y = quat[2]/1000;
-                    serial_msg.imu.orientation.z = quat[3]/1000;
-                    serial_msg.imu.angular_velocity.x = gyro[0];
-                    serial_msg.imu.angular_velocity.y = gyro[1];
-                    serial_msg.imu.angular_velocity.z = gyro[2];
-                    serial_msg.imu.linear_acceleration.x = acc[0];
-                    serial_msg.imu.linear_acceleration.y = acc[1];
-                    serial_msg.imu.linear_acceleration.z = acc[2];
-                    // imu_msg.orientation.w = quat[0];
-                    // imu_msg.orientation.x = quat[1];
-                    // imu_msg.orientation.y = quat[2];
-                    // imu_msg.orientation.z = quat[3];
-                    // imu_msg.angular_velocity.x = gyro[0];
-                    // imu_msg.angular_velocity.y = gyro[1];
-                    // imu_msg.angular_velocity.z = gyro[2];
-                    // imu_msg.linear_acceleration.x = acc[0];
-                    // imu_msg.linear_acceleration.y = acc[1];
-                    // imu_msg.linear_acceleration.z = acc[2];
-                    geometry_msgs::msg::TransformStamped t;
-
-                    // Read message content and assign it to corresponding tf variables
-                    t.header.stamp = this->get_clock()->now();
-                    t.header.frame_id = "base_link";
-                    t.child_frame_id = "imu_link";
-
-                    // Translation
-                    t.transform.translation.x = 0.0;
-                    t.transform.translation.y = 0.0;
-                    t.transform.translation.z = 0.0;
-
-                    // Rotation
-                    t.transform.rotation.x = serial_msg.imu.orientation.x;
-                    t.transform.rotation.y = serial_msg.imu.orientation.y;
-                    t.transform.rotation.z = serial_msg.imu.orientation.z;
-                    t.transform.rotation.w = serial_msg.imu.orientation.w;
-
-                    // Send the transformation
-                    tf_broadcaster_->sendTransform(t);
-
-                    // Pub serial msg
-                    serial_msg_pub_->publish(std::move(serial_msg));
-                    // imu_msg_pub_->publish(std::move(imu_msg));
-                }
             }
+            
+            u_char flag = serial_port_->serial_data_.rdata[0];
+            u_char mode = serial_port_->serial_data_.rdata[1];
+            mode_ = mode;
+
+            RCLCPP_INFO_THROTTLE(
+                this->get_logger(), 
+                *this->get_clock(), 
+                100,
+                "mode:%d", 
+                mode
+            );
+
+            if(flag == 0xA7) {
+                
+            }
+            /*
+            if (flag == 0xA5)
+            {
+                std::vector<float> quat;
+                std::vector<float> gyro;
+                std::vector<float> acc;
+                float bullet_speed = 0.0;
+                float shoot_delay = 0.0;
+                
+                // Process IMU Datas.
+                data_transform_->getQuatData(&serial_port_->serial_data_.rdata[2], quat);
+                data_transform_->getGyroData(&serial_port_->serial_data_.rdata[18], gyro);
+                data_transform_->getAccData(&serial_port_->serial_data_.rdata[30], acc);
+                data_transform_->getBulletSpeed(&serial_port_->serial_data_.rdata[42], bullet_speed);
+                data_transform_->getShootDelay(&serial_port_->serial_data_.rdata[46], shoot_delay);
+                
+                // Gimbal angle.
+                // float yaw_angle = 0.0, pitch_angle = 0.0;
+                // data_transform_->getYawAngle(flag, &serial_port_->serial_data_.rdata[55], yaw_angle);
+                // data_transform_->getPitchAngle(flag, &serial_port_->serial_data_.rdata[59], pitch_angle);
+                // RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "yaw_angle:%.2f", yaw_angle);
+                // RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "pitch_angle:%.2f", pitch_angle);
+                if (print_serial_info_)
+                {
+                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "quat:[%.3f %.3f %.3f %.3f]", quat[0], quat[1], quat[2], quat[3]);
+                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "gyro:[%.3f %.3f %.3f]", gyro[0], gyro[1], gyro[2]);
+                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "acc:[%.3f %.3f %.3f]", acc[0], acc[1], acc[2]);
+                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "bullet_speed::%.3f", bullet_speed);
+                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "shoot_delay:%.3f", shoot_delay);
+                }
+
+                rclcpp::Time now = this->get_clock()->now();
+                SerialMsg serial_msg;
+                // sensor_msgs::msg::Imu imu_msg;
+                serial_msg.header.frame_id = "serial";
+                serial_msg.header.stamp = now;
+                serial_msg.imu.header.frame_id = "imu_link";
+                serial_msg.imu.header.stamp = now;
+                // imu_msg.header.frame_id = "imu_link";
+                // imu_msg.header.stamp = now;
+                serial_msg.mode = mode;
+                serial_msg.bullet_speed = bullet_speed;
+                serial_msg.shoot_delay = shoot_delay;
+                // 下位机乘1000发，会准一点
+                serial_msg.imu.orientation.w = quat[0]/1000;
+                serial_msg.imu.orientation.x = quat[1]/1000;
+                serial_msg.imu.orientation.y = quat[2]/1000;
+                serial_msg.imu.orientation.z = quat[3]/1000;
+                serial_msg.imu.angular_velocity.x = gyro[0];
+                serial_msg.imu.angular_velocity.y = gyro[1];
+                serial_msg.imu.angular_velocity.z = gyro[2];
+                serial_msg.imu.linear_acceleration.x = acc[0];
+                serial_msg.imu.linear_acceleration.y = acc[1];
+                serial_msg.imu.linear_acceleration.z = acc[2];
+                // imu_msg.orientation.w = quat[0];
+                // imu_msg.orientation.x = quat[1];
+                // imu_msg.orientation.y = quat[2];
+                // imu_msg.orientation.z = quat[3];
+                // imu_msg.angular_velocity.x = gyro[0];
+                // imu_msg.angular_velocity.y = gyro[1];
+                // imu_msg.angular_velocity.z = gyro[2];
+                // imu_msg.linear_acceleration.x = acc[0];
+                // imu_msg.linear_acceleration.y = acc[1];
+                // imu_msg.linear_acceleration.z = acc[2];
+                geometry_msgs::msg::TransformStamped t;
+
+                // Read message content and assign it to corresponding tf variables
+                t.header.stamp = this->get_clock()->now();
+                t.header.frame_id = "base_link";
+                t.child_frame_id = "imu_link";
+
+                // Translation
+                t.transform.translation.x = 0.0;
+                t.transform.translation.y = 0.0;
+                t.transform.translation.z = 0.0;
+
+                // Rotation
+                t.transform.rotation.x = serial_msg.imu.orientation.x;
+                t.transform.rotation.y = serial_msg.imu.orientation.y;
+                t.transform.rotation.z = serial_msg.imu.orientation.z;
+                t.transform.rotation.w = serial_msg.imu.orientation.w;
+
+                // Send the transformation
+                tf_broadcaster_->sendTransform(t);
+
+                // Pub serial msg
+                serial_msg_pub_->publish(std::move(serial_msg));
+                // imu_msg_pub_->publish(std::move(imu_msg));
+            }
+            */
         }
     }
-    */
+    
 
     /**
      * @brief 数据发送函数

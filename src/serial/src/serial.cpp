@@ -139,9 +139,9 @@ namespace serialport
      */
     bool SerialPort::receiveData(int lens)
     {
-        // timestamp_ = this->steady_clock_.now();
-        // rclcpp::Time now = this->steady_clock_.now();
-        // cout << "rec_delay:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
+         timestamp_ = this->steady_clock_.now();
+        rclcpp::Time now = this->steady_clock_.now();
+        cout << "rec_delay:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
         
         int bytes;
         char *name = ttyname(serial_data_.fd);
