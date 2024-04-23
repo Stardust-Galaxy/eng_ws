@@ -20,6 +20,7 @@
 #include "serial.hpp"
 #include "packet.hpp"
 #include "msg_interfaces/msg/angle.hpp"
+#include "msg_interfaces/msg/receive_data.hpp"
 #include "my_msg_interface/srv/referee_graphic_msg.hpp"
 #include "crc_check.hpp"
 #include "DataType.h"
@@ -30,7 +31,7 @@ namespace serialport
     class SerialPortNode : public rclcpp::Node
     {
         typedef msg_interfaces::msg::Angle AngleMsg;
-
+        typedef msg_interfaces::msg::ReceiveData ReceiveDataMsg;
     public:
         SerialPortNode(const rclcpp::NodeOptions& options = rclcpp::NodeOptions());
         ~SerialPortNode();
@@ -66,6 +67,7 @@ namespace serialport
         
     public:
         rclcpp::Subscription<AngleMsg>::SharedPtr angle_info_sub_;
+        rclcpp::Publisher<ReceiveDataMsg>::SharedPtr receive_data_pub_;
         rclcpp::Client<my_msg_interface::srv::RefereeGraphicMsg>::SharedPtr client;
         rclcpp::TimerBase::SharedPtr request_timer_;
         rclcpp::Node::SharedPtr node_;

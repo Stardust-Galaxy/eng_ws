@@ -36,20 +36,21 @@ namespace serialport
    
         rmw_qos_profile_t rmw_qos(rmw_qos_profile_default);
         rmw_qos.depth = 5;
-        //
+        
         angle_info_sub_ = this->create_subscription<AngleMsg>(
             "/angle", 
             qos,
             std::bind(&SerialPortNode::angleMsgCallback, this, _1)
         );
         
-        node_ = this->shared_from_this();
+        //node_ = this->shared_from_this();
         client = this->create_client<my_msg_interface::srv::RefereeGraphicMsg>("RequestSerialize");
         RCLCPP_INFO(this->get_logger(), "RefereeSystem_Client has been started.");
-        bool is_connected = false;
+        bool is_connected = true;
         while (!client->wait_for_service(std::chrono::seconds(1))) {
                 if (!rclcpp::ok()) {
                     RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"RefereeSystem_Client Exit！");
+                    is_connected = false;
                     break;
                 }
                 RCLCPP_INFO(this->get_logger(),"RefereeSystem_Client connecting...");
@@ -62,7 +63,7 @@ namespace serialport
         {
             RCLCPP_INFO(this->get_logger(), "RefereeSystem_Client has not been connected.");
         }
-        // 设置定时器用于发送请求
+        //设置定时器用于发送请求
         request_timer_ = this->create_wall_timer(
             std::chrono::milliseconds(10),  
             std::bind(&SerialPortNode::requestDataFromService, this)
@@ -79,7 +80,7 @@ namespace serialport
             );
         }
         
-        receive_thread_ = std::make_unique<std::thread>(&SerialPortNode::receiveData, this);
+        //receive_thread_ = std::make_unique<std::thread>(&SerialPortNode::receiveData, this);
     }
 
     SerialPortNode::~SerialPortNode()
@@ -109,7 +110,7 @@ namespace serialport
             request->cmd_id = cmd_id;
             auto response = client->async_send_request(request);
             RCLCPP_INFO(this->get_logger(),"Sending Request:0x%x",cmd_id);
-            if (rclcpp::spin_until_future_complete(node_,response) == rclcpp::FutureReturnCode::SUCCESS) {
+            if (rclcpp::spin_until_future_complete(this,response) == rclcpp::FutureReturnCode::SUCCESS) {
                 RCLCPP_INFO(this->get_logger(),"Request Success!");
                 auto result = response.get();
                 if(result->data_stream.size() != 0) {
@@ -134,11 +135,10 @@ namespace serialport
         }
         uint16_t data_size = response->data_stream.size();
         if(response->data_length != 0) {
-            serial_port_->Tdata[0] = static_cast<uint8_t>(cmd_id >> 8); // 高8位
-            serial_port_->Tdata[1] = static_cast<uint8_t>(cmd_id);      // 低8位
+            serial_port_->Tdata[0] = 0xA9;     
 
             for (size_t i = 0; i < response->data_length; ++i) {
-                serial_port_->Tdata[i + 2] = response->data_stream[i];
+                serial_port_->Tdata[i + 1] = response->data_stream[i];
             }
 
             mutex_.lock();
@@ -222,7 +222,18 @@ namespace serialport
             );
 
             if(flag == 0xA7) {
-                
+                float pitch;
+                float height;
+                memcpy(&pitch, &serial_port_->serial_data_.rdata[2], 4);
+                memcpy(&height, &serial_port_->serial_data_.rdata[6], 4);
+                RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "pitch:%.2f", pitch);
+                RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "height:%.2f", height);
+                msg_interfaces::msg::ReceiveData receive_data;
+                receive_data.pitch = pitch;
+                receive_data.height = height;
+                receive_data_pub_->publish(std::move(receive_data));
+                //log and print success
+                RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "ReceiveData published");    
             }
             /*
             if (flag == 0xA5)
