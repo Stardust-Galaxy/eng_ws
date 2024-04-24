@@ -89,107 +89,92 @@ void ExchangeStationDetector::getImage(cv::Mat& source) {
     //cv::imshow("pro", mergedChannels);
     //cv::waitKey(0);
     //cv::Mat binaryResult;
-    cv::threshold(grayImg, binaryResult, redThreshold, 255, cv::THRESH_BINARY);
-
+    if(detectColor == RED)
+        cv::threshold(grayImg, binaryResult, redThreshold, 255, cv::THRESH_BINARY);
+    else
+        cv::threshold(grayImg, binaryResult, blueThreshold, 255, cv::THRESH_BINARY);
     int windowWidth = 800;
     int windowHeight = 600;
     this->binaryImg = binaryResult;
 }
 
-
-
-
-Packet ExchangeStationDetector::solveAngle()
-{
-    //print CameraMatrix for debug
-    std::cout << "CameraMatrix:" << CameraMatrix << std::endl;
-    //print DistortionCoeff for debug
-    std::cout << "DistortionCoeff:" << DistortionCoeff << std::endl;
+Packet ExchangeStationDetector::solveAngle(float currentPitch,float currentHeight)
+{   
+    cv::Mat cameraToReferenceRvec = cv::Mat::zeros(3, 1, CV_64F);
+    cv::Mat cameraToReferenceRMatrix = cv::Mat::eye(3, 3, CV_64F);
+    cv::Mat cameraToReferenceTvec = cv::Mat::zeros(3, 1, CV_64F);
+    //Three transformationMatrix
+    cv::Mat T_CameraToReference = cv::Mat::eye(4, 4, CV_64F);
+    cv::Mat T_WorldToCamera = cv::Mat::eye(4, 4, CV_64F);
+    cv::Mat T_WorldToReference = cv::Mat::eye(4, 4, CV_64F);
+    cameraToReferenceRvec.at<double>(0, 0) = -currentPitch * M_PI / 180;
+    cameraToReferenceTvec.at<double>(1, 0) = -currentHeight;
+    cameraToReferenceTvec.at<double>(2, 0) = 0;
+    cv::Rodrigues(cameraToReferenceRvec, cameraToReferenceRMatrix);
+    //build camera2reference transformation matrix
+    cameraToReferenceRMatrix.copyTo(T_CameraToReference(cv::Rect(0, 0, 3, 3)));
+    cameraToReferenceTvec.copyTo(T_CameraToReference(cv::Rect(3, 0, 1, 3)));
     if(found == false) {
         cv::putText(source, "pitch: UNKNOWN", cv::Point(20, 40), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
         cv::putText(source, "yaw: UNKNOWN", cv::Point(20, 100), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
         cv::putText(source, "roll: UNKNOWN", cv::Point(20, 160), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
         return Packet();
     }
-    double size = 288;
-    std::vector<cv::Point3f> ExStationPos = { cv::Point3f(size / 2, -size / 2,0),
+    double size = 275;
+    std::vector<cv::Point3f> objectPoints = { cv::Point3f(size / 2, -size / 2,0),
                                               cv::Point3f(size / 2, size / 2,0),
                                               cv::Point3f(-size / 2, size / 2,0),
                                               cv::Point3f(-size / 2, -size / 2,0) };
-    std::vector<cv::Point2f> realPos = { this->corners[0].corner,
+    std::vector<cv::Point2f> imagePoints = { this->corners[0].corner,
                                          this->corners[1].corner, 
                                          this->corners[2].corner, 
                                          this->corners[3].corner };
     cv::Mat tVec, rVec;
-    cv::solvePnP(ExStationPos, realPos, CameraMatrix, DistortionCoeff, rVec, tVec, false,cv::SOLVEPNP_IPPE_SQUARE);
-    cv::Mat rotationVector;
-    cv::Rodrigues(rVec, rotationVector);
+    cv::solvePnP(objectPoints, imagePoints, CameraMatrix, DistortionCoeff, rVec, tVec, false,cv::SOLVEPNP_SQPNP);
+    cv::Mat rotationMatrix;
+    cv::Rodrigues(rVec, rotationMatrix);
+    //build world2cam transformation matrix
+    rotationMatrix.copyTo(T_WorldToCamera(cv::Rect(0, 0, 3, 3)));
+    tVec.copyTo(T_WorldToCamera(cv::Rect(3, 0, 1, 3)));
+    //build world2reference transformation matrix
+    T_WorldToReference = T_WorldToCamera * T_CameraToReference.inv();
+    cv::Mat worldToReferenceRMatrix = T_WorldToReference(cv::Rect(0, 0, 3, 3));
+    cv::Mat worldToReferenceTvec = T_WorldToReference(cv::Rect(3, 0, 1, 3));
     cv::Mat mtxR, mtxQ;
-    cv::Vec3d eulerAngles = cv::RQDecomp3x3(rotationVector, mtxR, mtxQ, cv::noArray(), cv::noArray());
-    std::cout << "EulerAngle(pitch,yaw,roll)" << eulerAngles << std::endl;
+    cv::Vec3d eulerAngles = cv::RQDecomp3x3(rotationMatrix, mtxR, mtxQ, cv::noArray(), cv::noArray());
+    cv::Vec3d referenceEulerAngles = cv::RQDecomp3x3(worldToReferenceRMatrix, mtxR, mtxQ, cv::noArray(), cv::noArray());
     Packet packet;
     packet.found = true;
-    packet.pitch = eulerAngles[0];
-    packet.yaw = eulerAngles[1];
-    packet.roll = eulerAngles[2];
-    packet.x = tVec.at<double>(0, 0);
-    packet.y = tVec.at<double>(1, 0);
-    packet.z = tVec.at<double>(2, 0);
-    //print eularangle on the screen through imshow
-    cv::putText(source, "pitch:" + std::to_string(eulerAngles[0]), cv::Point(20, 20), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
-    cv::putText(source, "yaw:" + std::to_string(eulerAngles[1]), cv::Point(20, 60), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
-    cv::putText(source, "roll:" + std::to_string(eulerAngles[2]), cv::Point(20, 160), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
+    packet.pitch = referenceEulerAngles[0];
+    packet.yaw = referenceEulerAngles[1];
+    packet.roll = referenceEulerAngles[2];
+    packet.x = worldToReferenceTvec.at<double>(0, 0);
+    packet.y = worldToReferenceTvec.at<double>(1, 0);
+    packet.z = worldToReferenceTvec.at<double>(2, 0);
+    //print eulerangle on the screen through imshow
+    cv::putText(source, "pitch:" + std::to_string(eulerAngles[0]), cv::Point(20, 60), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "yaw:" + std::to_string(eulerAngles[1]), cv::Point(20, 110), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "roll:" + std::to_string(eulerAngles[2]), cv::Point(20, 160), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "referencePitch:" + std::to_string(referenceEulerAngles[0]), cv::Point(20, 210), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "referenceYaw:" + std::to_string(referenceEulerAngles[1]), cv::Point(20, 260), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "referenceRoll:" + std::to_string(referenceEulerAngles[2]), cv::Point(20, 310), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "Referencex:" + std::to_string(worldToReferenceTvec.at<double>(0, 0)), cv::Point(20, 510), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "Referencey:" + std::to_string(worldToReferenceTvec.at<double>(1, 0)), cv::Point(20, 550), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "Referencez:" + std::to_string(worldToReferenceTvec.at<double>(2, 0)), cv::Point(20, 610), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "x:" + std::to_string(tVec.at<double>(0, 0)), cv::Point(20, 360), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "y:" + std::to_string(tVec.at<double>(1, 0)), cv::Point(20, 410), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
+    cv::putText(source, "z:" + std::to_string(tVec.at<double>(2, 0)), cv::Point(20, 460), cv::FONT_HERSHEY_SIMPLEX, 1, cv::Scalar(255, 255, 255), 2);
     return packet;
-    /*quarternion version(discarded)*/
-    //solve quarternion and coordinates from rVec and tVec, alread have rVec and tVec
-    //cv::Mat rotationMatrix;
-    //cv::Rodrigues(rVec, rotationMatrix);
-    //double Q[4];
-    //getQuaternion(rotationMatrix, Q);
-    //packet.quaternion1 = Q[0];
-    //packet.quaternion2 = Q[1];
-    //packet.quaternion3 = Q[2];
-    //packet.quaternion4 = Q[3];
-    //packet.x = tVec.at<double>(0, 0);
-    //packet.y = tVec.at<double>(1, 0);
-    //packet.z = tVec.at<double>(2, 0);    
-    //return packet;
 }
-
-void getQuaternion(cv::Mat rotationMatrix, double Q[]) {
-    double trace = rotationMatrix.at<double>(0, 0) + rotationMatrix.at<double>(1, 1) + rotationMatrix.at<double>(2, 2);
-    if (trace > 0) {
-        double s = sqrt(trace + 1.0);
-        Q[3] = s * 0.5;
-        s = 0.5 / s;
-        Q[0] = (rotationMatrix.at<double>(2, 1) - rotationMatrix.at<double>(1, 2)) * s;
-        Q[1] = (rotationMatrix.at<double>(0, 2) - rotationMatrix.at<double>(2, 0)) * s;
-        Q[2] = (rotationMatrix.at<double>(1, 0) - rotationMatrix.at<double>(0, 1)) * s;
-    }
-    else {
-      int i = rotationMatrix.at<double>(0, 0) < rotationMatrix.at<double>(1, 1) ?
-        (rotationMatrix.at<double>(1, 1) < rotationMatrix.at<double>(2, 2) ? 2 : 1) :
-        (rotationMatrix.at<double>(0, 0) < rotationMatrix.at<double>(2, 2) ? 2 : 0);
-        int j = (i + 1) % 3;
-        int k = (i + 2) % 3;
-        double s = sqrt(rotationMatrix.at<double>(i, i) - rotationMatrix.at<double>(j, j) - rotationMatrix.at<double>(k, k) + 1.0);
-        Q[i] = s * 0.5;
-        s = 0.5 / s;
-        Q[3] = (rotationMatrix.at<double>(k, j) - rotationMatrix.at<double>(j, k)) * s;
-        Q[j] = (rotationMatrix.at<double>(j, i) + rotationMatrix.at<double>(i, j)) * s;
-        Q[k] = (rotationMatrix.at<double>(k, i) + rotationMatrix.at<double>(i, k)) * s;
-    }
-}
-
-
 
 void ExchangeStationDetector::selectContours() {
     found = false; //Reset state
     currentFrameSmallSquares.clear();
-	  double minArea = 300, maxArea = 1000; // For a single contour
-	  double maxRatio = 4.5; // For a single contour : width / height
-    double minDis = 0, maxDis = 400; // Compare between contours
+	double minArea = 400, maxArea = 10000; // For a single contour
+	double maxRatio = 4.5; // For a single contour : width / height
+    //double minDis = 0, maxDis = 400; // Compare between contours
     double minAreaRatio = 0.1, maxAreaRatio = 10; // Compare between contours
+    double minSmallSquareArea = 100, maxSmallSquareArea = 400;
 	std::vector<std::vector<cv::Point>> contours;
 	cv::findContours(binaryImg, contours, cv::RETR_EXTERNAL,cv::CHAIN_APPROX_SIMPLE);// should be in counter clock-wise order according to the video
     std::vector<candidateContour> candidateContours; // Potential corner contours
@@ -219,7 +204,7 @@ void ExchangeStationDetector::selectContours() {
         cv::RotatedRect boundary = cv::minAreaRect(contour);
         //select two small Points
         double boundArea = boundary.size.height * boundary.size.width;
-        if (area > 20 && area < 150 && boundArea < 2 * area && boundary.size.width / boundary.size.height < 2 && boundary.size.height / boundary.size.width < 2) {
+        if (area > minSmallSquareArea && area < maxSmallSquareArea && boundArea < 2 * area && boundary.size.width / boundary.size.height < 2 && boundary.size.height / boundary.size.width < 2) {
             cv::Point2f center = boundary.center;
             if (currentFrameSmallSquares.size() < 2)
                 currentFrameSmallSquares.push_back(boundary.center);
@@ -263,10 +248,10 @@ void ExchangeStationDetector::selectContours() {
     if (!currentFrameSmallSquares.empty())
         lastFrameSmallSquares = currentFrameSmallSquares;
 
-    std::cout << "currentFrameSmallSquares: " << currentFrameSmallSquares.size() << std::endl;
+    //std::cout << "currentFrameSmallSquares: " << currentFrameSmallSquares.size() << std::endl;
 
     if (candidateContours.size() < 4) {
-        std::cout << "Not enough corners" << std::endl; // Haven't found yet
+        //std::cout << "Not enough corners" << std::endl; // Haven't found yet
         return;
     }
 

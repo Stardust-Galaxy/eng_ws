@@ -1,2 +1,2 @@
-float64 pitch
-float64 height
+float32 pitch
+float32 height

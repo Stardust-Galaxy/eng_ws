@@ -33,6 +33,10 @@ exchangestation_detector_node::exchangestation_detector_node(const rclcpp::NodeO
         camera_info = msg;
         cam_center = cv::Point2f(msg->width / 2, msg->height / 2);
     });
+    // Create a receive data subscriber
+    receive_data_sub = this->create_subscription<msg_interfaces::msg::ReceiveData>("receive_data", 10, [this](const msg_interfaces::msg::ReceiveData::SharedPtr msg) {
+        this->setReceiveData(msg);
+    });
     // Create an image subscriber
     image_sub = this->create_subscription<sensor_msgs::msg::Image>(
     "/image_raw", rclcpp::SensorDataQoS(),
@@ -58,7 +62,7 @@ std::unique_ptr<ExchangeStationDetector> exchangestation_detector_node::initDete
     descriptor.description = "0-RED,`1-BLUE";
     descriptor.integer_range[0].from_value = 0;
     descriptor.integer_range[0].to_value = 1;
-    this->declare_parameter("detect_color", 0, descriptor);
+    this->declare_parameter("detect_color", BLUE, descriptor);
     auto detectColor = this->get_parameter("detect_color").as_int();
     int redThreshold = this->get_parameter("red_threshold").as_int();
     int blueThreshold = this->get_parameter("blue_threshold").as_int();
@@ -66,12 +70,19 @@ std::unique_ptr<ExchangeStationDetector> exchangestation_detector_node::initDete
     return std::make_unique<ExchangeStationDetector>(redThreshold, blueThreshold, detectColor);
 }
 
+void exchangestation_detector_node::setReceiveData(const msg_interfaces::msg::ReceiveData::SharedPtr msg) {
+    receive_data = *msg;
+    currentPitch = receive_data.pitch;
+    currentHeight = receive_data.height;
+}
+
 void exchangestation_detector_node::imageCallback(const sensor_msgs::msg::Image::SharedPtr & msg) {
     auto img = cv_bridge::toCvCopy(msg, "bgr8")->image;
     detector->getImage(img);
     detector->selectContours();
     detector->getCorners();
-    Packet packet = detector->solveAngle();
+
+    Packet packet = detector->solveAngle(currentPitch,currentHeight);
     detector->show();
     msg_interfaces::msg::Angle angle_msg;
     angle_msg.found = packet.found;

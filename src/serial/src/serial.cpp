@@ -175,14 +175,13 @@ namespace serialport
 
         //cout << "rec_delay2:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
 
-        RCLCPP_INFO_THROTTLE(logger_, steady_clock_, 100, "rec_delay:%.3fms", (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6);
+        //RCLCPP_INFO_THROTTLE(logger_, steady_clock_, 100, "rec_delay:%.3fms", (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6);
 
 
-        if ((serial_data_.rdata[0] == 0xA5 || serial_data_.rdata[0] == 0xB5 || serial_data_.rdata[0] == 0xC5))
+        if ((serial_data_.rdata[0] == 0xA5 || serial_data_.rdata[0] == 0xB5 || serial_data_.rdata[0] == 0xC5 || serial_data_.rdata[0] == 0xA7))
         {
-            cout << 1 << endl;
             rclcpp::Time now = this->steady_clock_.now();
-            cout << "rec_delay:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
+            //cout << "rec_delay:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
             timestamp_ = now;
             return true;
         }
@@ -202,7 +201,7 @@ namespace serialport
         // RCLCPP_INFO(logger_, "isFindTarget: %d", Tdata[15]);
         // RCLCPP_INFO(logger_, "isSpinning: %d", Tdata[16]);
         // RCLCPP_INFO(logger_, "isShooting: %d", Tdata[17]);
-        RCLCPP_WARN_THROTTLE(logger_, steady_clock_, 50, "Sending msg...");
+        //RCLCPP_WARN_THROTTLE(logger_, steady_clock_, 50, "Sending msg...");
         return;
     }
 

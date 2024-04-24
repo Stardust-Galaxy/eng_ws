@@ -5,7 +5,8 @@
 
 #ifndef EXSTATIONRECOG_H
 #define EXSTATIONRECOG_H
-
+#define RED 0
+#define BLUE 1
 #include <cmath>
 #include <iostream>
 #include <opencv2/core/core.hpp>
@@ -31,7 +32,7 @@ public:
 
 	void getCorners();
 
-	Packet solveAngle();
+	Packet solveAngle(float,float);
 
   void getQuaternion(cv::Mat rotationMatrix,double Q[]);
 	

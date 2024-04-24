@@ -53,15 +53,15 @@ namespace serialport
             [this, client]() {
                 uint16_t cmd_id = 0x0304;
                 auto response = client->send_request(cmd_id);
-                RCLCPP_INFO(client->get_logger(),"Sending Request:0x%x",cmd_id);
+                //RCLCPP_INFO(client->get_logger(),"Sending Request:0x%x",cmd_id);
                 //handle response
                 if (rclcpp::spin_until_future_complete(client,response) == rclcpp::FutureReturnCode::SUCCESS) {
                     auto result = response.get();
                     if(handleServiceResponse(cmd_id, result)) {
-                        RCLCPP_INFO(client->get_logger(),"Response received");
+                        //RCLCPP_INFO(client->get_logger(),"Response received");
                     }
                     else {
-                        RCLCPP_ERROR(client->get_logger(),"Response not received");
+                        //RCLCPP_ERROR(client->get_logger(),"Response not received");
                     }
                 }
                 
@@ -78,6 +78,10 @@ namespace serialport
             );
         }
         
+        receive_data_pub_ = this->create_publisher<ReceiveDataMsg>(
+            "/receive_data", 
+            qos
+        );
         receive_thread_ = std::make_unique<std::thread>(&SerialPortNode::receiveData, this);
     }
 
@@ -110,8 +114,9 @@ namespace serialport
             return false;
         }
         uint16_t data_size = response->data_stream.size();
-        RM_referee::KeyboardMouseMessageStruct T;
-        memcpy(&T, response->data_stream.data(), response->data_length);
+        /*For Test*/
+        //RM_referee::KeyboardMouseMessageStruct T;
+        //memcpy(&T, response->data_stream.data(), response->data_length);
         //RCLCPP_INFO(this->get_logger(), "mouse_x:%ld", T.mouse_x);
         //RCLCPP_INFO(this->get_logger(), "mouse_y:%ld", T.mouse_y);
         //RCLCPP_INFO(this->get_logger(), "mouse_z:%ld", T.mouse_z);
@@ -125,7 +130,7 @@ namespace serialport
                 serial_port_->Tdata[i + 1] = response->data_stream[i];
             }
             serial_port_->sendData();
-            RCLCPP_INFO(this->get_logger(), "Data sent to serial port.");
+            //RCLCPP_INFO(this->get_logger(), "Data sent to serial port.");
             mutex_.unlock();
             return true;
         }
@@ -143,32 +148,7 @@ namespace serialport
     {
         vector<float> vehicle_pos_info;
         while (1)
-        {   /*
-            if (!using_port_)
-            {   
-                geometry_msgs::msg::TransformStamped t;
-
-                // Read message content and assign it to corresponding tf variables
-                t.header.stamp = this->get_clock()->now();
-                t.header.frame_id = "base_link";
-                t.child_frame_id = "imu_link";
-                
-                // Translation
-                t.transform.translation.x = 0.0;
-                t.transform.translation.y = 0.0;
-                t.transform.translation.z = 0.0;
-
-                // Rotation
-                t.transform.rotation.x = 0.0;
-                t.transform.rotation.y = 0.0;
-                t.transform.rotation.z = 0.0;
-                t.transform.rotation.w = 1.0;
-
-                // Send the transformation
-                tf_broadcaster_->sendTransform(t);
-                
-            }
-            */
+        {   
             // 若串口离线则跳过数据发送
             if (!serial_port_->serial_data_.is_initialized)
             {
@@ -195,7 +175,8 @@ namespace serialport
             u_char flag = serial_port_->serial_data_.rdata[0];
             u_char mode = serial_port_->serial_data_.rdata[1];
             mode_ = mode;
-
+            //printf("header:%c\n", flag);
+            /*
             RCLCPP_INFO_THROTTLE(
                 this->get_logger(), 
                 *this->get_clock(), 
@@ -203,21 +184,24 @@ namespace serialport
                 "mode:%d", 
                 mode
             );
-
+            */
+            
             if(flag == 0xA7) {
-                float pitch;
-                float height;
-                memcpy(&pitch, &serial_port_->serial_data_.rdata[2], 4);
-                memcpy(&height, &serial_port_->serial_data_.rdata[6], 4);
-                RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "pitch:%.2f", pitch);
-                RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "height:%.2f", height);
+                short pitch = 0.0;
+                short height = 0.0;
+                memcpy(&pitch, &serial_port_->serial_data_.rdata[2], 2);
+                memcpy(&height, &serial_port_->serial_data_.rdata[4], 2);
+                //RCLCPP_INFO(this->get_logger(),"pitch:%.2f", pitch);
+                //RCLCPP_INFO(this->get_logger(),"height:%.2f", height);
+                
                 msg_interfaces::msg::ReceiveData receive_data;
-                receive_data.pitch = pitch;
-                receive_data.height = height;
-                receive_data_pub_->publish(std::move(receive_data));
-                //log and print success
-                RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "ReceiveData published");    
+                receive_data.pitch = (float)pitch;
+                receive_data.height = (float)height;
+                receive_data_pub_->publish(receive_data);
+                
+                //RCLCPP_INFO(this->get_logger(), "Receive data success!");
             }
+            
             /*
             if (flag == 0xA5)
             {
