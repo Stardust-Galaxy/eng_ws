@@ -14,6 +14,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 set(msg_files
   "msg/Angle.msg"
+  "msg/ReceiveData.msg"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}

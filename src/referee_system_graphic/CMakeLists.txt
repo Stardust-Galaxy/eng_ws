@@ -14,12 +14,10 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(my_msg_interface REQUIRED)
 
-add_executable(
-  referee_system_graphic
+add_executable(referee_system_graphic
   src/referee_system_graphic.cpp
   src/MappingTables.cpp
   src/DataType.cpp
-
 )
 
 ament_target_dependencies(referee_system_graphic
@@ -38,6 +36,10 @@ target_include_directories(referee_system_graphic
 install(TARGETS 
 referee_system_graphic
 DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY 
+launch DESTINATION 
+share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

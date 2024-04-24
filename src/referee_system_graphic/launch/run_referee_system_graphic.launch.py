@@ -9,16 +9,17 @@ import os
 
 def generate_launch_description():
 
-    referee_system_dir = get_package_share_directory('referee_system_graphic')
-    referee_system_yaml_path = os.path.join(referee_system_dir,'launch','param.yaml')
+    #referee_system_dir = get_package_share_directory('referee_system_graphic')
+    #referee_system_yaml_path = os.path.join(referee_system_dir,'launch','param.yaml')
+    referee_system_yaml_path = "/home/dji/eng_ws/src/referee_system_graphic/launch/param.yaml"
     config_path = LaunchConfiguration('config_path')
     declare_config_path_cmd = DeclareLaunchArgument(
         'config_path', default_value=referee_system_yaml_path,
         description='Yaml config file path'
     )
     t1 =Node(
-        package="referee_system",
-        executable="run_referee_system",
+        package="referee_system_graphic",
+        executable="referee_system_graphic",
         parameters=[config_path],
         )
     return LaunchDescription([

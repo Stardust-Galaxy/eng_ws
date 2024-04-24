@@ -159,7 +159,7 @@ namespace RM_referee{
             condVar_.wait(lock, [this,&offset_bytes]() { return /*!dataQueue_.empty() &&*/ dataQueue_.size() > offset_bytes+1; });//BUG!
             current_byte = *(dataQueue_.begin() + offset_bytes);
             lock.unlock();
-            // RCLCPP_INFO(rclcpp::get_logger("process"),"%#x,%d",current_byte,offset_bytes);
+            //RCLCPP_INFO(rclcpp::get_logger("process"),"%#x,%d",current_byte,offset_bytes);
             if(state == WAITING) {
                 if(current_byte == RM_referee::StartOfFrame) { 
                     //检测到帧头切换状态,记录帧头字节位置
@@ -180,7 +180,7 @@ namespace RM_referee{
                         //头部校验成功，进入数据包处理状态，获取数据长度
                         state = PROCESSINGPACKET;
                         current_data_length = ((RM_referee::PacketHeader*)processingArry->data())->DataLength;
-                        // RCLCPP_WARN(rclcpp::get_logger("Process"), "DataLength : %d",current_data_length);
+                        //RCLCPP_WARN(rclcpp::get_logger("Process"), "DataLength : %d",current_data_length);
                     } else {
                         //头部校验失败，清空待处理队列，偏移字节数归零，移除第一个字节
                         RCLCPP_WARN(rclcpp::get_logger("Process"), "CRC8 check error!");
@@ -203,13 +203,14 @@ namespace RM_referee{
                     }
                     if(processingArry->size() == sizeof(RM_referee::PacketHeader) + 2) {
                         cmd_id.data[1] = current_byte;
-                        // RCLCPP_WARN(rclcpp::get_logger("TEST"), "cmd_id:%#x",cmd_id.cmd_id);
+                        //RCLCPP_WARN(rclcpp::get_logger("TEST"), "cmd_id:%#x",cmd_id.cmd_id);
                     }
                 } else {
                     if(crc16.Verify_CRC16_Check_Sum(processingArry->data(),processingArry->size())) {
                         //TODO:比较这样操作和额外开辟线程的区别
                         //数据包校验成功，唤醒线程进行数据包处理,同时清空待处理队列，偏移字节数归零，移除已经处理的字节
                         uint16_t processed = MapSolve(cmd_id.cmd_id,&processingArry->at(sizeof(RM_referee::PacketHeader)+2),current_data_length);
+                        //RCLCPP_INFO(rclcpp::get_logger("TEST"),"processed successfully");
                         if(processed != current_data_length) {
                             RCLCPP_WARN(rclcpp::get_logger("TEST"), "cmd_id:%#x current_length:%d processed_length:%d",cmd_id.cmd_id,current_data_length,processed);
                             // throw std::runtime_error("There must be a bug in the code!");

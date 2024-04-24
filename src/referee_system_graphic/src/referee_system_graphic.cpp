@@ -131,7 +131,7 @@ class RefereeSystemGraphic : public rclcpp::Node {
             std::string file_path = "log/";
         void ProcessSerialize(const my_msg_interface::srv::RefereeGraphicMsg::Request::SharedPtr request,const my_msg_interface::srv::RefereeGraphicMsg::Response::SharedPtr response) {
             serialize_memcount = Factory_.MapSearchDataLength(request->cmd_id);
-            RCLCPP_INFO(this->get_logger(), "request->cmd_id:0x%x",request->cmd_id);
+            //RCLCPP_INFO(this->get_logger(), "request->cmd_id:0x%x",request->cmd_id);
             if(serialize_memcount == 0) { //cmd_id不存在
                 RCLCPP_INFO(this->get_logger(), "cmd_id不存在");
                 response->cmd_id = 0x0000;
@@ -152,7 +152,7 @@ class RefereeSystemGraphic : public rclcpp::Node {
 
         void GetParam() {
             this->declare_parameter<int>("buffersize", 4096);
-            this->declare_parameter<std::vector<std::string>>("serialport_arry",{"ttyUSB0"});
+            this->declare_parameter<std::vector<std::string>>("serialport_arry",{"/dev/ttyUSB0"});
             this->declare_parameter<bool>("file_output", false);
             this->declare_parameter<std::string>("file_output_path", "log");
             file_path = this->get_parameter("file_output_path").as_string();
