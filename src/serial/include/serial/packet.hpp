@@ -7,12 +7,12 @@
 struct Packet {
     bool found = false;
 
-    float roll;
-    float pitch;
-    float yaw;
-    float x;
-    float y;
-    float z;
+    float roll = 0.3;
+    float pitch = 0.4;
+    float yaw = 0.4;
+    float x = 0.5;
+    float y = 0.7;
+    float z = 0.8;
     uint16_t checksum = 0;
 }__attribute__((packed));
 

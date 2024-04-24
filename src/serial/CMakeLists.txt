@@ -40,6 +40,7 @@ include_directories(
 set(node_plugins "")
   
 add_library(${PROJECT_NAME} SHARED
+  src/referee_system_client.cpp
   src/crc_check.cpp 
   src/${PROJECT_NAME}.cpp
   src/${PROJECT_NAME}_node.cpp
@@ -70,6 +71,7 @@ target_link_libraries(${PROJECT_NAME}
 add_executable(${PROJECT_NAME}_node
   src/crc_check.cpp
   src/${PROJECT_NAME}.cpp
+  src/referee_system_client.cpp
   #src/data_processor/data_transform.cpp
   src/${PROJECT_NAME}_node.cpp
 )

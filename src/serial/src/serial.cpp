@@ -141,7 +141,7 @@ namespace serialport
     {
         timestamp_ = this->steady_clock_.now();
         rclcpp::Time now = this->steady_clock_.now();
-        cout << "rec_delay:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
+        //cout << "rec_delay:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
         
         int bytes;
         char *name = ttyname(serial_data_.fd);
@@ -167,13 +167,13 @@ namespace serialport
         bytes = read(serial_data_.fd, serial_data_.rdata, (size_t)(lens));
         now = this->steady_clock_.now();
 
-        cout << "rec_delay1:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
+        //cout << "rec_delay1:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
         timestamp_ = now;
 
         bytes = read(serial_data_.fd, serial_data_.rdata, (size_t)(lens));
         now = this->steady_clock_.now();
 
-        cout << "rec_delay2:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
+        //cout << "rec_delay2:" << (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6 << "ms" << endl;
 
         RCLCPP_INFO_THROTTLE(logger_, steady_clock_, 100, "rec_delay:%.3fms", (now.nanoseconds() - timestamp_.nanoseconds()) / 1e6);
 
@@ -202,7 +202,7 @@ namespace serialport
         // RCLCPP_INFO(logger_, "isFindTarget: %d", Tdata[15]);
         // RCLCPP_INFO(logger_, "isSpinning: %d", Tdata[16]);
         // RCLCPP_INFO(logger_, "isShooting: %d", Tdata[17]);
-        RCLCPP_WARN_THROTTLE(logger_, steady_clock_, 500, "Sending msg...");
+        RCLCPP_WARN_THROTTLE(logger_, steady_clock_, 50, "Sending msg...");
         return;
     }
 

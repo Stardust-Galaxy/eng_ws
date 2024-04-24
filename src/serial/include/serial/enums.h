@@ -4,38 +4,8 @@
 
 namespace RM_referee {
     enum class PacketType : uint16_t {
-        GameStatus = 0x0001,
-        GameResultEvent = 0x0002,
-        GameRobotHP = 0x0003,
-
-        PlaygroundEvent = 0x0101,
-        ExtSupplyProjectileAction = 0x0102,
-        RefereeWarningEvent = 0x0104,
-        DartInfo = 0x0105,
-
-        RobotState = 0x0201,
-        PowerHeatData = 0x0202,
-        RobotPosition = 0x0203,
-        RobotBuff = 0x0204,
-        AirSupportData = 0x0205,
-        DamageEvent = 0x0206,
-        ShootEvent = 0x0207,
-        ProjectileAllowance = 0x0208,
-        RobotRfidState = 0x0209,
-        DartClientCmd = 0x020A,
-        GroundRobotPosition = 0x020B,
-        RadarMarkData = 0x020C,
-        SentryInfo = 0x020D,
-        RadarInfo = 0x020E,
-
-        InterRobotCommsMessage = 0x0301,
         CustomRobotData = 0x0302,
-        MinimapInteractionCommsMessage = 0x0303, 
         KeyboardMouseMessage = 0x0304,
-        ClientMinimapRecv = 0x0305, 
-        CustomClientData = 0x0306,
-        MapData = 0x0307,
-        CustomInfo = 0x0308
     };
 
     enum class GameType : uint8_t {

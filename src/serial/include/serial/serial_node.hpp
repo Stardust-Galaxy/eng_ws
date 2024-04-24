@@ -23,8 +23,7 @@
 #include "msg_interfaces/msg/receive_data.hpp"
 #include "my_msg_interface/srv/referee_graphic_msg.hpp"
 #include "crc_check.hpp"
-#include "DataType.h"
-
+#include "referee_system_client.hpp"
 
 namespace serialport
 {
@@ -68,9 +67,7 @@ namespace serialport
     public:
         rclcpp::Subscription<AngleMsg>::SharedPtr angle_info_sub_;
         rclcpp::Publisher<ReceiveDataMsg>::SharedPtr receive_data_pub_;
-        rclcpp::Client<my_msg_interface::srv::RefereeGraphicMsg>::SharedPtr client;
         rclcpp::TimerBase::SharedPtr request_timer_;
-        rclcpp::Node::SharedPtr node_;
     private:
         std::unique_ptr<SerialPort> serial_port_;
         std::unique_ptr<SerialPort> initSerialPort();

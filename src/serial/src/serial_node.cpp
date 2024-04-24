@@ -43,32 +43,30 @@ namespace serialport
             std::bind(&SerialPortNode::angleMsgCallback, this, _1)
         );
         
-        //node_ = this->shared_from_this();
-        client = this->create_client<my_msg_interface::srv::RefereeGraphicMsg>("RequestSerialize");
-        RCLCPP_INFO(this->get_logger(), "RefereeSystem_Client has been started.");
-        bool is_connected = true;
-        while (!client->wait_for_service(std::chrono::seconds(1))) {
-                if (!rclcpp::ok()) {
-                    RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"RefereeSystem_Client Exit！");
-                    is_connected = false;
-                    break;
-                }
-                RCLCPP_INFO(this->get_logger(),"RefereeSystem_Client connecting...");
+        auto client = std::make_shared<RefereeGraphicClient>();
+        bool flag = client->connect_server();
+        if (!flag) {
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Service not available.");
         }
-        if(is_connected)
-        {
-            RCLCPP_INFO(this->get_logger(), "RefereeSystem_Client has been connected.");
-        }
-        else
-        {
-            RCLCPP_INFO(this->get_logger(), "RefereeSystem_Client has not been connected.");
-        }
-        //设置定时器用于发送请求
         request_timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(10),  
-            std::bind(&SerialPortNode::requestDataFromService, this)
+            1ms, 
+            [this, client]() {
+                uint16_t cmd_id = 0x0304;
+                auto response = client->send_request(cmd_id);
+                RCLCPP_INFO(client->get_logger(),"Sending Request:0x%x",cmd_id);
+                //handle response
+                if (rclcpp::spin_until_future_complete(client,response) == rclcpp::FutureReturnCode::SUCCESS) {
+                    auto result = response.get();
+                    if(handleServiceResponse(cmd_id, result)) {
+                        RCLCPP_INFO(client->get_logger(),"Response received");
+                    }
+                    else {
+                        RCLCPP_ERROR(client->get_logger(),"Response not received");
+                    }
+                }
+                
+            }
         );
-
         
         if (using_port_)
         { 
@@ -80,7 +78,7 @@ namespace serialport
             );
         }
         
-        //receive_thread_ = std::make_unique<std::thread>(&SerialPortNode::receiveData, this);
+        receive_thread_ = std::make_unique<std::thread>(&SerialPortNode::receiveData, this);
     }
 
     SerialPortNode::~SerialPortNode()
@@ -103,29 +101,7 @@ namespace serialport
         }
     }
 
-    void SerialPortNode::requestDataFromService() {
-        for (const auto& packetType : allPacketTypes) {
-            uint16_t cmd_id = static_cast<uint16_t>(packetType);
-            auto request = std::make_shared<my_msg_interface::srv::RefereeGraphicMsg::Request>();
-            request->cmd_id = cmd_id;
-            auto response = client->async_send_request(request);
-            RCLCPP_INFO(this->get_logger(),"Sending Request:0x%x",cmd_id);
-            if (rclcpp::spin_until_future_complete(this,response) == rclcpp::FutureReturnCode::SUCCESS) {
-                RCLCPP_INFO(this->get_logger(),"Request Success!");
-                auto result = response.get();
-                if(result->data_stream.size() != 0) {
-                    RCLCPP_INFO(this->get_logger(),"cmd_id:0x%x,data_length:%ld",result->cmd_id,result->data_stream.size());
-                    if (handleServiceResponse(cmd_id, result)) {
-                        RCLCPP_INFO(this->get_logger(),"Response Success!");
-                    } 
-                } else {
-                    RCLCPP_INFO(this->get_logger(),"Request Error");
-                }
-                // 控制请求间隔
-                //sleep(0.8);
-            }
-        }
-    }
+    
 
     bool SerialPortNode::handleServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeGraphicMsg::Response::SharedPtr response) {
         uint16_t response_cmd_id = response->cmd_id;
@@ -134,15 +110,22 @@ namespace serialport
             return false;
         }
         uint16_t data_size = response->data_stream.size();
+        RM_referee::KeyboardMouseMessageStruct T;
+        memcpy(&T, response->data_stream.data(), response->data_length);
+        //RCLCPP_INFO(this->get_logger(), "mouse_x:%ld", T.mouse_x);
+        //RCLCPP_INFO(this->get_logger(), "mouse_y:%ld", T.mouse_y);
+        //RCLCPP_INFO(this->get_logger(), "mouse_z:%ld", T.mouse_z);
+        //RCLCPP_INFO(this->get_logger(), "left_button_down:%d", T.left_button_down);
+        //RCLCPP_INFO(this->get_logger(), "right_button_down:%d", T.right_button_down);
+        //RCLCPP_INFO(this->get_logger(), "keyboard_value: %d", T.keyboard_value);
         if(response->data_length != 0) {
+            mutex_.lock();
             serial_port_->Tdata[0] = 0xA9;     
-
-            for (size_t i = 0; i < response->data_length; ++i) {
+            for (size_t i = 0; i < response->data_stream.size(); ++i) {
                 serial_port_->Tdata[i + 1] = response->data_stream[i];
             }
-
-            mutex_.lock();
             serial_port_->sendData();
+            RCLCPP_INFO(this->get_logger(), "Data sent to serial port.");
             mutex_.unlock();
             return true;
         }
@@ -454,7 +437,7 @@ namespace serialport
     void SerialPortNode::angleMsgCallback(AngleMsg::SharedPtr msg)
     {
         if(!sendData(msg))
-        {   
+        {
             RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 500, "Sub angle msg...");
         }
     }
