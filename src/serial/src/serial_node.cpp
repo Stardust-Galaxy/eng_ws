@@ -53,6 +53,10 @@ namespace serialport
         if (!flag) {
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Service not available.");
         }
+        bool flag2 = regularClient->connect_server();
+        if(!flag2) {
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Service not available.");
+        }
         request_graphic_timer_ = this->create_wall_timer(
             1ms, 
             [this, graphicClient]() {
@@ -83,7 +87,7 @@ namespace serialport
                     if(rclcpp::spin_until_future_complete(regularClient,response) == rclcpp::FutureReturnCode::SUCCESS) {
                         auto result = response.get();
                         if(result->data_stream.size() != 0) {
-                            if(result->cmd_id == 0x0201) 
+                            if(result->cmd_id == 0x0202) 
                                 memcpy(&RobotStateT,result->data_stream.data(),result->data_length);
                             else if(result->cmd_id == 0x0209)
                                 memcpy(&RobotRfidStateT,result->data_stream.data(),result->data_length);
@@ -165,8 +169,10 @@ namespace serialport
     bool SerialPortNode::handleRegularServiceResponse(RM_referee::RobotStateStruct RobotStateT,RM_referee::RobotRfidStateStruct RobotRfidStateT) {
         mutex_.lock();
         serial_port_->Tdata[0] = 0xAB;
-        memcpy(&serial_port_->Tdata[1],&RobotStateT,sizeof(RM_referee::RobotStateStruct));
-        memcpy(&serial_port_->Tdata[1] + sizeof(RM_referee::RobotStateStruct),&RobotRfidStateT,sizeof(RM_referee::RobotRfidStateStruct));
+        memcpy(&serial_port_->Tdata[1],&RobotRfidStateT,sizeof(RM_referee::RobotRfidStateStruct));
+        serial_port_->Tdata[5] |= (RobotStateT.power_management_chassis_output << 0);
+        serial_port_->Tdata[5] |= (RobotStateT.power_management_gimbal_output << 1);
+        serial_port_->Tdata[5] |= (RobotStateT.power_management_shooter_output << 2);
         serial_port_->sendData();
         mutex_.unlock();
         RCLCPP_INFO(this->get_logger(),"Two packet sent together successfully!");
