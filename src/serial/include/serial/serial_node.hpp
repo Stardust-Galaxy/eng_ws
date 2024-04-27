@@ -21,9 +21,10 @@
 #include "packet.hpp"
 #include "msg_interfaces/msg/angle.hpp"
 #include "msg_interfaces/msg/receive_data.hpp"
-#include "my_msg_interface/srv/referee_graphic_msg.hpp"
+#include "my_msg_interface/srv/referee_msg.hpp"
 #include "crc_check.hpp"
 #include "referee_system_client.hpp"
+#include "referee_system_graphic_client.hpp"
 
 namespace serialport
 {
@@ -66,8 +67,10 @@ namespace serialport
         
     public:
         rclcpp::Subscription<AngleMsg>::SharedPtr angle_info_sub_;
+        rclcpp::Subscription<AngleMsg>::SharedPtr second_angle_info_sub_;
         rclcpp::Publisher<ReceiveDataMsg>::SharedPtr receive_data_pub_;
-        rclcpp::TimerBase::SharedPtr request_timer_;
+        rclcpp::TimerBase::SharedPtr request_graphic_timer_;
+        rclcpp::TimerBase::SharedPtr request_timer;
     private:
         std::unique_ptr<SerialPort> serial_port_;
         std::unique_ptr<SerialPort> initSerialPort();
@@ -80,12 +83,16 @@ namespace serialport
         OnSetParametersCallbackHandle::SharedPtr callback_handle_;
         bool setParam(rclcpp::Parameter param);
         rcl_interfaces::msg::SetParametersResult paramsCallback(const std::vector<rclcpp::Parameter>& params);
-        void requestDataFromService();
-        bool handleServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeGraphicMsg::Response::SharedPtr response);
-        std::array<RM_referee::PacketType, 29> allPacketTypes = {
-        RM_referee::PacketType::CustomRobotData,
-        RM_referee::PacketType::KeyboardMouseMessage
-    };
+        bool handleGraphicServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeMsg::Response::SharedPtr response);
+        bool handleRegularServiceResponse(RM_referee::RobotStateStruct RobotStateT,RM_referee::RobotRfidStateStruct RobotRfidStateT);
+        std::array<RM_referee::PacketType, 2> allGraphicPacketTypes = {
+            RM_referee::PacketType::CustomRobotData,
+            RM_referee::PacketType::KeyboardMouseMessage
+        };
+        std::array<RM_referee::PacketType,2> allRegularPacketTypes = {
+            RM_referee::PacketType::RobotState,
+            RM_referee::PacketType::RobotRfidState
+        };
     }; 
 } //namespace serialport
 

@@ -29,13 +29,9 @@ namespace RM_referee{
         };
     */
    
+    
     PACKETCOPY(RobotStatePacket)
     
     PACKETCOPY(RobotRfidStatePacket)
-
-    PACKETCOPY(CustomRobotDataPacket)
-    
-    PACKETCOPY(KeyboardMouseMessagePacket)
-    
 
 }

@@ -42,32 +42,57 @@ namespace serialport
             qos,
             std::bind(&SerialPortNode::angleMsgCallback, this, _1)
         );
-        
-        auto client = std::make_shared<RefereeGraphicClient>();
-        bool flag = client->connect_server();
+        second_angle_info_sub_ = this->create_subscription<AngleMsg>(
+            "/second",
+            qos,
+            std::bind(&SerialPortNode::angleMsgCallback, this, _1)
+        );
+        auto graphicClient = std::make_shared<RefereeGraphicClient>();
+        auto regularClient = std::make_shared<RefereeClient>();
+        bool flag = graphicClient->connect_server();
         if (!flag) {
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Service not available.");
         }
-        request_timer_ = this->create_wall_timer(
+        request_graphic_timer_ = this->create_wall_timer(
             1ms, 
-            [this, client]() {
+            [this, graphicClient]() {
                 uint16_t cmd_id = 0x0304;
-                auto response = client->send_request(cmd_id);
-                //RCLCPP_INFO(client->get_logger(),"Sending Request:0x%x",cmd_id);
+                auto response = graphicClient->send_request(cmd_id);
+                //RCLCPP_INFO(graphicClient->get_logger(),"Sending Request:0x%x",cmd_id);
                 //handle response
-                if (rclcpp::spin_until_future_complete(client,response) == rclcpp::FutureReturnCode::SUCCESS) {
+                if (rclcpp::spin_until_future_complete(graphicClient,response) == rclcpp::FutureReturnCode::SUCCESS) {
                     auto result = response.get();
-                    if(handleServiceResponse(cmd_id, result)) {
-                        //RCLCPP_INFO(client->get_logger(),"Response received");
+                    if(handleGraphicServiceResponse(cmd_id, result)) {
+                        //RCLCPP_INFO(graphicClient->get_logger(),"Response:0x%x received",cmd_id);
                     }
                     else {
-                        //RCLCPP_ERROR(client->get_logger(),"Response not received");
+                        RCLCPP_ERROR(graphicClient->get_logger(),"Response:0x%x not received",cmd_id);
                     }
                 }
                 
             }
         );
-        
+        request_timer = this->create_wall_timer(
+            100ms,
+            [this,regularClient]() {
+                RM_referee::RobotStateStruct RobotStateT;
+                RM_referee::RobotRfidStateStruct RobotRfidStateT;
+                for(auto packetType : allRegularPacketTypes) {
+                    uint cmd_id = (uint16_t)packetType;
+                    auto response = regularClient->send_request(cmd_id);
+                    if(rclcpp::spin_until_future_complete(regularClient,response) == rclcpp::FutureReturnCode::SUCCESS) {
+                        auto result = response.get();
+                        if(result->data_stream.size() != 0) {
+                            if(result->cmd_id == 0x0201) 
+                                memcpy(&RobotStateT,result->data_stream.data(),result->data_length);
+                            else if(result->cmd_id == 0x0209)
+                                memcpy(&RobotRfidStateT,result->data_stream.data(),result->data_length);
+                        }
+                    }
+                }
+                handleRegularServiceResponse(RobotStateT,RobotRfidStateT);
+            }
+        );
         if (using_port_)
         { 
             watch_timer_ = rclcpp::create_timer(
@@ -107,7 +132,7 @@ namespace serialport
 
     
 
-    bool SerialPortNode::handleServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeGraphicMsg::Response::SharedPtr response) {
+    bool SerialPortNode::handleGraphicServiceResponse(uint16_t cmd_id, const my_msg_interface::srv::RefereeMsg::Response::SharedPtr response) {
         uint16_t response_cmd_id = response->cmd_id;
         if (response_cmd_id != cmd_id) {
             RCLCPP_ERROR(this->get_logger(), "Response cmd_id does not match request cmd_id!");
@@ -125,7 +150,7 @@ namespace serialport
         //RCLCPP_INFO(this->get_logger(), "keyboard_value: %d", T.keyboard_value);
         if(response->data_length != 0) {
             mutex_.lock();
-            serial_port_->Tdata[0] = 0xA9;     
+            serial_port_->Tdata[0] = 0xA9;
             for (size_t i = 0; i < response->data_stream.size(); ++i) {
                 serial_port_->Tdata[i + 1] = response->data_stream[i];
             }
@@ -137,6 +162,15 @@ namespace serialport
         return false;
     }
 
+    bool SerialPortNode::handleRegularServiceResponse(RM_referee::RobotStateStruct RobotStateT,RM_referee::RobotRfidStateStruct RobotRfidStateT) {
+        mutex_.lock();
+        serial_port_->Tdata[0] = 0xAB;
+        memcpy(&serial_port_->Tdata[1],&RobotStateT,sizeof(RM_referee::RobotStateStruct));
+        memcpy(&serial_port_->Tdata[1] + sizeof(RM_referee::RobotStateStruct),&RobotRfidStateT,sizeof(RM_referee::RobotRfidStateStruct));
+        serial_port_->sendData();
+        mutex_.unlock();
+        RCLCPP_INFO(this->get_logger(),"Two packet sent together successfully!");
+    }
     /**
      * @brief 数据发送线程
      * @details 标志位为0xA5的package包含模式位、陀螺仪数据、弹速以及上一发弹丸的发弹延迟
@@ -201,97 +235,6 @@ namespace serialport
                 
                 //RCLCPP_INFO(this->get_logger(), "Receive data success!");
             }
-            
-            /*
-            if (flag == 0xA5)
-            {
-                std::vector<float> quat;
-                std::vector<float> gyro;
-                std::vector<float> acc;
-                float bullet_speed = 0.0;
-                float shoot_delay = 0.0;
-                
-                // Process IMU Datas.
-                data_transform_->getQuatData(&serial_port_->serial_data_.rdata[2], quat);
-                data_transform_->getGyroData(&serial_port_->serial_data_.rdata[18], gyro);
-                data_transform_->getAccData(&serial_port_->serial_data_.rdata[30], acc);
-                data_transform_->getBulletSpeed(&serial_port_->serial_data_.rdata[42], bullet_speed);
-                data_transform_->getShootDelay(&serial_port_->serial_data_.rdata[46], shoot_delay);
-                
-                // Gimbal angle.
-                // float yaw_angle = 0.0, pitch_angle = 0.0;
-                // data_transform_->getYawAngle(flag, &serial_port_->serial_data_.rdata[55], yaw_angle);
-                // data_transform_->getPitchAngle(flag, &serial_port_->serial_data_.rdata[59], pitch_angle);
-                // RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "yaw_angle:%.2f", yaw_angle);
-                // RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "pitch_angle:%.2f", pitch_angle);
-                if (print_serial_info_)
-                {
-                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "quat:[%.3f %.3f %.3f %.3f]", quat[0], quat[1], quat[2], quat[3]);
-                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "gyro:[%.3f %.3f %.3f]", gyro[0], gyro[1], gyro[2]);
-                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "acc:[%.3f %.3f %.3f]", acc[0], acc[1], acc[2]);
-                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "bullet_speed::%.3f", bullet_speed);
-                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 100, "shoot_delay:%.3f", shoot_delay);
-                }
-
-                rclcpp::Time now = this->get_clock()->now();
-                SerialMsg serial_msg;
-                // sensor_msgs::msg::Imu imu_msg;
-                serial_msg.header.frame_id = "serial";
-                serial_msg.header.stamp = now;
-                serial_msg.imu.header.frame_id = "imu_link";
-                serial_msg.imu.header.stamp = now;
-                // imu_msg.header.frame_id = "imu_link";
-                // imu_msg.header.stamp = now;
-                serial_msg.mode = mode;
-                serial_msg.bullet_speed = bullet_speed;
-                serial_msg.shoot_delay = shoot_delay;
-                // 下位机乘1000发，会准一点
-                serial_msg.imu.orientation.w = quat[0]/1000;
-                serial_msg.imu.orientation.x = quat[1]/1000;
-                serial_msg.imu.orientation.y = quat[2]/1000;
-                serial_msg.imu.orientation.z = quat[3]/1000;
-                serial_msg.imu.angular_velocity.x = gyro[0];
-                serial_msg.imu.angular_velocity.y = gyro[1];
-                serial_msg.imu.angular_velocity.z = gyro[2];
-                serial_msg.imu.linear_acceleration.x = acc[0];
-                serial_msg.imu.linear_acceleration.y = acc[1];
-                serial_msg.imu.linear_acceleration.z = acc[2];
-                // imu_msg.orientation.w = quat[0];
-                // imu_msg.orientation.x = quat[1];
-                // imu_msg.orientation.y = quat[2];
-                // imu_msg.orientation.z = quat[3];
-                // imu_msg.angular_velocity.x = gyro[0];
-                // imu_msg.angular_velocity.y = gyro[1];
-                // imu_msg.angular_velocity.z = gyro[2];
-                // imu_msg.linear_acceleration.x = acc[0];
-                // imu_msg.linear_acceleration.y = acc[1];
-                // imu_msg.linear_acceleration.z = acc[2];
-                geometry_msgs::msg::TransformStamped t;
-
-                // Read message content and assign it to corresponding tf variables
-                t.header.stamp = this->get_clock()->now();
-                t.header.frame_id = "base_link";
-                t.child_frame_id = "imu_link";
-
-                // Translation
-                t.transform.translation.x = 0.0;
-                t.transform.translation.y = 0.0;
-                t.transform.translation.z = 0.0;
-
-                // Rotation
-                t.transform.rotation.x = serial_msg.imu.orientation.x;
-                t.transform.rotation.y = serial_msg.imu.orientation.y;
-                t.transform.rotation.z = serial_msg.imu.orientation.z;
-                t.transform.rotation.w = serial_msg.imu.orientation.w;
-
-                // Send the transformation
-                tf_broadcaster_->sendTransform(t);
-
-                // Pub serial msg
-                serial_msg_pub_->publish(std::move(serial_msg));
-                // imu_msg_pub_->publish(std::move(imu_msg));
-            }
-            */
         }
     }
     
@@ -317,8 +260,8 @@ namespace serialport
         if (this->using_port_)
         {   
             Packet angle_data;
-           
             angle_data.found = angle_info->found;
+            angle_data.mode = angle_info->mode;
             angle_data.roll= angle_info->roll;
             angle_data.pitch = angle_info->pitch;
             angle_data.yaw= angle_info->yaw;
@@ -366,7 +309,7 @@ namespace serialport
       // 0xA5
       Tdata[0] = 0xA7;
       // mode
-      Tdata[1] = mode_;
+      Tdata[1] = angle_data.mode;
       Tdata[2] = angle_data.found;
       // roll
       float* roll = reinterpret_cast<float*>(&angle_data.roll);
@@ -425,7 +368,6 @@ namespace serialport
             RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 500, "Sub angle msg...");
         }
     }
-
     /**
      * @brief 修改参数
      * 

@@ -104,24 +104,4 @@ namespace RM_referee{
         uint32_t rfid_status; };
     static_assert(sizeof(RobotRfidStateStruct) == 4, "RobotRfidStateStruct must be 16 bytes long with packing");
     GENERATEPACK(RobotRfidState,RobotRfidStateStruct)
-
-    //0x0302 CustomRobotDataPacket 30 CustomRobotData
-    struct CustomRobotDataStruct { 
-        uint8_t data[30]; };
-    static_assert(sizeof(CustomRobotDataStruct) == 30, "CustomRobotDataStruct must be 30 bytes long with packing");
-    GENERATEPACK(CustomRobotData,CustomRobotDataStruct)
-    
-
-    //0x0304 KeyboardMouseMessagePacket 12 KeyboardMouseMessage
-    struct KeyboardMouseMessageStruct { 
-        int16_t mouse_x; 
-        int16_t mouse_y; 
-        int16_t mouse_z; 
-        int8_t left_button_down; 
-        int8_t right_button_down; 
-        uint16_t keyboard_value; 
-        uint16_t reserved; };
-    static_assert(sizeof(KeyboardMouseMessageStruct) == 12, "KeyboardMouseMessageStruct must be 30 bytes long with packing");
-    GENERATEPACK(KeyboardMouseMessage,KeyboardMouseMessageStruct)
-
 }

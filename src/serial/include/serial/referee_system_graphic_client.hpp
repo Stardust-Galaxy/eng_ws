@@ -4,9 +4,9 @@
 #include "my_msg_interface/srv/referee_msg.hpp"
 #include "DataType.h"
 
-class RefereeClient : public rclcpp::Node {
+class RefereeGraphicClient : public rclcpp::Node {
 public:
-    RefereeClient();
+    RefereeGraphicClient();
     bool connect_server();
     rclcpp::Client<my_msg_interface::srv::RefereeMsg>::SharedFuture send_request(uint16_t cmd_id);
 
