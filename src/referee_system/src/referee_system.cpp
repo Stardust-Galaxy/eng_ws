@@ -33,7 +33,7 @@ class RefereeSystem : public rclcpp::Node {
             } else {
                 RCLCPP_ERROR(this->get_logger(), "Failed to get current working directory");
             }
-            if(en_file_output){
+            if(en_file_output) {
                 // 创建一个带有时间戳的文件名
                 auto now = std::chrono::system_clock::now();
                 std::time_t now_c = std::chrono::system_clock::to_time_t(now);
@@ -131,7 +131,7 @@ class RefereeSystem : public rclcpp::Node {
             std::string file_path = "log/";
         void ProcessSerialize(const my_msg_interface::srv::RefereeMsg::Request::SharedPtr request,const my_msg_interface::srv::RefereeMsg::Response::SharedPtr response) {
             serialize_memcount = Factory_.MapSearchDataLength(request->cmd_id);
-            //CLCPP_INFO(this->get_logger(), "request->cmd_id:0x%x",request->cmd_id);
+            //RCLCPP_INFO(this->get_logger(), "request->cmd_id:0x%x",request->cmd_id);
             if(serialize_memcount == 0) { //cmd_id不存在
                 RCLCPP_INFO(this->get_logger(), "cmd_id不存在");
                 response->cmd_id = 0x0000;
@@ -152,12 +152,11 @@ class RefereeSystem : public rclcpp::Node {
 
         void GetParam() {
             this->declare_parameter<int>("buffersize", 4096);
-            this->declare_parameter<std::vector<std::string>>("serialport_arry",{"/dev/ttyUSB1"});
+            this->declare_parameter<std::vector<std::string>>("serialport_arry",{"/dev/ttyUSB0"});
             this->declare_parameter<bool>("file_output", false);
             this->declare_parameter<std::string>("file_output_path", "log");
             file_path = this->get_parameter("file_output_path").as_string();
             en_file_output = this->get_parameter("file_output").as_bool();
-
             serialport_arry = this->get_parameter("serialport_arry").as_string_array();
             for (const auto& port : serialport_arry) {
                 RCLCPP_INFO(rclcpp::get_logger("TEST"), "Serialport: %s", port.c_str());

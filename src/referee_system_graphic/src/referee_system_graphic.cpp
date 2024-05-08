@@ -15,7 +15,7 @@
 
 #include "DataType.h"
 #include "MappingTables.h"
-#include "my_msg_interface/srv/referee_graphic_msg.hpp"
+#include "my_msg_interface/srv/referee_msg.hpp"
 
 using std::hex;
 
@@ -96,7 +96,7 @@ class RefereeSystemGraphic : public rclcpp::Node {
                 RCLCPP_INFO(this->get_logger(), "process_thread has been started.");
             }
 
-            service = this->create_service<my_msg_interface::srv::RefereeGraphicMsg>("RequestSerialize", std::bind(&RefereeSystemGraphic::ProcessSerialize,this,std::placeholders::_1,std::placeholders::_2));
+            service = this->create_service<my_msg_interface::srv::RefereeMsg>("RefereeGraphicService", std::bind(&RefereeSystemGraphic::ProcessSerialize,this,std::placeholders::_1,std::placeholders::_2));
             RCLCPP_INFO(this->get_logger(), "RefereeSystemGraphic has been started.");
                 
             }
@@ -118,7 +118,7 @@ class RefereeSystemGraphic : public rclcpp::Node {
         }
 
         private:    
-            rclcpp::Service<my_msg_interface::srv::RefereeGraphicMsg>::SharedPtr service ;
+            rclcpp::Service<my_msg_interface::srv::RefereeMsg>::SharedPtr service ;
             uint16_t serialize_memcount = 0;
             RM_referee::TypeMethodsTables Factory_;
             std::vector<std::string> serialport_arry;
@@ -129,7 +129,7 @@ class RefereeSystemGraphic : public rclcpp::Node {
             std::ofstream* file;    
             bool en_file_output = false;
             std::string file_path = "log/";
-        void ProcessSerialize(const my_msg_interface::srv::RefereeGraphicMsg::Request::SharedPtr request,const my_msg_interface::srv::RefereeGraphicMsg::Response::SharedPtr response) {
+        void ProcessSerialize(const my_msg_interface::srv::RefereeMsg::Request::SharedPtr request,const my_msg_interface::srv::RefereeMsg::Response::SharedPtr response) {
             serialize_memcount = Factory_.MapSearchDataLength(request->cmd_id);
             //RCLCPP_INFO(this->get_logger(), "request->cmd_id:0x%x",request->cmd_id);
             if(serialize_memcount == 0) { //cmd_id不存在

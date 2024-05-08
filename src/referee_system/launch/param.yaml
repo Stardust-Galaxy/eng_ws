@@ -3,8 +3,8 @@
     buffersize: 4096
     serialport_arry:
     - /dev/ttyUSB0
-    - /dev/ttyUSB1
-    - /dev/ttyUSB2
+    # - /dev/ttyUSB1
+    # - /dev/ttyUSB2
     # - /dev/ttyACM0
     # - /dev/ttyACM1
     # - /dev/ttyACM2

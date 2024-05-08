@@ -212,7 +212,7 @@ namespace RM_referee{
                         //数据包校验成功，唤醒线程进行数据包处理,同时清空待处理队列，偏移字节数归零，移除已经处理的字节
                         uint16_t processed = MapSolve(cmd_id.cmd_id,&processingArry->at(sizeof(RM_referee::PacketHeader)+2),current_data_length);
                         if(processed != current_data_length) {
-                            RCLCPP_WARN(rclcpp::get_logger("TEST"), "cmd_id:%#x current_length:%d processed_length:%d",cmd_id.cmd_id,current_data_length,processed);
+                            //RCLCPP_WARN(rclcpp::get_logger("TEST"), "cmd_id:%#x current_length:%d processed_length:%d",cmd_id.cmd_id,current_data_length,processed);
                             // throw std::runtime_error("There must be a bug in the code!");
                         }
                         state = WAITING;

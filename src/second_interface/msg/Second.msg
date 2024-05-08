@@ -1,9 +1,8 @@
+uint8 mode
 int8 found
-int8 mode
 float32 roll
 float32 pitch
 float32 yaw
 float32 x
 float32 y
 float32 z
-

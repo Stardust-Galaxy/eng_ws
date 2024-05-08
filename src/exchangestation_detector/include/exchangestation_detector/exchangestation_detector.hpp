@@ -26,7 +26,7 @@ public:
 
 	void getImage(cv::Mat& binaryImg);
 	
-	ExchangeStationDetector(cv::Mat& source);
+	//ExchangeStationDetector(cv::Mat& source);
 
 	void selectContours();
 

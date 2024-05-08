@@ -48,15 +48,13 @@ namespace serialport
             std::bind(&SerialPortNode::angleMsgCallback, this, _1)
         );
         auto graphicClient = std::make_shared<RefereeGraphicClient>();
-        auto regularClient = std::make_shared<RefereeClient>();
+        //auto regularClient = std::make_shared<RefereeClient>();
         bool flag = graphicClient->connect_server();
         if (!flag) {
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Service not available.");
         }
-        bool flag2 = regularClient->connect_server();
-        if(!flag2) {
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Service not available.");
-        }
+        //bool flag2 = regularClient->connect_server();
+        
         request_graphic_timer_ = this->create_wall_timer(
             1ms, 
             [this, graphicClient]() {
@@ -76,6 +74,7 @@ namespace serialport
                 
             }
         );
+        /*
         request_timer = this->create_wall_timer(
             100ms,
             [this,regularClient]() {
@@ -97,6 +96,7 @@ namespace serialport
                 handleRegularServiceResponse(RobotStateT,RobotRfidStateT);
             }
         );
+        */
         if (using_port_)
         { 
             watch_timer_ = rclcpp::create_timer(
@@ -369,7 +369,8 @@ namespace serialport
 
     void SerialPortNode::angleMsgCallback(AngleMsg::SharedPtr msg)
     {
-        if(!sendData(msg))
+        //use mode_ to decide whether use the main camera or the small camera
+        if(msg-> mode == mode_ && !sendData(msg))
         {
             RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 500, "Sub angle msg...");
         }

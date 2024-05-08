@@ -31,10 +31,10 @@ class second_node(Node):
         )
         self.pub_second = self.create_publisher(Angle,"second",qos)
 
-        K = np.array([[274.848009, 0.000000, 160.533148],
-                  [0.000000, 276.069596, 121.141148],
-                  [0.000000, 0.000000, 1.000000]])
-        D = np.array([0.077923, -0.059707, 0.003536, -0.003644, 0.000000])
+        K = np.array([[623.6946919854665, 0.0,325.16044119395104], 
+                      [0.0, 623.0212233788975, 243.62731542546734], 
+                      [0.0, 0.0, 1.0]])
+        D = np.array([0.04744837973812748, 0.11038950430220529, -0.0051339047333748295, -0.0006166345162193224, 0.0])
         self.preProcession = ImagePreprocessor(True)
         self.detector = TriangleDetector()
         self.p3p = AngleSolver(K,D)
@@ -51,15 +51,14 @@ class second_node(Node):
         if cv_image is None:
             self.get_logger().error('Failed to capture image, skipping this frame.')
             return
-        #cv2.imshow('cv_image', cv_image)
-        # if cv2.waitKey(30) & 0xFF == ord('q'):  # 添加一个退出条件，按'q'退出
-        #     return
-        #cv2.waitKey(30)
-        # cv2.destroyAllWindows()
+        #cv2.imshow("cv_image", cv_image)
         cp_frame = self.preProcession.set_image(cv_image)
         binary_image = self.preProcession.preProcession_main()
         sorted_points = self.detector.detector_main(binary_image,cp_frame)
+        cv2.imshow("cv_image", binary_image)
+        cv2.waitKey(10)
         if len(sorted_points)==0:
+            print("len(sorted_points)==0!")
             rvecs = np.zeros((3, 1))
             tvecs = np.zeros((3, 1))
             mode = 1
@@ -69,10 +68,14 @@ class second_node(Node):
         if mode:
             if tvecs[0] != 0 or tvecs[1] != 0 or tvecs[2] != 0:
                 center_point = self.trans.calculate_center_point_left()
+                print("left!")
             else:
                 center_point = np.zeros((3,1))
+                print("no!")
         else:
             center_point = self.trans.calculate_center_point_right()
+            print("right!")
+
         print("旋转向量1:", rvecs)
         print("平移向量1:", center_point)
         msg = Angle()

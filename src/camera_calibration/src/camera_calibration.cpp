@@ -26,9 +26,9 @@ void updateDistortionMatrix(int, void* ) {
     distortionMatrix.at<double>(0, 4) = k_3;
 
 
-    Mat cameraMatrix = (cv::Mat_<double>(3, 3) << 1850.906255, 0.0000, 496.601643,
-         0.0000, 1846.847240, 212.542900,
-         0.0000, 0.0000, 1.0000);
+    Mat cameraMatrix = (cv::Mat_<double>(3, 3) << 1753.058013, 0.000000, 769.090679,
+         0.000000, 1756.054512, 557.696355,
+         0.000000, 0.000000, 1.000000);
     Mat newCameraMatrix = getOptimalNewCameraMatrix(cameraMatrix, distortionMatrix,g_image.size(),1);
     Mat map1 = Mat(g_image.size(), CV_32FC1);
     Mat map2 = Mat(g_image.size(), CV_32FC1);

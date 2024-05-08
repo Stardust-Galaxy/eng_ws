@@ -22,16 +22,12 @@ class AngleSolver:
     def get_mode(self):
         if len(self.points) < 3 and cv2.contourArea(self.points[-1]) > 35:
             tmp = [self.points[0]]
-            #print("tmp ", len(tmp))
             return True, tmp
         elif len(self.points) >= 3:
             tmp = [self.points[-1], self.points[-2], self.points[-3]]
-            #print("tmp ", len(tmp))
             return False, tmp
         else:
-            #print(str(cv2.contourArea(self.points[-1])) + " !!!area")
             tmp = np.array([])
-            #print("tmp ", len(tmp))
             return False, tmp
 
     def find_extreme_points_left(self, points):
@@ -43,9 +39,9 @@ class AngleSolver:
         x_values = points_array[:, 0, 0]  # x coordinates of all points
         y_values = points_array[:, 0, 1]  # y coordinates of all points
         # Find top-left point
-        right_top_indices = np.where((x_values < np.mean(x_values)) & (y_values < np.mean(y_values)))
-        right_top_points = points_array[right_top_indices]
-        if len(right_top_points) == 0:
+        left_top_indices = np.where((x_values < np.mean(x_values)) & (y_values < np.mean(y_values)))
+        left_top_points = points_array[left_top_indices]
+        if len(left_top_points) == 0:
             # Set a default farthest point to continue code execution
             default_point = np.array([[[0, 0]]])
             return default_point
@@ -54,11 +50,11 @@ class AngleSolver:
         center_y = np.mean(y_values)
         # Calculate distances to center
         distances_to_center = np.sqrt(
-            (right_top_points[:, 0, 0] - center_x) ** 2 + (right_top_points[:, 0, 1] - center_y) ** 2)
+            (left_top_points[:, 0, 0] - center_x) ** 2 + (left_top_points[:, 0, 1] - center_y) ** 2)
         # Find index of farthest point
         farthest_index = np.argmax(distances_to_center)
         # Get farthest point
-        farthest_point = right_top_points[farthest_index]
+        farthest_point = left_top_points[farthest_index]
         # Find index of rightmost point
         rightmost_index = np.argmax(x_values)
         # Find index of bottommost point
@@ -77,8 +73,6 @@ class AngleSolver:
             if abs(k-1)<min_k:
                 min_k = abs(k-1)
                 top_left_point = point
-
-
 
         return final_points,top_left_point
 
@@ -123,10 +117,6 @@ class AngleSolver:
             return None,None
         # Calculate midpoint1 and midpoint2
         midpoint1, midpoint2,midpoint3 = self.calculate_square_midpoints(points[0:3])
-        # Find corner points
-        # corner_points = self.find_corner_points(points[-1])
-        # Sort points clockwise
-        # mid = (midpoint1+midpoint2+corner_points)/3
         """
         2----1
              |
@@ -166,16 +156,11 @@ class AngleSolver:
     def get_corner(self,mode,points):
         if mode:
             corner,forth_point = self.find_extreme_points_left(points)
-            #print("left!")
         else:
             corner,forth_point = self.find_extreme_points_right(points)
-            #print("right!")
         return corner,forth_point
 
-
-
     def find_fourth_point(self, image_points,forth_point):
-        
         if len(image_points) < 3:
             #print("不足三个点的坐标！")
             return None
@@ -210,8 +195,6 @@ class AngleSolver:
             tvecs = np.array([[0], [0], [0]])  # Translation vector
             return rvecs, tvecs
         # Add the coordinates of the fourth point to image_points
-        # print("fourth point")
-        # print(fourth_point)
         image_points = np.vstack([image_points, fourth_point])
         object_points = object_points.astype(np.float32)
         image_points = image_points.astype(np.float32)
@@ -251,6 +234,7 @@ class AngleSolver:
             tvecs = np.array([[0], [0], [0]])  # 平移向量
             return rvecs, tvecs,mode
 # 绘制每个点
+        """
         if(object_points.size!=0):
             i=1
             for point in object_points:
@@ -268,16 +252,13 @@ class AngleSolver:
                 point_4 = (int(forth_point[0]), int(forth_point[1])) 
             cv2.circle(cv_image, point_4, 5, (0, 255, 255), -1)
             #cv2.imshow("image", cv_image)
+        """
         rvecs, tvecs = self.solve_p3p(mode, object_points,forth_point)
-        #print("旋转向量:", rvecs)
-        #print("平移向量:", tvecs)
         rvec = np.float32(rvecs)
         # Convert rotation vector to rotation matrix
         rotationMatrix, _ = cv2.Rodrigues(rvec)
-
         # Decompose rotation matrix into Euler angles
         eulerAngles = cv2.RQDecomp3x3(rotationMatrix)[0]
-        #print("EulerAngle(pitch, yaw, roll):", eulerAngles)
         # 如果需要将欧拉角从弧度转换为度数
         #euler_angles_deg = np.degrees(rvecs)
         #roll, pitch, yaw = euler_angles_deg

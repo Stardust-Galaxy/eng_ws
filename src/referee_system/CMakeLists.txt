@@ -38,7 +38,13 @@ target_include_directories(referee_system_regular
 )
 install(TARGETS 
 referee_system_regular
-DESTINATION lib/${PROJECT_NAME})
+DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}
+)
 
 
 

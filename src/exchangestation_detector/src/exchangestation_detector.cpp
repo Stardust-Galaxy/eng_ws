@@ -93,8 +93,6 @@ void ExchangeStationDetector::getImage(cv::Mat& source) {
         cv::threshold(grayImg, binaryResult, redThreshold, 255, cv::THRESH_BINARY);
     else
         cv::threshold(grayImg, binaryResult, blueThreshold, 255, cv::THRESH_BINARY);
-    int windowWidth = 800;
-    int windowHeight = 600;
     this->binaryImg = binaryResult;
 }
 
@@ -109,6 +107,7 @@ Packet ExchangeStationDetector::solveAngle(float currentPitch,float currentHeigh
     cv::Mat T_WorldToReference = cv::Mat::eye(4, 4, CV_64F);
     cameraToReferenceRvec.at<double>(0, 0) = -currentPitch * M_PI / 180;
     cameraToReferenceTvec.at<double>(1, 0) = -currentHeight;
+    //TODO: add a fixed value for x axis
     cameraToReferenceTvec.at<double>(2, 0) = 0;
     cv::Rodrigues(cameraToReferenceRvec, cameraToReferenceRMatrix);
     //build camera2reference transformation matrix
@@ -145,6 +144,7 @@ Packet ExchangeStationDetector::solveAngle(float currentPitch,float currentHeigh
     cv::Vec3d referenceEulerAngles = cv::RQDecomp3x3(worldToReferenceRMatrix, mtxR, mtxQ, cv::noArray(), cv::noArray());
     Packet packet;
     packet.found = true;
+    packet.mode = 0;
     packet.pitch = referenceEulerAngles[0];
     packet.yaw = referenceEulerAngles[1];
     packet.roll = referenceEulerAngles[2];
@@ -170,7 +170,7 @@ Packet ExchangeStationDetector::solveAngle(float currentPitch,float currentHeigh
 void ExchangeStationDetector::selectContours() {
     found = false; //Reset state
     currentFrameSmallSquares.clear();
-	double minArea = 400, maxArea = 10000; // For a single contour
+	double minArea = 400, maxArea = 6000; // For a single contour
 	double maxRatio = 4.5; // For a single contour : width / height
     //double minDis = 0, maxDis = 400; // Compare between contours
     double minAreaRatio = 0.1, maxAreaRatio = 10; // Compare between contours
@@ -205,7 +205,6 @@ void ExchangeStationDetector::selectContours() {
         //select two small Points
         double boundArea = boundary.size.height * boundary.size.width;
         if (area > minSmallSquareArea && area < maxSmallSquareArea && boundArea < 2 * area && boundary.size.width / boundary.size.height < 2 && boundary.size.height / boundary.size.width < 2) {
-            cv::Point2f center = boundary.center;
             if (currentFrameSmallSquares.size() < 2)
                 currentFrameSmallSquares.push_back(boundary.center);
             continue;
@@ -220,7 +219,7 @@ void ExchangeStationDetector::selectContours() {
         
         //cv::polylines(source, approx, true, cv::Scalar(255, 0, 0), 10);
 
-        std::cout <<"approxSize:" << approx.size() << std::endl;
+        //std::cout <<"approxSize:" << approx.size() << std::endl;
         
         if (approx.size() <= 5 || approx.size() >= 13) {
             continue;
