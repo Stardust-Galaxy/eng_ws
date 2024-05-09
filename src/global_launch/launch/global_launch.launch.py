@@ -56,7 +56,7 @@ def generate_launch_description():
     )
     ld.add_action(camera_launch)
     ld.add_action(detector_node)
-    ld.add_action(mind_detector_node)
+    #ld.add_action(mind_detector_node)
     ld.add_action(serial_node)
     ld.add_action(small_camera_node)
     ld.add_action(second_exchange_node)
