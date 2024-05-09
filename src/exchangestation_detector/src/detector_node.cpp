@@ -56,18 +56,17 @@ std::unique_ptr<ExchangeStationDetector> exchangestation_detector_node::initDete
     descriptor.integer_range[0].step = 1;
     descriptor.integer_range[0].from_value = 0;
     descriptor.integer_range[0].to_value = 255;
-    this->declare_parameter("red_threshold", 150, descriptor);
-    this->declare_parameter("blue_threshold", 80, descriptor);
+    this->declare_parameter("red_threshold", 80, descriptor);
+    this->declare_parameter("blue_threshold", 50, descriptor);
 
-    descriptor.description = "0-RED,`1-BLUE";
+    descriptor.description = "0 for red, 1 for blue";
     descriptor.integer_range[0].from_value = 0;
     descriptor.integer_range[0].to_value = 1;
-    this->declare_parameter("detect_color", BLUE, descriptor);
-    auto detectColor = this->get_parameter("detect_color").as_int();
+    this->declare_parameter("detect_color", RED, descriptor);
+    int detectColor = this->get_parameter("detect_color").as_int();
     int redThreshold = this->get_parameter("red_threshold").as_int();
     int blueThreshold = this->get_parameter("blue_threshold").as_int();
-
-    return std::make_unique<ExchangeStationDetector>(redThreshold, blueThreshold, detectColor);
+    return std::make_unique<ExchangeStationDetector>(blueThreshold, redThreshold, detectColor);
 }
 
 void exchangestation_detector_node::setReceiveData(const msg_interfaces::msg::ReceiveData::SharedPtr msg) {

@@ -40,7 +40,7 @@ private:
     //Receive Data
     msg_interfaces::msg::ReceiveData receive_data;
 
-    float currentPitch = 30.0;
+    float currentPitch = 0.0;
     float currentHeight = 200.0;
     
 

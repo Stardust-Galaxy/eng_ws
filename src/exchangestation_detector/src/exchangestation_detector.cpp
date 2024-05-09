@@ -79,21 +79,27 @@ void ExchangeStationDetector::getImage(cv::Mat& source) {
     this->source = source;
     cv::Mat grayImg;
     cv::Mat binaryResult;
-    cv::cvtColor(source,grayImg,cv::COLOR_BGR2GRAY);
-    //cv::threshold(grayImg, binaryResult, 50, 255, cv::THRESH_BINARY);
-    //std::vector<cv::Mat> channels;
-    //cv::split(source, channels);
-    //cv::Mat redChannel = channels[2];
-    //cv::Mat blueChannel = channels[0];
-    //cv::Mat mergedChannels = redChannel + blueChannel;
-    //cv::imshow("pro", mergedChannels);
-    //cv::waitKey(0);
-    //cv::Mat binaryResult;
+    //cv::cvtColor(source,grayImg,cv::COLOR_BGR2GRAY);
+    std::vector<cv::Mat> channels;
+    cv::split(source, channels);
+    cv::Mat redChannel = channels[2];
+    cv::Mat blueChannel = channels[0];
+    std::vector<cv::Mat> mergedChannels;
+    cv::Mat mergedImage;
+    mergedChannels.push_back(redChannel);
+    mergedChannels.push_back(cv::Mat::zeros(blueChannel.size(), CV_8UC1));
+    mergedChannels.push_back(blueChannel);
+    cv::merge(mergedChannels,mergedImage);
+    cv::cvtColor(mergedImage, grayImg, cv::COLOR_BGR2GRAY);
+    cv::imshow("mergedChannels",mergedImage);
+    cv::waitKey(1);
     if(detectColor == RED)
         cv::threshold(grayImg, binaryResult, redThreshold, 255, cv::THRESH_BINARY);
     else
         cv::threshold(grayImg, binaryResult, blueThreshold, 255, cv::THRESH_BINARY);
     this->binaryImg = binaryResult;
+    cv::imshow("binaryResult",binaryResult);
+    cv::waitKey(1);
 }
 
 Packet ExchangeStationDetector::solveAngle(float currentPitch,float currentHeight)
@@ -105,9 +111,10 @@ Packet ExchangeStationDetector::solveAngle(float currentPitch,float currentHeigh
     cv::Mat T_CameraToReference = cv::Mat::eye(4, 4, CV_64F);
     cv::Mat T_WorldToCamera = cv::Mat::eye(4, 4, CV_64F);
     cv::Mat T_WorldToReference = cv::Mat::eye(4, 4, CV_64F);
+    std::cout << "currentPitch" << currentPitch << std::endl;
     cameraToReferenceRvec.at<double>(0, 0) = -currentPitch * M_PI / 180;
     cameraToReferenceTvec.at<double>(1, 0) = -currentHeight;
-    //TODO: add a fixed value for x axis
+    //TODO: add a fixed value for z axis
     cameraToReferenceTvec.at<double>(2, 0) = 0;
     cv::Rodrigues(cameraToReferenceRvec, cameraToReferenceRMatrix);
     //build camera2reference transformation matrix
@@ -170,11 +177,11 @@ Packet ExchangeStationDetector::solveAngle(float currentPitch,float currentHeigh
 void ExchangeStationDetector::selectContours() {
     found = false; //Reset state
     currentFrameSmallSquares.clear();
-	double minArea = 400, maxArea = 6000; // For a single contour
+	double minArea = 200, maxArea = 6000; // For a single contour
 	double maxRatio = 4.5; // For a single contour : width / height
     //double minDis = 0, maxDis = 400; // Compare between contours
-    double minAreaRatio = 0.1, maxAreaRatio = 10; // Compare between contours
-    double minSmallSquareArea = 100, maxSmallSquareArea = 400;
+    double minAreaRatio = 0.2, maxAreaRatio = 5; // Compare between contours
+    double minSmallSquareArea = 20, maxSmallSquareArea = 200;
 	std::vector<std::vector<cv::Point>> contours;
 	cv::findContours(binaryImg, contours, cv::RETR_EXTERNAL,cv::CHAIN_APPROX_SIMPLE);// should be in counter clock-wise order according to the video
     std::vector<candidateContour> candidateContours; // Potential corner contours
@@ -250,7 +257,7 @@ void ExchangeStationDetector::selectContours() {
     //std::cout << "currentFrameSmallSquares: " << currentFrameSmallSquares.size() << std::endl;
 
     if (candidateContours.size() < 4) {
-        //std::cout << "Not enough corners" << std::endl; // Haven't found yet
+        std::cout << "Not enough corners" << std::endl; // Haven't found yet
         return;
     }
 
