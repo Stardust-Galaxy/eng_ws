@@ -71,10 +71,14 @@ class second_node(Node):
                 print("left!")
             else:
                 center_point = np.zeros((3,1))
-                print("no!")
+                print("no1!")
         else:
-            center_point = self.trans.calculate_center_point_right()
-            print("right!")
+            if tvecs[0] != 0 or tvecs[1] != 0 or tvecs[2] != 0:
+                center_point = self.trans.calculate_center_point_right()
+                print("right!")
+            else:
+                center_point = np.zeros((3,1))
+                print("no2!")
 
         print("旋转向量1:", rvecs)
         print("平移向量1:", center_point)
