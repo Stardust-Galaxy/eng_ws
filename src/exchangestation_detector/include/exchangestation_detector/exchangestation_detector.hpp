@@ -53,6 +53,8 @@ private:
 	int blueThreshold = 80;
 	int detectColor = 0;
 
+	int foundCount = 0;
+
 	cv::Mat source;
 	
 	cv::Mat binaryImg;

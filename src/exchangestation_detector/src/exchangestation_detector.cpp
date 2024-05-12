@@ -126,6 +126,8 @@ Packet ExchangeStationDetector::solveAngle(float currentPitch,float currentHeigh
         cv::putText(source, "roll: UNKNOWN", cv::Point(20, 160), cv::FONT_HERSHEY_SIMPLEX, 2, cv::Scalar(255, 255, 255), 2);
         return Packet();
     }
+    if(foundCount != 100)
+        foundCount += 1;
     double size = 275;
     std::vector<cv::Point3f> objectPoints = { cv::Point3f(size / 2, -size / 2,0),
                                               cv::Point3f(size / 2, size / 2,0),
@@ -151,6 +153,12 @@ Packet ExchangeStationDetector::solveAngle(float currentPitch,float currentHeigh
     cv::Vec3d referenceEulerAngles = cv::RQDecomp3x3(worldToReferenceRMatrix, mtxR, mtxQ, cv::noArray(), cv::noArray());
     Packet packet;
     packet.found = true;
+    if(foundCount == 50) {
+        packet.isStable = true;
+        foundCount = 0;
+    }
+    else
+        packet.isStable = false;
     packet.mode = 0;
     packet.pitch = referenceEulerAngles[0];
     packet.yaw = referenceEulerAngles[1];
