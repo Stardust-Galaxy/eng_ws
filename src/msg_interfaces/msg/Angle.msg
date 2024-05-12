@@ -1,4 +1,5 @@
 int8 found
+int8 is_stable
 int8 mode
 float32 roll
 float32 pitch

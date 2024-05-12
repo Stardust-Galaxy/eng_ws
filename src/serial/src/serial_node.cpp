@@ -207,7 +207,7 @@ namespace serialport
                 if(!is_receive_data)
                 {
                     RCLCPP_INFO_THROTTLE(this->get_logger(), this->serial_port_->steady_clock_, 1000, "CHECKSUM FAILED OR NO DATA RECVIED!!!");
-                    usleep(1000);
+                    usleep(10);
                     continue;
                 }
             }
@@ -267,6 +267,7 @@ namespace serialport
         {   
             Packet angle_data;
             angle_data.found = angle_info->found;
+            angle_data.isStable = angle_info->is_stable;
             angle_data.mode = angle_info->mode;
             angle_data.roll= angle_info->roll;
             angle_data.pitch = angle_info->pitch;
@@ -317,12 +318,13 @@ namespace serialport
       // mode
       Tdata[1] = angle_data.mode;
       Tdata[2] = angle_data.found;
+      Tdata[3] = angle_data.isStable;
       // roll
       float* roll = reinterpret_cast<float*>(&angle_data.roll);
       u_char* rollBytes = reinterpret_cast<u_char*>(roll);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[3 + i] = rollBytes[i];
+        Tdata[4 + i] = rollBytes[i];
       }
 
       // pitch
@@ -330,7 +332,7 @@ namespace serialport
       u_char* pitchBytes = reinterpret_cast<u_char*>(pitch);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[7 + i] = pitchBytes[i];
+        Tdata[8 + i] = pitchBytes[i];
       }
 
       // yaw
@@ -338,7 +340,7 @@ namespace serialport
       u_char* yawBytes = reinterpret_cast<u_char*>(yaw);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[11 + i] = yawBytes[i];
+        Tdata[12 + i] = yawBytes[i];
       }
 
       // x
@@ -346,7 +348,7 @@ namespace serialport
       u_char* xBytes = reinterpret_cast<u_char*>(x);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[15 + i] = xBytes[i];
+        Tdata[16 + i] = xBytes[i];
       }
 
       // y
@@ -354,7 +356,7 @@ namespace serialport
       u_char* yBytes = reinterpret_cast<u_char*>(y);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[19 + i] = yBytes[i];
+        Tdata[20 + i] = yBytes[i];
       }
 
       // z
@@ -362,7 +364,7 @@ namespace serialport
       u_char* zBytes = reinterpret_cast<u_char*>(z);
       for (int i = 0; i < 4; i++)
       {
-        Tdata[23 + i] = zBytes[i];
+        Tdata[24 + i] = zBytes[i];
       }
     
     }

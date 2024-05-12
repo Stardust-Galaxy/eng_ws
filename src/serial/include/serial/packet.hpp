@@ -6,6 +6,7 @@
 
 struct Packet {
     bool found = false;
+    bool isStable = false;
     int mode = 0;
     float roll = 0.3;
     float pitch = 0.4;
