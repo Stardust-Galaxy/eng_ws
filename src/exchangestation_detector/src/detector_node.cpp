@@ -82,7 +82,7 @@ void exchangestation_detector_node::imageCallback(const sensor_msgs::msg::Image:
     detector->getCorners();
 
     Packet packet = detector->solveAngle(currentPitch,currentHeight);
-    detector->show();
+    //detector->show();
     msg_interfaces::msg::Angle angle_msg;
     angle_msg.mode = packet.mode;
     angle_msg.found = packet.found;
